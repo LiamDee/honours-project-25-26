@@ -1,2 +1,4 @@
-# honours-project-25-26
+# Honours Project 2025-2026
 A repository to store information, code, and documents related to my Honours Project for Year 4.
+
+The Java code for my Android-based mobile application will be stored here. This will be useful when it comes to retaining older versions of my code, as it will make evaluating the development process a lot easier. Any other relevant documents will also be kept here.
