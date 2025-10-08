@@ -1,0 +1,231 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[export]{adjustbox}
+%\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\usepackage{csquotes}% Recommended
+
+\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+
+\addbibresource{references.bib}% Syntax for version >= 1.2
+
+\title{Usage tracking \& psychology-based mobile application to help treat social media and smartphone addiction in young adults}	% Title
+\author{Liam De Buffalo}		% Author
+\date{\today}	% Date
+
+\newcommand{\studentId}{S2213159}
+\newcommand{\degree}{BSc/BSc (Hons)  Computing}
+\newcommand{\supervisor}{Dr. Mario Mata}
+\newcommand{\secondmarker}{Dr Second Marker}
+\newcommand{\wordcount}{soon twin}
+\newcommand{\module}{MHW225671}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+   % \vspace*{0.5 cm}
+    \includegraphics[scale = 0.05]{newlogo.png}\\[0.5 cm]
+    \text{Honours Project - \module}\\[0.5 cm]
+    \textsc{\LARGE INTERIM REPORT}\\[0.5 cm]	
+    \text{2025-26} \\[0.5 cm]	
+    \text{\large Department of Computer Science} \\[0.8 cm]	
+	\text{ Submitted for the Degree of:}\\[0.2 cm]		
+	\degree \\[0.8 cm]
+
+	
+	\begin{minipage}{0.8\textwidth}
+		\begin{flushleft} \large	
+            \emph{Project Title: }
+			\thetitle \\ [0.2 cm]
+            \emph{Name: }
+			\theauthor \\ [0.2 cm]
+            \emph{Student ID: }
+			\studentId \\ [0.2 cm]
+            \emph{Supervisor: }
+			\supervisor \\ [0.2 cm]
+            \emph{Second Marker: }
+			\secondmarker \\ [0.2 cm]
+            \emph{Word Count: }
+			\wordcount \\ 
+            \text{\small (excluding contents pages, figures, tables, references and appendices)} \\ [0.5 cm]
+            \small{“Except where explicitly stated, all work in this report, is my own original work and has not been submitted elsewhere in fulfilment of the requirement of this or any other award”}
+			\end{flushleft}
+			%\end{minipage}~
+			%\begin{minipage}{0.4\textwidth}
+		
+	\end{minipage}\\[0.2 cm]
+
+   
+
+\vspace{5mm}
+
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} 
+			Name: \\
+			\theauthor
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} 
+			Date: \\
+			\thedate								% Date of declaration
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+%	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+This template has been adapted from the one provided in RSPI. It contains suggested main section headings, and example content illustrating the use of subsections, references, figures, tables and equations.
+
+Front page data (title, name, studentID, etc) can be entered in the first section of \emph{main.tex}, by replacing the placeholder values in the following lines:
+
+% \begin{verbatim}
+% \title{Full title of project}	% Title
+% \author{My Name}		% Author
+% \date{\today}	% Date
+% \newcommand{\studentId}{S9876543}
+% \newcommand{\degree}{BSc (Hons) My Degree}
+% \newcommand{\supervisor}{Dr First Marker}
+% \newcommand{\secondmarker}{Dr Second Marker}
+% \newcommand{\wordcount}{4000}
+% \newcommand{\module}{MHWXXXXXX}
+% \end{verbatim}
+
+Module code should be MHW225671 for full time students, MHW226542 for Graduate Apprentices.
+
+The introduction section should describe the background and motivation for your project, citing appropriate sources, and state the research question (or problem statement), project aim and objectives and hypothesis if appropriate.
+
+\subsection{Project Background}
+
+
+\subsection{Project Overview}
+\subsubsection{Project Outline}
+
+
+\subsection{Project Objectives}
+
+
+% \subsection{\LaTeX help, equations, figures }
+
+% For help with \LaTeX see the tutorial and further documentation at:
+
+% \url{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}
+
+% \url{https://www.overleaf.com/learn/latex/Main_Page}
+% \newline
+% This document was created using \LaTeX. The mass-energy equivalence is described by the famous equation
+% \begin{equation}\label{engy-mass-v}
+% E = mc^2
+% \end{equation}
+% discovered in 1905 by Albert Einstein. In natural units (c = 1), Eq. \ref{engy-mass-v}
+% becomees the identity as in Eq. \ref{engy-mass-1}
+% \begin{equation}\label{engy-mass-1}
+% E = m
+% \end{equation}
+
+% It's easy to add subscript, too, e.g.,
+% \begin{equation}
+% y_k = x_k^3 + a x_k
+% \end{equation}
+
+% Fig. \ref{fig:g-campus} shows the GCU campus in the centre of Glasgow.
+
+% \begin{figure} [h!]
+% \includegraphics[width=0.85\textwidth, center]{campus}
+% \caption{Glasgow campus}
+% \label{fig:g-campus}
+% \end{figure}
+
+
+
+\section{Literature and technology review}
+\subsection{Secondary objective 1}
+The subsections of your literature and technology review should correspond to your secondary research objectives. This should be an in-depth review that provides the foundation for your research method and execution. 
+
+
+\subsection{Secondary objective 2}
+Your review should cite a comprehensive set of sources as evidence to support your analysis \autocite{Smith:2012qr}. As \textcite{Smith:2013jd} said, reliable sources constitute the evidentiary foundation of research, distinguishing rigorous inquiry from unsupported assertion\parencite{Other:2014ab}. Your sources should be stored in BibTex format, with appropriate keys, in the file \emph{references.bib}.
+
+
+\section{Project's Primary Research Methods}
+This section will give a detailed overview on the methods that will be used to carry out the remainder of the project and provide a reasonable conclusion to the problem statement.
+
+This section will also outline what work has been completed up to this point and all future work that will be carried out over the project's lifetime.
+
+
+% This section should provide a detailed description of the research methods which will used in the project. This will include the process of creating the artefact and evaluating the outcome.  This should make reference to the literature review findings where appropriate. 
+
+\subsection{Technical methods}
+\subsubsection {Theme 1}
+\subsubsection {Theme 2}
+\subsubsection {Theme 3}
+\subsubsection {Theme 4}
+
+% Table \ref{table:1} is an example of referenced \LaTeX{} elements.
+
+% \begin{table}[h!]
+% \centering
+% \begin{tabular}{||c c c c||} 
+%  \hline
+%     & Strengths & Limitations & References \\ [0.5ex] 
+%  \hline\hline
+%  Method 1 & 11 & 87837 & 787 \\ 
+%  Method 2 & 7 & 78 & 5415 \\
+%  Method 3 & 545 & 778 & 7507 \\
+%  Method 4 & 545 & 18744 & 7560 \\
+%   \hline
+% \end{tabular}
+% \caption{Comparisons between different methods.}
+% \label{table:1}
+% \end{table}
+
+\subsection {Preliminary work}
+You should describe preliminary work that has been done to date. Remember that this is a report, not a proposal.
+
+\subsection {Future work}
+This section will list all 
+
+\addcontentsline{toc}{section}{References}
+\printbibliography
+
+\end{document}
