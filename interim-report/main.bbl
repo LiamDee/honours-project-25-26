@@ -19,112 +19,873 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{Smith:2013jd}{article}{}{}
+    \entry{RefWorks:RefID:91-abeele2021media}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=be76b5bf7fa911e76b7029cf81189081}{%
-           family={Jones},
-           familyi={J\bibinitperiod},
-           given={A.\bibnamedelimi B.},
-           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+        {{un=0,uniquepart=base,hash=7a04572ab516acf88f6a531fe6364083}{%
+           family={Abeele},
+           familyi={A\bibinitperiod},
+           given={Mariek\bibnamedelimb MP\bibnamedelima Vanden},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim V\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=6126f91a89611279e86182106bf09d1a}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={J.\bibnamedelimi M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+        {{un=0,uniquepart=base,hash=1fb81880cb6031a804fa976c798e3a03}{%
+           family={Mohr},
+           familyi={M\bibinitperiod},
+           given={Victoria},
+           giveni={V\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Publisher}%
-      }
-      \strng{namehash}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{fullhash}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{fullhashraw}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{bibnamehash}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{authorbibnamehash}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{authornamehash}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{authorfullhash}{348932ff0b7038ddd516ab40e4a45308}
-      \strng{authorfullhashraw}{348932ff0b7038ddd516ab40e4a45308}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \strng{namehash}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{fullhash}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{fullhashraw}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{bibnamehash}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{authorbibnamehash}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{authornamehash}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{authorfullhash}{43d821e33ab016d7c78acf6d37d2adb5}
+      \strng{authorfullhashraw}{43d821e33ab016d7c78acf6d37d2adb5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal title}
-      \field{month}{3}
-      \field{number}{52}
-      \field{title}{{A}rticle {T}itle}
-      \field{volume}{13}
-      \field{year}{2013}
-      \field{pages}{123\bibrangedash 456}
-      \range{pages}{334}
+      \field{isbn}{1354-8565}
+      \field{journaltitle}{Convergence}
+      \field{note}{doi: 10.1177/13548565211038539}
+      \field{number}{6}
+      \field{title}{Media addictions as Apparatgeist: What discourse on {TV} and smartphone addiction reveals about society}
+      \field{volume}{27}
+      \field{year}{2021}
+      \field{pages}{1536\bibrangedash 1557}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1177/13548565211038539
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/13548565211038539
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/13548565211038539
+      \endverb
     \endentry
-    \entry{Other:2014ab}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=7c3a70c2ccd6e4afa26f0178ccb6408e}{%
-           family={Other},
-           familyi={O\bibinitperiod},
-           given={A.\bibnamedelimi N.},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+    \entry{RefWorks:RefID:96-adorjan2021smartphone}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=de3c9bca7dc06b9dbc2c07b63d876ec0}{%
+           family={Adorjan},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5c77bd033b1bddd388f9abab1d5ce6e}{%
+           family={Ricciardelli},
+           familyi={R\bibinitperiod},
+           given={Rosemary},
+           giveni={R\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Publisher}%
+      \strng{namehash}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{fullhash}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{fullhashraw}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{bibnamehash}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{authorbibnamehash}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{authornamehash}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{authorfullhash}{c705a9400e0934e31cbb1bdb351186dc}
+      \strng{authorfullhashraw}{c705a9400e0934e31cbb1bdb351186dc}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Review of Sociology/Revue canadienne de sociologie}
+      \field{number}{1}
+      \field{title}{Smartphone and social media addiction: Exploring the perceptions and experiences of Canadian teenagers}
+      \field{volume}{58}
+      \field{year}{2021}
+      \field{pages}{45\bibrangedash 64}
+      \range{pages}{20}
+    \endentry
+    \entry{RefWorks:RefID:100-aksoy2018qualitative}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a9c234d59fc89bd8e38e9cc4c9260921}{%
+           family={Aksoy},
+           familyi={A\bibinitperiod},
+           given={Mehmet\bibnamedelima Emin},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{fullhash}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{fullhashraw}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{bibnamehash}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{authorbibnamehash}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{authornamehash}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{authorfullhash}{7c3a70c2ccd6e4afa26f0178ccb6408e}
-      \strng{authorfullhashraw}{7c3a70c2ccd6e4afa26f0178ccb6408e}
+      \strng{namehash}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{fullhash}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{fullhashraw}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{bibnamehash}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{authorbibnamehash}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{authornamehash}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{authorfullhash}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \strng{authorfullhashraw}{a9c234d59fc89bd8e38e9cc4c9260921}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Educational Research}
+      \field{number}{4}
+      \field{title}{A qualitative study on the reasons for social media addiction}
+      \field{volume}{7}
+      \field{year}{2018}
+      \field{pages}{861\bibrangedash 865}
+      \range{pages}{5}
+    \endentry
+    \entry{RefWorks:RefID:82-barnett2024illusions}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7b0d0ddb462db15855f8f7cdaaf25c83}{%
+           family={Barnett},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{fullhash}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{fullhashraw}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{bibnamehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{authorbibnamehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{authornamehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{authorfullhash}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \strng{authorfullhashraw}{7b0d0ddb462db15855f8f7cdaaf25c83}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Antitrust Law Journal}
+      \field{number}{1}
+      \field{title}{{ILLUSIONS} {OF} {DOMINANCE}: {REVISITING} {THE} {MARKET}-{POWER} {ASSUMPTION} {IN} {PLATFORM} {ECOSYSTEMS}}
+      \field{volume}{86}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 62}
+      \range{pages}{62}
+      \verb{urlraw}
+      \verb https://www.proquest.com/scholarly-journals/illusions-dominance-revisiting-market-power/docview/3109490012/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Aabiglobal\&atitle=ILLUSIONS+OF+DOMINANCE\%253A+REVISITING+THE+MARKET-POWER+ASSUMPTION+IN+PLATFORM+ECOSYSTEMS\&title=Antitrust+Law+Journal\&issn=00036056\&date=2024-01-01\&volume=86\&issue=1\&spage=1\&au=Barnett\%252C+Jonathan+M\&isbn=\&jtitle=Antitrust+Law+Journal\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/
+      \endverb
+      \verb{url}
+      \verb https://www.proquest.com/scholarly-journals/illusions-dominance-revisiting-market-power/docview/3109490012/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Aabiglobal%5C&atitle=ILLUSIONS+OF+DOMINANCE%5C%253A+REVISITING+THE+MARKET-POWER+ASSUMPTION+IN+PLATFORM+ECOSYSTEMS%5C&title=Antitrust+Law+Journal%5C&issn=00036056%5C&date=2024-01-01%5C&volume=86%5C&issue=1%5C&spage=1%5C&au=Barnett%5C%252C+Jonathan+M%5C&isbn=%5C&jtitle=Antitrust+Law+Journal%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
+      \endverb
+      \keyw{Law--Corporate Law; Antitrust; Food; Intervention; Competition policy; Computer platforms; Digital economy; Cloud computing; Monopolies; Market shares; Economics; Case studies; Competition; United Kingdom--UK; United States--US; China; 92812:International Affairs}
+    \endentry
+    \entry{RefWorks:RefID:78-bhalerao2020analysis}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=ec0d16ad858fd979e0edffa2bd0baea5}{%
+           family={Bhalerao},
+           familyi={B\bibinitperiod},
+           given={Muktpal\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0269ea92769a66a253767feb3d43f8b1}{%
+           family={Krishnan},
+           familyi={K\bibinitperiod},
+           given={Bindu},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f457e71c2f99abcd2591ab19b57eebca}{%
+           family={Mokal},
+           familyi={M\bibinitperiod},
+           given={Smita\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=469e6112255dadc3854ae67facfc605f}{%
+           family={Latti},
+           familyi={L\bibinitperiod},
+           given={R.\bibnamedelimi G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e44fe86f1542d62bada5b5a97c91b553}
+      \strng{fullhash}{0655b4186f1d20801ae3d14890acdbf3}
+      \strng{fullhashraw}{0655b4186f1d20801ae3d14890acdbf3}
+      \strng{bibnamehash}{e44fe86f1542d62bada5b5a97c91b553}
+      \strng{authorbibnamehash}{e44fe86f1542d62bada5b5a97c91b553}
+      \strng{authornamehash}{e44fe86f1542d62bada5b5a97c91b553}
+      \strng{authorfullhash}{0655b4186f1d20801ae3d14890acdbf3}
+      \strng{authorfullhashraw}{0655b4186f1d20801ae3d14890acdbf3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indian Journal of Clinical Anatomy and Physiology}
+      \field{number}{1}
+      \field{title}{An analysis of smartphone addiction among {MBBS} students}
+      \field{volume}{7}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+    \entry{RefWorks:RefID:92-chan2023types}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f4990f8cc9f1e53460dd86f2ed69e576}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Sii\bibnamedelima Jiing},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=68c40479a6965ab96514ff452fe74b61}{%
+           family={Yeo},
+           familyi={Y\bibinitperiod},
+           given={Kee\bibnamedelima Jiar},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e11c834404d6d757e90e13ed5bd2cecf}{%
+           family={Handayani},
+           familyi={H\bibinitperiod},
+           given={Lina},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{fullhash}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{fullhashraw}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{bibnamehash}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{authorbibnamehash}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{authornamehash}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{authorfullhash}{eeb8118f141282df9d188434d23f1ed3}
+      \strng{authorfullhashraw}{eeb8118f141282df9d188434d23f1ed3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Evaluation and Research in Education}
+      \field{number}{2}
+      \field{title}{Types of smartphone usage and problematic smartphone use among adolescents: A review of literature}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{pages}{563\bibrangedash 570}
+      \range{pages}{8}
+    \endentry
+    \entry{RefWorks:RefID:95-chou2005review}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=34df852c3f60636d0a9c469288edc899}{%
+           family={Chou},
+           familyi={C\bibinitperiod},
+           given={Chien},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb58277e4c896d88d3c2e94ee3869a41}{%
+           family={Condron},
+           familyi={C\bibinitperiod},
+           given={Linda},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8e0ceb04cbcc2db0699975b6e6a0df8}{%
+           family={Belland},
+           familyi={B\bibinitperiod},
+           given={John\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{fullhash}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{fullhashraw}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{bibnamehash}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{authorbibnamehash}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{authornamehash}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{authorfullhash}{d54d89e793ddfbc251fde64e0ad03028}
+      \strng{authorfullhashraw}{d54d89e793ddfbc251fde64e0ad03028}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Educational psychology review}
+      \field{number}{4}
+      \field{title}{A review of the research on Internet addiction}
+      \field{volume}{17}
+      \field{year}{2005}
+      \field{pages}{363\bibrangedash 388}
+      \range{pages}{26}
+    \endentry
+    \entry{RefWorks:RefID:93-goggin2012google}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f2b759cde95638b47eb10d22c2cf8856}{%
+           family={Goggin},
+           familyi={G\bibinitperiod},
+           given={Gerard},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{fullhash}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{fullhashraw}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{bibnamehash}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{authorbibnamehash}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{authornamehash}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{authorfullhash}{f2b759cde95638b47eb10d22c2cf8856}
+      \strng{authorfullhashraw}{f2b759cde95638b47eb10d22c2cf8856}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper explores the rise of Google's Android phone ? a fascinating case study in a crucial yet under-theorized terrain of mobile media that illuminates the politics of software, operating systems, and their attachments to handsets and networks. While Android is a notable attempt to create an open source platform, I argue that in key respects it remains tied to the project of media corporations enclosing and controlling mobile and online platforms. This is nowhere more evident than in Google's embroilment in intellectual property struggles over smartphone patents.}
+      \field{isbn}{1030-4312}
+      \field{journaltitle}{Continuum}
+      \field{note}{doi: 10.1080/10304312.2012.706462}
+      \field{number}{5}
+      \field{title}{Google phone rising: The Android and the politics of open source}
+      \field{volume}{26}
+      \field{year}{2012}
+      \field{pages}{741\bibrangedash 752}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1080/10304312.2012.706462
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/10304312.2012.706462
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/10304312.2012.706462
+      \endverb
+    \endentry
+    \entry{RefWorks:RefID:66-hou2019social}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f0006ab22eb7dc5eebfb039001759bab}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Yubo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9b6b466c9cae903d2b70545b6f9269e}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fcb1c0ae4b5c3c45ac65cd7845f826b}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Tonglin},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=678676dc49e5b95bb949b7c32b2b96bb}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Lily},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ff53b99cb226c6384ebd0abb3e330b1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c85743e5f091649ccdee86e2f277f7ab}
+      \strng{fullhash}{9f5d889e8d1e6dddb337d22bcfb08f3b}
+      \strng{fullhashraw}{9f5d889e8d1e6dddb337d22bcfb08f3b}
+      \strng{bibnamehash}{c85743e5f091649ccdee86e2f277f7ab}
+      \strng{authorbibnamehash}{c85743e5f091649ccdee86e2f277f7ab}
+      \strng{authornamehash}{c85743e5f091649ccdee86e2f277f7ab}
+      \strng{authorfullhash}{9f5d889e8d1e6dddb337d22bcfb08f3b}
+      \strng{authorfullhashraw}{9f5d889e8d1e6dddb337d22bcfb08f3b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cyberpsychology: Journal of psychosocial research on cyberspace}
+      \field{number}{1}
+      \field{title}{Social media addiction: Its impact, mediation, and intervention}
+      \field{volume}{13}
+      \field{year}{2019}
+    \endentry
+    \entry{RefWorks:RefID:98-islam2025impact}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9f19bb70e382d1df1b2e58673b46df11}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={Md\bibnamedelima Mujahidul},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=277442caf69f201bb8eb75476f8d87e9}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Faysal},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89025b32a1d05044e605405f88d73657}{%
+           family={Kabir},
+           familyi={K\bibinitperiod},
+           given={Mohammad\bibnamedelima Anowarul},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2929cc3f6e59f3c24d9607d6ba85e2c}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2c55c27972283a7dd58360d8b0558d4f}
+      \strng{fullhash}{6fa8fade4acaa696be38b02f4ea5e3c1}
+      \strng{fullhashraw}{6fa8fade4acaa696be38b02f4ea5e3c1}
+      \strng{bibnamehash}{2c55c27972283a7dd58360d8b0558d4f}
+      \strng{authorbibnamehash}{2c55c27972283a7dd58360d8b0558d4f}
+      \strng{authornamehash}{2c55c27972283a7dd58360d8b0558d4f}
+      \strng{authorfullhash}{6fa8fade4acaa696be38b02f4ea5e3c1}
+      \strng{authorfullhashraw}{6fa8fade4acaa696be38b02f4ea5e3c1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The impact of short video content and social media influencers on digital marketing success: A systematic literature review of smartphone usage}
+      \field{year}{2025}
+    \endentry
+    \entry{RefWorks:RefID:68-king2017impact}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=784a5a826d8720e0e74d1eadf001744e}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Ruth\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac7b6e4d6fd4eba30d26b6db8b8348c5}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Su},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{fullhash}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{fullhashraw}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{bibnamehash}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{authorbibnamehash}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{authornamehash}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{authorfullhash}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \strng{authorfullhashraw}{f752c8e574190b6e8defac3f9bf5cdb5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Business \& Management Review}
+      \field{number}{4}
+      \field{title}{The impact of smartphone on young adults}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{342}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:73-kuss2017social}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e88cc6535b1994b9e348505cc683bbe0}{%
+           family={Kuss},
+           familyi={K\bibinitperiod},
+           given={Daria\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c20de3bbdda33b7031f1dfb71ae29d2}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={Mark\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{fullhash}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{fullhashraw}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{bibnamehash}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{authorbibnamehash}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{authornamehash}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{authorfullhash}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \strng{authorfullhashraw}{c9ed2e51c3d74b42710f5851a1f2040e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International journal of environmental research and public health}
+      \field{number}{3}
+      \field{title}{Social networking sites and addiction: Ten lessons learned}
+      \field{volume}{14}
+      \field{year}{2017}
+      \field{pages}{311}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:102-lin2016association}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=335647f687f92fc532e9a8a00b3fd20b}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Liu\bibnamedelima Yi},
+           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2637c788285d5cbc28542e888ee2da30}{%
+           family={Sidani},
+           familyi={S\bibinitperiod},
+           given={Jaime\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a59ddf96fededef8eafc16357e4ead3}{%
+           family={Shensa},
+           familyi={S\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43c3c1bead82b684a35509617d2f4b6d}{%
+           family={Radovic},
+           familyi={R\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a4a8053ec64d811c3a20444e7eb15fa}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c787b4d166ce94820008921e45d08b6f}{%
+           family={Colditz},
+           familyi={C\bibinitperiod},
+           given={Jason\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50ef9d7278e696e72a34306be62b27d1}{%
+           family={Hoffman},
+           familyi={H\bibinitperiod},
+           given={Beth\bibnamedelima L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9d8efa87a0da3ef048e2950f0278a7b}{%
+           family={Giles},
+           familyi={G\bibinitperiod},
+           given={Leila\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ffa048bfa67082f52c8daed38bd0d31}{%
+           family={Primack},
+           familyi={P\bibinitperiod},
+           given={Brian\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{65d943f2ebe1f1bf7f9577377239788e}
+      \strng{fullhash}{c74ec479f4b1e668a1a0e5458a1f90ca}
+      \strng{fullhashraw}{c74ec479f4b1e668a1a0e5458a1f90ca}
+      \strng{bibnamehash}{65d943f2ebe1f1bf7f9577377239788e}
+      \strng{authorbibnamehash}{65d943f2ebe1f1bf7f9577377239788e}
+      \strng{authornamehash}{65d943f2ebe1f1bf7f9577377239788e}
+      \strng{authorfullhash}{c74ec479f4b1e668a1a0e5458a1f90ca}
+      \strng{authorfullhashraw}{c74ec479f4b1e668a1a0e5458a1f90ca}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Depression and anxiety}
+      \field{number}{4}
+      \field{title}{Association between social media use and depression among {US} young adults}
+      \field{volume}{33}
+      \field{year}{2016}
+      \field{pages}{323\bibrangedash 331}
+      \range{pages}{9}
+    \endentry
+    \entry{RefWorks:RefID:74-löchtefeld2013appdetox}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bc7cf4e5d06274f06c98ca726eeaa7e4}{%
+           family={Löchtefeld},
+           familyi={L\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb1717c63756bedb2678744a27ef7cba}{%
+           family={Böhmer},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c09ee53d5dec19ae92db8ba76a5b541}{%
+           family={Ganev},
+           familyi={G\bibinitperiod},
+           given={Lyubomir},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{581bf5b064c124c592bd59950534de52}
+      \strng{fullhash}{581bf5b064c124c592bd59950534de52}
+      \strng{fullhashraw}{581bf5b064c124c592bd59950534de52}
+      \strng{bibnamehash}{581bf5b064c124c592bd59950534de52}
+      \strng{authorbibnamehash}{581bf5b064c124c592bd59950534de52}
+      \strng{authornamehash}{581bf5b064c124c592bd59950534de52}
+      \strng{authorfullhash}{581bf5b064c124c592bd59950534de52}
+      \strng{authorfullhashraw}{581bf5b064c124c592bd59950534de52}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 12th international conference on mobile and ubiquitous multimedia}
+      \field{title}{AppDetox: helping users with mobile app addiction}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 2}
+      \range{pages}{2}
+    \endentry
+    \entry{RefWorks:RefID:75-oliveira2021effectiveness}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e2343137f2f003f5cde1786b4bbb370c}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Carla},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=036659c08f95029fd849356459e6ad51}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Anabela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e6bc9507fead3bd62ac59c88e559e8d}{%
+           family={Vagos},
+           familyi={V\bibinitperiod},
+           given={Paula},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ff1401953c44e65eb09c4a1d85cef4e}{%
+           family={Nóbrega},
+           familyi={N\bibinitperiod},
+           given={Catarina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8f0c40d5ccdd7207282f9c2be59da30}{%
+           family={Gonçalves},
+           familyi={G\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f99825273327b8feaca94de5414454dd}{%
+           family={Afonso},
+           familyi={A\bibinitperiod},
+           given={Beatriz},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{218be59745f2450ffbf324ec5eb0bffe}
+      \strng{fullhash}{5dd38ef80792eb469487a452e97e123f}
+      \strng{fullhashraw}{5dd38ef80792eb469487a452e97e123f}
+      \strng{bibnamehash}{218be59745f2450ffbf324ec5eb0bffe}
+      \strng{authorbibnamehash}{218be59745f2450ffbf324ec5eb0bffe}
+      \strng{authornamehash}{218be59745f2450ffbf324ec5eb0bffe}
+      \strng{authorfullhash}{5dd38ef80792eb469487a452e97e123f}
+      \strng{authorfullhashraw}{5dd38ef80792eb469487a452e97e123f}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{10th}
-      \field{title}{{B}ook {T}itle}
-      \field{year}{2014}
+      \field{abstract}{Serious mental health disorders are increasing among college students and university counseling services are often overburdened. Mobile applications for mental health have been growing exponentially in the last decade and they are emerging in university settings as a promising tool to promote and intervene in college students' mental health. Additionally, considering the recent covid-19 pandemic, mHealth interventions, due to its nature and possibilities, may play an important role in these institutions. Our main objectives are to explore mhealth interventions in universities, regarding its conceptual framework, acceptability and efficacy outcomes and understand its impact and contributions to address treatment delivery and psychological difficulties resulting from covid-19 pandemic. The literature search was conducted in scientific databases, namely, Web of Science, Pubmed, and Scopus. A search in app stores was not conducted, thus regarding commercially available apps, only those found in our database search were included in our review. We selected studies with mobile applications addressing psychological interventions for college students. A total of 2,158 participants were included in the 8 selected studies and most interventions were delivered through mobile apps only and based in cognitive behavioral therapy. Results suggested that college students accept and adhere to these interventions and preliminary evidence of efficacy was demonstrated in different disorders, such as stress, anxiety, depression and risky behaviors such as alcohol and tobacco abuse and sexual knowledge. We conclude that universities, particularly college counseling services, may benefit from mhealth interventions, not only to address college students' mental health but to decrease some of its difficulties related to lack of human resources. Specifically in covid-19 pandemic context, these interventions may contribute significantly by promoting and delivering psychological interventions at a safe distance.}
+      \field{isbn}{1664-1078}
+      \field{journaltitle}{Frontiers in Psychology}
+      \field{title}{Effectiveness of Mobile App-Based Psychological Interventions for College Students: A Systematic Review of the Literature}
+      \field{volume}{olume 12 - 2021}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.647606
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.647606
+      \endverb
     \endentry
-    \entry{Smith:2012qr}{book}{}{}
+    \entry{RefWorks:RefID:94-ouellette2022usefulness}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=6126f91a89611279e86182106bf09d1a}{%
-           family={Smith},
+        {{un=0,uniquepart=base,hash=319f3d649b068cc7e1a43bac1d5edf04}{%
+           family={Ouellette},
+           familyi={O\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5474bafa47ae01d4a72e9ff47bdbc0db}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Babar\bibnamedelima K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{787b02e3cb856aa08814009ede7a0460}
+      \strng{fullhash}{787b02e3cb856aa08814009ede7a0460}
+      \strng{fullhashraw}{787b02e3cb856aa08814009ede7a0460}
+      \strng{bibnamehash}{787b02e3cb856aa08814009ede7a0460}
+      \strng{authorbibnamehash}{787b02e3cb856aa08814009ede7a0460}
+      \strng{authornamehash}{787b02e3cb856aa08814009ede7a0460}
+      \strng{authorfullhash}{787b02e3cb856aa08814009ede7a0460}
+      \strng{authorfullhashraw}{787b02e3cb856aa08814009ede7a0460}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Environmental Research and Public Health}
+      \field{number}{6}
+      \field{title}{Usefulness of smartphones in dermatology: a {US}-based review}
+      \field{volume}{19}
+      \field{year}{2022}
+      \field{pages}{3553}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:99-özcan2017smartphone}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8cf61decb47b4ab2c1d01b16c1271966}{%
+           family={Özcan},
+           familyi={Ö\bibinitperiod},
+           given={Yasemin\bibnamedelima Sanal},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97018e6d538e31272a0e37ef528c0bab}{%
+           family={Ozer},
+           familyi={O\bibinitperiod},
+           given={Ömer},
+           giveni={Ö\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{fullhash}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{fullhashraw}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{bibnamehash}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{authorbibnamehash}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{authornamehash}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{authorfullhash}{2fc37b06e285531cad0f7a01ad142979}
+      \strng{authorfullhashraw}{2fc37b06e285531cad0f7a01ad142979}
+      \field{sortinit}{Ö}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Akdeniz İnsani Bilimler Dergisi}
+      \field{number}{2}
+      \field{title}{Smartphone addiction and the use of social media among university students}
+      \field{volume}{7}
+      \field{year}{2017}
+      \field{pages}{367\bibrangedash 377}
+      \range{pages}{11}
+    \endentry
+    \entry{RefWorks:RefID:97-rozgonjuk2018problematic}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3c980aba0be892cfcb305fa6bb9867d3}{%
+           family={Rozgonjuk},
+           familyi={R\bibinitperiod},
+           given={Dmitri},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f90a7ed9651ba4fc431747684302284a}{%
+           family={Saal},
            familyi={S\bibinitperiod},
-           given={J.\bibnamedelimi M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Kristiina},
+           giveni={K\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=be76b5bf7fa911e76b7029cf81189081}{%
-           family={Jones},
-           familyi={J\bibinitperiod},
-           given={A.\bibnamedelimi B.},
-           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+        {{un=0,uniquepart=base,hash=0a644aae33025a9d9c6cadb9885515f3}{%
+           family={Täht},
+           familyi={T\bibinitperiod},
+           given={Karin},
+           giveni={K\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Publisher}%
+      \strng{namehash}{957d89e31e66aa7e2eda800555665889}
+      \strng{fullhash}{957d89e31e66aa7e2eda800555665889}
+      \strng{fullhashraw}{957d89e31e66aa7e2eda800555665889}
+      \strng{bibnamehash}{957d89e31e66aa7e2eda800555665889}
+      \strng{authorbibnamehash}{957d89e31e66aa7e2eda800555665889}
+      \strng{authornamehash}{957d89e31e66aa7e2eda800555665889}
+      \strng{authorfullhash}{957d89e31e66aa7e2eda800555665889}
+      \strng{authorfullhashraw}{957d89e31e66aa7e2eda800555665889}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International journal of environmental research and public health}
+      \field{number}{1}
+      \field{title}{Problematic smartphone use, deep and surface approaches to learning, and social media use in lectures}
+      \field{volume}{15}
+      \field{year}{2018}
+      \field{pages}{92}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:103-seran2024effectiveness}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=59a64e9a53a6a4208142ba78df27f9c6}{%
+           family={Seran},
+           familyi={S\bibinitperiod},
+           given={Nappinnai},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{6cda7f34da4828c776e9f66658f50983}
-      \strng{fullhash}{6cda7f34da4828c776e9f66658f50983}
-      \strng{fullhashraw}{6cda7f34da4828c776e9f66658f50983}
-      \strng{bibnamehash}{6cda7f34da4828c776e9f66658f50983}
-      \strng{authorbibnamehash}{6cda7f34da4828c776e9f66658f50983}
-      \strng{authornamehash}{6cda7f34da4828c776e9f66658f50983}
-      \strng{authorfullhash}{6cda7f34da4828c776e9f66658f50983}
-      \strng{authorfullhashraw}{6cda7f34da4828c776e9f66658f50983}
+      \strng{namehash}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{fullhash}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{fullhashraw}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{bibnamehash}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{authorbibnamehash}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{authornamehash}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{authorfullhash}{59a64e9a53a6a4208142ba78df27f9c6}
+      \strng{authorfullhashraw}{59a64e9a53a6a4208142ba78df27f9c6}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{7th}
-      \field{title}{{B}ook {T}itle}
-      \field{year}{2012}
+      \field{booktitle}{Obstetrics \& Gynaecology Forum}
+      \field{chapter}{3}
+      \field{title}{{EFFECTIVENESS} {OF} {EDUCATIONAL} {INTERVENTION} {ON} {SOCIAL} {MEDIA} {ADDICTION} {AND} {OBESITY} {AMONG} {YOUNG} {ADULTS} {IN} {SELECTED} {COLLEGES}, {CHENNAI}.}
+      \field{volume}{34}
+      \field{year}{2024}
+    \endentry
+    \entry{RefWorks:RefID:88-shah2021rise}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04de45e1ccd2302900013a119ed89597}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Aastha},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{04de45e1ccd2302900013a119ed89597}
+      \strng{fullhash}{04de45e1ccd2302900013a119ed89597}
+      \strng{fullhashraw}{04de45e1ccd2302900013a119ed89597}
+      \strng{bibnamehash}{04de45e1ccd2302900013a119ed89597}
+      \strng{authorbibnamehash}{04de45e1ccd2302900013a119ed89597}
+      \strng{authornamehash}{04de45e1ccd2302900013a119ed89597}
+      \strng{authorfullhash}{04de45e1ccd2302900013a119ed89597}
+      \strng{authorfullhashraw}{04de45e1ccd2302900013a119ed89597}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Research Culture Society}
+      \field{title}{Rise of Social Media and Its Trends}
+      \field{volume}{22}
+      \field{year}{2021}
+      \field{pages}{162}
+      \range{pages}{1}
     \endentry
   \enddatalist
 \endrefsection
