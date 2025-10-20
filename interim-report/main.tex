@@ -26,7 +26,7 @@
 \date{\today}	% Date
 
 \newcommand{\studentId}{S2213159}
-\newcommand{\degree}{BSc/BSc (Hons)  Computing}
+\newcommand{\degree}{BSc (Hons) Computing}
 \newcommand{\supervisor}{Dr. Mario Mata}
 \newcommand{\secondmarker}{Dr Second Marker}
 \newcommand{\wordcount}{}
@@ -115,7 +115,10 @@
 \newpage
 
 \section{Introduction}
-This section will provide a brief overview on the...It will also provide an overview on the project, it's objectives...
+This section will provide a brief overview on smartphones, social media, and their eventual integration with one another. It will then
+provide context on the issue of smartphone addiction and social media addiction, including how people develop such addictions, and the
+effects they have on an individual. Existing apps and studies that attempt to deal with the issue are also mentioned.
+It will also provide an overview on the project and it's objectives to be achieved in the literature \& technology review and during development of the app.
 % This template has been changed from the one provided in RSPI. It contains suggested main section headings, and example content illustrating the use of subsections, references, figures, tables and equations.
 
 % Front page data (title, name, studentID, etc) can be entered in the first section of \emph{main.tex}, by replacing the placeholder values in the following lines:
@@ -137,132 +140,179 @@ This section will provide a brief overview on the...It will also provide an over
 \subsection{Project Background}
 % (brief overview on social media)\newline
 Social media, sometimes referred to as Social Networking Sites (SNS), have been adopted as an important piece of daily life for a substantial number of people in the world.
- They have provided us the ability to connect with groups of individuals online from around the globe on a never-before-seen scale, allowing for friendships, 
- communities and relationships to be built from virtually anywhere. Dating back to the days of MySpace in the mid-2000s, where at one point, it made up nearly 75\% of all social networking traffic and was 
-the most visited website in the United States \autocite{RefWorks:RefID:82-barnett2024illusions}, to social media networks such
-as X (formerly known as Twitter) and Facebook reaching out to billions around the globe, to the ever-growing trend of short-form-video social networks kickstarted
-by TikTok, forcing networks such as Instagram and YouTube to adapt to the new medium, social media looks to be omnipresent within a majority of
+They have provided us the ability to connect with groups of individuals online from around the globe on a never-before-seen scale, allowing for friendships, 
+communities and relationships to be built from virtually anywhere. Dating back to the days of MySpace in the mid-2000s, to social media networks such
+as X (formerly known as Twitter) and Facebook reaching out to billions around the globe, social media looks to be omnipresent within a majority of
 peoples' lives, with it being estimated that 1 in 3 people globally have some form of social media presence \autocite{RefWorks:RefID:88-shah2021rise}. \newline
 
 % (brief overview on smartphones)\newline
-Similarly, smartphones have equally taken the world by storm, and have also become an important part of life for most people, even at early ages, with studies
+Similarly, smartphones have taken the world by storm, and have also become an important part of life for most people, even at early ages, with studies
 reporting that young people are receiving their first phone at the age of 10 \autocite{RefWorks:RefID:92-chan2023types}. With the June 2007 release of Apple's "iPhone" and the
 release of the HTC Dream running the open source "Android" operating system in 2008, both Apple's iPhone and the myriad of devices that use Google's Android OS have cultivated
 a large shift in the world of online media \autocite{RefWorks:RefID:93-goggin2012google}, with it being reported in 2021 that 85\% of adults in the United States own a 
 smartphone \autocite{RefWorks:RefID:94-ouellette2022usefulness}. Smartphones nowadays are used for communication via calling or texting through apps such as WhatsApp, for 
-entertainment (gaming, live sports, TV, online content, etc..), for productivity, for learning, and a wide variety of other purposes, all contained within a device typically the size of someone's hand.
-It cannot be understated how much of an overall game-changer smartphones have been.\newline
+entertainment (gaming, TV, online content, etc..), for productivity, for learning, and a wide variety of other purposes.\newline % all contained within a device typically the size of someone's hand.
+% It cannot be understated how much of an overall game-changer smartphones have been.
 
 
 % (social media, smartphones and the problems associated with it (w/ young ppl)) \newline
-As time went on though, it was only a matter of time before social media was integrated onto smartphones via downloadable apps from various app storefronts such as Apple's App Store and Google's Google Play, 
-social media networks such as YouTube, X, and Facebook adapted their web interfaces to smartphones, and have been rewarded with large gains in userbase for all, with it being revealed that 80\% of content consumed on
-social media is through a smartphone \autocite{RefWorks:RefID:98-islam2025impact}. However, over the years, worries have been raised regarding a variety of issues that concern both smartphones and social media, 
-particularly surrounding the problem of individuals developing an overdependence on their smartphones and / or social media that negatively affects their day-to-day life. Commonly categorised as "Smartphone Addiction" and 
-"Social Media Addiction", the issue has become a largely discussed and researched topic over the last 15 years with researchers looking into potential causes and correlations with other health effects.\newline
+It was only a matter of time before social media networks such as YouTube, X, and Facebook adapted their web interfaces to fit smartphones, and doing so has rewarded those networks with large gains in users 
+for all, with it being revealed that 80\% of content consumed on social media is through a smartphone \autocite{RefWorks:RefID:98-islam2025impact}. However, over the years, worries have been raised regarding a variety of 
+issues that concern both smartphones and social media, particularly surrounding the problem of individuals developing an overdependence on their smartphones and / or social media that negatively 
+affects their day-to-day life. Commonly categorised as "Smartphone Addiction" (SA) and "Social Media Addiction" (SMA), the issue has become a largely discussed and researched topic over the last 15 years with researchers looking into 
+potential causes and correlations with other health effects.\newline
 
 New forms of media "harming the minds of the youth" isn't a new concept by any means. Going as far back to the invention of the radio, worries from parents about addictions 
 related to radio, television, video games, the internet, and smartphones affecting young people have been prevalent, due to the youth's carelessness in regards to new 
-technologies, but also due to the dystopian over-exaggeration on the dangerous effects that these at-the-time new technologies could have on society \autocite{RefWorks:RefID:91-abeele2021media, RefWorks:RefID:96-adorjan2021smartphone}.
-This isn't to say their concerns aren't valid, but rather to point out that the sentiment has been shared with emerging digital mediums.\newline
+technologies, but also due to the dystopian over-exaggeration on the dangerous effects that these at-the-time new technologies could have on society that 
+these groups express \autocite{RefWorks:RefID:91-abeele2021media, RefWorks:RefID:96-adorjan2021smartphone}. \newline
+% This isn't to say their concerns aren't valid, but rather to point out that the sentiment has been shared with emerging digital mediums.\newline
 
-While Smartphone Addiction isn't classified the same way drug addiction is classified, the nature of it is instead classified as a behavioral addiction \autocite{RefWorks:RefID:68-king2017impact}, 
-and a similar manner, Social Media Addiction is considered as a subset of Internet Addiction \autocite{RefWorks:RefID:66-hou2019social}, which itself is considered a subset of behavioural 
-addictions \autocite{RefWorks:RefID:95-chou2005review}, and while both are typically categorised as separate types of "addiction", it has been argued by some that smartphone addiction may be correlated
-with Social Media Addiction, due to smartphones themselves being enablers for addictive behaviors, including social media addiction \autocite{RefWorks:RefID:73-kuss2017social} (self cite also?). Despite this, the use of the term 
-"addiction" has had pushback, due to the sensationalist language the term brings \autocite{RefWorks:RefID:96-adorjan2021smartphone}, and also because both terms don't fit the typical perception of addiction 
-with the term "Problematic Smartphone/Social Media Use" being used as an alternative term \autocite{RefWorks:RefID:97-rozgonjuk2018problematic}.\newline
+While SA isn't classified the same way other addictions such as drug addiction are classified, the nature of it is instead classified as a behavioral addiction \autocite{RefWorks:RefID:68-king2017impact}, 
+and a similar manner, SMA is considered as a subset of Internet Addiction \autocite{RefWorks:RefID:66-hou2019social}, which itself is considered a subset of behavioural 
+addictions \autocite{RefWorks:RefID:95-chou2005review}, and while both are typically categorised as separate types of "addiction", it has been argued by some that SA may be correlated
+with SMA, due to smartphones themselves being enablers for addictive behaviors, including SMA \autocite{RefWorks:RefID:73-kuss2017social}. \newline
 
-The nature of Smartphone Addiction and Social Media Addiction has on young individuals have been extensively studied over the years, including why individuals may develop an addiction in the first place. When looking at why some may be addicted to smartphones and social media, 
-a study from Indian researchers, \textcite{RefWorks:RefID:78-bhalerao2020analysis}, that 
-analysed smartphone addiction provided a multitude of possible causes behind Smartphone Addiction, one of which being how the current generation has been brought up alongside the internet and technology as a whole, therefore 
-they may feel a preference to communicate over the internet as opposed to in-person, fueling the dwindling need for talking face-to-face with someone. Another study from Turkish researchers \autocite{RefWorks:RefID:99-özcan2017smartphone} 
-mentioned how alongside young people (defined as between 18-29) ranking first in internet usage, they're also more prone to problematic smartphone use, possibly due to the characteristics the phone carries that
-triggers heavy smartphone usage. A 2018 study from Turkish researcher \textcite{RefWorks:RefID:100-aksoy2018qualitative} looked to define a set of causes behind social media addiction and found that most of those who considered themselves addicted to social media
-were addicted due to factors such as a lack of friends outside of social media, the fact that social media was a "social activity requirement", a need to fulfil a task of some kind, ensuring that they were kept updated on current events, and
-the fact that social media was now ingrained with social life in a general sense.\newline
+% Despite this, the use of the term 
+% "addiction" has had pushback, due to the sensationalist language the term brings \autocite{RefWorks:RefID:96-adorjan2021smartphone}, and also because both terms don't fit the typical perception of addiction 
+% with the term "Problematic Smartphone/Social Media Use" being used as an alternative term \autocite{RefWorks:RefID:97-rozgonjuk2018problematic}.\newline
 
-Many studies have also looked at the multitude of effects that are correlated with both Smartphone and Social Media Addiction, for example, in 2017, researchers in the United States \textcite{RefWorks:RefID:68-king2017impact} made a series of hypotheses
-in relation to college students and the effects related to smartphone addiction, in particular, they looked at smartphone addiction's associations with "life stressors" (a measure of stress and anxiety), "digital overload" (a measure of information and communication overload), 
-retention, academic performance, and social well-being. The results of their study found that smartphone addiction could be positively correlated with life stressors, digital overload, retention, and academic performance, with social well-being as the only factor with no
+The nature of SA and SMA has on young individuals have been extensively studied over the years, including why individuals may develop an addiction to both in the first place, and
+the effects that are correlated with both. For example, when looking at why some may be addicted to smartphones and social media, a study from Indian researchers \textcite{RefWorks:RefID:78-bhalerao2020analysis} that 
+analysed SA provided a multitude of possible causes behind SA, one of which being how the current generation has been brought up alongside the internet and technology as a whole, therefore 
+they may feel a preference to communicate over the internet as opposed to in-person, fueling the dwindling need for talking face-to-face with someone. When looking at the effects both are correlated with, in 2017, researchers in the United States \textcite{RefWorks:RefID:68-king2017impact} made a series of hypotheses
+in relation to college students and the effects related to SA, in particular, they looked at SA's associations with "life stressors" (a measure of stress and anxiety), "digital overload" (a measure of information and communication overload), 
+retention, academic performance, and social well-being. The results of their study found that SA could be positively correlated with life stressors, digital overload, retention, and academic performance, with social well-being as the only factor with no
 significant correlation. Following the results, they concluded by mentioning that 3 out of their 5 hypotheses were consistent with past studies, while mentioning that regarding the hypothesis related to retention was "...a novel insight created from this study as current
-smartphone addiction has not linked the consideration with college retention.". Another study from researchers \textcite{RefWorks:RefID:102-lin2016association} looked at the correlation between depression and social media use in young American adults, 
-and found that those who exhibited heavier social media use tended to show a high indication of depression.\newline
+SA has not linked the consideration with college retention.". \newline
 
-% (previous attempts to treat the issue via apps) \newline
-That being said, many researchers and developers over the years have made attempts to study and provide treatment for the issue of Smartphone and Social Media Addiction, both as experimental studies on alternative treatments and as dedicated mobile applications. 
- A 2024 India-based study \autocite{RefWorks:RefID:103-seran2024effectiveness} aimed to look at using educational-based methods to reduce social media addiction and obesity. After answering a questionnaire, participants were split into a control group and a experimental group, the latter of which
- were then involved in educational activities such as lectures, brainstorming sessions, and exercises, among other activities. Regarding the results for social media addiction, participants were then scored on their social media addiction one, three, and six months after 
- the initial study. The researchers found that there was a 21.2\% difference in social media addiction scores between the control group and the group that partook in the educational-based intervention, with them concluding that it was an effective measure in reducing social media addiction. \newline
+% A 2018 study from Turkish researcher \textcite{RefWorks:RefID:100-aksoy2018qualitative} 
+% looked to define a set of causes behind social media addiction and found that most of those who considered themselves addicted to social media
+% were addicted due to factors such as a lack of friends outside of social media, the fact that social media was a "social activity requirement", a need to fulfil a task of some kind, ensuring that they were kept updated on current events, and
+% the fact that social media was now ingrained with social life in a general sense.\newline
 
- For specifically mobile applications, in 2013, a group of German researchers \textcite{RefWorks:RefID:74-löchtefeld2013appdetox}, developed an android-based mobile application called "AppDetox" an app that's main objective was to provide a "medication" for smartphone addiction, with the app
- allowing users to set restriction-based rules on apps that prevent the user from opening the app at specific times of the day, until the user removed the rule, and after a set amount of time. It also displayed information on their set rules, times they've 
- broken said rules, and usage statistics on all their apps. Their analysis found that users mostly set restrictions on messaging apps such as WhatsApp and WeChat, and broke self-created rules at roughly a 7:1 ratio (7 times a rules was broken for every 1 rule set). % self cite here maybe?
+% Another study from Turkish researchers \textcite{RefWorks:RefID:99-özcan2017smartphone} 
+% mentioned how alongside young people (defined as between 18-29) ranking first in internet usage, they're also more prone to problematic smartphone use, possibly due to the characteristics the phone carries that
+% triggers heavy smartphone usage.
+
+% Many studies have also looked at the multitude of effects that are correlated with both Smartphone and Social Media Addiction, for example, 
+
+
  
- However, there seemingly exists a gap of intervention apps that deal specifically with smartphone or social media addiction, and that also educate the user. Most literature that's within the topic of addiction provides analysis on apps that deal with adjacent issues. For example, a 2021 study
+% Another study from researchers \textcite{RefWorks:RefID:102-lin2016association} looked at the correlation between depression and social media use in young American adults, 
+% and found that those who exhibited heavier social media use tended to show a high indication of depression.\newline
+
+% (previous attempts to treat the issue via apps and other external methods) \newline
+Many researchers and developers have made attempts to study and provide treatment for the issue of SA and SMA, both as experimental studies on alternative treatments and as dedicated mobile applications. 
+ A 2024 India-based study \autocite{RefWorks:RefID:103-seran2024effectiveness} aimed to look at using educational-based methods to reduce SMA and obesity. After answering a questionnaire, participants were split into a control group and a experimental group, the latter of which
+ were then involved in educational activities such as lectures, brainstorming sessions, and exercises, among other activities. Regarding the results for SMA, participants were then scored on their SMA one, three, and six months after 
+ the initial study. The researchers found that there was a 21.2\% difference in SMA scores between the control group and the group that partook in the educational-based intervention, with them concluding that it was an effective measure in reducing SMA. Other studies have 
+ looked to utilise different experimental methods, such as methods closely tied to psychology such as behavioural therapy. A China-based study from 2019 analysing SMA \autocite{RefWorks:RefID:66-hou2019social} developed a cognitive-behavioural-therapy-based intervention program that used
+ various techniques including reminder cards, jotting down thoughts and emotions before sleeping, and cognitive reconstruction. The results showed that compared to the control group, those who took part in the program saw improvements in their overall mental health, engagement in learning, sleep quality,
+ and also saw a drop in social media usage. \newline
+
+ For specifically mobile applications, in 2013, a group of German researchers \textcite{RefWorks:RefID:74-löchtefeld2013appdetox}, developed an android-based mobile application called "AppDetox" an app that's main objective was to provide a "medication" for SA, with the app
+ allowing users to set restriction-based rules on apps that prevent the user from opening the app at specific times of the day, until the user removed the rule, and after a set amount of time. It also displayed information on their set rules, times they've 
+ broken said rules, and usage statistics on all their apps. Their analysis found that users mostly set restrictions on messaging apps such as WhatsApp and WeChat, and broke self-created rules at roughly a 7:1 ratio (7 times a rules was broken for every 1 rule set). Another app titled "AntiSocial"
+ developed by Australian company BugBean for Android devices provided similar functionality to AppDetox, allowing users to restrict access to certain apps and provided app usage statistics but also added other functionality such as showing the user the app usage of other users that were within
+ their age group, location, and occupation. It also showed users how many times they picked up their device, and how long they used certain apps for \autocite{RefWorks:RefID:104-michael2017addicted}. According to the author of the journal entry, Katina Michael, the app ranked 3rd in downloads
+ on the UK Google Play store mere days after launch, which "demonstrates the need for [AntiSocial.io]" \autocite{RefWorks:RefID:104-michael2017addicted}. \newline
+ 
+ However, there seemingly exists a gap of intervention apps that deal specifically with SA or SMA, and that also allow self-reflection from the user. Most literature that's within the topic of intervention apps only provide analysis on apps that deal with adjacent issues. For example, a 2021 study
  \autocite{RefWorks:RefID:75-oliveira2021effectiveness} reviewed the effectiveness of psychological intervention mobile apps to help with issues such as depression, anxiety, and a user's overall mental health, and while they concluded that the apps in the selected literature showed promise in reducing the aforementioned issues,
- none of the literature reviewed looked at specifically treating the issue of smartphone or social media addiction.\newline
+ none of the literature reviewed specifically looked at treating the issue of SA or SMA As well as this, most of these apps only provide the functionality to stop the user from using the app, but do not provide any sort of teachings for the user
+ that can let them reflect on their usage. \autocite{RefWorks:RefID:75-oliveira2021effectiveness}.\newline
 
 % (outline the void the project will attempt to fill) \newline <-- likely wont include this
 
-% add more reviews of current apps?
-
-% NOTE: if needs be (very likely), trim this section first before others. finish paper first though
+% NOTE: if needs be (very likely), trim this section first before others, trim mostly the top part, this much expedition on smartphones and social media is not needed. finish paper first though
 
 
 \subsection{Project Overview}
 
 \subsubsection{Project Outline}
-(something about providing a solution while also implementing an experimental method, in this case, reality therapy)
+% (something about providing a solution while also implementing an experimental method, in this case, reality therapy)
 
-While evidence has shown psychology-based approaches in intervention mobile applications 
-to be promising in solving the issues of smartphone and social media addiction, very 
-few apps have been developed and released with this approach in mind, with most consumer 
-products on the app store opting to utilise restriction and time-out technologies instead. 
-Because of this approach, young adults aren't given much opportunity to reflect on their 
-addiction and the root cause of it should they choose not to seek outside help, leading 
-to very little growth for the end-user. However, by taking this psychology-based approach, 
-young adults can be given opportunity to reflect on their addiction and learn how to treat the issue.
-\textbf{(PLACEHOLDER, REWORD AND SELF-CITE)}\newline
+Evidence has shown that smartphone apps that help with smartphone and social media addiction by restricting usage of applications are
+in-demand, and a substantial amount of research and studies have been conducted aiming to suggest treatments to the issue by
+using experimental methods such as educational, and cognitive-behavioural therapy. However, very few apps have been researched, 
+let alone developed and released with this approach in mind, with most consumer 
+products on the app store opting to utilise app-restriction functionalities instead. 
+Because of this approach, young adults who use these apps aren't given much opportunity to reflect on the nature of their
+addiction and the potential causes of it, should they choose not to seek outside professional assistance, leading 
+to very little character growth for the end-user. However, by taking a different approach by integrating psychology for example, 
+young adults can be given opportunity to reflect on their addiction and learn how to treat the issue. With that being said, the research
+statement is as follows: \newline
 
-\textbf{To create a mobile application that integrates reality therapy to help treat smartphone and social media addiction}
-
-
-\subsection{Project Objectives}
-
-\subsubsection{Secondary Objectives}
-\textbf{Investigate how mobile intervention apps attempt to encourage outside activity from its users}\newline
-Research how past and present mobile intervention applications encourage its users to engage in
-other activities independent from the smartphone. It will also involve looking
-at common suggestions of outside activities to suggest to users to replace their smartphone usage with.\newline
-
-\noindent\textbf{Investigate the use of methods based in psychology used to treat smartphone and social media addiction}\newline
-Research how psychological methods have been used in the past to treat smartphone and social media
-addiction, and see if such methods have been integrated with mobile apps to gain a further understanding on how
-these methods could be integrated or improved upon.\newline
-
-\noindent\textbf{Investigate how intervention apps ensure users stay on track with their treatment over long periods of time}\newline
-Research how existing intervention apps try to engage and encourage its users and ensure they keep on track with maintaining
-reduced smartphone usage. This will give a good sense on how to make sure potential end-users stay engaged with the app
-and the treatment as a whole. (expand)\newline
-
-\noindent\textbf{Investigate how intervention apps contextualise smartphone addiction to educate its users while handling the topic gracefully}\newline
-Research how (or if) intervention apps have tried to communicate the dangers of smartphone addiction 
-and why it's important to maintain healthy smartphone usage, while handling it in a graceful manner.
-This will help in finding the kind of tone the app should take when providing information to the user, encouraging them
-to take the "treatment" seriously. It will also suggest if there is an educational gap in these types of apps.\newline
+\noindent\textbf{To create a mobile application that integrates psychological intervention methods alongside usage tracking technologies to help treat 
+smartphone and social media addiction}
 
 
-\subsubsection{Primary Objectives}
-\noindent\underline{\textbf{Develop the smartphone intervention app}}\newline
-Create the application based on the knowledge gained findings from the literature and technology review.\newline
+\subsubsection{Project Objectives}
+The primary aim of this project is to create an application that can guide the user into reducing their smartphone \& social media
+usage with the use of usage tracking and psychological methods. Two types of objectives have been identified, those being secondary objectives
+and primary objectives.\newline
 
-\noindent\underline{\textbf{Another primary objective (temp)}}\newline
-text goes here\newline
+\noindent\underline{\textbf{Secondary Objectives}}\newline\newline
+\noindent\textbf{Investigate existing mobile apps that use psychological methods to treat mental health issues}
+Research into how existing mobile applications make use of psychological methods when treating issues such as depression
+and anxiety to understand how viable using mobile apps are to treat similar issues.\newline
 
-\noindent\underline{\textbf{some kind of testing (temp)}}\newline
+\noindent\textbf{Investigate psychological methods used to treat smartphone and social media addiction}\newline
+Research how psychological methods have been used in the past, specifically to treat SA or SMA, and see if such methods 
+have been integrated with mobile apps to gain a further understanding on how these methods could be integrated or improved upon.\newline
 
-\noindent\underline{\textbf{some kind of analysis and conclude (temp)}}\newline
+\noindent\textbf{Investigate the contextualisation of SA and SMA in existing apps}\newline
+Research how the issue of SA and SMA are contextualised within existing intervention apps and what issues could
+arise from how they are presented. This will help in enabling growth in a user when it comes to learning about
+SA and SMA.\newline
+
+\noindent\textbf{Investigate methods to track app usage}\newline
+Research into how apps currently track phone activity, and how they can be utilised in the context of the project,
+as a major component of the application makes use of usage tracking.\newline
+
+% Research how (or if) intervention apps have tried to communicate the dangers of smartphone addiction 
+% and why it's important to maintain healthy smartphone usage, while handling it in a graceful manner.
+% This will help in finding the kind of tone the app should take when providing information to the user, encouraging them
+% to take the "treatment" seriously. It will also suggest if there is an educational gap in these types of apps.\newline
+
+% \textbf{Investigate how mobile intervention apps attempt to encourage outside activity from its users}\newline
+% Research how past and present mobile intervention applications encourage its users to engage in
+% other activities independent from the smartphone. It will also involve looking
+% at common suggestions of outside activities to suggest to users to replace their smartphone usage with.\newline
+
+% \noindent\textbf{Investigate how mobile intervention apps ensure users stay on track with their treatment over long periods of time}\newline
+% Research how existing intervention apps try to engage and encourage its users and ensure they keep on track with maintaining
+% reduced smartphone usage. This will give a good sense on how to make sure potential end-users stay engaged with the app
+% and the treatment as a whole.\newline
+
+
+\noindent\underline{\textbf{Primary Objectives}}\newline\newline
+\noindent\textbf{Develop the smartphone intervention app}\newline
+Create the application based on the knowledge gained from the literature and technology review. \newline
+
+% \noindent\textbf{Another primary objective (temp)}\newline
+% text goes here\newline
+
+\noindent\textbf{Gather participants for evaluating the app and perform evaluation}\newline
+Participants will be used when evaluating if the developed application reduces smartphone and social media usage more than
+existing apps that use restriction functionality. They will be given an overview of the app before being given a consent form
+to sign to consent to participating in the research. Participants will be split into two groups, one will be using the developed app while the other
+will be using an existing app that has app restriction functionality. % (reword slightly?)
+
+\noindent\textbf{Analyse the results and obtain a conclusion}\newline
+Collect results from the evaluation and see if the app was more impactful at reducing smartphone usage than traditional apps.
+Then draw up a conclusion based on the results, and see if the problem statement was met. % (reword slightly?)
+
+
+\subsection{Project Hypothesis}
+To test the hypothesis of this project, participants involved in testing the project will be split into two separate groups. One
+group will attempt to reduce their smartphone \& social media usage by using a mobile application with usage tracking and psychological intervention methods, while
+the other will do the same, but by using a mobile application with traditional app restriction technologies instead. Given this, the hypothesis for this project
+is: \newline
+
+\noindent The combination of usage tracking and intervention methods rooted in psychology within a mobile application will help to reduce
+the smartphone \& social media usage in young adults more than existing apps which only use app restriction technologies. \newline
 
 
 
@@ -278,18 +328,35 @@ text goes here\newline
 
 
 \section{Literature and Technology Review}
-\subsection{Investigate how mobile intervention apps attempt to encourage outside activity from its users}
+
+\subsection{Investigate apps that use psychological methods to treat things mental health issues}
+% plan for this part: looking at existing apps that treat other issues, how they're successful in 
+% treating said issues, showing their feasibility in how they could help with other issues
+
+
+\subsection{Investigate psychological methods used to treat smartphone and social media addiction}
 % The subsections of your literature and technology review should correspond to your secondary research objectives. This should be an in-depth review that provides the foundation for your research method and execution. 
 
+% plan for this part: broad overview of existing methods, then hone in on reality 
+% therapy & cbt (?), eventually decide on reality therapy
 
-\subsection{Investigate the use of methods based in psychology used to treat smartphone and social media addiction}
+
+\subsection{Investigate methods to track app usage}
+% plan for this part: some research on existing app tracking, but more-or-less looking at the android.app.usage package
+
+
+\subsection{Investigate the contextualisation of SA and SMA in existing apps}
 % Your review should cite a comprehensive set of sources as evidence to support your analysis \autocite{Smith:2012qr}. As \textcite{Smith:2013jd} said, reliable sources constitute the evidentiary foundation of research, distinguishing rigorous inquiry from unsupported assertion\parencite{Other:2014ab}. Your sources should be stored in BibTex format, with appropriate keys, in the file \emph{references.bib}.
 
 
-\subsection{Investigate how intervention apps ensure users stay on track with their treatment over long periods of time}
 
 
-\subsection{Investigate how intervention apps contextualise smartphone addiction to educate its users while handling the topic gracefully}
+
+
+% \subsection{Investigate how mobile intervention apps attempt to encourage outside activity from its users}
+
+
+% \subsection{Investigate how mobile intervention apps ensure users stay on track with their treatment over long periods of time}
 
 
 
@@ -308,10 +375,16 @@ to this point and all remaining work that will be carried out over the project's
 
 
 \subsubsection {Development}
+% android, java, android studio ide, open source
 
 \subsubsection {Project Lifecycle}
+% develop and test
 
 \subsection{Usability Testing with users and Evaluation}
+
+\subsubsection{Usability Testing}
+
+\subsubsection{Evaluation}
 
 % Table \ref{table:1} is an example of referenced \LaTeX{} elements.
 
@@ -331,6 +404,8 @@ to this point and all remaining work that will be carried out over the project's
 % \label{table:1}
 % \end{table}
 
+\subsection{Ethical Issues}
+
 \subsection {Preliminary Work}
 % You should describe preliminary work that has been done to date. Remember that this is a report, not a proposal.
 
@@ -342,3 +417,5 @@ text goes here
 \end{document}
 
 % "smartphone" AND "social media" AND "addiction" <-- into proquest
+
+% "smartphone addiction" AND "reality therapy" NOT "virtual"

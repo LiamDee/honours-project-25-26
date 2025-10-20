@@ -104,78 +104,6 @@
       \field{pages}{45\bibrangedash 64}
       \range{pages}{20}
     \endentry
-    \entry{RefWorks:RefID:100-aksoy2018qualitative}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a9c234d59fc89bd8e38e9cc4c9260921}{%
-           family={Aksoy},
-           familyi={A\bibinitperiod},
-           given={Mehmet\bibnamedelima Emin},
-           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{fullhash}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{fullhashraw}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{bibnamehash}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{authorbibnamehash}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{authornamehash}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{authorfullhash}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \strng{authorfullhashraw}{a9c234d59fc89bd8e38e9cc4c9260921}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{European Journal of Educational Research}
-      \field{number}{4}
-      \field{title}{A qualitative study on the reasons for social media addiction}
-      \field{volume}{7}
-      \field{year}{2018}
-      \field{pages}{861\bibrangedash 865}
-      \range{pages}{5}
-    \endentry
-    \entry{RefWorks:RefID:82-barnett2024illusions}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=7b0d0ddb462db15855f8f7cdaaf25c83}{%
-           family={Barnett},
-           familyi={B\bibinitperiod},
-           given={Jonathan\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {English}%
-      }
-      \strng{namehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{fullhash}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{fullhashraw}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{bibnamehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{authorbibnamehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{authornamehash}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{authorfullhash}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \strng{authorfullhashraw}{7b0d0ddb462db15855f8f7cdaaf25c83}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Antitrust Law Journal}
-      \field{number}{1}
-      \field{title}{{ILLUSIONS} {OF} {DOMINANCE}: {REVISITING} {THE} {MARKET}-{POWER} {ASSUMPTION} {IN} {PLATFORM} {ECOSYSTEMS}}
-      \field{volume}{86}
-      \field{year}{2024}
-      \field{pages}{1\bibrangedash 62}
-      \range{pages}{62}
-      \verb{urlraw}
-      \verb https://www.proquest.com/scholarly-journals/illusions-dominance-revisiting-market-power/docview/3109490012/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Aabiglobal\&atitle=ILLUSIONS+OF+DOMINANCE\%253A+REVISITING+THE+MARKET-POWER+ASSUMPTION+IN+PLATFORM+ECOSYSTEMS\&title=Antitrust+Law+Journal\&issn=00036056\&date=2024-01-01\&volume=86\&issue=1\&spage=1\&au=Barnett\%252C+Jonathan+M\&isbn=\&jtitle=Antitrust+Law+Journal\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/
-      \endverb
-      \verb{url}
-      \verb https://www.proquest.com/scholarly-journals/illusions-dominance-revisiting-market-power/docview/3109490012/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Aabiglobal%5C&atitle=ILLUSIONS+OF+DOMINANCE%5C%253A+REVISITING+THE+MARKET-POWER+ASSUMPTION+IN+PLATFORM+ECOSYSTEMS%5C&title=Antitrust+Law+Journal%5C&issn=00036056%5C&date=2024-01-01%5C&volume=86%5C&issue=1%5C&spage=1%5C&au=Barnett%5C%252C+Jonathan+M%5C&isbn=%5C&jtitle=Antitrust+Law+Journal%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
-      \endverb
-      \keyw{Law--Corporate Law; Antitrust; Food; Intervention; Competition policy; Computer platforms; Digital economy; Cloud computing; Monopolies; Market shares; Economics; Case studies; Competition; United Kingdom--UK; United States--US; China; 92812:International Affairs}
-    \endentry
     \entry{RefWorks:RefID:78-bhalerao2020analysis}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=ec0d16ad858fd979e0edffa2bd0baea5}{%
@@ -525,85 +453,6 @@
       \field{pages}{311}
       \range{pages}{1}
     \endentry
-    \entry{RefWorks:RefID:102-lin2016association}{article}{}{}
-      \name{author}{9}{}{%
-        {{un=0,uniquepart=base,hash=335647f687f92fc532e9a8a00b3fd20b}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Liu\bibnamedelima Yi},
-           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2637c788285d5cbc28542e888ee2da30}{%
-           family={Sidani},
-           familyi={S\bibinitperiod},
-           given={Jaime\bibnamedelima E.},
-           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4a59ddf96fededef8eafc16357e4ead3}{%
-           family={Shensa},
-           familyi={S\bibinitperiod},
-           given={Ariel},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=43c3c1bead82b684a35509617d2f4b6d}{%
-           family={Radovic},
-           familyi={R\bibinitperiod},
-           given={Ana},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3a4a8053ec64d811c3a20444e7eb15fa}{%
-           family={Miller},
-           familyi={M\bibinitperiod},
-           given={Elizabeth},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c787b4d166ce94820008921e45d08b6f}{%
-           family={Colditz},
-           familyi={C\bibinitperiod},
-           given={Jason\bibnamedelima B.},
-           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=50ef9d7278e696e72a34306be62b27d1}{%
-           family={Hoffman},
-           familyi={H\bibinitperiod},
-           given={Beth\bibnamedelima L.},
-           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c9d8efa87a0da3ef048e2950f0278a7b}{%
-           family={Giles},
-           familyi={G\bibinitperiod},
-           given={Leila\bibnamedelima M.},
-           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1ffa048bfa67082f52c8daed38bd0d31}{%
-           family={Primack},
-           familyi={P\bibinitperiod},
-           given={Brian\bibnamedelima A.},
-           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{65d943f2ebe1f1bf7f9577377239788e}
-      \strng{fullhash}{c74ec479f4b1e668a1a0e5458a1f90ca}
-      \strng{fullhashraw}{c74ec479f4b1e668a1a0e5458a1f90ca}
-      \strng{bibnamehash}{65d943f2ebe1f1bf7f9577377239788e}
-      \strng{authorbibnamehash}{65d943f2ebe1f1bf7f9577377239788e}
-      \strng{authornamehash}{65d943f2ebe1f1bf7f9577377239788e}
-      \strng{authorfullhash}{c74ec479f4b1e668a1a0e5458a1f90ca}
-      \strng{authorfullhashraw}{c74ec479f4b1e668a1a0e5458a1f90ca}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Depression and anxiety}
-      \field{number}{4}
-      \field{title}{Association between social media use and depression among {US} young adults}
-      \field{volume}{33}
-      \field{year}{2016}
-      \field{pages}{323\bibrangedash 331}
-      \range{pages}{9}
-    \endentry
     \entry{RefWorks:RefID:74-löchtefeld2013appdetox}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=bc7cf4e5d06274f06c98ca726eeaa7e4}{%
@@ -644,6 +493,37 @@
       \field{year}{2013}
       \field{pages}{1\bibrangedash 2}
       \range{pages}{2}
+    \endentry
+    \entry{RefWorks:RefID:104-michael2017addicted}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2e9cc74b13c36fa234d8e91ffabeb048}{%
+           family={Michael},
+           familyi={M\bibinitperiod},
+           given={Katina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{fullhash}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{fullhashraw}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{bibnamehash}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{authorbibnamehash}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{authornamehash}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{authorfullhash}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \strng{authorfullhashraw}{2e9cc74b13c36fa234d8e91ffabeb048}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Consumer Electronics Magazine}
+      \field{number}{4}
+      \field{title}{Are you addicted to your smartphone, social media, and more?: The new AntiSocial app could help}
+      \field{volume}{6}
+      \field{year}{2017}
+      \field{pages}{116\bibrangedash 121}
+      \range{pages}{6}
     \endentry
     \entry{RefWorks:RefID:75-oliveira2021effectiveness}{article}{}{}
       \name{author}{6}{}{%
@@ -746,86 +626,6 @@
       \field{volume}{19}
       \field{year}{2022}
       \field{pages}{3553}
-      \range{pages}{1}
-    \endentry
-    \entry{RefWorks:RefID:99-özcan2017smartphone}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=8cf61decb47b4ab2c1d01b16c1271966}{%
-           family={Özcan},
-           familyi={Ö\bibinitperiod},
-           given={Yasemin\bibnamedelima Sanal},
-           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=97018e6d538e31272a0e37ef528c0bab}{%
-           family={Ozer},
-           familyi={O\bibinitperiod},
-           given={Ömer},
-           giveni={Ö\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{fullhash}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{fullhashraw}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{bibnamehash}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{authorbibnamehash}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{authornamehash}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{authorfullhash}{2fc37b06e285531cad0f7a01ad142979}
-      \strng{authorfullhashraw}{2fc37b06e285531cad0f7a01ad142979}
-      \field{sortinit}{Ö}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Akdeniz İnsani Bilimler Dergisi}
-      \field{number}{2}
-      \field{title}{Smartphone addiction and the use of social media among university students}
-      \field{volume}{7}
-      \field{year}{2017}
-      \field{pages}{367\bibrangedash 377}
-      \range{pages}{11}
-    \endentry
-    \entry{RefWorks:RefID:97-rozgonjuk2018problematic}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=3c980aba0be892cfcb305fa6bb9867d3}{%
-           family={Rozgonjuk},
-           familyi={R\bibinitperiod},
-           given={Dmitri},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f90a7ed9651ba4fc431747684302284a}{%
-           family={Saal},
-           familyi={S\bibinitperiod},
-           given={Kristiina},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0a644aae33025a9d9c6cadb9885515f3}{%
-           family={Täht},
-           familyi={T\bibinitperiod},
-           given={Karin},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{957d89e31e66aa7e2eda800555665889}
-      \strng{fullhash}{957d89e31e66aa7e2eda800555665889}
-      \strng{fullhashraw}{957d89e31e66aa7e2eda800555665889}
-      \strng{bibnamehash}{957d89e31e66aa7e2eda800555665889}
-      \strng{authorbibnamehash}{957d89e31e66aa7e2eda800555665889}
-      \strng{authornamehash}{957d89e31e66aa7e2eda800555665889}
-      \strng{authorfullhash}{957d89e31e66aa7e2eda800555665889}
-      \strng{authorfullhashraw}{957d89e31e66aa7e2eda800555665889}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International journal of environmental research and public health}
-      \field{number}{1}
-      \field{title}{Problematic smartphone use, deep and surface approaches to learning, and social media use in lectures}
-      \field{volume}{15}
-      \field{year}{2018}
-      \field{pages}{92}
       \range{pages}{1}
     \endentry
     \entry{RefWorks:RefID:103-seran2024effectiveness}{inproceedings}{}{}
