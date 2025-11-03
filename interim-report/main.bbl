@@ -19,6 +19,44 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{RefWorks:RefID:133-allen2020social}{inbook}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=776c27cdd32acc150aa8161f41468058}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a75ae90f9730b6c68d03eda7dfb4c0fa}{%
+           family={Buzzi},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Policy Press}%
+      }
+      \strng{namehash}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{fullhash}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{fullhashraw}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{bibnamehash}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{authorbibnamehash}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{authornamehash}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{authorfullhash}{0b700c82cef16ab85da239e84b271fb9}
+      \strng{authorfullhashraw}{0b700c82cef16ab85da239e84b271fb9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Social Media and Social Work}
+      \field{title}{Social media and mental health social work}
+      \field{year}{2020}
+      \field{pages}{113\bibrangedash 132}
+      \range{pages}{20}
+    \endentry
     \entry{androiddevelopment-appfundamentals}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
@@ -81,6 +119,35 @@
       \verb https://support.apple.com/en-gb/102420
       \endverb
     \endentry
+    \entry{RefWorks:RefID:141-beck2020cognitive}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a7465ad4f2159205d7df812c64ee6d45}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={Judith\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Guilford Publications}%
+      }
+      \strng{namehash}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{fullhash}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{fullhashraw}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{bibnamehash}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{authorbibnamehash}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{authornamehash}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{authorfullhash}{a7465ad4f2159205d7df812c64ee6d45}
+      \strng{authorfullhashraw}{a7465ad4f2159205d7df812c64ee6d45}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cognitive behavior therapy: Basics and beyond}
+      \field{year}{2020}
+    \endentry
     \entry{RefWorks:RefID:78-bhalerao2020analysis}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=ec0d16ad858fd979e0edffa2bd0baea5}{%
@@ -129,6 +196,49 @@
       \field{year}{2020}
       \field{pages}{1\bibrangedash 7}
       \range{pages}{7}
+    \endentry
+    \entry{RefWorks:RefID:143-bradley2014choice}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=75f13f7f621346ff8ca388a707c34772}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={Ezrina\bibnamedelima L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{75f13f7f621346ff8ca388a707c34772}
+      \strng{fullhash}{75f13f7f621346ff8ca388a707c34772}
+      \strng{fullhashraw}{75f13f7f621346ff8ca388a707c34772}
+      \strng{bibnamehash}{75f13f7f621346ff8ca388a707c34772}
+      \strng{authorbibnamehash}{75f13f7f621346ff8ca388a707c34772}
+      \strng{authornamehash}{75f13f7f621346ff8ca388a707c34772}
+      \strng{authorfullhash}{75f13f7f621346ff8ca388a707c34772}
+      \strng{authorfullhashraw}{75f13f7f621346ff8ca388a707c34772}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An old cub scout saying states that "We need to keep things simple and make them fun, and then before we know it, the job will be done." Notably, William Glasser seemed to be aware of this saying as he sought to create Choice Theory and Reality Therapy. Truly, he consistently sought to help others to better relate to their experiences, and then guided them regarding how they might more readily take efficient control of their lives. This brief overview simply seeks to explain how all of this can be simply done.}
+      \field{journaltitle}{International Journal of Choice Theory and Reality Therapy}
+      \field{note}{Source type: Scholarly Journals; Object type: Article; Object type: Feature; Copyright: Copyright International Journal of Reality Therapy Fall 2014; DOCID: 3496477601; PCID: 91773702; PMID: 165936; ProvJournalCode: NJRT; PublisherXID: INNNNJRT0009496428}
+      \field{number}{1}
+      \field{title}{{CHOICE} {THEORY} {AND} {REALITY} {THERAPY}: {AN} {OVERVIEW}}
+      \field{volume}{34}
+      \field{year}{2014}
+      \field{pages}{6\bibrangedash 13}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://www.proquest.com/scholarly-journals/choice-theory-reality-therapy-overview/docview/1625136609/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Apsychology\&atitle=CHOICE+THEORY+AND+REALITY+THERAPY\%253A+AN+OVERVIEW\&title=International+Journal+of+Choice+Theory+and+Reality+Therapy\&issn=\&date=2014-10-01\&volume=34\&issue=1\&spage=6\&au=Bradley\%252C+Ezrina+L\&isbn=\&jtitle=International+Journal+of+Choice+Theory+and+Reality+Therapy\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/
+      \endverb
+      \verb{url}
+      \verb https://www.proquest.com/scholarly-journals/choice-theory-reality-therapy-overview/docview/1625136609/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Apsychology%5C&atitle=CHOICE+THEORY+AND+REALITY+THERAPY%5C%253A+AN+OVERVIEW%5C&title=International+Journal+of+Choice+Theory+and+Reality+Therapy%5C&issn=%5C&date=2014-10-01%5C&volume=34%5C&issue=1%5C&spage=6%5C&au=Bradley%5C%252C+Ezrina+L%5C&isbn=%5C&jtitle=International+Journal+of+Choice+Theory+and+Reality+Therapy%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
+      \endverb
+      \keyw{Psychology; Control; Reality therapy; Choice; Reality; Self-control; Choice theory; Control theory; Decision making; Physiology; Therapy; Behavior; Emotions; Macroeconomics}
     \endentry
     \entry{RefWorks:RefID:116-bye2024cohort}{article}{}{}
       \name{author}{12}{}{%
@@ -320,6 +430,49 @@
       \field{pages}{363\bibrangedash 388}
       \range{pages}{26}
     \endentry
+    \entry{RefWorks:RefID:144-denecke2022implementation}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=98da54a4ed86048c289668fae369ff05}{%
+           family={Denecke},
+           familyi={D\bibinitperiod},
+           given={Kerstin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0218dee1b2a773dfc60ebd3447c0548}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Nicole},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=24b2a6ca372268bd43930fda5164b5a2}{%
+           family={Nüssli},
+           familyi={N\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d1282fea1b4d3349279ef76422351559}
+      \strng{fullhash}{d1282fea1b4d3349279ef76422351559}
+      \strng{fullhashraw}{d1282fea1b4d3349279ef76422351559}
+      \strng{bibnamehash}{d1282fea1b4d3349279ef76422351559}
+      \strng{authorbibnamehash}{d1282fea1b4d3349279ef76422351559}
+      \strng{authornamehash}{d1282fea1b4d3349279ef76422351559}
+      \strng{authorfullhash}{d1282fea1b4d3349279ef76422351559}
+      \strng{authorfullhashraw}{d1282fea1b4d3349279ef76422351559}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of medical Internet research}
+      \field{number}{3}
+      \field{title}{Implementation of cognitive behavioral therapy in e–mental health apps: literature review}
+      \field{volume}{24}
+      \field{year}{2022}
+      \field{pages}{e27791}
+      \range{pages}{-1}
+    \endentry
     \entry{RefWorks:RefID:111-deterding2011game}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=4ad251c02d478d38f2fe79e126ae6bf1}{%
@@ -398,6 +551,61 @@
       \field{type}{phdthesis}
       \field{year}{2017}
     \endentry
+    \entry{RefWorks:RefID:135-gajecki2014mobile}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1b2b8e4bd6a34c3761b77d1570ad77b2}{%
+           family={Gajecki},
+           familyi={G\bibinitperiod},
+           given={Mikael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d7195bdddcc29451cbb9dc215cf2c2d}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Anne\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88c0c737b702a80ec70018e59ea01e2e}{%
+           family={Sinadinovic},
+           familyi={S\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=796bd8c504a0351405e3a13dd655d2f4}{%
+           family={Rosendahl},
+           familyi={R\bibinitperiod},
+           given={Ingvar},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d0c52ff487baaead5ce8417b6ffff37}{%
+           family={Andersson},
+           familyi={A\bibinitperiod},
+           given={Claes},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aa04756e9c870e369bee06bee57a03fc}
+      \strng{fullhash}{cc24693bf2ebaeb85ea38aa094846167}
+      \strng{fullhashraw}{cc24693bf2ebaeb85ea38aa094846167}
+      \strng{bibnamehash}{aa04756e9c870e369bee06bee57a03fc}
+      \strng{authorbibnamehash}{aa04756e9c870e369bee06bee57a03fc}
+      \strng{authornamehash}{aa04756e9c870e369bee06bee57a03fc}
+      \strng{authorfullhash}{cc24693bf2ebaeb85ea38aa094846167}
+      \strng{authorfullhashraw}{cc24693bf2ebaeb85ea38aa094846167}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Addiction science \& clinical practice}
+      \field{number}{1}
+      \field{title}{Mobile phone brief intervention applications for risky alcohol use among university students: a randomized controlled study}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{11}
+      \range{pages}{1}
+    \endentry
     \entry{RefWorks:RefID:93-goggin2012google}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f2b759cde95638b47eb10d22c2cf8856}{%
@@ -440,6 +648,61 @@
       \verb{url}
       \verb https://doi.org/10.1080/10304312.2012.706462
       \endverb
+    \endentry
+    \entry{RefWorks:RefID:140-hofmann2012efficacy}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=a38d1c025c34e2c18ffdf3df388549d1}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Stefan\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=013b2823115739989225466f291e73b9}{%
+           family={Asnaani},
+           familyi={A\bibinitperiod},
+           given={Anu},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fa967f02e9e222904d278cc2d85ffa0}{%
+           family={Vonk},
+           familyi={V\bibinitperiod},
+           given={Imke\bibnamedelima JJ},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a74944fdb7dae32734aad235e4285b2}{%
+           family={Sawyer},
+           familyi={S\bibinitperiod},
+           given={Alice\bibnamedelima T.},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c877da7212ea59ab204db6c6a4cec049}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{488a69e958e6637082d492d83c828e7c}
+      \strng{fullhash}{62b62002706dd2d0e08d45760670c479}
+      \strng{fullhashraw}{62b62002706dd2d0e08d45760670c479}
+      \strng{bibnamehash}{488a69e958e6637082d492d83c828e7c}
+      \strng{authorbibnamehash}{488a69e958e6637082d492d83c828e7c}
+      \strng{authornamehash}{488a69e958e6637082d492d83c828e7c}
+      \strng{authorfullhash}{62b62002706dd2d0e08d45760670c479}
+      \strng{authorfullhashraw}{62b62002706dd2d0e08d45760670c479}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cognitive therapy and research}
+      \field{number}{5}
+      \field{title}{The efficacy of cognitive behavioral therapy: A review of meta-analyses}
+      \field{volume}{36}
+      \field{year}{2012}
+      \field{pages}{427\bibrangedash 440}
+      \range{pages}{14}
     \endentry
     \entry{RefWorks:RefID:66-hou2019social}{article}{}{}
       \name{author}{5}{}{%
@@ -493,6 +756,43 @@
       \field{title}{Social media addiction: Its impact, mediation, and intervention}
       \field{volume}{13}
       \field{year}{2019}
+    \endentry
+    \entry{RefWorks:RefID:139-kaczkurkin2015cognitivebehavioral}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c6880e10c6c269c7512bf3fd09b2851a}{%
+           family={Kaczkurkin},
+           familyi={K\bibinitperiod},
+           given={Antonia\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c59b9c91983761c7f002ed79578e2b1a}{%
+           family={Foa},
+           familyi={F\bibinitperiod},
+           given={Edna\bibnamedelima B.},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9067efa3f1112c922e153a933191592e}
+      \strng{fullhash}{9067efa3f1112c922e153a933191592e}
+      \strng{fullhashraw}{9067efa3f1112c922e153a933191592e}
+      \strng{bibnamehash}{9067efa3f1112c922e153a933191592e}
+      \strng{authorbibnamehash}{9067efa3f1112c922e153a933191592e}
+      \strng{authornamehash}{9067efa3f1112c922e153a933191592e}
+      \strng{authorfullhash}{9067efa3f1112c922e153a933191592e}
+      \strng{authorfullhashraw}{9067efa3f1112c922e153a933191592e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dialogues in clinical neuroscience}
+      \field{number}{3}
+      \field{title}{Cognitive-behavioral therapy for anxiety disorders: an update on the empirical evidence}
+      \field{volume}{17}
+      \field{year}{2015}
+      \field{pages}{337\bibrangedash 346}
+      \range{pages}{10}
     \endentry
     \entry{RefWorks:RefID:68-king2017impact}{article}{}{}
       \name{author}{2}{}{%
@@ -657,6 +957,97 @@
       \field{year}{2013}
       \field{pages}{1\bibrangedash 2}
       \range{pages}{2}
+    \endentry
+    \entry{RefWorks:RefID:106-lu2025interventions}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=5c1e16e3967db9ab77ecdbb59a576801}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=caba1deaec4ab94f754a08d2ff2dde8b}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Jiamin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e01c3836fced2f653bfb164156ea8c9}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Shiqi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7be34bd2a52ef518b2e6f3b393f9648}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xinman},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9dd1bb9eaf94a6b1ee81efba4a85a3f}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Shasha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ed1d5521f65d868118befc6d606fff8}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Sui},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5196fad503d32d0a60626ecbb8395a6}{%
+           family={Ning},
+           familyi={N\bibinitperiod},
+           given={Youjing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6368bf2233d30e1c23ab8c6c99d08868}{%
+           family={Fang-fang},
+           familyi={F\bibinithyphendelim f\bibinitperiod},
+           given={Zeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5f09d4dd527bc7dd5835a5ad978fa72}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{161affd660a5c8901ac2597f02d28c75}
+      \strng{fullhash}{967c0edb7a86d44412aaf3a760f567fb}
+      \strng{fullhashraw}{967c0edb7a86d44412aaf3a760f567fb}
+      \strng{bibnamehash}{161affd660a5c8901ac2597f02d28c75}
+      \strng{authorbibnamehash}{161affd660a5c8901ac2597f02d28c75}
+      \strng{authornamehash}{161affd660a5c8901ac2597f02d28c75}
+      \strng{authorfullhash}{967c0edb7a86d44412aaf3a760f567fb}
+      \strng{authorfullhashraw}{967c0edb7a86d44412aaf3a760f567fb}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Medical Internet Research}
+      \field{title}{Interventions for Digital Addiction: Umbrella Review of Meta-Analyses}
+      \field{volume}{27}
+      \field{year}{2025}
+      \field{pages}{e59656}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.2196/59656
+      \endverb
+      \verb{urlraw}
+      \verb https://www.proquest.com/scholarly-journals/interventions-digital-addiction-umbrella-review/docview/3222368316/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Ahealthcompleteshell\&atitle=Interventions+for+Digital+Addiction\%253A+Umbrella+Review+of+Meta-Analyses\&title=Journal+of+Medical+Internet+Research\&issn=\&date=2025-01-01\&volume=27\&issue=\&spage=e59656\&au=Lu\%252C+Peng\%253BQiu\%252C+Jiamin\%253BHuang\%252C+Shiqi\%253BWang\%252C+Xinman\%253BHan\%252C+Shasha\%253BZhu\%252C+Sui\%253BYoujing+Ning\%253BFang-fang\%252C+Zeng\%253BYuan\%252C+Yuan\&isbn=\&jtitle=Journal+of+Medical+Internet+Research\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/10.2196\%252F59656 https://doi.org/10.2196/59656
+      \endverb
+      \verb{url}
+      \verb https://www.proquest.com/scholarly-journals/interventions-digital-addiction-umbrella-review/docview/3222368316/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Ahealthcompleteshell%5C&atitle=Interventions+for+Digital+Addiction%5C%253A+Umbrella+Review+of+Meta-Analyses%5C&title=Journal+of+Medical+Internet+Research%5C&issn=%5C&date=2025-01-01%5C&volume=27%5C&issue=%5C&spage=e59656%5C&au=Lu%5C%252C+Peng%5C%253BQiu%5C%252C+Jiamin%5C%253BHuang%5C%252C+Shiqi%5C%253BWang%5C%252C+Xinman%5C%253BHan%5C%252C+Shasha%5C%253BZhu%5C%252C+Sui%5C%253BYoujing+Ning%5C%253BFang-fang%5C%252C+Zeng%5C%253BYuan%5C%252C+Yuan%5C&isbn=%5C&jtitle=Journal+of+Medical+Internet+Research%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/10.2196%5C%252F59656%20https://doi.org/10.2196/59656
+      \endverb
+      \keyw{Medical Sciences--Computer Applications; digital addiction; interventions; umbrella reviews; systematic review; internet addiction; loneliness; quality of life; well-being; internet; psychological; pharmacological treatment; cognitive behavioral therapy; Random effects; Exercise; Analysis; Anxiety; Prevention programs; Self esteem; Psychotherapy; Intervention; Quasi-experimental methods; Games; Data analysis; Psychosocial intervention; Clinical trials; Screen time; Mental depression; Addictions; Stress; Meta-analysis; Psychosocial factors; Decision makers; Associations; Group counseling; Cognitive-behavioral factors; Mental health; Self control; Uncertainty; Cognition; Medical research; Evaluation; Medical decision making; Time; Symptoms; Educational programs}
     \endentry
     \entry{RefWorks:RefID:83-marshall2019smartphone}{article}{}{}
       \name{author}{3}{}{%
@@ -866,6 +1257,82 @@
       \field{pages}{3553}
       \range{pages}{1}
     \endentry
+    \entry{RefWorks:RefID:127-parry2023digital}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5e04ebd61d60ebcd3647417fd9b1c398}{%
+           family={Parry},
+           familyi={P\bibinitperiod},
+           given={Douglas\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b8a2f36f0a10047b7d9fbe6747077ce}{%
+           family={Roux},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0,
+           prefix={le},
+           prefixi={l\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=830446640219d5e8931c98681d3318e4}{%
+           family={Morton},
+           familyi={M\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a98638495e5e6a179a9f202d047bc7b}{%
+           family={Pons},
+           familyi={P\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f3cd872c7d17d32dafdf8a8f51a8d92}{%
+           family={Pretorius},
+           familyi={P\bibinitperiod},
+           given={Ruan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2e2f9fdb4a59d1e243e43c6abc243e8}{%
+           family={Schoeman},
+           familyi={S\bibinitperiod},
+           given={Andre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4512464ba56579060cf091fed863d379}
+      \strng{fullhash}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
+      \strng{fullhashraw}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
+      \strng{bibnamehash}{4512464ba56579060cf091fed863d379}
+      \strng{authorbibnamehash}{4512464ba56579060cf091fed863d379}
+      \strng{authornamehash}{4512464ba56579060cf091fed863d379}
+      \strng{authorfullhash}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
+      \strng{authorfullhashraw}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Increasingly, mobile applications, services, and features enable people to monitor and regulate their smartphone use in the support of their digital wellbeing. Herein we report a mixed-method study involving the collection of both quantitative and qualitative data from a student sample conducted with the aim of investigating, firstly, the adoption of applications and features designed to support digital wellbeing, secondly, the factors that influence the continued use of such applications and, thirdly, the effects users perceive these applications to have on their digital wellbeing. The outcomes of this study highlight the importance of individual motivations and the need to understand digital wellbeing as more than simply the use of an application or tool but, rather a subjective consideration of the place of digital media in an individual’s life. The present study provides a rich descriptive account of the temporal variability, person-specificity, and device-contingent nature of digital wellbeing.}
+      \field{isbn}{0747-5632}
+      \field{journaltitle}{Computers in Human Behavior}
+      \field{note}{ID: 271802}
+      \field{title}{Digital wellbeing applications: Adoption, use and perceived effects}
+      \field{volume}{139}
+      \field{year}{2023}
+      \field{pages}{107542}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.chb.2022.107542
+      \endverb
+      \verb{urlraw}
+      \verb https://www-sciencedirect-com.gcu.idm.oclc.org/science/article/pii/S0747563222003624
+      \endverb
+      \verb{url}
+      \verb https://www-sciencedirect-com.gcu.idm.oclc.org/science/article/pii/S0747563222003624
+      \endverb
+      \keyw{Digital wellbeing; Screen Time; Quantified self; Behaviour tracking; Self-regulation}
+    \endentry
     \entry{RefWorks:RefID:126-petrucco2021user}{inbook}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=720a574ff534db88676857f4849fcf1a}{%
@@ -897,6 +1364,137 @@
       \field{year}{2021}
       \field{pages}{75\bibrangedash 92}
       \range{pages}{18}
+    \endentry
+    \entry{RefWorks:RefID:134-primack2017social}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=1ffa048bfa67082f52c8daed38bd0d31}{%
+           family={Primack},
+           familyi={P\bibinitperiod},
+           given={Brian\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a59ddf96fededef8eafc16357e4ead3}{%
+           family={Shensa},
+           familyi={S\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2637c788285d5cbc28542e888ee2da30}{%
+           family={Sidani},
+           familyi={S\bibinitperiod},
+           given={Jaime\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c9de8eef93473bba58795b085e4f02b}{%
+           family={Whaite},
+           familyi={W\bibinitperiod},
+           given={Erin\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff76ffdd01b2ee83316341dc613b1e42}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Liu},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           prefix={yi},
+           prefixi={y\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=2764c4f3e37e58476d1cd2dd24f81254}{%
+           family={Rosen},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c787b4d166ce94820008921e45d08b6f}{%
+           family={Colditz},
+           familyi={C\bibinitperiod},
+           given={Jason\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43c3c1bead82b684a35509617d2f4b6d}{%
+           family={Radovic},
+           familyi={R\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a4a8053ec64d811c3a20444e7eb15fa}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{79dd6fb1c03c03c5bc95d102b4ebfd65}
+      \strng{fullhash}{a70b790de9548470e2316391c4d2d476}
+      \strng{fullhashraw}{a70b790de9548470e2316391c4d2d476}
+      \strng{bibnamehash}{79dd6fb1c03c03c5bc95d102b4ebfd65}
+      \strng{authorbibnamehash}{79dd6fb1c03c03c5bc95d102b4ebfd65}
+      \strng{authornamehash}{79dd6fb1c03c03c5bc95d102b4ebfd65}
+      \strng{authorfullhash}{a70b790de9548470e2316391c4d2d476}
+      \strng{authorfullhashraw}{a70b790de9548470e2316391c4d2d476}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Introduction Perceived social isolation (PSI) is associated with substantial morbidity and mortality. Social media platforms, commonly used by young adults, may offer an opportunity to ameliorate social isolation. This study assessed associations between social media use (SMU) and PSI among U.S. young adults. Methods Participants were a nationally representative sample of 1,787 U.S. adults aged 19–32 years. They were recruited in October–November 2014 for a cross-sectional survey using a sampling frame that represented 97\% of the U.S. population. SMU was assessed using both time and frequency associated with use of 11 social media platforms, including Facebook, Twitter, Google+, YouTube, LinkedIn, Instagram, Pinterest, Tumblr, Vine, Snapchat, and Reddit. PSI was measured using the Patient-Reported Outcomes Measurement Information System scale. In 2015, ordered logistic regression was used to assess associations between SMU and SI while controlling for eight covariates. Results In fully adjusted multivariable models that included survey weights, compared with those in the lowest quartile for SMU time, participants in the highest quartile had twice the odds of having greater PSI (AOR=2.0, 95\% CI=1.4, 2.8). Similarly, compared with those in the lowest quartile, those in the highest quartile of SMU frequency had more than three times the odds of having greater PSI (AOR=3.4, 95\% CI=2.3, 5.1). Associations were linear (p<0.001 for all), and results were robust to all sensitivity analyses. Conclusions Young adults with high SMU seem to feel more socially isolated than their counterparts with lower SMU. Future research should focus on determining directionality and elucidating reasons for these associations.}
+      \field{isbn}{0749-3797}
+      \field{journaltitle}{American Journal of Preventive Medicine}
+      \field{note}{ID: 271902}
+      \field{number}{1}
+      \field{title}{Social Media Use and Perceived Social Isolation Among Young Adults in the U.S.}
+      \field{volume}{53}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.amepre.2017.01.010
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0749379717300168
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0749379717300168
+      \endverb
+    \endentry
+    \entry{RefWorks:RefID:42-esmaeili2018method}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9c6a1379960bb0f2d9078c3caf06b8c7}{%
+           family={Rad},
+           familyi={R\bibinitperiod},
+           given={Mahsa\bibnamedelima Esmaeili},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6aae8359ca51053e50ca0c7c574fdb4}{%
+           family={Ahmadi},
+           familyi={A\bibinitperiod},
+           given={Farid},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{37b27b03634982ec71f68d50b408fb12}
+      \strng{fullhash}{37b27b03634982ec71f68d50b408fb12}
+      \strng{fullhashraw}{37b27b03634982ec71f68d50b408fb12}
+      \strng{bibnamehash}{37b27b03634982ec71f68d50b408fb12}
+      \strng{authorbibnamehash}{37b27b03634982ec71f68d50b408fb12}
+      \strng{authornamehash}{37b27b03634982ec71f68d50b408fb12}
+      \strng{authorfullhash}{37b27b03634982ec71f68d50b408fb12}
+      \strng{authorfullhashraw}{37b27b03634982ec71f68d50b408fb12}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Asia‐Pacific Psychiatry}
+      \field{number}{4}
+      \field{title}{A new method to measure and decrease the online social networking addiction}
+      \field{volume}{10}
+      \field{year}{2018}
+      \field{pages}{e12330}
+      \range{pages}{-1}
     \endentry
     \entry{RefWorks:RefID:125-rahmillah2023evaluating}{article}{}{}
       \name{author}{4}{}{%
@@ -1032,6 +1630,47 @@
       \verb 10.3390/ijerph19127445
       \endverb
     \endentry
+    \entry{RefWorks:RefID:128-santhosh2025augmented}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3f2789ac798caa2ee4e3624f13607185}{%
+           family={Santhosh},
+           familyi={S\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{fullhash}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{fullhashraw}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{bibnamehash}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{authorbibnamehash}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{authornamehash}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{authorfullhash}{3f2789ac798caa2ee4e3624f13607185}
+      \strng{authorfullhashraw}{3f2789ac798caa2ee4e3624f13607185}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Adolescent social media (SM) usage has surged over the past decade, outpacing that of adults and exacerbating digital polarization. Due to ongoing neural development, adolescents are particularly susceptible to social media addiction (SMA) - a phenomenon that has intensified post-COVID-19 with increased digital engagement. On average, adolescents spend 8.5 hours daily on SM platforms, exposing them to heightened risks of cyberbullying, sexting, body shaming, and academic disengagement. The dopamine-driven reward mechanisms inherent in social media reinforce compulsive use, contributing to severe mental health consequences, including anxiety, depression, and suicidal ideation.Despite its growing prevalence, SMA remains an underrecognized behavioral disorder due to the absence of standardized diagnostic criteria, making assessment and intervention challenging. The lack of regulatory frameworks further exacerbates the issue, leaving adolescents vulnerable to excessive and harmful SM exposure. Given the rapid increase in adolescent SM engagement and its detrimental effects, there is an urgent need for systematic research and evidence-based intervention strategies to mitigate its impact. Addressing this issue is critical to safeguarding adolescent mental health and well-being in the digital age.This dissertation addresses the growing issue of Social Media Addiction (SMA) among adolescents, emphasizing its mental health consequences and proposing a novel intervention strategy. Using the Design Science Research (DSR) methodology, this study developed and evaluated SMAART, an augmented fotonovela mobile application designed to raise awareness and promote behavioral change in adolescents aged 13–19 years. A foundational component of this research involved constructing a taxonomy of SMA, derived through a systematic literature review (SLR). This taxonomy identified key enablers, manifestations, and health consequences of SMA, which guided the design, implementation, and evaluation of the SMAART app. The app integrates behavioral design principles and augmented reality (AR) to enhance engagement and educational outcomes. Experimental results demonstrated a statistically significant improvement in awareness regarding body image distortion, body shaming, and catfishing among adolescents using the SMAART app compared to a control group receiving email-based interventions. Statistical analyses, including paired t-tests, confirmed the appâ€™s efficacy in increasing knowledge and awareness.}
+      \field{isbn}{9798288851650}
+      \field{journaltitle}{ProQuest Dissertations and Theses}
+      \field{note}{Source type: Dissertations \& Theses; Object type: Dissertation; Object type: Thesis; Copyright: Database copyright ProQuest LLC; ProQuest does not claim copyright in the individual underlying works.; DissertationNum: 31839151; DocISBN: 9798288851650; PublisherXID: 31839151; PMID: 66569; MSTARLegacyID: DISS-31839151}
+      \field{title}{Augmented Digital Fotonovela ({SMAART} App) to Mitigate Health Consequences Among Adolescents Resulting from Social Media Addiction}
+      \field{type}{phdthesis}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation\&genre=dissertations\&sid=ProQ:ProQuest+Dissertations+\%2526+Theses+Global\&atitle=\&title=Augmented+Digital+Fotonovela+\%2528SMAART+App\%2529+to+Mitigate+Health+Consequences+Among+Adolescents+Resulting+from+Social+Media+Addiction\&issn=\&date=2025-01-01\&volume=\&issue=\&spage=\&au=Santhosh\%252C+Joseph\&isbn=9798288851650\&jtitle=\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/
+      \endverb
+      \verb{url}
+      \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation%5C&genre=dissertations%5C&sid=ProQ:ProQuest+Dissertations+%5C%2526+Theses+Global%5C&atitle=%5C&title=Augmented+Digital+Fotonovela+%5C%2528SMAART+App%5C%2529+to+Mitigate+Health+Consequences+Among+Adolescents+Resulting+from+Social+Media+Addiction%5C&issn=%5C&date=2025-01-01%5C&volume=%5C&issue=%5C&spage=%5C&au=Santhosh%5C%252C+Joseph%5C&isbn=9798288851650%5C&jtitle=%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
+      \endverb
+      \keyw{Adolescent health consequence; Behavior algorithm; Design science research; Social media addiction; Taxonomy; Information technology; Bioinformatics; Artificial intelligence; Web studies; 0489:Information Technology; 0646:Internet and social media studies; 0715:Bioinformatics; 0800:Artificial intelligence}
+    \endentry
     \entry{RefWorks:RefID:103-seran2024effectiveness}{inproceedings}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=59a64e9a53a6a4208142ba78df27f9c6}{%
@@ -1090,6 +1729,116 @@
       \field{year}{2021}
       \field{pages}{162}
       \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:147-throuvala2020mind}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=258f93b6fc2804736cb424263f6b09e7}{%
+           family={Throuvala},
+           familyi={T\bibinitperiod},
+           given={Melina\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c20de3bbdda33b7031f1dfb71ae29d2}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={Mark\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=858964f3ff99078eeba11336cd39f3d1}{%
+           family={Rennoldson},
+           familyi={R\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e88cc6535b1994b9e348505cc683bbe0}{%
+           family={Kuss},
+           familyi={K\bibinitperiod},
+           given={Daria\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8afd372457c2e02c5c0444f9ec954205}
+      \strng{fullhash}{dd92c8e6a676ba30d32dc2a08369c908}
+      \strng{fullhashraw}{dd92c8e6a676ba30d32dc2a08369c908}
+      \strng{bibnamehash}{8afd372457c2e02c5c0444f9ec954205}
+      \strng{authorbibnamehash}{8afd372457c2e02c5c0444f9ec954205}
+      \strng{authornamehash}{8afd372457c2e02c5c0444f9ec954205}
+      \strng{authorfullhash}{dd92c8e6a676ba30d32dc2a08369c908}
+      \strng{authorfullhashraw}{dd92c8e6a676ba30d32dc2a08369c908}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International journal of environmental research and public health}
+      \field{number}{13}
+      \field{title}{Mind over matter: testing the efficacy of an online randomized controlled trial to reduce distraction from smartphone use}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{pages}{4842}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:146-tindall2017behavioural}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=3b5dac10d8d8d51879fc134dcdc9dd25}{%
+           family={Tindall},
+           familyi={T\bibinitperiod},
+           given={Lucy},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d63d976c4cebf727a9282b3121aaf34}{%
+           family={Mikocka‐Walus},
+           familyi={M\bibinithyphendelim W\bibinitperiod},
+           given={Antonina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8437747afb28035deff3014135c92c99}{%
+           family={McMillan},
+           familyi={M\bibinitperiod},
+           given={Dean},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=199031a543ba8324047eaf1ff1d796da}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d35715b086ce3a52278ede37e43ae6ab}{%
+           family={Hewitt},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e33569be6747c79df4f3ff520b14998}{%
+           family={Gascoyne},
+           familyi={G\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{48a5372794f8a2b456111ecd7f6becb4}
+      \strng{fullhash}{724eabfcdb9a40e5125f37b48102d8ca}
+      \strng{fullhashraw}{724eabfcdb9a40e5125f37b48102d8ca}
+      \strng{bibnamehash}{48a5372794f8a2b456111ecd7f6becb4}
+      \strng{authorbibnamehash}{48a5372794f8a2b456111ecd7f6becb4}
+      \strng{authornamehash}{48a5372794f8a2b456111ecd7f6becb4}
+      \strng{authorfullhash}{724eabfcdb9a40e5125f37b48102d8ca}
+      \strng{authorfullhashraw}{724eabfcdb9a40e5125f37b48102d8ca}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychology and Psychotherapy: Theory, Research and Practice}
+      \field{number}{4}
+      \field{title}{Is behavioural activation effective in the treatment of depression in young people? A systematic review and meta‐analysis}
+      \field{volume}{90}
+      \field{year}{2017}
+      \field{pages}{770\bibrangedash 796}
+      \range{pages}{27}
     \endentry
     \entry{RefWorks:RefID:124-ubochi2019apples}{article}{}{}
       \name{author}{1}{}{%
@@ -1182,8 +1931,282 @@
       \verb 10.1038/s41746-019-0188-8
       \endverb
     \endentry
+    \entry{RefWorks:RefID:138-wenzel2017basic}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3a6e491cd3d7fd9ddb609bc7ecd58d7}{%
+           family={Wenzel},
+           familyi={W\bibinitperiod},
+           given={Amy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{fullhash}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{fullhashraw}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{bibnamehash}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{authorbibnamehash}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{authornamehash}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{authorfullhash}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \strng{authorfullhashraw}{b3a6e491cd3d7fd9ddb609bc7ecd58d7}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychiatric Clinics}
+      \field{note}{pmid:29080588}
+      \field{number}{4}
+      \field{title}{Basic strategies of cognitive behavioral therapy}
+      \field{volume}{40}
+      \field{year}{2017}
+      \field{pages}{597\bibrangedash 609}
+      \range{pages}{13}
+    \endentry
+    \entry{RefWorks:RefID:136-witkiewitz2014development}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=33991bffc03e50602ef701d20c68da7b}{%
+           family={Witkiewitz},
+           familyi={W\bibinitperiod},
+           given={Katie},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9450797748aba73b64c713394e32736}{%
+           family={Desai},
+           familyi={D\bibinitperiod},
+           given={Sruti\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a464407733318b5c575cb7c671cf5454}{%
+           family={Bowen},
+           familyi={B\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f90c104388f4fb5550b7a87f1475c359}{%
+           family={Leigh},
+           familyi={L\bibinitperiod},
+           given={Barbara\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab5cd183abfdc9440cb56f29aa091230}{%
+           family={Kirouac},
+           familyi={K\bibinitperiod},
+           given={Megan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c4422766d44d46e93781123bd80e3b4}{%
+           family={Larimer},
+           familyi={L\bibinitperiod},
+           given={Mary\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3a48ccb7f2733994cdacf10cd933fb44}
+      \strng{fullhash}{4d37d376adf76b5340c2934bea924760}
+      \strng{fullhashraw}{4d37d376adf76b5340c2934bea924760}
+      \strng{bibnamehash}{3a48ccb7f2733994cdacf10cd933fb44}
+      \strng{authorbibnamehash}{3a48ccb7f2733994cdacf10cd933fb44}
+      \strng{authornamehash}{3a48ccb7f2733994cdacf10cd933fb44}
+      \strng{authorfullhash}{4d37d376adf76b5340c2934bea924760}
+      \strng{authorfullhashraw}{4d37d376adf76b5340c2934bea924760}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychology of Addictive Behaviors}
+      \field{number}{3}
+      \field{title}{Development and evaluation of a mobile intervention for heavy drinking and smoking among college students.}
+      \field{volume}{28}
+      \field{year}{2014}
+      \field{pages}{639}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:145-wubbolding2016reality}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7864319b3ef26a53682bfa28414cff18}{%
+           family={Wubbolding},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7864319b3ef26a53682bfa28414cff18}
+      \strng{fullhash}{7864319b3ef26a53682bfa28414cff18}
+      \strng{fullhashraw}{7864319b3ef26a53682bfa28414cff18}
+      \strng{bibnamehash}{7864319b3ef26a53682bfa28414cff18}
+      \strng{authorbibnamehash}{7864319b3ef26a53682bfa28414cff18}
+      \strng{authornamehash}{7864319b3ef26a53682bfa28414cff18}
+      \strng{authorfullhash}{7864319b3ef26a53682bfa28414cff18}
+      \strng{authorfullhashraw}{7864319b3ef26a53682bfa28414cff18}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Contemporary theory and practice in counseling and psychotherapy}
+      \field{title}{Reality therapy}
+      \field{year}{2016}
+      \field{pages}{173\bibrangedash 200}
+      \range{pages}{28}
+    \endentry
+    \entry{RefWorks:RefID:48-yao2017combined}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=052c3369c7e1f8c79c5cd28cfa6cc1ca}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Yuan-Wei},
+           giveni={Y\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f73b0c7cb4d2cec135f091b9a970e90b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Pin-Ru},
+           giveni={P\bibinithyphendelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65be7190222f33abe618f550e156b7d6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chiang-shan\bibnamedelima R.},
+           giveni={C\bibinithyphendelim s\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e90fa4db8efda2cbd1835fc71023a103}{%
+           family={Hare},
+           familyi={H\bibinitperiod},
+           given={Todd\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=909427ba15a05b64bbb661ae6ebde980}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e85131a87b07bd77b8e600073521c0f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jin-Tao},
+           giveni={J\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b70d85f003fa30a5cae684a692c6e97}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0998a6990bd695321bd45000af09fb2c}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Shan-Shan},
+           giveni={S\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d2ae95274a984b30ca6661939a389ad}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Xiao-Yi},
+           giveni={X\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a936ba14018bb8ad5d8e605d6849268f}
+      \strng{fullhash}{780f9549f12fc964dff49e421903b676}
+      \strng{fullhashraw}{780f9549f12fc964dff49e421903b676}
+      \strng{bibnamehash}{a936ba14018bb8ad5d8e605d6849268f}
+      \strng{authorbibnamehash}{a936ba14018bb8ad5d8e605d6849268f}
+      \strng{authornamehash}{a936ba14018bb8ad5d8e605d6849268f}
+      \strng{authorfullhash}{780f9549f12fc964dff49e421903b676}
+      \strng{authorfullhashraw}{780f9549f12fc964dff49e421903b676}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Decisional impulsivity represents an important phenotype and a therapeutic target in Internet gaming disorder (IGD). Reality therapy and mindfulness meditation were two approaches to reduce impulsivity. This study aimed to evaluate the efficacy of a group behavioral intervention combining reality therapy and mindfulness meditation in reducing decisional impulsivity and IGD severity. Twenty-five IGD and 21 healthy comparison (HC) young adults participated in baseline tests on the delay discounting and balloon analog risk tasks to measure intertemporal and risky decision-making respectively. Among them, 18 IGD subjects participated in the intervention and were tested again at the end of intervention, and 19 HC subjects without intervention were also tested twice within a similar time period. Results indicate that: (1) at baseline, IGD subjects showed greater intertemporal and risky decisional impulsivity than HC subjects; (2) After intervention, IGD subjects were decreased in delay discounting rate and IGD severity, but did not perform differently on decisional impulsivity in risky choices, as compared with baseline. These findings suggest that decisional impulsivity is a multifaceted behavioral construct and may serve as a possible therapeutic target for IGD. In addition, these results highlight the need for further research into the roles of different forms of decisional impulsivity in the shaping, maintenance, and remission of IGD.}
+      \field{isbn}{0747-5632}
+      \field{journaltitle}{Computers in Human Behavior}
+      \field{note}{ID: 271802}
+      \field{title}{Combined reality therapy and mindfulness meditation decrease intertemporal decisional impulsivity in young adults with Internet gaming disorder}
+      \field{volume}{68}
+      \field{year}{2017}
+      \field{pages}{210\bibrangedash 216}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.chb.2016.11.038
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0747563216307798
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0747563216307798
+      \endverb
+      \keyw{Internet gaming disorder; Impulsivity; Delay discounting; Balloon analogue risk task; Intervention}
+    \endentry
+    \entry{RefWorks:RefID:49-zajac2017treatments}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8d21ea66a31c9f1095b71cb24acc7049}{%
+           family={Zajac},
+           familyi={Z\bibinitperiod},
+           given={Kristyn},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=879a9a7af4a4f8ffb7d5ad9c648a78d4}{%
+           family={Ginley},
+           familyi={G\bibinitperiod},
+           given={Meredith\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=647fd8788d1faf08f07522273317d648}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Rocio},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0d66d077e223644c22e857a8cc78dbdc}{%
+           family={Petry},
+           familyi={P\bibinitperiod},
+           given={Nancy\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{02fa02aaa414284f63509f1cd0f4397b}
+      \strng{fullhash}{5b43abb8554461cef9a8dfb418a94cbb}
+      \strng{fullhashraw}{5b43abb8554461cef9a8dfb418a94cbb}
+      \strng{bibnamehash}{02fa02aaa414284f63509f1cd0f4397b}
+      \strng{authorbibnamehash}{02fa02aaa414284f63509f1cd0f4397b}
+      \strng{authornamehash}{02fa02aaa414284f63509f1cd0f4397b}
+      \strng{authorfullhash}{5b43abb8554461cef9a8dfb418a94cbb}
+      \strng{authorfullhashraw}{5b43abb8554461cef9a8dfb418a94cbb}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Problems related to excessive use of the Internet and video games have recently captured the interests of both researchers and clinicians. The goals of this review are to summarize the literature on treatment effectiveness for these problems and to determine whether any treatments meet the minimum requirement of an evidence-based treatment as defined by Chambless et al. (1998). Studies of treatments for Internet gaming disorder (IGD) and Internet addiction were examined separately, as past studies have linked IGD to more severe outcomes. The systematic review identified 26 studies meeting predefined criteria; 13 focused on treatments for IGD and 13 on Internet addiction. The results highlighted a paucity of well-designed treatment outcome studies and limited evidence for the effectiveness of any treatment modality. Studies were limited by methodological flaws, including small sample sizes, lack of control groups, and little information on treatment adherence, among other problems. In addition, the field is beset by a lack of consistent definitions of and established instruments to measure IGD and Internet addiction. The results of this review highlight the need for additional work in the area of treatment development and evaluation for IGD and Internet addiction. Attention to methodological concerns identified within this review should improve subsequent research related to treating these conditions, and ultimately outcomes of patients suffering from them. (PsycINFO Database Record (c) 2019 APA, all rights reserved) (Source: journal abstract)}
+      \field{isbn}{0893-164X, 0893-164X}
+      \field{journaltitle}{Psychology of Addictive Behaviors}
+      \field{note}{Source type: Scholarly Journals; Object type: Feature; Object type: Article; Copyright: © 2017, American Psychological Association; AccNum: 2017-40993-001; CSAUnique: PSAR-2017-40993-001; DOI: 10.1037/adb0000315; ISSN: 0893-164X; ElecISSN: 1939-1501; PMID: 28921996; Peer Reviewed: true}
+      \field{number}{8}
+      \field{title}{Treatments for Internet gaming disorder and Internet addiction: A systematic review}
+      \field{volume}{31}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1037/adb0000315
+      \endverb
+      \verb{urlraw}
+      \verb https://www.proquest.com/scholarly-journals/treatments-internet-gaming-disorder-addiction/docview/1940533247/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Apsycarticles\&atitle=Treatments+for+Internet+gaming+disorder+and+Internet+addiction\%253A+A+systematic+review\&title=Psychology+of+Addictive+Behaviors\&issn=0893164X\&date=2017-12-01\&volume=31\&issue=8\&spage=979\&au=Zajac\%252C+Kristyn\%253BGinley\%252C+Meredith+K.\%253BChang\%252C+Rocio\%253BPetry\%252C+Nancy+M.\&isbn=\&jtitle=Psychology+of+Addictive+Behaviors\&btitle=\&rft_id=info:eric/2017-40993-001\&rft_id=info:doi/10.1037\%252Fadb0000315 https://doi.org/10.1037/adb0000315
+      \endverb
+      \verb{url}
+      \verb https://www.proquest.com/scholarly-journals/treatments-internet-gaming-disorder-addiction/docview/1940533247/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Apsycarticles%5C&atitle=Treatments+for+Internet+gaming+disorder+and+Internet+addiction%5C%253A+A+systematic+review%5C&title=Psychology+of+Addictive+Behaviors%5C&issn=0893164X%5C&date=2017-12-01%5C&volume=31%5C&issue=8%5C&spage=979%5C&au=Zajac%5C%252C+Kristyn%5C%253BGinley%5C%252C+Meredith+K.%5C%253BChang%5C%252C+Rocio%5C%253BPetry%5C%252C+Nancy+M.%5C&isbn=%5C&jtitle=Psychology+of+Addictive+Behaviors%5C&btitle=%5C&rft_id=info:eric/2017-40993-001%5C&rft_id=info:doi/10.1037%5C%252Fadb0000315%20https://doi.org/10.1037/adb0000315
+      \endverb
+    \endentry
   \enddatalist
-  \missing{put a NEW citation here}
 \endrefsection
 \endinput
 
