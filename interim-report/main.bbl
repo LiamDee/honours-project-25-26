@@ -57,6 +57,37 @@
       \field{pages}{113\bibrangedash 132}
       \range{pages}{20}
     \endentry
+    \entry{RefWorks:RefID:148-altameem2015impact}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fe0ef6d952e9692e78dc79982d3a911a}{%
+           family={Altameem},
+           familyi={A\bibinitperiod},
+           given={Eman\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{fullhash}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{fullhashraw}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{bibnamehash}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{authorbibnamehash}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{authornamehash}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{authorfullhash}{fe0ef6d952e9692e78dc79982d3a911a}
+      \strng{authorfullhashraw}{fe0ef6d952e9692e78dc79982d3a911a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer and Information Science}
+      \field{number}{2}
+      \field{title}{Impact of agile methodology on software development}
+      \field{volume}{8}
+      \field{year}{2015}
+      \field{pages}{9}
+      \range{pages}{1}
+    \endentry
     \entry{androiddevelopment-appfundamentals}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
@@ -958,6 +989,32 @@
       \field{pages}{1\bibrangedash 2}
       \range{pages}{2}
     \endentry
+    \entry{RefWorks:RefID:150-loikkanen2024improving}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e1dfd59ed4b0b95f65329604de91af17}{%
+           family={Loikkanen},
+           familyi={L\bibinitperiod},
+           given={Ildikó},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{fullhash}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{fullhashraw}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{bibnamehash}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{authorbibnamehash}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{authornamehash}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{authorfullhash}{e1dfd59ed4b0b95f65329604de91af17}
+      \strng{authorfullhashraw}{e1dfd59ed4b0b95f65329604de91af17}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Improving End to End Testing of a Complex Full Stack Software}
+      \field{year}{2024}
+    \endentry
     \entry{RefWorks:RefID:106-lu2025interventions}{article}{}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=5c1e16e3967db9ab77ecdbb59a576801}{%
@@ -1670,6 +1727,47 @@
       \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation%5C&genre=dissertations%5C&sid=ProQ:ProQuest+Dissertations+%5C%2526+Theses+Global%5C&atitle=%5C&title=Augmented+Digital+Fotonovela+%5C%2528SMAART+App%5C%2529+to+Mitigate+Health+Consequences+Among+Adolescents+Resulting+from+Social+Media+Addiction%5C&issn=%5C&date=2025-01-01%5C&volume=%5C&issue=%5C&spage=%5C&au=Santhosh%5C%252C+Joseph%5C&isbn=9798288851650%5C&jtitle=%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
       \endverb
       \keyw{Adolescent health consequence; Behavior algorithm; Design science research; Social media addiction; Taxonomy; Information technology; Bioinformatics; Artificial intelligence; Web studies; 0489:Information Technology; 0646:Internet and social media studies; 0715:Bioinformatics; 0800:Artificial intelligence}
+    \endentry
+    \entry{RefWorks:RefID:149-al-saqqa2020agile}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=abf853127fc5d026061acf3a76ef88a1}{%
+           family={Al-Saqqa},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Samar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9736a6f08adc24da7c16f6b54eacd55}{%
+           family={Sawalha},
+           familyi={S\bibinitperiod},
+           given={Samer},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b665c28ec37f93d851a410605ff4a19}{%
+           family={AbdelNabi},
+           familyi={A\bibinitperiod},
+           given={Hiba},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{fullhash}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{fullhashraw}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{bibnamehash}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{authorbibnamehash}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{authornamehash}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{authorfullhash}{96eef7c6a76c4b91b375b58f5047a93b}
+      \strng{authorfullhashraw}{96eef7c6a76c4b91b375b58f5047a93b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Interactive Mobile Technologies}
+      \field{number}{11}
+      \field{title}{Agile software development: Methodologies and trends.}
+      \field{volume}{14}
+      \field{year}{2020}
     \endentry
     \entry{RefWorks:RefID:103-seran2024effectiveness}{inproceedings}{}{}
       \name{author}{1}{}{%

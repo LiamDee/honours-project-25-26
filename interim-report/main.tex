@@ -28,7 +28,7 @@
 \newcommand{\studentId}{S2213159}
 \newcommand{\degree}{BSc (Hons) Computing}
 \newcommand{\supervisor}{Dr. Mario Mata}
-\newcommand{\secondmarker}{}
+\newcommand{\secondmarker}{To Be Confirmed}
 \newcommand{\wordcount}{}
 \newcommand{\module}{MHW225671}
 
@@ -112,6 +112,7 @@
 \newpage
 \tableofcontents
 \listoffigures
+\listoftables
 
 \newpage
 
@@ -363,7 +364,9 @@ as a major component of the application makes use of usage tracking.\newline
 
 \noindent\underline{\textbf{Primary Objectives}}\newline\newline
 \noindent\textbf{Develop the smartphone intervention app}\newline
-Create the application based on the knowledge gained from the literature and technology review. (expand) \newline
+Create the application based on the knowledge gained from the literature and technology review. This will involve
+integrating the chosen psychological framework and usage tracking method before testing the app's functionality
+via test cases to ensure the app functions as intended.  \newline
 
 \noindent\textbf{Gather participants for evaluating the app and perform evaluation}\newline
 Participants will be used when evaluating if the developed application reduces smartphone and social media usage 
@@ -374,7 +377,8 @@ functionality. \newline % (reword slightly?)
 
 \noindent\textbf{Analyse the results and obtain a conclusion}\newline
 Collect results from the evaluation and see if the app was more impactful at reducing smartphone usage than 
-traditional apps. Then draw up a conclusion based on the results, and see if the problem statement was met.\newline 
+traditional apps. Then draw up a conclusion based on the results, and see if the problem statement and
+hypothesis were met.\newline 
 % (reword slightly?)
 
 
@@ -398,7 +402,7 @@ foundational knowledge on the subject area that will then be used to carry out d
 instrument. This is done by performing research and analysis into prior work surrounding the subject area. \newline
 
 This literature and technology review will review mobile apps that use psychological methods to treat mental 
-health issues before pivoting into looking at how existing apps provide context to the issue of SA and SMA and
+health issues before pivoting into looking at how existing apps provide context regarding SA and SMA and
 the issues that may come with it. An investigation into how psychological methods can be used to treat smartphone 
 and social media addiction is then performed before researching how app usage can be tracked.
 
@@ -671,7 +675,7 @@ questionnaire used to screen adolescents who may be vulnerable to smartphone add
 \autocite{RefWorks:RefID:120-kwon2013smartphone}, as well as cognitive tests using external platforms. \newline
 
 The app was developed for devices using the Android operating system, Google's own mobile phone OS. The researchers
-mention how making the app compatible for iOS devices, Apple's mobile phone OS, was not possible, as the OS
+mention how making the app compatible for iOS devices, Apple's smartphone OS, was not possible, as the OS
 disallows the collection of usage statistics for privacy reasons \autocite{applesupport-ifanappasks}. 
 The programming language used was Java, one of
 three officially supported languages via the Android SDK, the other two being Kotlin and C++
@@ -722,8 +726,6 @@ should be developed for is Android, and that using the android.app.usage package
 usage tracking.
 
 
-
-
 % \subsection{Investigate how mobile intervention apps attempt to encourage outside activity from its users}
 
 
@@ -740,25 +742,82 @@ carried out over the project's lifetime.
 
 % This section should provide a detailed description of the research methods which will used in the project. This will include the process of creating the artefact and evaluating the outcome.  This should make reference to the literature review findings where appropriate. 
 
-\subsection{Research Method and Justification}
+\subsection{Research Method}
+This project aims to create a smartphone \& social media addiction mobile intervention app that utilises 
+psychological frameworks and usage tracking and find if it reduces smartphone \& social media usage in young adults 
+more than traditional intervention apps that use app-restriction features. The project will follow a develop and 
+test methodology. \newline
+
+A mobile application that integrates a chosen psychological framework alongside usage tracking functionalities will
+be created, then at the conclusion of development, testing and evaluating the effectiveness of the app will begin, which will 
+involve comparing the results of using the developed app for two weeks with an existing app that uses 
+app-restriction functionalities for the same time period with participants. This testing method has been used by 
+other researchers who have conducted research into the topic or have developed intervention apps 
+\autocite{RefWorks:RefID:147-throuvala2020mind,RefWorks:RefID:42-esmaeili2018method}. The results of this will then
+be evaluated to find if it satisfies the problem statement and hypothesis.
 
 
-\subsection {Develop the Mobile app (temp)}
-
-
+\subsection {Develop the psychology-based intervention mobile application}
 \subsubsection {Development}
 % android, java, android studio ide, because android is open source
+Due to the research carried out in the literature and technology review, the platform that the app will be
+developed for will be Google's Android OS. This is because Android applications easily allow for requesting usage 
+statistics of apps installed on a user's phone via the android.app.usage package in the Android API, while Apple's
+iOS operating system doesn't allow for this due to privacy concerns. The app will be developed using the Java
+programming language, and will Android Studio as its IDE, as it's the IDE recommended by Google for developing
+Android apps. \newline
+
+% is an open source operating system, meaning that
+
+Cognitive Behavioural Therapy and Reality Therapy were both discussed as psychological frameworks that could be
+used for the app, and from the research carried out, Reality Therapy was decided on as the framework to integrate.
+This is because one of the main criticisms of SA \& SMA intervention apps was the lack of opportunity to learn
+about SA \& SMA, and Reality Therapy's aim is to make a patient aware on if their actions get in their way of their
+goals, and to then replace the action with a healthier alternative. Meanwhile, Cognitive Behavioural Therapy's
+methods don't innately provide teaching opportunities in its framework. 
 
 \subsubsection {Project Lifecycle}
-% develop and test
+% develop and test? agile? iterative?
+A key component of any project is the lifecycle the project's development will follow. This project will make use
+of an agile methodology during the development. The Agile methodology is a framework that allows for iteration
+and flexibility throughout the software development lifecycle in response to user and stakeholder demands, an
+advantage over traditional methodologies such as the waterfall methodology 
+\autocite{RefWorks:RefID:149-al-saqqa2020agile, RefWorks:RefID:148-altameem2015impact}.
+ 
+\subsubsection{Testing}
+Testing will consist of integration testing and system testing. Integration testing will occur once the
+development of the prototype reaches certain development milestones, such as when implementation of a component is
+completed, where it will then be tested against a set of test cases. Development will then progress to the next 
+milestone once the state of the component is at a satisfactory level. Near the end of development, the prototype
+will undergo system testing, where the entire prototype is tested from the perspective of an end-user for 
+functional and non-functional elements \autocite{RefWorks:RefID:150-loikkanen2024improving}.
 
-\subsection{Usability Testing with users and Evaluation}
+\subsection{Evaluation}
 % see section 1.2.1 for more info
+%\subsubsection{Usability Testing}
+%\subsubsection{Evaluation}
 
-\subsubsection{Usability Testing}
+Evaluating the application will involve gathering 10 participants to partake in testing the app. This is because
+the evaluation will involve splitting participants into two equal-sized groups, one of which will make use of the
+developed app, while the other will use a separate app that only provides app restriction in order to evaluate the 
+app's effectiveness. After a two week testing period, participants will be asked to provide statistics about their 
+app usage over the two weeks. Those in the group using the developed app will also receive a survey regarding their 
+experience with the app. The results from this testing period will then be used to evaluate the app's effectiveness 
+and identify any areas of further work.
 
-\subsubsection{Evaluation}
 
+\subsection {Preliminary Work}
+% You should describe preliminary work that has been done to date. Remember that this is a report, not a proposal.
+Work surrounding the project is already underway. As of submission, requirements gathering is still underway, though
+is nearing the state of completion. Part of requirements gathering involved gathering responses via surveys and
+user interviews, though ethical approval has not been granted to conduct these at this time. Initial work on 
+wireframes of screens to be included in the app is also underway.
+ 
+
+\subsection {Remaining Work}
+Below is a table containing a list of remaining tasks, their estimated start and end dates, a description of the
+task, and the expected deliverable at the completion of the task. It should be noted that check-ins with
+stakeholder(s) will occur at certain points throughout the entirety of the project.
 % Table \ref{table:1} is an example of referenced \LaTeX{} elements.
 
 % \begin{table}[h!]
@@ -776,18 +835,35 @@ carried out over the project's lifetime.
 % \caption{Comparisons between different methods.}
 % \label{table:1}
 % \end{table}
+\newpage
 
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|l|l|l}
+Task Name                           & Description                                                                                                                                                                                                                                                                                                                                                                                                                                              & Deliverable(s)                                                                                              & Start and End Date                                                                                            \\ \hline
+Carry out requirements gathering    & \begin{tabular}[c]{@{}l@{}}An extensive set of functional and non-functional requirements \\ that satisfies the problem statement and hypothesis will be gathered\\ and listed in a requirements specification document. This will consist\\ of information found during the literature review, as well as independent\\ research via one-to-one interviews and surveys.\end{tabular}                                                                    & Requirements specification document                                                                         & \begin{tabular}[c]{@{}l@{}}Start: Ongoing as of October\\ End: Est. Early November\end{tabular}               \\ \hline
+Create design document              & \begin{tabular}[c]{@{}l@{}}Once requirements gathering has concluded, the process of creating\\ wireframes for the UI, flowcharts that deptict user choices and screen\\ layouts will begin. These designs will then be used when developing the\\ app.\end{tabular}                                                                                                                                                                                     & \begin{tabular}[c]{@{}l@{}}Design document containing wireframes,\\ flowcharts, screen layouts\end{tabular} & \begin{tabular}[c]{@{}l@{}}Start: Est. Early November\\ End: Est. Late November - Early December\end{tabular} \\ \hline
+Develop the application             & \begin{tabular}[c]{@{}l@{}}Upon design approval from stakeholders, development of the\\ prototype will begin, with the final result being an application\\ that meets the requirements outlined in the requirements\\ specification document.\end{tabular}                                                                                                                                                                                               & Functional Prototype(s)                                                                                     & \begin{tabular}[c]{@{}l@{}}Start: Est. Early December\\ End: Est. Mid February\end{tabular}                   \\ \hline
+Undergo testing for the application & \begin{tabular}[c]{@{}l@{}}Concurrent to development, the application will also undergo\\ testing. When a component of the app is completed, integration\\ testing will commence against a set of test cases to ensure the\\ component works as expected. Integration testing will continue\\ until all components are successfully implemented, where system\\ testing will being, which tests the entire app from a user's\\ perspective.\end{tabular} & Results of testing inside a test document                                                                   & \begin{tabular}[c]{@{}l@{}}Start: Est. Late December - Early January\\ End: Est. Mid February\end{tabular}    \\ \hline
+Conduct user evaluation             & \begin{tabular}[c]{@{}l@{}}Evaluation will consist of splitting participants into two separate groups,\\ one of which will use the app, while the other uses a separate app. After\\ this, a survey will be given to those who used the developed app, assessing\\ certain aspects of the app. Ethical approval is still pending as of writing.\end{tabular}                                                                                             & \begin{tabular}[c]{@{}l@{}}Evaluation report document,\\ final report\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Start: Est. Late February\\ End: Est. Mid-late April\end{tabular}                 
+\end{tabular}%
+}
+\caption{Remaining work to be carried out}
+\label{tab:my-table}
+\end{table}
+
+\newpage
 \subsection{Ethical Issues}
 % Due to the use of participants and data collection, ethical approval was sought after from module co-ordinator
 % from the date of submission, ethical approval hasn't been granted as of now
-
-\subsection {Preliminary Work}
-% You should describe preliminary work that has been done to date. Remember that this is a report, not a proposal.
-
-\subsection {Remaining Work}
-text goes here
-
-
+The use of human participants for testing purposes was mentioned within the introduction when discussing the
+project's primary objectives. Participants will be used for this purpose and will play a significant role
+when assessing if the completed app meets the project hypothesis as they will be the ones testing the app.
+As well as this, participants are intended to be used for requirements gathering via user interviews and surveys. 
+Due to this, ethical approval will need to be granted by the module co-ordinator before conducting anything 
+involving participants. An ethical approval form was submitted, though as of the time of submission, approval has 
+not been granted, nor has any response to the initial form has been given.
 \newpage
 
 \addcontentsline{toc}{section}{References}
