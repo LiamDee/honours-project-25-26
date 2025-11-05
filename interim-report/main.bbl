@@ -418,49 +418,6 @@
       \field{pages}{563\bibrangedash 570}
       \range{pages}{8}
     \endentry
-    \entry{RefWorks:RefID:95-chou2005review}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=34df852c3f60636d0a9c469288edc899}{%
-           family={Chou},
-           familyi={C\bibinitperiod},
-           given={Chien},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=eb58277e4c896d88d3c2e94ee3869a41}{%
-           family={Condron},
-           familyi={C\bibinitperiod},
-           given={Linda},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f8e0ceb04cbcc2db0699975b6e6a0df8}{%
-           family={Belland},
-           familyi={B\bibinitperiod},
-           given={John\bibnamedelima C.},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{fullhash}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{fullhashraw}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{bibnamehash}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{authorbibnamehash}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{authornamehash}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{authorfullhash}{d54d89e793ddfbc251fde64e0ad03028}
-      \strng{authorfullhashraw}{d54d89e793ddfbc251fde64e0ad03028}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Educational psychology review}
-      \field{number}{4}
-      \field{title}{A review of the research on Internet addiction}
-      \field{volume}{17}
-      \field{year}{2005}
-      \field{pages}{363\bibrangedash 388}
-      \range{pages}{26}
-    \endentry
     \entry{RefWorks:RefID:144-denecke2022implementation}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=98da54a4ed86048c289668fae369ff05}{%
@@ -503,53 +460,6 @@
       \field{year}{2022}
       \field{pages}{e27791}
       \range{pages}{-1}
-    \endentry
-    \entry{RefWorks:RefID:111-deterding2011game}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=4ad251c02d478d38f2fe79e126ae6bf1}{%
-           family={Deterding},
-           familyi={D\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=77b7f2834ada9e806200ca66ed3767a4}{%
-           family={Dixon},
-           familyi={D\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6693a49677bd64d91668dccd98fe0d4e}{%
-           family={Khaled},
-           familyi={K\bibinitperiod},
-           given={Rilla},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f8dcd6b16d5cfe0d1191e77e5f709c16}{%
-           family={Nacke},
-           familyi={N\bibinitperiod},
-           given={Lennart},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{74ba12e04f1a6f9417ee0406ccd7ba89}
-      \strng{fullhash}{5900b306a627b766e3160b1c23b117f2}
-      \strng{fullhashraw}{5900b306a627b766e3160b1c23b117f2}
-      \strng{bibnamehash}{74ba12e04f1a6f9417ee0406ccd7ba89}
-      \strng{authorbibnamehash}{74ba12e04f1a6f9417ee0406ccd7ba89}
-      \strng{authornamehash}{74ba12e04f1a6f9417ee0406ccd7ba89}
-      \strng{authorfullhash}{5900b306a627b766e3160b1c23b117f2}
-      \strng{authorfullhashraw}{5900b306a627b766e3160b1c23b117f2}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 15th international academic MindTrek conference: Envisioning future media environments}
-      \field{title}{From game design elements to gamefulness: defining" gamification"}
-      \field{year}{2011}
-      \field{pages}{9\bibrangedash 15}
-      \range{pages}{7}
     \endentry
     \entry{RefWorks:RefID:35-dosselaar2017smartphone}{thesis}{}{}
       \name{author}{1}{}{%
@@ -636,49 +546,6 @@
       \field{year}{2014}
       \field{pages}{11}
       \range{pages}{1}
-    \endentry
-    \entry{RefWorks:RefID:93-goggin2012google}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f2b759cde95638b47eb10d22c2cf8856}{%
-           family={Goggin},
-           familyi={G\bibinitperiod},
-           given={Gerard},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{fullhash}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{fullhashraw}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{bibnamehash}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{authorbibnamehash}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{authornamehash}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{authorfullhash}{f2b759cde95638b47eb10d22c2cf8856}
-      \strng{authorfullhashraw}{f2b759cde95638b47eb10d22c2cf8856}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This paper explores the rise of Google's Android phone ? a fascinating case study in a crucial yet under-theorized terrain of mobile media that illuminates the politics of software, operating systems, and their attachments to handsets and networks. While Android is a notable attempt to create an open source platform, I argue that in key respects it remains tied to the project of media corporations enclosing and controlling mobile and online platforms. This is nowhere more evident than in Google's embroilment in intellectual property struggles over smartphone patents.}
-      \field{isbn}{1030-4312}
-      \field{journaltitle}{Continuum}
-      \field{note}{doi: 10.1080/10304312.2012.706462}
-      \field{number}{5}
-      \field{title}{Google phone rising: The Android and the politics of open source}
-      \field{volume}{26}
-      \field{year}{2012}
-      \field{pages}{741\bibrangedash 752}
-      \range{pages}{12}
-      \verb{doi}
-      \verb 10.1080/10304312.2012.706462
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1080/10304312.2012.706462
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1080/10304312.2012.706462
-      \endverb
     \endentry
     \entry{RefWorks:RefID:140-hofmann2012efficacy}{article}{}{}
       \name{author}{5}{}{%
@@ -860,43 +727,6 @@
       \field{volume}{8}
       \field{year}{2017}
       \field{pages}{342}
-      \range{pages}{1}
-    \endentry
-    \entry{RefWorks:RefID:73-kuss2017social}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=e88cc6535b1994b9e348505cc683bbe0}{%
-           family={Kuss},
-           familyi={K\bibinitperiod},
-           given={Daria\bibnamedelima J.},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9c20de3bbdda33b7031f1dfb71ae29d2}{%
-           family={Griffiths},
-           familyi={G\bibinitperiod},
-           given={Mark\bibnamedelima D.},
-           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{fullhash}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{fullhashraw}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{bibnamehash}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{authorbibnamehash}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{authornamehash}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{authorfullhash}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \strng{authorfullhashraw}{c9ed2e51c3d74b42710f5851a1f2040e}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International journal of environmental research and public health}
-      \field{number}{3}
-      \field{title}{Social networking sites and addiction: Ten lessons learned}
-      \field{volume}{14}
-      \field{year}{2017}
-      \field{pages}{311}
       \range{pages}{1}
     \endentry
     \entry{RefWorks:RefID:120-kwon2013smartphone}{article}{}{}
@@ -1106,51 +936,6 @@
       \endverb
       \keyw{Medical Sciences--Computer Applications; digital addiction; interventions; umbrella reviews; systematic review; internet addiction; loneliness; quality of life; well-being; internet; psychological; pharmacological treatment; cognitive behavioral therapy; Random effects; Exercise; Analysis; Anxiety; Prevention programs; Self esteem; Psychotherapy; Intervention; Quasi-experimental methods; Games; Data analysis; Psychosocial intervention; Clinical trials; Screen time; Mental depression; Addictions; Stress; Meta-analysis; Psychosocial factors; Decision makers; Associations; Group counseling; Cognitive-behavioral factors; Mental health; Self control; Uncertainty; Cognition; Medical research; Evaluation; Medical decision making; Time; Symptoms; Educational programs}
     \endentry
-    \entry{RefWorks:RefID:83-marshall2019smartphone}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=ebb7d76811f0e01a2fe1f607a568b095}{%
-           family={Marshall},
-           familyi={M\bibinitperiod},
-           given={Jamie\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=00e734295b8dc58173a3a68f354d6777}{%
-           family={Dunstan},
-           familyi={D\bibinitperiod},
-           given={Debra\bibnamedelima A.},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=102da2dd8a69b30994987c0da3c52228}{%
-           family={Bartik},
-           familyi={B\bibinitperiod},
-           given={Warren},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {English}%
-      }
-      \strng{namehash}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{fullhash}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{fullhashraw}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{bibnamehash}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{authorbibnamehash}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{authornamehash}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{authorfullhash}{fdf1f13c803c4eccf709dd21230a0c48}
-      \strng{authorfullhashraw}{fdf1f13c803c4eccf709dd21230a0c48}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Professional Psychology: Research and Practice}
-      \field{title}{Smartphone psychology: New approaches towards safe and efficacious mobile mental health apps}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.1037/pro0000278
-      \endverb
-    \endentry
     \entry{RefWorks:RefID:104-michael2017addicted}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2e9cc74b13c36fa234d8e91ffabeb048}{%
@@ -1313,82 +1098,6 @@
       \field{year}{2022}
       \field{pages}{3553}
       \range{pages}{1}
-    \endentry
-    \entry{RefWorks:RefID:127-parry2023digital}{article}{}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=5e04ebd61d60ebcd3647417fd9b1c398}{%
-           family={Parry},
-           familyi={P\bibinitperiod},
-           given={Douglas\bibnamedelima A.},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0b8a2f36f0a10047b7d9fbe6747077ce}{%
-           family={Roux},
-           familyi={R\bibinitperiod},
-           given={Daniel\bibnamedelima B.},
-           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0,
-           prefix={le},
-           prefixi={l\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=830446640219d5e8931c98681d3318e4}{%
-           family={Morton},
-           familyi={M\bibinitperiod},
-           given={Joshua},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9a98638495e5e6a179a9f202d047bc7b}{%
-           family={Pons},
-           familyi={P\bibinitperiod},
-           given={Ruth},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1f3cd872c7d17d32dafdf8a8f51a8d92}{%
-           family={Pretorius},
-           familyi={P\bibinitperiod},
-           given={Ruan},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f2e2f9fdb4a59d1e243e43c6abc243e8}{%
-           family={Schoeman},
-           familyi={S\bibinitperiod},
-           given={Andre},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{4512464ba56579060cf091fed863d379}
-      \strng{fullhash}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
-      \strng{fullhashraw}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
-      \strng{bibnamehash}{4512464ba56579060cf091fed863d379}
-      \strng{authorbibnamehash}{4512464ba56579060cf091fed863d379}
-      \strng{authornamehash}{4512464ba56579060cf091fed863d379}
-      \strng{authorfullhash}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
-      \strng{authorfullhashraw}{ac2c71e4532aeb9cd8ff24bf18c2b80d}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Increasingly, mobile applications, services, and features enable people to monitor and regulate their smartphone use in the support of their digital wellbeing. Herein we report a mixed-method study involving the collection of both quantitative and qualitative data from a student sample conducted with the aim of investigating, firstly, the adoption of applications and features designed to support digital wellbeing, secondly, the factors that influence the continued use of such applications and, thirdly, the effects users perceive these applications to have on their digital wellbeing. The outcomes of this study highlight the importance of individual motivations and the need to understand digital wellbeing as more than simply the use of an application or tool but, rather a subjective consideration of the place of digital media in an individual’s life. The present study provides a rich descriptive account of the temporal variability, person-specificity, and device-contingent nature of digital wellbeing.}
-      \field{isbn}{0747-5632}
-      \field{journaltitle}{Computers in Human Behavior}
-      \field{note}{ID: 271802}
-      \field{title}{Digital wellbeing applications: Adoption, use and perceived effects}
-      \field{volume}{139}
-      \field{year}{2023}
-      \field{pages}{107542}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.chb.2022.107542
-      \endverb
-      \verb{urlraw}
-      \verb https://www-sciencedirect-com.gcu.idm.oclc.org/science/article/pii/S0747563222003624
-      \endverb
-      \verb{url}
-      \verb https://www-sciencedirect-com.gcu.idm.oclc.org/science/article/pii/S0747563222003624
-      \endverb
-      \keyw{Digital wellbeing; Screen Time; Quantified self; Behaviour tracking; Self-regulation}
     \endentry
     \entry{RefWorks:RefID:126-petrucco2021user}{inbook}{}{}
       \name{author}{1}{}{%
@@ -1768,35 +1477,6 @@
       \field{title}{Agile software development: Methodologies and trends.}
       \field{volume}{14}
       \field{year}{2020}
-    \endentry
-    \entry{RefWorks:RefID:103-seran2024effectiveness}{inproceedings}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=59a64e9a53a6a4208142ba78df27f9c6}{%
-           family={Seran},
-           familyi={S\bibinitperiod},
-           given={Nappinnai},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{fullhash}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{fullhashraw}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{bibnamehash}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{authorbibnamehash}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{authornamehash}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{authorfullhash}{59a64e9a53a6a4208142ba78df27f9c6}
-      \strng{authorfullhashraw}{59a64e9a53a6a4208142ba78df27f9c6}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Obstetrics \& Gynaecology Forum}
-      \field{chapter}{3}
-      \field{title}{{EFFECTIVENESS} {OF} {EDUCATIONAL} {INTERVENTION} {ON} {SOCIAL} {MEDIA} {ADDICTION} {AND} {OBESITY} {AMONG} {YOUNG} {ADULTS} {IN} {SELECTED} {COLLEGES}, {CHENNAI}.}
-      \field{volume}{34}
-      \field{year}{2024}
     \endentry
     \entry{RefWorks:RefID:88-shah2021rise}{article}{}{}
       \name{author}{1}{}{%
