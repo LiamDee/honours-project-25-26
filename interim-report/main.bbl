@@ -686,55 +686,6 @@
       \field{pages}{342}
       \range{pages}{1}
     \endentry
-    \entry{RefWorks:RefID:120-kwon2013smartphone}{article}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=ef9ec3bdc628621508d0e8121d8b04b6}{%
-           family={Kwon},
-           familyi={K\bibinitperiod},
-           given={Min},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=af7a4c14cfb7845cdc9dc1bf2afd0212}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Dai-Jin},
-           giveni={D\bibinithyphendelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ff51832221a43d74606067ab4e90fa30}{%
-           family={Cho},
-           familyi={C\bibinitperiod},
-           given={Hyun},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=81f339799acbf8a77a9390756f550277}{%
-           family={Yang},
-           familyi={Y\bibinitperiod},
-           given={Soo},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{9c5aa28692989bbab0c243078601b60c}
-      \strng{fullhash}{4daa9d12ff62cce1334c363829f381ba}
-      \strng{fullhashraw}{4daa9d12ff62cce1334c363829f381ba}
-      \strng{bibnamehash}{9c5aa28692989bbab0c243078601b60c}
-      \strng{authorbibnamehash}{9c5aa28692989bbab0c243078601b60c}
-      \strng{authornamehash}{9c5aa28692989bbab0c243078601b60c}
-      \strng{authorfullhash}{4daa9d12ff62cce1334c363829f381ba}
-      \strng{authorfullhashraw}{4daa9d12ff62cce1334c363829f381ba}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{PloS one}
-      \field{number}{12}
-      \field{title}{The smartphone addiction scale: development and validation of a short version for adolescents}
-      \field{volume}{8}
-      \field{year}{2013}
-      \field{pages}{e83558}
-      \range{pages}{-1}
-    \endentry
     \entry{RefWorks:RefID:74-löchtefeld2013appdetox}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=bc7cf4e5d06274f06c98ca726eeaa7e4}{%
