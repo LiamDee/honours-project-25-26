@@ -375,49 +375,6 @@
       \endverb
       \keyw{Sciences: Comprehensive Works; Self harm; Cell phones; Social media; Mental health and psychiatry; Medical risk factors; Electronic medical records; Questionnaires; Apps; Parents & parenting; Mental health; Smartphones; Mental depression; Social networks; Cross-sectional studies; Mental health care; Self report; Self destructive behavior; Young adults; Researchers; Health services; Sleep; Anxiety; Electronic health records; Consent; Self-injury; Cohort analysis; Natural language processing; Caregivers; Digital media; Observational studies; Suicides & suicide attempts; Social; United Kingdom--UK}
     \endentry
-    \entry{RefWorks:RefID:92-chan2023types}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=f4990f8cc9f1e53460dd86f2ed69e576}{%
-           family={Chan},
-           familyi={C\bibinitperiod},
-           given={Sii\bibnamedelima Jiing},
-           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=68c40479a6965ab96514ff452fe74b61}{%
-           family={Yeo},
-           familyi={Y\bibinitperiod},
-           given={Kee\bibnamedelima Jiar},
-           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e11c834404d6d757e90e13ed5bd2cecf}{%
-           family={Handayani},
-           familyi={H\bibinitperiod},
-           given={Lina},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{fullhash}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{fullhashraw}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{bibnamehash}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{authorbibnamehash}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{authornamehash}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{authorfullhash}{eeb8118f141282df9d188434d23f1ed3}
-      \strng{authorfullhashraw}{eeb8118f141282df9d188434d23f1ed3}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Evaluation and Research in Education}
-      \field{number}{2}
-      \field{title}{Types of smartphone usage and problematic smartphone use among adolescents: A review of literature}
-      \field{volume}{12}
-      \field{year}{2023}
-      \field{pages}{563\bibrangedash 570}
-      \range{pages}{8}
-    \endentry
     \entry{RefWorks:RefID:144-denecke2022implementation}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=98da54a4ed86048c289668fae369ff05}{%
