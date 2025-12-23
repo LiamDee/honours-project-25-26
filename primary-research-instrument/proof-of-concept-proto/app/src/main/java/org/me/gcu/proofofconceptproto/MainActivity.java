@@ -18,13 +18,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AppOpsManager;
+import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -62,16 +70,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("emailTest", "yea we here");
     }
 
+    //TODO: add file from internal (or external) storage as email attachment
+
     public void prepEmail() {
         Log.d("emailTest", "yea we here...again");
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_EMAIL, "ldebuf300@caledonain.ac.uk");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
         intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
-        //intent.putExtra(Intent.EXTRA_STREAM, attachment); -- this would be the file containing usage data
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+//        File file = getFileStreamPath("myfile.txt");
+//        Log.d("file dir", String.valueOf(getFilesDir()));
+//        String s = file.getAbsolutePath();
+//        File file1 = new File(s);
+        //String fileName = "myfile.txt";
+//        File file = new File(getFilesDir(), "myfile.txt");
+//        File extDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+//        Uri uri = Uri.fromFile(file);
+//        intent.putExtra(Intent.EXTRA_STREAM, uri);
+
+        //-- this would be the file containing usage data
+//        if (intent.resolveActivity(getPackageManager()) != null) {
+//            startActivity(intent);
+//        }
+        Intent intent1 = Intent.createChooser(intent, null);
+        startActivity(intent1);
     }
 
     private boolean getGrantStatus() {
@@ -146,11 +168,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 AppDetails usageStatThing = new AppDetails(packageIcon, appName, usagePercent, usageTime);
                 appDetailsArrayList.add(usageStatThing);
+
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
-        }
 
+
+//            Log.d("filepath", s);
+        }
+        writeAppListToFile(appDetailsArrayList);
         Collections.reverse(appDetailsArrayList);
         AppAdapter appAdapter = new AppAdapter(this, appDetailsArrayList);
 
@@ -158,6 +184,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         appListView.setAdapter(appAdapter);
 
 
+    }
+
+    private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
+        try {
+            FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
+            ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
+            for (int i = 0; i < appStuff.size(); i++) {
+                outputStream.writeObject("\n" + appStuff.get(i).appName + "  |  " + appStuff.get(i).usageTime);
+            }
+            //outputStream.flush();
+            outputStream.close();
+            fileOutputStream.close();
+            Log.d("fileDebug", "app details written to file!");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private boolean doesAppInfoExist(UsageStats usageStats) {
