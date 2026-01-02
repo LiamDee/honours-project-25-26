@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+\usepackage{subfiles}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[export]{adjustbox}
+%\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\usepackage{csquotes}% Recommended
+
+\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+
+\addbibresource{references.bib}% Syntax for version >= 1.2
+
+\title{Focusath - Usage tracking \& psychology-based mobile application to help treat social media and smartphone addiction in young adults}	% Title
+\author{Liam De Buffalo}		% Author
+\date{\today}	% Date
+
+\newcommand{\studentId}{S2213159}
+\newcommand{\degree}{BSc (Hons) Computing}
+\newcommand{\supervisor}{Dr. Mario Mata}
+\newcommand{\secondmarker}{Prof. Hua Tianfield}
+\newcommand{\wordcount}{10000}
+\newcommand{\sdgs}{4,5,12}
+\newcommand{\module}{MHW225671}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+   % \vspace*{0.5 cm}
+    \includegraphics[scale = 0.05]{newlogo.png}\\[0.5 cm]
+    \text{Honours Project - \module}\\[0.5 cm]
+    \textsc{\LARGE FINAL REPORT}\\[0.5 cm]	
+    \text{2025-26} \\[0.5 cm]	
+    \text{\large Department of Computer Science} \\[0.8 cm]	
+	\text{ Submitted for the Degree of:}\\[0.2 cm]		
+	\degree \\[0.8 cm]
+
+	
+	\begin{minipage}{0.8\textwidth}
+		\begin{flushleft} \large	
+            \emph{Project Title: }
+			\thetitle \\ [0.2 cm]
+            \emph{Name: }
+			\theauthor \\ [0.2 cm]
+            \emph{Student ID: }
+			\studentId \\ [0.2 cm]
+            \emph{Supervisor: }
+			\supervisor \\ [0.2 cm]
+            \emph{Second Marker: }
+			\secondmarker \\ [0.2 cm]
+            \emph{Word Count: }
+			\wordcount \\ [0.2 cm]
+            \text{\small (excluding contents pages, figures, tables, references and appendices)} \\ [0.2 cm]
+            \emph{Aligned to SDGs: }
+            \sdgs \\ [0.5 cm]
+
+            \small{“Except where explicitly stated, all work in this report, is my own original work and has not been submitted elsewhere in fulfilment of the requirement of this or any other award”}
+			\end{flushleft}
+			%\end{minipage}~
+			%\begin{minipage}{0.4\textwidth}
+		
+	\end{minipage}\\[0.2 cm]
+
+   
+
+\vspace{5mm}
+
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} 
+			Name: \\
+			\theauthor
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+			\begin{flushright} 
+			Date: \\
+			\thedate								% Date of declaration
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+%	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{abstract}
+This should be an overview of the student’s project in less than half a page. It should summarise what they have actually done on their project: why it was done, how it was done and what were the conclusions. In particular, main objectives, main approaches/technologies used, actual solution/implementation, highlights of evaluation findings.
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\subsection{Project Background}
+
+\subsection{Aims and Methodology}
+
+\subsection{Structure of the Report}
+
+
+
+\newpage
+\section{Literature and technology review}
+\subsection{Secondary objective 1}
+The subsections of your literature and technology review should correspond to your secondary research objectives. This should be an in-depth review that provides the foundation for your research method and execution. 
+
+
+\subsection{Secondary objective 2}
+Your review should cite a comprehensive set of sources as evidence to support your analysis \autocite{Smith:2012qr}. As \textcite{Smith:2013jd} said, reliable sources constitute the evidentiary foundation of research, distinguishing rigorous inquiry from unsupported assertion\parencite{Other:2014ab}. Your sources should be stored in BibTex format, with appropriate keys, in the file \emph{references.bib}.
+
+
+
+\newpage
+\section{Execution}
+This section should provide a detailed description of the research methods which will used in the project. This will include the process of creating the artefact and evaluating the outcome.  This should make reference to the literature review findings where appropriate. 
+
+\subsection{Technical methods}
+\subsubsection {Theme 1}
+\subsubsection {Theme 2}
+\subsubsection {Theme 3}
+\subsubsection {Theme 4}
+
+
+
+\newpage
+\section{Evaluation and Discussion}
+
+
+
+\newpage
+\section{Social, Legal, Ethical and Professional Issues}
+
+
+
+\newpage
+\section{Conclusion and Further Work}
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\printbibliography
+
+\end{document}
