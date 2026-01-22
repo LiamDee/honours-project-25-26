@@ -21,7 +21,7 @@
 
 \addbibresource{references.bib}% Syntax for version >= 1.2
 
-\title{Focusath - Usage tracking \& psychology-based mobile application to help treat social media and smartphone addiction in young adults}	% Title
+\title{Focusath - Usage tracking \& psychology-based mobile application to help address social media and smartphone addiction in young adults}	% Title
 \author{Liam De Buffalo}		% Author
 \date{\today}	% Date
 
@@ -118,32 +118,384 @@ This should be an overview of the student’s project in less than half a page. 
 \end{abstract}
 
 \newpage
+
+\section*{Acknowledgements}
+I would like to thank my project supervisor, Dr. Mario Mata, for all his guidance and feedback throughout my honours project. His overall helpfulness over the last several months
+has not gone unappreciated, and I am very grateful I had someone like him guiding me through this project. \newline
+
+I would also like to thank everyone who participated in interviews and participated in the evaluation process for my honours project, their contributions have been very helpful in
+the completion of this project. \newline
+
+I would like to thank everyone who I've met throughout my time at Glasgow Caledonian University. Whether that be a teacher, a friend, or someone helpful on campus, you have helped shaped
+me over my four years at GCU, and I'm thankful for that. \newline
+
+Finally, I would like to thank my family and friends outside of GCU who have been nothing but supportive and encouraging over the last several months. Thank you, all.
+
+\newpage
 \tableofcontents
 
 \newpage
 
 \section{Introduction}
+This section will provide a brief overview on smartphones and social media. It will then provide context on the 
+issue of smartphone addiction and social media addiction, including how people develop such addictions, and the 
+effects they have on an individual. Existing apps and studies that attempt to deal with the issue are also 
+mentioned. It will also provide an overview on the project and it's objectives to be achieved in the literature 
+\& technology review and during development of the app.
+
 
 \subsection{Project Background}
+Social media (SM) and smartphones 
+have been adopted as an important piece of daily life for a substantial number of people in the world. 
+They have provided us the ability to connect with from around the globe on a 
+never-before-seen scale, allowing for friendships, communities, and relationships to be built from virtually 
+anywhere. Dating back MySpace in the mid-2000s, the release of Apple's "iPhone" and the
+release of the HTC Dream running the "Android" operating system in 2008, to SM such as Twitter and Facebook 
+reaching out to billions around the globe, smartphones and social 
+media looks to be omnipresent within a majority of peoples' lives, with it being estimated that 1 in 3 people 
+globally have some form of SM presence \autocite{RefWorks:RefID:88-shah2021rise}, reportedly 85\% of 
+adults in the United States own a smartphone \autocite{RefWorks:RefID:94-ouellette2022usefulness}.\newline
+
+Over the years, worries have been raised regarding many issues that concern smartphones and 
+SM, particularly surrounding the problem of individuals developing an overdependence on their smartphones 
+and SM that negatively affects their day-to-day life 
+\autocite{RefWorks:RefID:133-allen2020social, RefWorks:RefID:134-primack2017social}.
+Commonly categorised as "Smartphone Addiction" (SA) and "Social Media Addiction" (SMA) and considered 
+subsets of behavioural addiction 
+\autocite{RefWorks:RefID:68-king2017impact, RefWorks:RefID:66-hou2019social}, the issue has been largely discussed 
+and researched over the last 15 years, with researchers looking into potential causes and 
+correlations with other health effects.\newline
+
+\textcite{RefWorks:RefID:78-bhalerao2020analysis} analyzed SA and provided potential causes 
+behind SA, one of which being how the current generation has been brought up alongside the internet 
+and technology, therefore possibly feeling a preference to communicate over the internet instead of 
+in-person, fueling the dwindling need for face-to-face communication. \textcite{RefWorks:RefID:68-king2017impact} 
+made a series of hypotheses in relation to college students and the effects 
+related to SA, looking at SA's associations with "life stressors" (a measure of stress and anxiety), "digital overload" 
+(a measure of information and communication overload), retention, academic performance, and social well-being. The results 
+found that SA could be positively correlated with life stressors, digital overload, retention, and academic performance, 
+something consistent with previous studies.\newline
+
+Potential treatments have been researched as well. A China-based study from 2019 analyzing SMA 
+\autocite{RefWorks:RefID:66-hou2019social} developed a cognitive-behavioural-therapy-based intervention program 
+that used various techniques including reminder cards, journal entries before sleeping, and 
+cognitive reconstruction. The results showed that compared to the control group, those who took part in the 
+program saw improvements in mental health, engagement in learning, sleep quality, and also saw a 
+drop in SM usage. \newline
+
+The "AntiSocial" app, developed by Australian company BugBean for Android devices allowed users to restrict access to 
+certain apps and provided app usage statistics, but also added other functionality like usage comparisons
+with others that were within their age group, location, and occupation. It also showed users how many 
+times they picked up their device, and how long they used certain apps for 
+\autocite{RefWorks:RefID:104-michael2017addicted}. The author stated that the app ranked 3rd in downloads on the 
+UK Google Play store mere days after launch, "demonstrat[ing] the need 
+for [AntiSocial.io]" \autocite{RefWorks:RefID:104-michael2017addicted}.\newline
+
+However, there seemingly exists a gap of intervention apps that deal specifically with SA or SMA, and that also 
+allow self-reflection from the user, and most literature on the topic mostly provide 
+analysis on apps that deal with adjacent issues. A 2021 study by \textcite{RefWorks:RefID:75-oliveira2021effectiveness} 
+reviewed the effectiveness of psychological intervention mobile apps, and while they 
+concluded that the apps showed promise, none of 
+the literature specifically looked at addressing the issue of SA or SMA.\newline 
+
+\subsection{Project Overview}
+
+\subsubsection{Project Outline}
+
+Evidence has shown that smartphone apps that help with SA and SMA are 
+in-demand, and significant amounts research have been conducted suggesting treatments to the 
+issue. However, most consumer products on the app store opt to utilize app-restriction features. Because of 
+this approach, young adults who use these apps aren't given much opportunity to reflect on the nature of SA \& SMA 
+and the potential causes of it, leading to very little character growth for the end-user. However, by taking a 
+different approach by integrating psychology, young adults can be given the opportunity to reflect on their 
+addiction and learn how to address the issue. With that being said, the research statement is as follows: \newline
+
+\noindent\textbf{To create a mobile application that integrates psychological intervention methods alongside usage 
+tracking technologies to help address smartphone and social media addiction}
+
+\subsubsection{Project Objectives}
+The primary aim of this project is to create an application that can guide the user into reducing their smartphone 
+\& social media usage with the use of usage tracking and psychological methods.\newline
+
+\noindent\underline{\textbf{Secondary Objectives}}\newline\newline
+\noindent\textbf{Investigate existing mobile apps that use psychological methods to address mental health issues}\newline
+Research into how existing mobile applications make use of psychological methods when addressing issues such as 
+depression and anxiety to understand how viable using mobile apps are to address similar issues.\newline
+
+\noindent\textbf{Investigate the contextualization of SA and SMA in existing apps}\newline
+Research how the issue of SA and SMA are contextualized within existing intervention apps and what issues could
+arise from how they are presented. This will help in enabling growth in a user when it comes to learning about
+SA and SMA.\newline
+
+\noindent\textbf{Investigate psychological frameworks}\newline
+Research how psychological methods have been used in the past, specifically to treat SA or SMA, and see if such 
+methods have been integrated with mobile apps to gain a further understanding on how these methods could be 
+integrated or improved upon.\newline
+
+\noindent\textbf{Investigate methods to track app usage}\newline
+Research into how apps currently track phone activity, and how they can be utilized in the context of the project,
+as a major component of the application makes use of usage tracking.\newline
+
+\noindent\underline{\textbf{Primary Objectives}}\newline\newline
+\noindent\textbf{Develop the smartphone intervention app}\newline
+Create the application based on the knowledge gained from the literature and technology review. This will involve
+integrating the chosen psychological framework and usage tracking method before testing the app's functionality
+via test cases to ensure the app functions as intended.  \newline
+
+\noindent\textbf{Gather participants for evaluating the app and perform evaluation}\newline
+Participants will be used when evaluating the developed application. They will be given an overview of the app 
+before being given a consent form to sign to consent to participating in the research. Participants will be split 
+into two groups; one will be using the developed app while the other will be using an existing app that has app 
+restriction functionality. \newline
+\noindent\textbf{Analyze the results and obtain a conclusion}\newline
+Collect results from the evaluation and see if the app was more impactful at reducing smartphone usage than 
+traditional apps. Then evaluate based on the results, and see if the problem statement and
+hypothesis were met.\newline 
+
+
+\subsection{Project Hypothesis}
+Testing the hypothesis will involve splitting participants into two 
+separate groups. One will attempt to reduce their smartphone \& social media usage by using a mobile 
+application with usage tracking and psychological intervention methods, while the other will do the same, but with 
+a mobile application only utilizing app restriction technologies. Given this, the hypothesis for 
+this project is: \newline
+
+\noindent The combination of usage tracking and intervention methods rooted in psychology within a mobile 
+application will help to reduce smartphone \& social media usage in young adults more than existing apps which 
+only use app restriction technologies.
+\newpage
 
 \subsection{Aims and Methodology}
 
 \subsection{Structure of the Report}
-
-
-
 \newpage
-\section{Literature and technology review}
-\subsection{Secondary objective 1}
-The subsections of your literature and technology review should correspond to your secondary research objectives. This should be an in-depth review that provides the foundation for your research method and execution. 
-
-
-\subsection{Secondary objective 2}
-Your review should cite a comprehensive set of sources as evidence to support your analysis \autocite{Smith:2012qr}. As \textcite{Smith:2013jd} said, reliable sources constitute the evidentiary foundation of research, distinguishing rigorous inquiry from unsupported assertion\parencite{Other:2014ab}. Your sources should be stored in BibTex format, with appropriate keys, in the file \emph{references.bib}.
 
 
 
+\section{Literature and Technology Review}
+This literature and technology review will review mobile apps that use psychological methods to address mental 
+health issues before looking at how existing apps provide context regarding SA \& SMA and
+the issues associated with it. Potential psychological frameworks for treating SA \& SMA are reviewed 
+before researching how app usage can be tracked.
+
+\subsection{Investigate existing mobile apps that use psychological methods to address mental health issues}
+The project background mentioned that although researchers have studied SA and SMA, few apps are available, 
+or have been created for research purposes that handle the issue. However, apps that address similar 
+issues exist and have extensively been reviewed and evaluated. This section reviews existing
+studies on these apps to gain a further understanding on the viability of treating mental health issues.
+
+\subsubsection{Prior research on mobile app interventions}
+Researchers \textcite{RefWorks:RefID:87-weisel2019standalone} reviewed mobile apps that integrated
+psychological frameworks to treat mental health issues such as depression, anxiety,
+drug use, among others, with their intention being to evaluate the 
+effectiveness of these apps in reducing mental health symptoms. The review discusses features used, 
+with the most common being behaviour monitoring, participant engagement via explicit input, tailoring based on 
+feedback, 
+and gamification, while also noting the majority of apps opted to use CBT as their psychological framework.
+They discover that out of all the mental health issues targeted, depression, sleep-related 
+issues, and smoking returned a significant effect, with the review stating that "our knowledge on how to design 
+effective mental health apps is very much at the beginning". \newline
+
+They continue by suggesting different approaches that focus more on the user and the framework, as well as 
+engagement with the app via usage patterns,
+before saying that at the current point in time, there isn't much significant evidence 
+that supports using mobile apps for treating mental health as an alternative to traditional treatment, highlighting that
+while apps targeting depression, sleep issues and smoking showed promising results, the results showed a high
+risk of bias within them \autocite{RefWorks:RefID:87-weisel2019standalone}. \newline
+
+\textcite{RefWorks:RefID:75-oliveira2021effectiveness} reviewed mobile app-based 
+interventions utilizing psychological frameworks targeting college students, aiming to review the outcomes of 
+using app-based psychological interventions instead of traditional therapy, as well as looking how these apps are 
+being embraced by students. The review details the types of mental health issues these apps target, while also 
+noting that a majority of these apps are "self-guided" in nature 
+\autocite{RefWorks:RefID:75-oliveira2021effectiveness}. Psychological frameworks used are mentioned, with 
+Cognitive Behavioural Therapy (CBT) being 
+the main framework used or combined with another framework, with other frameworks such as 
+Acceptance and Commitment Therapy and Self-determination Theory mentioned. \newline
+
+The review then concludes by saying that the current literature demonstrates that using mobile apps for mental
+health intervention is a viable option and could be a great resource for
+counselling services, noting that future work into the topic should utilize alternative psychological
+frameworks, look further into what students and therapists would want out of similar apps, and that
+future studies should stray from monetary incentives for students looking to participate
+\autocite{RefWorks:RefID:75-oliveira2021effectiveness}.
+
+\subsubsection{Discussion}
+\textcite{RefWorks:RefID:87-weisel2019standalone} found that while apps that targeted
+depression, sleep-related issues, and smoking showed some results, the field was merely in its infancy when it
+came to designing effective applications that integrate psychological frameworks. Later, 
+\textcite{RefWorks:RefID:75-oliveira2021effectiveness} showed that mobile apps 
+that targets mental health issues aimed towards college-level students were a viable alternative option for 
+treating mental health issues due to student embracement, showcasing growth within the topic between the two points
+in time, though noted that this could've been due to incentives attached within the latter study. \newline
+
+Despite lacking insight on psychological frameworks other than CBT,
+showing a need to expand the types of psychological frameworks used for these apps, and the use of incentives 
+which may bias user retention, the studies demonstrate that the viability of a mobile mental health app
+using psychological frameworks has grown, and that developing such app is doable, as long
+as aspects such as other psychological frameworks, and user incentive are considered. 
+
+
+\subsection{Investigate the contextualization of SA and SMA in existing apps}
+The project background mentioned that intervention apps are developed with
+mostly functionality in mind, while neglecting any sort of teaching element, therefore leaving the user little to 
+no room to learn about SA and SMA. This section reviews how SA and SMA are contextualized, and
+how this could be improved.
+
+\subsubsection{Issues with contextualization}
+\textcite{RefWorks:RefID:35-dosselaar2017smartphone} puts forward an argument stating that 
+SA apps created by developers aren't suitable for treating SA due to developers having limited knowledge on the
+topic of SA, and points out the irony in attempting to treat SA with the use of a smartphone. This sentiment is 
+shared in \textcite{RefWorks:RefID:126-petrucco2021user}, stating that proposing technology as a solution to 
+an issue caused by technology itself is paradoxical in nature. \newline
+
+Dosselaar says that developers lack a deep understanding of the topic, and points out the overall complexity of the issue, 
+mentioning how SA is a product of many other factors; not just the phone, and the apps simplify what is often a complex 
+issue by acting as a one-size-fits-all solution \autocite{RefWorks:RefID:35-dosselaar2017smartphone, RefWorks:RefID:132-monge2019race}. 
+They also fail to consider context behind smartphone usage, noting how it can be productive 
+\autocite{RefWorks:RefID:35-dosselaar2017smartphone} and non-disruptive depending on where it's used 
+\autocite{RefWorks:RefID:126-petrucco2021user}. Another issue is that the apps lack any kind of opportunity
+for the user to understand and reflect on the issue of SA, noting that these apps frame
+SA as an issue that can be quantified, while lacking any features that offer information about SA 
+\autocite{RefWorks:RefID:35-dosselaar2017smartphone}, something that plays a role in treating the issue 
+\autocite{RefWorks:RefID:118-rosa2022problematic}, and could influence app effectiveness 
+\autocite{RefWorks:RefID:125-rahmillah2023evaluating}.\newline
+
+The author concludes by stating that SA apps are limited in effectiveness as they focus on practical
+functionality of the app rather than the contextualization and opportunity for reflection for the user, before
+recommending researching integrating psychological frameworks into the apps
+\autocite{RefWorks:RefID:35-dosselaar2017smartphone}.
+
+\subsubsection{Discussion}
+While it can be argued that some of these issues have been addressed, for consumers, most of
+these issues are yet to be addressed by anyone but the developers of these apps 
+\autocite{RefWorks:RefID:35-dosselaar2017smartphone}. These apps focus only on features
+such as self-monitoring and app restriction \autocite{RefWorks:RefID:74-löchtefeld2013appdetox}, rather than 
+providing opportunity for end-users to reflect and learn. These apps frame SA and SMA as an issue 
+that can be solved with the apps themselves, rather than it being a complex issue
+\autocite{RefWorks:RefID:128-santhosh2025augmented}, emphasised by the fact that not all smartphone usage 
+is the same for each person \autocite{RefWorks:RefID:126-petrucco2021user}, bringing suggestions of
+incorporating aspects such as psychological frameworks into these apps to make them more effective 
+\autocite{RefWorks:RefID:35-dosselaar2017smartphone}.
+
+
+\subsection{Investigate psychological frameworks}
+The project background mentioned that plenty of studies have been conducted utilising different
+psychological methods to treat SA and SMA. This section aims to review the most common psychological methods
+to understand which method would work best with the project.
+
+\subsubsection{Existing psychological frameworks for SA and SMA}
+The previous section highlighted the need for research into how psychological frameworks could be integrated into 
+consumer SA and SMA intervention apps to make them more effective, a sentiment shared with 
+\textcite{RefWorks:RefID:75-oliveira2021effectiveness}, who mentioned future intervention apps should 
+incorporate [other] psychological methods. \newline
+
+Intervention apps developed for research purposes commonly use Cognitive Behavioural Therapy (CBT) as their 
+psychological framework
+\autocite{RefWorks:RefID:87-weisel2019standalone,RefWorks:RefID:75-oliveira2021effectiveness}, though other 
+frameworks such as mindfulness, reality therapy, and theory of planned behaviour have also been utilized to 
+mixed success 
+\autocite{RefWorks:RefID:135-gajecki2014mobile, RefWorks:RefID:136-witkiewitz2014development, RefWorks:RefID:106-lu2025interventions}.
+
+\subsubsection{Cognitive Behavioural Therapy}
+Cognitive Behavioural Therapy (CBT) is a psychological framework that take an "active, problem-focused, 
+time-sensitive treatment approach" aiming to increase adaptive 
+behaviour and reduce emotional distress in an individual with mental health issues via targeted, short-term 
+strategies that intends to alter maladaptive emotional responses in an individual by changing their thoughts and/or 
+behaviours \autocite{RefWorks:RefID:138-wenzel2017basic,RefWorks:RefID:139-kaczkurkin2015cognitivebehavioral}.
+Despite results lacking in some areas, it can be argued that it's the framework with the highest usage 
+\autocite{RefWorks:RefID:140-hofmann2012efficacy} overall, with some considering it the "gold 
+standard" \autocite{RefWorks:RefID:141-beck2020cognitive} due to the proven success the framework has had on 
+treating certain issues such as nicotine overdependence, schizophrenia, 
+depression, and anxiety \autocite{RefWorks:RefID:140-hofmann2012efficacy}. \newline
+
+The main CBT techniques used in intervention apps are behavioural activation (A focus on engaging
+a patient in positive activities and helping with aversive control 
+\autocite{RefWorks:RefID:146-tindall2017behavioural}), cognitive restructuring (A process that assists patients 
+in identifying and evaluating negative thoughts \autocite{RefWorks:RefID:138-wenzel2017basic}), and problem solving 
+(Discover solutions to a patient's issue \autocite{RefWorks:RefID:144-denecke2022implementation}). 
+\textcite{RefWorks:RefID:147-throuvala2020mind} assessed if these techniques could reduce smartphone 
+usage via three separate apps which provided these techniques (AntiSocial, Headspace, Pacifica) and found that 
+those in the experimental group saw their smartphone usage drop and were made more aware of their usage when 
+compared to the control group.
+
+\subsubsection{Reality Therapy}
+Reality Therapy (RT) is a psychological framework that can be traced back to choice theory, which theorizes that 
+all human behaviour is a result
+of choices, \autocite{RefWorks:RefID:143-bradley2014choice, RefWorks:RefID:145-wubbolding2016reality}. RT's primary aim is on
+focusing an individual's behaviour in the present by using the Wants, Direction, Evaluation, and Planning \& 
+Commitment System (WDEP system) \autocite{RefWorks:RefID:143-bradley2014choice}. This involves asking an individual
+to define a goal for themselves, what they're currently doing, and if that 
+behaviour is halting progress towards their goal or not, before being encouraged to replace it with a
+healthier alternative \autocite{RefWorks:RefID:48-yao2017combined}. RT has shown effectiveness in treating issues
+such as Internet Addiction and Internet Gaming Disorder 
+\autocite{RefWorks:RefID:48-yao2017combined,RefWorks:RefID:49-zajac2017treatments}, though has had limited research
+\autocite{RefWorks:RefID:143-bradley2014choice} when treating SA and SMA compared to CBT. \newline
+
+\textcite{RefWorks:RefID:42-esmaeili2018method} developed a mobile app 
+integrating RT. The app was hypothesized to reduce anxiety, SM usage, among others, and was developed for Android 
+devices. It implemented teachings about SMA, as well as app restriction functions, with the results being that 
+anxiety and SM usage fell when compared to the control group.
+
+
+\subsection{Investigate methods to track app usage}
+The project background mentioned that existing SA and SMA intervention applications mainly make use of 
+app-restriction and usage tracking technologies, and due to usage tracking being a large component of the project, 
+it would be useful to know the technological methods used for app usage tracking.
+
+\subsubsection{Justification for app usage tracking}
+App usage tracking has proven to be successful in reducing smartphone usage. a
+study by researchers \textcite{RefWorks:RefID:125-rahmillah2023evaluating} reviewed the effectiveness of apps 
+intended to reduce smartphone use, and found that in the 13 apps reviewed, 4 apps successfully reduced smartphone 
+usage, those of which included app usage tracking.
+
+\subsubsection{Methods of app usage tracking}
+\textcite{RefWorks:RefID:118-rosa2022problematic} hypothesized that individuals with high levels of 
+smartphone usage show more difficulty in not using their smartphone when compared to those with lower levels, verifying their 
+hypothesis by developing an application called "SocialStatsApp" to track app usage of participants.
+
+The app was developed for devices using Google's Android operating system. The researchers
+mention how making the app compatible for Apple's iOS devices wasn't possible as the OS
+disallows the collection of usage statistics for privacy reasons \autocite{applesupport-ifanappasks}. 
+The programming language used was Java, one of three officially supported languages via the Android SDK, 
+the other two being Kotlin and C++ \autocite{androiddevelopment-appfundamentals}, though the study doesn't detail the 
+reasoning behind using Java. The app makes use of the Android class 
+\newline android.app.usage.UsageStatsManager from the 
+Android API which gives access to phone usage stats and history. Because of this, the app needs permission 
+manually granted by the user. The results of the study showed that those with high levels of smartphone usage 
+did experience more difficulty in not using their phone. \newline
+
+\textcite{RefWorks:RefID:116-bye2024cohort} analyzed the effects technology has on 
+the mental health of young people, developing an app called the "3S-YP" app 
+that constantly collected "smartphone metadata" from participants. 
+While they don't detail the development of the app, they mention that smartphone metadata was collected using 
+the android.app.usage package from the Android API, while also mentioning that metadata collection was not 
+performed for the iOS version of the application due to "data protection restrictions", a sentiment shared by the 
+previous study, showing that developing for Android allowed for additional functionality not possible with iOS.\newline
+
+Another method of tracking a user's app usage is by making use of screenshots
+and digital well-being features included with smartphones. \textcite{RefWorks:RefID:124-ubochi2019apples} 
+investigates the use of digital health apps and their effectiveness via Apple's Screen Time feature. 
+Due to the aforementioned privacy restrictions, the researcher instructs participants to instead 
+screenshot multiple aspects related to the Screen Time feature. A limitation of this method however is that 
+screenshots must be taken at a specified time, as mistiming it could yield less accurate 
+metrics \autocite{RefWorks:RefID:123-2024mobile}.
+
+\subsubsection{Discussion}
+Both studies chose Android as their development platform of choice, mentioning that iOS apps don't allow for app 
+usage tracking due to privacy restrictions 
+\autocite{RefWorks:RefID:118-rosa2022problematic, RefWorks:RefID:116-bye2024cohort, applesupport-ifanappasks}. 
+This is elaborated further within \textcite{RefWorks:RefID:123-2024mobile}, mentioning including iOS users 
+would require a "jailbroken" phone, which brings a variety of issues. Meanwhile, Android allows for this as 
+long as the user permits it. Only one of the studies makes mention of a programming language 
+\autocite{RefWorks:RefID:118-rosa2022problematic}, that being Java, and while both studies make use of the
+android.app.usage package within the Android API, only one \autocite{RefWorks:RefID:118-rosa2022problematic}
+explicitly uses the UsageStatsManager class. Given this, it is clear that the OS that the app 
+should be developed for is Android, and that using the android.app.usage package would be a viable method of app 
+usage tracking.
 \newpage
+
+
 \section{Execution}
 This section should provide a detailed description of the research methods which will used in the project. This will include the process of creating the artefact and evaluating the outcome.  This should make reference to the literature review findings where appropriate. 
 
@@ -171,5 +523,8 @@ This section should provide a detailed description of the research methods which
 \newpage
 \addcontentsline{toc}{section}{References}
 \printbibliography
+
+\newpage
+\section*{Appendix}
 
 \end{document}

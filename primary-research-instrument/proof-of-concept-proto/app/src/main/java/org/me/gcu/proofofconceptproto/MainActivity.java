@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void loadUsage() throws PackageManager.NameNotFoundException {
         long lastWeek = System.currentTimeMillis() - (1000*3600*24*7);
         UsageStatsManager usm = (UsageStatsManager)this.getSystemService(USAGE_STATS_SERVICE);
-        List<UsageStats> appList = usm.queryUsageStats(UsageStatsManager.INTERVAL_MONTHLY,
+        List<UsageStats> appList = usm.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY,
                 lastWeek, System.currentTimeMillis());
         appList = appList.stream().filter(app -> app.getTotalTimeInForeground() > 0).collect(Collectors.toList());
 
