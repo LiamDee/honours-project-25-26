@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        permissionsBtn = (Button)findViewById(R.id.permissionBtn);
         showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
         appListView = (ListView)findViewById(R.id.appListView);
         emailBtn = (Button)findViewById(R.id.emailBtn);
@@ -84,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
         } else {
             setContentView(R.layout.onboarding_info_screen);
+            permissionsBtn = (Button)findViewById(R.id.permissionBtn);
             permissionsBtn.setOnClickListener(view -> {
                 startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
             });
