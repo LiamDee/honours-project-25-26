@@ -42,7 +42,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn;
+    private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn, nextScreenBtn;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
@@ -96,18 +96,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
         if (getGrantStatus()) {
             showStatsBtn.setOnClickListener(view -> {
-                try {
-                    loadUsage();
-                } catch (PackageManager.NameNotFoundException e) {
-                    throw new RuntimeException(e);
-                }
+
             });
         } else {
             setContentView(R.layout.onboarding_info_screen);
+            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
             permissionsBtn = (Button)findViewById(R.id.permissionBtn);
             notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
             permissionsBtn.setOnClickListener(view -> {
                 startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
+            });
+            nextScreenBtn.setOnClickListener(view -> {
+                if (!getGrantStatus()) {
+                    return;
+                } else {
+                    setContentView(R.layout.activity_main);
+                    try {
+                        loadUsage();
+                    } catch (PackageManager.NameNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+
             });
             notiTestBtn.setOnClickListener(view -> {
                 createNotiChannel();
