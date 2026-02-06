@@ -3,9 +3,11 @@ package org.me.gcu.focusath;
 import static android.app.AppOpsManager.MODE_ALLOWED;
 
 import android.Manifest;
+import android.app.AlarmManager;
 import android.app.AppOpsManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.content.Context;
@@ -20,6 +22,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,11 +32,18 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.work.Constraints;
+import androidx.work.Data;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         emailBtn = (Button)findViewById(R.id.emailBtn);
         emailBtn.setOnClickListener(this);
 
+//        WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
+//        WorkManager.getInstance().pruneWork();
+
         try {
             this.loadUsage();
         } catch (PackageManager.NameNotFoundException e) {
@@ -80,18 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void createNotiChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "FocusathChannel";
-            String desc = "App notification channel for Focusath";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
-            channel.setDescription(desc);
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
-    }
-
     @Override protected void onStart() {
         super.onStart();
         if (getGrantStatus()) {
@@ -100,12 +101,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
         } else {
             setContentView(R.layout.onboarding_info_screen);
+
             nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
             permissionsBtn = (Button)findViewById(R.id.permissionBtn);
             notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
             permissionsBtn.setOnClickListener(view -> {
                 startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
             });
+            final PeriodicWorkRequest periodicWorkRequest =
+                    new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
+                    .addTag("periodicWork")
+                    .build();
+
+            notiTestBtn.setOnClickListener(view ->
+                    WorkManager.getInstance().enqueue(periodicWorkRequest));
+
             nextScreenBtn.setOnClickListener(view -> {
                 if (!getGrantStatus()) {
                     return;
@@ -119,13 +129,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
             });
-            notiTestBtn.setOnClickListener(view -> {
-                createNotiChannel();
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_launcher_foreground)
-                        .setContentTitle("a noti")
-                        .setContentText("look at me im all the text");
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+
+            //notiTestBtn.setOnClickListener(view -> {
+//                WorkRequest workerClassReq = new OneTimeWorkRequest.Builder(WorkerClass.class).build();
+//                WorkManager.getInstance(this).enqueue(workerClassReq);
+                //createNotiChannel();
+                //scheduleNotification(calendar);
+//                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+//                        .setSmallIcon(R.drawable.ic_launcher_foreground)
+//                        .setContentTitle("a noti")
+//                        .setContentText("look at me im all the text");
+                //if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -134,11 +148,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // to handle the case where the user grants the permission. See the documentation
                     // for ActivityCompat#requestPermissions for more details.
                     return;
-                }
-                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
-            });
+//                }
+//                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
+            //});
         }
     }
+
+
     public void loadUsage() throws PackageManager.NameNotFoundException {
         long lastWeek = System.currentTimeMillis() - (1000 * 3600 * 24 * 7);
         UsageStatsManager usm = (UsageStatsManager) this.getSystemService(USAGE_STATS_SERVICE);
