@@ -52,7 +52,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn, nextScreenBtn, nextScreenBtnTwo;
+    //TODO: refactor "nextScreenBtn's" names to be more meaningful
+    private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
+            nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
@@ -159,19 +161,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-    //used to swap between screens, probably a simpler way to do this but it'll suffice
+    //used to swap between screens, 100% a MUCH better, nicer, and cleaner way to do this
+    // (with switch cases for example) to do this but it'll suffice
+    //TODO: add validation to each onclicklistener
     public void screenCheck() {
-        if (screen_count == 1) {
+        //TODO: move onboarding usage tracking code to here
+        if (screen_count == 0) {
+            setContentView(R.layout.activity_main);
+        }
+        else if (screen_count == 1) {
             setContentView(R.layout.onboarding_info_screen);
             nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
         }
-        if (screen_count == 2) {
+        else if (screen_count == 2) {
             setContentView(R.layout.onboarding_info_screen_two);
             nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
             nextScreenBtnTwo.setOnClickListener(view -> {
                 screen_count = 3;
                 screenCheck();
             });
+        }
+        else if (screen_count == 3) {
+            setContentView(R.layout.user_goal_input_screen);
+            nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
+            nextScreenBtnThree.setOnClickListener(view -> {
+                screen_count = 4;
+                screenCheck();
+            });
+        }
+        else if (screen_count == 4) {
+            setContentView(R.layout.user_activity_suggestions_screen);
+            nextScreenBtnFour = (Button)findViewById(R.id.nextScreenBtnFour);
+            nextScreenBtnFour.setOnClickListener(view -> {
+                screen_count = 5;
+                screenCheck();
+            });
+        }
+        else if (screen_count == 5) {
+            setContentView(R.layout.enable_user_tracking_screen);
+            nextScreenBtnFive = (Button)findViewById(R.id.nextScreenBtnFive);
+            nextScreenBtnFive.setOnClickListener(view -> {
+                screen_count = 6;
+                screenCheck();
+            });
+        }
+        else if (screen_count == 6) {
+            setContentView(R.layout.noti_screen);
+            nextScreenBtnSix = (Button)findViewById(R.id.nextScreenBtnSix);
+            nextScreenBtnSix.setOnClickListener(view -> {
+                screen_count = 0;
+                screenCheck();
+            });
+
         }
     }
 
