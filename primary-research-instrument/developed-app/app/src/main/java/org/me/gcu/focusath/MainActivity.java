@@ -52,10 +52,12 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn, nextScreenBtn;
+    private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn, nextScreenBtn, nextScreenBtnTwo;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
+    private int screen_count = 0;
+
 
 
 
@@ -68,8 +70,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         emailBtn = (Button)findViewById(R.id.emailBtn);
         emailBtn.setOnClickListener(this);
 
-//        WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
-//        WorkManager.getInstance().pruneWork();
+        //TODO: remove in prod, only here so emulated phone doesn't constantly receive notifications
+        WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
+        WorkManager.getInstance().pruneWork();
 
         try {
             this.loadUsage();
@@ -100,9 +103,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             });
         } else {
-            setContentView(R.layout.onboarding_info_screen);
-
-            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
+            screen_count = 1;
+            screenCheck();
             permissionsBtn = (Button)findViewById(R.id.permissionBtn);
             notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
             permissionsBtn.setOnClickListener(view -> {
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
             final PeriodicWorkRequest periodicWorkRequest =
                     new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
+                            //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
                     .addTag("periodicWork")
                     .build();
 
@@ -117,16 +120,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     WorkManager.getInstance().enqueue(periodicWorkRequest));
 
             nextScreenBtn.setOnClickListener(view -> {
-                if (!getGrantStatus()) {
-                    return;
-                } else {
-                    setContentView(R.layout.activity_main);
-                    try {
-                        loadUsage();
-                    } catch (PackageManager.NameNotFoundException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
+//                if (!getGrantStatus()) {
+                   // return; //TODO: replace with toast, move to different onclicklistener
+//                } else {
+                    screen_count = 2;
+                    screenCheck();
+//                    setContentView(R.layout.activity_main);
+//                    try {
+//                        loadUsage();
+//                    } catch (PackageManager.NameNotFoundException e) {
+//                        throw new RuntimeException(e);
+//                    }
+                //}
 
             });
 
@@ -151,6 +156,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                }
 //                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
             //});
+        }
+
+    }
+    //used to swap between screens, probably a simpler way to do this but it'll suffice
+    public void screenCheck() {
+        if (screen_count == 1) {
+            setContentView(R.layout.onboarding_info_screen);
+            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
+        }
+        if (screen_count == 2) {
+            setContentView(R.layout.onboarding_info_screen_two);
+            nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
+            nextScreenBtnTwo.setOnClickListener(view -> {
+                screen_count = 3;
+                screenCheck();
+            });
         }
     }
 
