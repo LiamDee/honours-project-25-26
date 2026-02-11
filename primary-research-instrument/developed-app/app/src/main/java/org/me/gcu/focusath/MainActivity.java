@@ -12,6 +12,7 @@ import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
@@ -21,6 +22,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -52,13 +54,16 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    //TODO: refactor "nextScreenBtn's" names to be more meaningful
+    //TODO: refactor "nextScreenBtn's" names to be more meaningful / compact, create app logo
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
             nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
     private int screen_count = 0;
+    private SharedPreferences sharedPreferences;
+    private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree;
+    private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText;
 
 
 
@@ -66,13 +71,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.activity_main);
         showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
         appListView = (ListView)findViewById(R.id.appListView);
         emailBtn = (Button)findViewById(R.id.emailBtn);
         emailBtn.setOnClickListener(this);
+        sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
 
-        //TODO: remove in prod, only here so emulated phone doesn't constantly receive notifications
+        //TODO: move to settings screen in prod, only here so emulated phone doesn't constantly receive notifications when opened
         WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
         WorkManager.getInstance().pruneWork();
 
@@ -105,26 +114,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             });
         } else {
+            //TODO: add notification permission functionality
             screen_count = 1;
             screenCheck();
-            permissionsBtn = (Button)findViewById(R.id.permissionBtn);
+
+
             notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
-            permissionsBtn.setOnClickListener(view -> {
-                startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
-            });
             final PeriodicWorkRequest periodicWorkRequest =
                     new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
                             //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
-                    .addTag("periodicWork")
-                    .build();
+                            .addTag("periodicWork")
+                            .build();
 
             notiTestBtn.setOnClickListener(view ->
                     WorkManager.getInstance().enqueue(periodicWorkRequest));
 
             nextScreenBtn.setOnClickListener(view -> {
-//                if (!getGrantStatus()) {
-                   // return; //TODO: replace with toast, move to different onclicklistener
-//                } else {
                     screen_count = 2;
                     screenCheck();
 //                    setContentView(R.layout.activity_main);
@@ -163,16 +168,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     //used to swap between screens, 100% a MUCH better, nicer, and cleaner way to do this
     // (with switch cases for example) to do this but it'll suffice
-    //TODO: add validation to each onclicklistener
+    //TODO: add validation to each onclicklistener -- make sure to check uml flowcharts, see each TODO in each onclicklistener, add toasts when necessary
     public void screenCheck() {
         //TODO: move onboarding usage tracking code to here
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
         }
+        //no validation needed here
         else if (screen_count == 1) {
             setContentView(R.layout.onboarding_info_screen);
             nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
         }
+        //no validation needed here
         else if (screen_count == 2) {
             setContentView(R.layout.onboarding_info_screen_two);
             nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
@@ -181,30 +188,80 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 screenCheck();
             });
         }
+        //TODO: add validation for empty edittext field, add character limit
         else if (screen_count == 3) {
             setContentView(R.layout.user_goal_input_screen);
+            goalEntryField = (EditText)findViewById(R.id.goalEntryField);
             nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
             nextScreenBtnThree.setOnClickListener(view -> {
+
+                goalEntryText = goalEntryField.getText().toString();
+                sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
+
                 screen_count = 4;
                 screenCheck();
             });
         }
+        //TODO: add validation for empty edittext fields, add character limit, check to ensure all activities are unique
         else if (screen_count == 4) {
+            //Log.d("goalEntry", goalEntryText);
+
             setContentView(R.layout.user_activity_suggestions_screen);
+
+//            String currentGoal = sharedPreferences.getString("goalEntry", "none");
+//            Log.d("currentGoal", currentGoal);
+
+            activityFieldOne = (EditText)findViewById(R.id.activityFieldOne);
+            activityFieldTwo = (EditText)findViewById(R.id.activityFieldTwo);
+            activityFieldThree = (EditText)findViewById(R.id.activityFieldThree);
+
             nextScreenBtnFour = (Button)findViewById(R.id.nextScreenBtnFour);
             nextScreenBtnFour.setOnClickListener(view -> {
+
+                activityFieldOneText = activityFieldOne.getText().toString();
+                sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
+
+                activityFieldTwoText = activityFieldTwo.getText().toString();
+                sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
+
+                activityFieldThreeText = activityFieldThree.getText().toString();
+                sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
+
                 screen_count = 5;
                 screenCheck();
             });
         }
+        //TODO: move validation to here -- see code in onStart() -- find a way to retain screen pos, currently goes back to first screen if exited
         else if (screen_count == 5) {
             setContentView(R.layout.enable_user_tracking_screen);
+
+//            String acOne = sharedPreferences.getString("activityOne", "none");
+//            Log.d("currentAcOne", acOne);
+//
+//            String acTwo = sharedPreferences.getString("activityTwo", "none");
+//            Log.d("currentAcTwo", acTwo);
+//
+//            String acThree = sharedPreferences.getString("activityThree", "none");
+//            Log.d("currentAcThree", acThree);
+
+            permissionsBtn = (Button)findViewById(R.id.permissionBtn);
+            permissionsBtn.setOnClickListener(view -> {
+                startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
+                setContentView(R.layout.enable_user_tracking_screen);
+            });
+
             nextScreenBtnFive = (Button)findViewById(R.id.nextScreenBtnFive);
             nextScreenBtnFive.setOnClickListener(view -> {
-                screen_count = 6;
-                screenCheck();
+                if (!getGrantStatus()) {
+                    Toast.makeText(view.getContext(), "Please enable app usage statistics tracking to continue", Toast.LENGTH_SHORT).show();
+                } else {
+                    screen_count = 6;
+                    screenCheck();
+                }
+
             });
         }
+        //no validation necessary here -- TODO: add notification enable button for android APIs 26+
         else if (screen_count == 6) {
             setContentView(R.layout.noti_screen);
             nextScreenBtnSix = (Button)findViewById(R.id.nextScreenBtnSix);

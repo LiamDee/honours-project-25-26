@@ -21,6 +21,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/activityFieldOne"
             android:hint="enter activity 1 here">
         </EditText>
     </LinearLayout>
@@ -31,6 +32,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/activityFieldTwo"
             android:hint="enter activity 2 here">
         </EditText>
     </LinearLayout>
@@ -41,6 +43,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/activityFieldThree"
             android:hint="enter activity 3 here">
         </EditText>
     </LinearLayout>
