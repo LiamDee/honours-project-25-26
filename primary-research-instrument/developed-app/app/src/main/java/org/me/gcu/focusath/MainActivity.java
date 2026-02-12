@@ -49,6 +49,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
@@ -117,52 +118,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //TODO: add notification permission functionality
             screen_count = 1;
             screenCheck();
-
-
-            notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
-            final PeriodicWorkRequest periodicWorkRequest =
-                    new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
-                            //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
-                            .addTag("periodicWork")
-                            .build();
-
-            notiTestBtn.setOnClickListener(view ->
-                    WorkManager.getInstance().enqueue(periodicWorkRequest));
-
-            nextScreenBtn.setOnClickListener(view -> {
-                    screen_count = 2;
-                    screenCheck();
-//                    setContentView(R.layout.activity_main);
-//                    try {
-//                        loadUsage();
-//                    } catch (PackageManager.NameNotFoundException e) {
-//                        throw new RuntimeException(e);
-//                    }
-                //}
-
-            });
-
-            //notiTestBtn.setOnClickListener(view -> {
-//                WorkRequest workerClassReq = new OneTimeWorkRequest.Builder(WorkerClass.class).build();
-//                WorkManager.getInstance(this).enqueue(workerClassReq);
-                //createNotiChannel();
-                //scheduleNotification(calendar);
-//                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-//                        .setSmallIcon(R.drawable.ic_launcher_foreground)
-//                        .setContentTitle("a noti")
-//                        .setContentText("look at me im all the text");
-                //if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
-                    return;
-//                }
-//                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
-            //});
         }
 
     }
@@ -174,65 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
         }
-        //no validation needed here
-        else if (screen_count == 1) {
-            setContentView(R.layout.onboarding_info_screen);
-            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
-        }
-        //no validation needed here
-        else if (screen_count == 2) {
-            setContentView(R.layout.onboarding_info_screen_two);
-            nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
-            nextScreenBtnTwo.setOnClickListener(view -> {
-                screen_count = 3;
-                screenCheck();
-            });
-        }
-        //TODO: add validation for empty edittext field, add character limit
-        else if (screen_count == 3) {
-            setContentView(R.layout.user_goal_input_screen);
-            goalEntryField = (EditText)findViewById(R.id.goalEntryField);
-            nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
-            nextScreenBtnThree.setOnClickListener(view -> {
-
-                goalEntryText = goalEntryField.getText().toString();
-                sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
-
-                screen_count = 4;
-                screenCheck();
-            });
-        }
-        //TODO: add validation for empty edittext fields, add character limit, check to ensure all activities are unique
-        else if (screen_count == 4) {
-            //Log.d("goalEntry", goalEntryText);
-
-            setContentView(R.layout.user_activity_suggestions_screen);
-
-//            String currentGoal = sharedPreferences.getString("goalEntry", "none");
-//            Log.d("currentGoal", currentGoal);
-
-            activityFieldOne = (EditText)findViewById(R.id.activityFieldOne);
-            activityFieldTwo = (EditText)findViewById(R.id.activityFieldTwo);
-            activityFieldThree = (EditText)findViewById(R.id.activityFieldThree);
-
-            nextScreenBtnFour = (Button)findViewById(R.id.nextScreenBtnFour);
-            nextScreenBtnFour.setOnClickListener(view -> {
-
-                activityFieldOneText = activityFieldOne.getText().toString();
-                sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
-
-                activityFieldTwoText = activityFieldTwo.getText().toString();
-                sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
-
-                activityFieldThreeText = activityFieldThree.getText().toString();
-                sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
-
-                screen_count = 5;
-                screenCheck();
-            });
-        }
-        //TODO: move validation to here -- see code in onStart() -- find a way to retain screen pos, currently goes back to first screen if exited
-        else if (screen_count == 5) {
+        //note: this has been moved to be the first screen as exiting the intent returns to the first screen, TODO: update uml flowchart to reflect change
+        else if (screen_count == 1){
             setContentView(R.layout.enable_user_tracking_screen);
 
 //            String acOne = sharedPreferences.getString("activityOne", "none");
@@ -252,15 +150,132 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             nextScreenBtnFive = (Button)findViewById(R.id.nextScreenBtnFive);
             nextScreenBtnFive.setOnClickListener(view -> {
-                if (!getGrantStatus()) {
-                    Toast.makeText(view.getContext(), "Please enable app usage statistics tracking to continue", Toast.LENGTH_SHORT).show();
+                //commented for testing, make sure to uncomment when finished testing
+//                if (!getGrantStatus()) {
+//                    Toast.makeText(view.getContext(), "Please enable app usage statistics tracking to continue", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+                screen_count = 2;
+                screenCheck();
+
+            });
+        }
+        //no validation needed here
+        else if (screen_count == 2) {
+            setContentView(R.layout.onboarding_info_screen);
+            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
+            notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
+            final PeriodicWorkRequest periodicWorkRequest =
+                    new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
+                            //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
+                            .addTag("periodicWork")
+                            .build();
+            notiTestBtn.setOnClickListener(view ->
+                    WorkManager.getInstance().enqueue(periodicWorkRequest));
+
+            nextScreenBtn.setOnClickListener(view -> {
+                screen_count = 3;
+                screenCheck();
+//                    setContentView(R.layout.activity_main);
+//                    try {
+//                        loadUsage();
+//                    } catch (PackageManager.NameNotFoundException e) {
+//                        throw new RuntimeException(e);
+//                    }
+                //}
+
+            });
+
+            //notiTestBtn.setOnClickListener(view -> {
+//                WorkRequest workerClassReq = new OneTimeWorkRequest.Builder(WorkerClass.class).build();
+//                WorkManager.getInstance(this).enqueue(workerClassReq);
+            //createNotiChannel();
+            //scheduleNotification(calendar);
+//                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+//                        .setSmallIcon(R.drawable.ic_launcher_foreground)
+//                        .setContentTitle("a noti")
+//                        .setContentText("look at me im all the text");
+            //if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+//                }
+//                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
+            //});
+        }
+        //no validation needed here
+        else if (screen_count == 3) {
+            setContentView(R.layout.onboarding_info_screen_two);
+            nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
+            nextScreenBtnTwo.setOnClickListener(view -> {
+                screen_count = 4;
+                screenCheck();
+            });
+        }
+        else if (screen_count == 4) {
+            setContentView(R.layout.user_goal_input_screen);
+            goalEntryField = (EditText)findViewById(R.id.goalEntryField);
+            nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
+            nextScreenBtnThree.setOnClickListener(view -> {
+
+                goalEntryText = goalEntryField.getText().toString();
+                if (goalEntryText.isEmpty()) {
+                    Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
+                    return;
                 } else {
-                    screen_count = 6;
+                    sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
+                    screen_count = 5;
                     screenCheck();
                 }
 
             });
         }
+        else if (screen_count == 5) {
+            //Log.d("goalEntry", goalEntryText);
+
+            setContentView(R.layout.user_activity_suggestions_screen);
+
+//            String currentGoal = sharedPreferences.getString("goalEntry", "none");
+//            Log.d("currentGoal", currentGoal);
+
+            activityFieldOne = (EditText)findViewById(R.id.activityFieldOne);
+            activityFieldTwo = (EditText)findViewById(R.id.activityFieldTwo);
+            activityFieldThree = (EditText)findViewById(R.id.activityFieldThree);
+
+            nextScreenBtnFour = (Button)findViewById(R.id.nextScreenBtnFour);
+            nextScreenBtnFour.setOnClickListener(view -> {
+
+                activityFieldOneText = activityFieldOne.getText().toString();
+                activityFieldTwoText = activityFieldTwo.getText().toString();
+                activityFieldThreeText = activityFieldThree.getText().toString();
+
+                if (activityFieldOneText.isEmpty() || activityFieldTwoText.isEmpty() || activityFieldThreeText.isEmpty()) {
+                    Toast.makeText(view.getContext(), "Please enter some activities to continue", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    if ((Objects.equals(activityFieldOneText, activityFieldTwoText))
+                            || (Objects.equals(activityFieldTwoText, activityFieldThreeText))
+                            || (Objects.equals(activityFieldOneText, activityFieldThreeText))) {
+                        //TODO: reword to sound less odd
+                        Toast.makeText(view.getContext(), "Your activities must be unique", Toast.LENGTH_SHORT).show();
+                        return;
+                    } else {
+                        sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
+                        sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
+                        sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
+
+                        screen_count = 6;
+                        screenCheck();
+                    }
+                }
+            });
+        }
+
         //no validation necessary here -- TODO: add notification enable button for android APIs 26+
         else if (screen_count == 6) {
             setContentView(R.layout.noti_screen);

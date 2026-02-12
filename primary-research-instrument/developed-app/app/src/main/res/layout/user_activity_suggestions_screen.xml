@@ -22,6 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/activityFieldOne"
+            android:maxLength="30"
+            android:inputType="textNoSuggestions|textVisiblePassword"
             android:hint="enter activity 1 here">
         </EditText>
     </LinearLayout>
@@ -33,6 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/activityFieldTwo"
+            android:maxLength="30"
+            android:inputType="textNoSuggestions|textVisiblePassword"
             android:hint="enter activity 2 here">
         </EditText>
     </LinearLayout>
@@ -44,6 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/activityFieldThree"
+            android:maxLength="30"
+            android:inputType="textNoSuggestions|textVisiblePassword"
             android:hint="enter activity 3 here">
         </EditText>
     </LinearLayout>

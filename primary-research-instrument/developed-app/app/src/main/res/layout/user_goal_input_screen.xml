@@ -21,6 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/goalEntryField"
+            android:maxLength="25"
+            android:inputType="textNoSuggestions|textVisiblePassword"
             android:hint="enter a goal here">
         </EditText>
     </LinearLayout>
