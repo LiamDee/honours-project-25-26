@@ -22,14 +22,7 @@ public class WorkerClass extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         sendNoti();
-
         return Result.success();
     }
     public void sendNoti() {
@@ -44,9 +37,11 @@ public class WorkerClass extends Worker {
             notiManager.createNotificationChannel(channel);
         }
 
+        //TODO: make notification look nice, replace placeholder values with intended ones
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
                 .setContentTitle("title")
                 .setContentText("message")
+                .setStyle(new NotificationCompat.BigTextStyle())
                 .setSmallIcon(R.drawable.ic_launcher_foreground);
         notiManager.notify(1, notification.build());
     }

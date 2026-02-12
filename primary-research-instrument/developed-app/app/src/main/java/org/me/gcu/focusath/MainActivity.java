@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             });
         } else {
-            //TODO: add notification permission functionality
             screen_count = 1;
             screenCheck();
         }
@@ -217,7 +216,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 goalEntryText = goalEntryField.getText().toString();
                 if (goalEntryText.isEmpty()) {
                     Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
-                    return;
                 } else {
                     sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
                     screen_count = 5;
@@ -267,14 +265,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
         }
 
-        //no validation necessary here -- TODO: add notification enable button for android APIs 26+
+        //no validation necessary here
         else if (screen_count == 6) {
             setContentView(R.layout.noti_screen);
             nextScreenBtnSix = (Button)findViewById(R.id.nextScreenBtnSix);
+            //this function is necessary to enable notifications on android apis above 33
             notiEnableBtn = (Button)findViewById(R.id.notiEnableBtn);
             notiEnableBtn.setOnClickListener(view -> {
-
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                        ActivityCompat.requestPermissions(this, new String[]{(Manifest.permission.POST_NOTIFICATIONS)}, 12);
+                    }
+                }
             });
+
             notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
             final PeriodicWorkRequest periodicWorkRequest =
                     new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
@@ -282,12 +286,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             .addTag("periodicWork")
                             .build();
             notiTestBtn.setOnClickListener(view ->
-                    WorkManager.getInstance().enqueue(periodicWorkRequest));
+            {
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(view.getContext(), "Please enable notifications to use this feature", Toast.LENGTH_SHORT).show();
+                } else {
+                    WorkManager.getInstance().enqueue(periodicWorkRequest);
+                }
+            });
+
+
             nextScreenBtnSix.setOnClickListener(view -> {
                 screen_count = 0;
                 screenCheck();
             });
-
         }
     }
 
