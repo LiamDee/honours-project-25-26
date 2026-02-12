@@ -128,6 +128,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //TODO: move onboarding usage tracking code to here
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
+            try {
+                loadUsage();
+            } catch (PackageManager.NameNotFoundException e) {
+                throw new RuntimeException(e);
+            }
         }
         //note: this has been moved to be the first screen as exiting the intent returns to the first screen, TODO: update uml flowchart to reflect change
         else if (screen_count == 1){
@@ -164,24 +169,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (screen_count == 2) {
             setContentView(R.layout.onboarding_info_screen);
             nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
-            notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
-            final PeriodicWorkRequest periodicWorkRequest =
-                    new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
-                            //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
-                            .addTag("periodicWork")
-                            .build();
-            notiTestBtn.setOnClickListener(view ->
-                    WorkManager.getInstance().enqueue(periodicWorkRequest));
-
             nextScreenBtn.setOnClickListener(view -> {
                 screen_count = 3;
                 screenCheck();
 //                    setContentView(R.layout.activity_main);
-//                    try {
-//                        loadUsage();
-//                    } catch (PackageManager.NameNotFoundException e) {
-//                        throw new RuntimeException(e);
-//                    }
                 //}
 
             });
@@ -280,6 +271,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (screen_count == 6) {
             setContentView(R.layout.noti_screen);
             nextScreenBtnSix = (Button)findViewById(R.id.nextScreenBtnSix);
+            notiEnableBtn = (Button)findViewById(R.id.notiEnableBtn);
+            notiEnableBtn.setOnClickListener(view -> {
+
+            });
+            notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
+            final PeriodicWorkRequest periodicWorkRequest =
+                    new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
+                            //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
+                            .addTag("periodicWork")
+                            .build();
+            notiTestBtn.setOnClickListener(view ->
+                    WorkManager.getInstance().enqueue(periodicWorkRequest));
             nextScreenBtnSix.setOnClickListener(view -> {
                 screen_count = 0;
                 screenCheck();

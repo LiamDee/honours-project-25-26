@@ -37,7 +37,7 @@ public class WorkerClass extends Worker {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "FocusathChannel";
             String desc = "App notification channel for Focusath";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel("default", name, importance);
             channel.setDescription(desc);
             //NotificationManager notificationManager = getSystemService(NotificationManager.class);
@@ -47,7 +47,7 @@ public class WorkerClass extends Worker {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
                 .setContentTitle("title")
                 .setContentText("message")
-                .setSmallIcon(R.mipmap.ic_launcher);
+                .setSmallIcon(R.drawable.ic_launcher_foreground);
         notiManager.notify(1, notification.build());
     }
 

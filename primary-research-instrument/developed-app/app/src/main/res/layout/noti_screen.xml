@@ -21,10 +21,36 @@
             android:layout_height="wrap_content"
             android:text="set reminders (make sure theres a way to disable the reminders in settings - see mainactivity)" />
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press to enable notifications" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="set notification reminders(see onboarding_info_screen)"/>
+            android:id="@+id/notiEnableBtn"
+            android:text="Enable notifications (if not enabled)"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set reminder noti" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notiTestBtn"
+            android:text="Send noti"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
