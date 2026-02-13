@@ -62,9 +62,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
     private int screen_count = 0;
-    private SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences, sharedPreferencesOnBoarding;
     private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree;
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText;
+    private Boolean isOnboardingComplete;
 
 
 
@@ -72,17 +73,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
         setContentView(R.layout.activity_main);
         showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
         appListView = (ListView)findViewById(R.id.appListView);
         emailBtn = (Button)findViewById(R.id.emailBtn);
         emailBtn.setOnClickListener(this);
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
+        sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
 
-        //TODO: move to settings screen in prod, only here so emulated phone doesn't constantly receive notifications when opened
+        //TODO: move to settings screen -- only here so emulated phone doesn't constantly receive notifications when opened
         WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
         WorkManager.getInstance().pruneWork();
 
@@ -110,15 +109,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override protected void onStart() {
         super.onStart();
-        if (getGrantStatus()) {
-            showStatsBtn.setOnClickListener(view -> {
-
-            });
-        } else {
-            screen_count = 1;
-            screenCheck();
+        isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingComplete", false);
+        if (!isOnboardingComplete) {
+            if (screen_count > 1) {
+                sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", false).apply();
+                screenCheck();
+            } else {
+                sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", false).apply();
+                screen_count = 1;
+                screenCheck();
+            }
         }
+        else {
+            if (getGrantStatus()) {
+                screen_count = 0;
+                showStatsBtn.setOnClickListener(view -> {
 
+                });
+            }
+        }
     }
     //used to swap between screens, 100% a MUCH better, nicer, and cleaner way to do this
     // (with switch cases for example) to do this but it'll suffice
@@ -296,6 +305,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             nextScreenBtnSix.setOnClickListener(view -> {
+                sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", true).apply();
                 screen_count = 0;
                 screenCheck();
             });
