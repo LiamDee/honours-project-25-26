@@ -294,6 +294,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
                             .addTag("periodicWork")
                             .build();
+            //TODO: add check to prevent multiple workerclass calls
             notiTestBtn.setOnClickListener(view ->
             {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {

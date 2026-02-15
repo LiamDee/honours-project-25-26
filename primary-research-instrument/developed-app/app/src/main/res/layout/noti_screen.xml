@@ -2,70 +2,110 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="40sp">
     <LinearLayout
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="27sp"
+            android:text="Enable Notifications (Optional)">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="17sp"
             android:text="This screen will recommend the user enable notifications to be reminded when to send the stats email">
         </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="set reminders (make sure theres a way to disable the reminders in settings - see mainactivity)" />
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="17sp"
+            android:text="Tapping the button below will prompt you to enable notifications for the app, press allow">
+        </TextView>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Press to enable notifications" />
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
             android:id="@+id/notiEnableBtn"
-            android:text="Enable notifications (if not enabled)"/>
+            android:text="Enable notifications"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="17sp"
+            android:text="Clicking this button will enable the app to send a notfication every week">
+        </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="set reminder noti" />
-
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
             android:id="@+id/notiTestBtn"
-            android:text="Send noti"/>
+            android:text="Set notification reminder"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="17sp"
+            android:text="Please press the 'Finish' button below once you are ready">
+        </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="go to next screen" />
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
             android:id="@+id/nextScreenBtnSix"
-            android:text="Go to next screen"/>
+            android:text="Finish"/>
     </LinearLayout>
 
 </LinearLayout>
