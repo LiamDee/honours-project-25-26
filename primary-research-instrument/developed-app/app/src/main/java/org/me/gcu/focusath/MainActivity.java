@@ -74,12 +74,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
+        EdgeToEdge.enable(this);
+        //showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
         appListView = (ListView)findViewById(R.id.appListView);
-        emailBtn = (Button)findViewById(R.id.emailBtn);
-        emailBtn.setOnClickListener(this);
+        //emailBtn = (Button)findViewById(R.id.emailBtn);
+        //emailBtn.setOnClickListener(this);
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
         sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
+
 
         //TODO: move to settings screen -- only here so emulated phone doesn't constantly receive notifications when opened
         WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
@@ -123,9 +125,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else {
             if (getGrantStatus()) {
                 screen_count = 0;
-                showStatsBtn.setOnClickListener(view -> {
-
-                });
+//                showStatsBtn.setOnClickListener(view -> {
+//
+//                });
             }
         }
     }
@@ -409,7 +411,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long hours = TimeUnit.MILLISECONDS.toHours(milliseconds); milliseconds -= TimeUnit.HOURS.toMillis(hours);
         long minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
 
-        return (hours + " h " + minutes + " m ");
+        return (hours + "h " + minutes + "m ");
     }
 
 }
