@@ -16,6 +16,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -57,7 +58,8 @@ import java.util.stream.Collectors;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //TODO: refactor "nextScreenBtn's" names to be more meaningful / compact, create app logo
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
-            nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix;
+            nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix,
+            settingsScreenBtn;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
@@ -77,8 +79,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         //showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
         appListView = (ListView)findViewById(R.id.appListView);
-        //emailBtn = (Button)findViewById(R.id.emailBtn);
-        //emailBtn.setOnClickListener(this);
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
         sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
 
@@ -96,8 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     };
     public void onClick(View aview) {
-//        prepEmail();
-//        Log.d("emailTest", "yea we here");
+
     }
     private boolean getGrantStatus() {
         AppOpsManager appOpsManager = (AppOpsManager)getApplicationContext().getSystemService(Context.APP_OPS_SERVICE);
@@ -125,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else {
             if (getGrantStatus()) {
                 screen_count = 0;
+                screenCheck();
 //                showStatsBtn.setOnClickListener(view -> {
 //
 //                });
@@ -138,6 +138,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //TODO: move onboarding usage tracking code to here
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
+            settingsScreenBtn = (Button)findViewById(R.id.settingsScreenBtn);
+            settingsScreenBtn.setOnClickListener(view ->{
+                screen_count = 7;
+                screenCheck();
+            });
             try {
                 loadUsage();
             } catch (PackageManager.NameNotFoundException e) {
@@ -313,6 +318,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 screenCheck();
             });
         }
+        //TODO: implement disable reminders, email button, edit goal. back button
+        else if (screen_count == 7) {
+            setContentView(R.layout.settings_screen);
+            emailBtn = (Button)findViewById(R.id.emailBtn);
+            emailBtn.setOnClickListener(view -> {
+                prepEmail();
+                //Log.d("emailTest", "yea we here");
+            });
+
+        }
     }
 
 
@@ -412,6 +427,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
 
         return (hours + "h " + minutes + "m ");
+    }
+    public void prepEmail() {
+        Log.d("emailTest", "yea we here...again");
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
+//        File file = getFileStreamPath("myfile.txt");
+//        Log.d("file dir", String.valueOf(getFilesDir()));
+//        String s = file.getAbsolutePath();
+//        File file1 = new File(s);
+        //String fileName = "myfile.txt";
+//        File file = new File(getFilesDir(), "myfile.txt");
+//        File extDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+//        Uri uri = Uri.fromFile(file);
+//        intent.putExtra(Intent.EXTRA_STREAM, uri);
+
+        //-- this would be the file containing usage data
+//        if (intent.resolveActivity(getPackageManager()) != null) {
+//            startActivity(intent);
+//        }
+        Intent intent1 = Intent.createChooser(intent, null);
+        startActivity(intent1);
     }
 
 }
