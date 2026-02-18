@@ -15,6 +15,8 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
@@ -26,10 +28,14 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
@@ -55,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree, newGoalEntryField;
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
     private Boolean isOnboardingComplete;
+    private File fileToEmail;
 
 
 
@@ -72,6 +79,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //TODO: remove in prod -- only here so emulated phone doesn't constantly receive notifications when opened
         WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
         WorkManager.getInstance().pruneWork();
+
+
+//        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+//        StrictMode.setVmPolicy(builder.build());
+
 
 
         try {
@@ -416,7 +428,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //            Log.d("filepath", s);
         }
-        writeAppListToFile(appDetailsArrayList);
+
+        //writeAppListToFile(appDetailsArrayList);
+
+            //TODO: only call on weekly
+        generateFile(appDetailsArrayList);
+
         Collections.reverse(appDetailsArrayList);
         AppAdapter appAdapter = new AppAdapter(this, appDetailsArrayList);
 
@@ -425,19 +442,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-    private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
+//    private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
+//        try {
+//            FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
+//            ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
+//            for (int i = 0; i < appStuff.size(); i++) {
+//                outputStream.writeObject("\n" + appStuff.get(i).appName + "  |  " + appStuff.get(i).usageTime);
+//            }
+//            //outputStream.flush();
+//            outputStream.close();
+//            fileOutputStream.close();
+//            Log.d("fileDebug", "app details written to file!");
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+    private void generateFile(ArrayList<AppDetails> appDetails) {
+        String fileName = "appDataDetails.csv";
+        File exFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+        fileToEmail = new File (exFileDir, fileName);
         try {
-            FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
-            ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
-            for (int i = 0; i < appStuff.size(); i++) {
-                outputStream.writeObject("\n" + appStuff.get(i).appName + "  |  " + appStuff.get(i).usageTime);
+            FileWriter fileWriter = new FileWriter(fileToEmail);
+            for (int i = 0; i < appDetails.size(); i++) {
+                fileWriter.append("\n").append(appDetails.get(i).appName).append("  |  ").append(appDetails.get(i).usageTime);
             }
-            //outputStream.flush();
-            outputStream.close();
-            fileOutputStream.close();
-            Log.d("fileDebug", "app details written to file!");
+            fileWriter.flush();
+            fileWriter.close();
+            Log.d("fileStuff", "File created successfully, located at: " + exFileDir);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -452,7 +486,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String convertUsageTime(long milliseconds) {
         if (milliseconds < 0) {
-            throw new IllegalArgumentException("how");
+            throw new IllegalArgumentException("IllegalArgument");
         }
         long hours = TimeUnit.MILLISECONDS.toHours(milliseconds); milliseconds -= TimeUnit.HOURS.toMillis(hours);
         long minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
@@ -460,27 +494,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return (hours + "h " + minutes + "m ");
     }
     public void prepEmail() {
-        Log.d("emailTest", "yea we here...again");
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
+//        Log.d("emailTest", "yea we here...again");
+//        Intent intent = new Intent(Intent.ACTION_SENDTO);
+//        intent.setData(Uri.parse("mailto:"));
+//        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
+//        intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
 //        File file = getFileStreamPath("myfile.txt");
 //        Log.d("file dir", String.valueOf(getFilesDir()));
-//        String s = file.getAbsolutePath();
-//        File file1 = new File(s);
-        //String fileName = "myfile.txt";
-//        File file = new File(getFilesDir(), "myfile.txt");
-//        File extDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+////        String s = file.getAbsolutePath();
+////        File file1 = new File(s);
+////        String fileName = "myfile.txt";
+////        File file = new File(getFilesDir(), "myfile.txt");
+////        File extDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
 //        Uri uri = Uri.fromFile(file);
 //        intent.putExtra(Intent.EXTRA_STREAM, uri);
+//
+//        //-- this would be the file containing usage data
+////        if (intent.resolveActivity(getPackageManager()) != null) {
+////            startActivity(intent);
+////        }
+//        Intent intent1 = Intent.createChooser(intent, "Send using: ");
+//        intent1.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+//        startActivity(intent1);
+        Uri fileUri = FileProvider.getUriForFile(this, getPackageName()+".provider", fileToEmail);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("vnd.android.cursor.dir/email");
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
+        intent.putExtra(Intent.EXTRA_STREAM, fileUri);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
+        startActivity(Intent.createChooser(intent, "Send email using: "));
 
-        //-- this would be the file containing usage data
-//        if (intent.resolveActivity(getPackageManager()) != null) {
-//            startActivity(intent);
-//        }
-        Intent intent1 = Intent.createChooser(intent, null);
-        startActivity(intent1);
+
     }
 
 }
