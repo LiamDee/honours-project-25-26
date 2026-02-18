@@ -3,11 +3,7 @@ package org.me.gcu.focusath;
 import static android.app.AppOpsManager.MODE_ALLOWED;
 
 import android.Manifest;
-import android.app.AlarmManager;
 import android.app.AppOpsManager;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.content.Context;
@@ -30,23 +26,13 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.work.Constraints;
-import androidx.work.Data;
-import androidx.work.OneTimeWorkRequest;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
-import androidx.work.WorkRequest;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -57,16 +43,17 @@ import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //TODO: refactor "nextScreenBtn's" names to be more meaningful / compact, create app logo
+    //TODO: check every view to ensure no placeholder text remains in prod
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
             nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix,
-            settingsScreenBtn;
+            settingsScreenBtn, editGoalBtn, disableReminderBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
     private int screen_count = 0;
     private SharedPreferences sharedPreferences, sharedPreferencesOnBoarding;
-    private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree;
-    private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText;
+    private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree, newGoalEntryField;
+    private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
     private Boolean isOnboardingComplete;
 
 
@@ -82,10 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
         sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
 
-
-        //TODO: move to settings screen -- only here so emulated phone doesn't constantly receive notifications when opened
+        //TODO: remove in prod -- only here so emulated phone doesn't constantly receive notifications when opened
         WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
         WorkManager.getInstance().pruneWork();
+
 
         try {
             this.loadUsage();
@@ -135,7 +122,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // (with switch cases for example) to do this but it'll suffice
     //TODO: add validation to each onclicklistener -- make sure to check uml flowcharts, see each TODO in each onclicklistener, add toasts when necessary
     public void screenCheck() {
-        //TODO: move onboarding usage tracking code to here
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
             settingsScreenBtn = (Button)findViewById(R.id.settingsScreenBtn);
@@ -318,7 +304,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 screenCheck();
             });
         }
-        //TODO: implement disable reminders, email button, edit goal. back button
         else if (screen_count == 7) {
             setContentView(R.layout.settings_screen);
             emailBtn = (Button)findViewById(R.id.emailBtn);
@@ -326,6 +311,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 prepEmail();
                 //Log.d("emailTest", "yea we here");
             });
+            editGoalBtn = (Button)findViewById(R.id.editGoalBtn);
+            editGoalBtn.setOnClickListener(view -> {
+                screen_count = 8;
+                screenCheck();
+            });
+            disableReminderBtn = (Button)findViewById(R.id.disableReminderBtn);
+            disableReminderBtn.setOnClickListener(view -> {
+
+                WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
+                WorkManager.getInstance().pruneWork();
+                Toast.makeText(view.getContext(), "Notification reminders have been disabled", Toast.LENGTH_LONG).show();
+
+            });
+            backToMainBtn = (Button)findViewById(R.id.backToMainBtn);
+            backToMainBtn.setOnClickListener(view -> {
+                screen_count = 0;
+                screenCheck();
+            });
+
+        }
+        else if (screen_count == 8) {
+            setContentView(R.layout.redefine_goal_screen);
+            submitNewGoalBtn = (Button)findViewById(R.id.submitNewGoalBtn);
+            backToSettingsBtn = (Button)findViewById(R.id.backToSettingsBtn);
+            newGoalEntryField = (EditText)findViewById(R.id.newGoalEntryField);
+
+            submitNewGoalBtn.setOnClickListener(view -> {
+                String oldGoal =  sharedPreferences.getString("goalEntry", "none");
+                newGoalEntryText = newGoalEntryField.getText().toString();
+                if (newGoalEntryText.isEmpty()) {
+                    Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
+                } else if (oldGoal.equals(newGoalEntryText)) {
+                    Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    sharedPreferences.edit().putString("goalEntry", newGoalEntryText).apply();
+                    Toast.makeText(view.getContext(), "Goal has been updated to: " + newGoalEntryText, Toast.LENGTH_LONG).show();
+                    screen_count = 7;
+                    screenCheck();
+                }
+            });
+            backToSettingsBtn.setOnClickListener(view -> {
+                screen_count = 7;
+                screenCheck();
+            });
+
 
         }
     }
