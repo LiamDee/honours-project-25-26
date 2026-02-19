@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="27sp"
+            android:textSize="25sp"
             android:text="How will my data be used?">
         </TextView>
     </LinearLayout>
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="27sp"
+            android:textSize="25sp"
             android:text="What happens afterwards?">
         </TextView>
     </LinearLayout>
