@@ -76,7 +76,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0% difference from last week"
+        android:text="No difference to compare, please check back later"
         android:textSize="15sp"
         android:textStyle="bold"
         android:id="@+id/timeDiffText"

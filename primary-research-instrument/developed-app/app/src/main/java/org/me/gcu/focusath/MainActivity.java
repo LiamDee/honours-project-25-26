@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -57,11 +58,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
     private int screen_count = 0;
-    private SharedPreferences sharedPreferences, sharedPreferencesOnBoarding;
+    public SharedPreferences sharedPreferences, sharedPreferencesOnBoarding, sharedPreferencesUsageTime;
     private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree, newGoalEntryField;
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
-    private Boolean isOnboardingComplete;
+    private Boolean isOnboardingComplete, notiSent;
     private File fileToEmail;
+    private long totalTime;
+    public SharedPreferences sharedPreferencesWeekElapsed, sharedPreferencesNotiSent;
 
 
 
@@ -75,6 +78,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         appListView = (ListView)findViewById(R.id.appListView);
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
         sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
+        sharedPreferencesUsageTime = getSharedPreferences("oldUsageTime", MODE_PRIVATE);
+        sharedPreferencesNotiSent = getSharedPreferences("notiSent", MODE_PRIVATE);
+        sharedPreferencesWeekElapsed = getSharedPreferences("weekElapsed", MODE_PRIVATE);
+        boolean hasItBeenAWeek = sharedPreferencesWeekElapsed.getBoolean("weekElapsed", false);
+        Log.d("beenAWeekMain", String.valueOf(hasItBeenAWeek));
 
         //TODO: remove in prod -- only here so emulated phone doesn't constantly receive notifications when opened
         WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
@@ -109,6 +117,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override protected void onStart() {
         super.onStart();
+
+        notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
+        Log.d("notiSentMain", String.valueOf(notiSent));
+
         isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingComplete", false);
         if (!isOnboardingComplete) {
             if (screen_count > 1) {
@@ -121,6 +133,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         else {
+            if (notiSent) {
+                Log.d("wasNotiSentMain", "noti has been sent, different screen would appear here");
+                sharedPreferencesNotiSent.edit().putBoolean("notiSent", false).apply();
+                boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
+                Log.d("afterNotiSentMain", String.valueOf(notiSent));
+            }
             if (getGrantStatus()) {
                 screen_count = 0;
                 screenCheck();
@@ -146,6 +164,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } catch (PackageManager.NameNotFoundException e) {
                 throw new RuntimeException(e);
             }
+            TextView timeDiffText = (TextView)findViewById(R.id.timeDiffText);
+
+            //TODO: change to hours, rework to only run after "week has elapsed" (sharedpref), display placeholder message before then
+            long currentTime = TimeUnit.MILLISECONDS.toSeconds(totalTime);
+            long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
+
+            Log.d("currTime", String.valueOf(currentTime));
+            Log.d("oldTime", String.valueOf(oldTime));
+
+            if (currentTime >= oldTime) {
+                long timeDiff = currentTime - oldTime;
+                Log.d("timeDiff1", String.valueOf(timeDiff));
+                int timePercent = Math.round(((float)timeDiff / currentTime) * 100);
+                timeDiffText.setText(timePercent + "% increase from last week");
+            } else {
+                long timeDiff = oldTime - currentTime;
+                int timePercent = Math.round(((float)timeDiff / oldTime) * 100);
+                Log.d("timeDiff2", String.valueOf(timeDiff));
+                timeDiffText.setText(timePercent + "% decrease from last week");
+            }
+
+            //long time2 = TimeUnit.MILLISECONDS.toHours(149573890);
+
+            //Log.d("time1", String.valueOf(time1));
+            //Log.d("time2", String.valueOf(time2));
+
+            //long timeDiff = time2 - time1;
+            //int comp = Math.round(((float) timeDiff / time1) * 100);
+
+
+            Log.d("oldTime", String.valueOf(oldTime)); //should be 131441149
+
+
+            //Log.d("total time", String.valueOf(totalTime));
+            //Log.d("comp", String.valueOf(comp));
+            //timeDiffText.setText(comp + "% increase from last week");
         }
         //note: this has been moved to be the first screen as exiting the intent returns to the first screen, TODO: update uml flowchart to reflect change
         else if (screen_count == 1){
@@ -314,6 +368,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", true).apply();
                 screen_count = 0;
                 screenCheck();
+                Log.d("totalTime", String.valueOf(totalTime));
+                sharedPreferencesUsageTime.edit().putLong("oldUsageTime", totalTime).apply();
             });
         }
         else if (screen_count == 7) {
@@ -400,7 +456,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Collections.sort(usageStatsList, (z1, z2) ->
                 Long.compare(z1.getTotalTimeInForeground(), z2.getTotalTimeInForeground()));
 
-        long totalTime = usageStatsList.stream().map(UsageStats::getTotalTimeInForeground).mapToLong(Long::longValue).sum();
+        totalTime = usageStatsList.stream().map(UsageStats::getTotalTimeInForeground).mapToLong(Long::longValue).sum();
 
         for (UsageStats usageStats : usageStatsList) {
             try {
@@ -421,6 +477,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AppDetails usageStatThing = new AppDetails(packageIcon, appName, usagePercent, usageTime);
                 appDetailsArrayList.add(usageStatThing);
 
+
+
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
@@ -428,6 +486,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //            Log.d("filepath", s);
         }
+
+
 
         //writeAppListToFile(appDetailsArrayList);
 
@@ -442,6 +502,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+
+
 //    private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
 //        try {
 //            FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
