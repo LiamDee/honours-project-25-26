@@ -30,6 +30,8 @@
             android:text="This screen will recommend the user enable notifications to be reminded when to send the stats email">
         </TextView>
     </LinearLayout>
+
+    <!-- TODO: possibly no use for this button after moving workerenqueue to finish button -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

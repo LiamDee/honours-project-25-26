@@ -16,7 +16,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.StrictMode;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
@@ -34,11 +33,8 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -53,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //TODO: check every view to ensure no placeholder text remains in prod
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
             nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix,
-            settingsScreenBtn, editGoalBtn, disableReminderBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn;
+            settingsScreenBtn, editGoalBtn, disableReminderBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn, backToMainBtn2,
+            redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
@@ -61,10 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public SharedPreferences sharedPreferences, sharedPreferencesOnBoarding, sharedPreferencesUsageTime;
     private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree, newGoalEntryField;
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
-    private Boolean isOnboardingComplete, notiSent;
+    private Boolean isOnboardingComplete, notiSent, isRedefiningGoal;
     private File fileToEmail;
     private long totalTime;
-    public SharedPreferences sharedPreferencesWeekElapsed, sharedPreferencesNotiSent;
+    //TODO: rename notiSent to something that makes more sense
+    //initially from WorkerClass
+    public SharedPreferences sharedPreferencesWorkerSent, sharedPreferencesNotiSent;
 
 
 
@@ -79,14 +78,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
         sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
         sharedPreferencesUsageTime = getSharedPreferences("oldUsageTime", MODE_PRIVATE);
+
+        isRedefiningGoal = false;
+
         sharedPreferencesNotiSent = getSharedPreferences("notiSent", MODE_PRIVATE);
-        sharedPreferencesWeekElapsed = getSharedPreferences("weekElapsed", MODE_PRIVATE);
-        boolean hasItBeenAWeek = sharedPreferencesWeekElapsed.getBoolean("weekElapsed", false);
-        Log.d("beenAWeekMain", String.valueOf(hasItBeenAWeek));
+        sharedPreferencesWorkerSent = getSharedPreferences("workerSent", MODE_PRIVATE);
+
+        boolean hasWorkerBeenSent = sharedPreferencesWorkerSent.getBoolean("workerSent", false);
+        Log.d("workerSentMain", String.valueOf(hasWorkerBeenSent));
 
         //TODO: remove in prod -- only here so emulated phone doesn't constantly receive notifications when opened
-        WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
-        WorkManager.getInstance().pruneWork();
+        //WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
+        //WorkManager.getInstance().pruneWork();
 
 
 //        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -134,17 +137,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else {
             if (notiSent) {
-                Log.d("wasNotiSentMain", "noti has been sent, different screen would appear here");
+                Log.d("wasNotiSentMain", "noti has been sent");
+                try {
+                    loadUsage();
+                } catch (PackageManager.NameNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+                long currentTime =  TimeUnit.MILLISECONDS.toSeconds(totalTime);
+                long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
+
+                if (currentTime > oldTime) {
+                    Log.d("changeScreen1", "screen time has increased, different screen will appear here");
+                    screen_count = 10;
+                    screenCheck();
+                } else {
+                    Log.d("changeScreen2", "screen time has droppped, different screen will appear here");
+                    screen_count = 9;
+                    screenCheck();
+                }
+
                 sharedPreferencesNotiSent.edit().putBoolean("notiSent", false).apply();
+
                 boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
                 Log.d("afterNotiSentMain", String.valueOf(notiSent));
-            }
-            if (getGrantStatus()) {
-                screen_count = 0;
-                screenCheck();
+            } else {
+                if (getGrantStatus()) {
+                    screen_count = 0;
+                    screenCheck();
 //                showStatsBtn.setOnClickListener(view -> {
 //
 //                });
+            }
+
             }
         }
     }
@@ -166,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             TextView timeDiffText = (TextView)findViewById(R.id.timeDiffText);
 
-            //TODO: change to hours, rework to only run after "week has elapsed" (sharedpref), display placeholder message before then
+            //TODO: change to hours
             long currentTime = TimeUnit.MILLISECONDS.toSeconds(totalTime);
             long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
 
@@ -178,11 +202,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("timeDiff1", String.valueOf(timeDiff));
                 int timePercent = Math.round(((float)timeDiff / currentTime) * 100);
                 timeDiffText.setText(timePercent + "% increase from last week");
-            } else {
+            }
+
+            else {
                 long timeDiff = oldTime - currentTime;
                 int timePercent = Math.round(((float)timeDiff / oldTime) * 100);
                 Log.d("timeDiff2", String.valueOf(timeDiff));
                 timeDiffText.setText(timePercent + "% decrease from last week");
+            }
+
+            if (oldTime == 0) {
+                timeDiffText.setText("No difference to compare, please check back later");
             }
 
             //long time2 = TimeUnit.MILLISECONDS.toHours(149573890);
@@ -284,7 +314,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 goalEntryText = goalEntryField.getText().toString();
                 if (goalEntryText.isEmpty()) {
                     Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+
+                else if (isRedefiningGoal == true) {
+                    //TODO: possibly change paragraph text to make more sense given the context
+                    String oldGoal =  sharedPreferences.getString("goalEntry", "none");
+                    if (oldGoal.equals(goalEntryText)) {
+                        Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
+                        Toast.makeText(view.getContext(), "Goal has been updated to: " + goalEntryText, Toast.LENGTH_LONG).show();
+                        screen_count = 11;
+                        screenCheck();
+                        isRedefiningGoal = false;
+                    }
+                }
+
+                else {
                     sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
                     screen_count = 5;
                     screenCheck();
@@ -353,23 +400,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
                             .addTag("periodicWork")
                             .build();
-            //TODO: add check to prevent multiple workerclass calls
-            notiTestBtn.setOnClickListener(view ->
-            {
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(view.getContext(), "Please enable notifications to use this feature", Toast.LENGTH_SHORT).show();
-                } else {
-                    WorkManager.getInstance().enqueue(periodicWorkRequest);
-                }
-            });
+//            notiTestBtn.setOnClickListener(view ->
+//            {
+//                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+//                    Toast.makeText(view.getContext(), "Please enable notifications to use this feature", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    WorkManager.getInstance().enqueue(periodicWorkRequest);
+//                }
+//            });
 
 
             nextScreenBtnSix.setOnClickListener(view -> {
                 sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", true).apply();
+                WorkManager.getInstance().enqueue(periodicWorkRequest);
                 screen_count = 0;
                 screenCheck();
-                Log.d("totalTime", String.valueOf(totalTime));
                 sharedPreferencesUsageTime.edit().putLong("oldUsageTime", totalTime).apply();
+                Log.d("totalTime", String.valueOf(totalTime));
             });
         }
         else if (screen_count == 7) {
@@ -426,6 +473,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
 
 
+        } else if (screen_count == 9) {
+            setContentView(R.layout.appraise_screen);
+            backToMainBtn2 = (Button)findViewById(R.id.backToMainBtn2);
+            backToMainBtn2.setOnClickListener(view -> {
+                screen_count = 0;
+                screenCheck();
+            });
+        } else if (screen_count == 10) {
+            //TODO: add usage percentage to text
+            setContentView(R.layout.usage_evaluation_screen);
+            redefineGoalYesBtn = (Button)findViewById(R.id.redefineGoalYesBtn);
+            redefineGoalNoBtn = (Button)findViewById(R.id.redefineGoalNoBtn);
+
+            redefineGoalNoBtn.setOnClickListener(view -> {
+                screen_count = 11;
+                screenCheck();
+            });
+
+            redefineGoalYesBtn.setOnClickListener(view -> {
+                isRedefiningGoal = true;
+                screen_count = 4;
+                screenCheck();
+            });
+
+        } else if (screen_count == 11) {
+            setContentView(R.layout.activity_suggestion_screen);
+            backToMainBtn3 = (Button)findViewById(R.id.backToMainBtn3);
+
+            backToMainBtn3.setOnClickListener(view -> {
+                screen_count = 0;
+                screenCheck();
+            });
         }
     }
 
@@ -491,7 +570,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //writeAppListToFile(appDetailsArrayList);
 
-            //TODO: only call on weekly
         generateFile(appDetailsArrayList);
 
         Collections.reverse(appDetailsArrayList);
@@ -525,6 +603,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String fileName = "appDataDetails.csv";
         File exFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         fileToEmail = new File (exFileDir, fileName);
+
+        //prep for req-1.2 //TODO: add graphs for prior usage -- ensure new file creation occurs on weekly basis
+        if (fileToEmail.exists()) {
+            Log.d("fileExists", "file already exists");
+        }
         try {
             FileWriter fileWriter = new FileWriter(fileToEmail);
             for (int i = 0; i < appDetails.size(); i++) {
