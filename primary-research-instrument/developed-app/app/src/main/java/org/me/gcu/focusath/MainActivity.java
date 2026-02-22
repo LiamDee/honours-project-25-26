@@ -40,6 +40,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Random;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //TODO: check every view to ensure no placeholder text remains in prod
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
             nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix,
-            settingsScreenBtn, editGoalBtn, disableReminderBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn, backToMainBtn2,
+            settingsScreenBtn, editGoalBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn, backToMainBtn2,
             redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
     private Boolean isOnboardingComplete, notiSent, isRedefiningGoal;
     private File fileToEmail;
+    private TextView goalText, activitiesText;
     private long totalTime;
     //TODO: rename notiSent to something that makes more sense
     //initially from WorkerClass
@@ -395,7 +397,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
 
-            notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
             final PeriodicWorkRequest periodicWorkRequest =
                     new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
                             //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
@@ -431,14 +432,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editGoalBtn.setOnClickListener(view -> {
                 screen_count = 8;
                 screenCheck();
-            });
-            disableReminderBtn = (Button)findViewById(R.id.disableReminderBtn);
-            disableReminderBtn.setOnClickListener(view -> {
-
-                WorkManager.getInstance().cancelAllWorkByTag("periodicWork");
-                WorkManager.getInstance().pruneWork();
-                Toast.makeText(view.getContext(), "Notification reminders have been disabled", Toast.LENGTH_LONG).show();
-
             });
             backToMainBtn = (Button)findViewById(R.id.backToMainBtn);
             backToMainBtn.setOnClickListener(view -> {
@@ -477,6 +470,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (screen_count == 9) {
             setContentView(R.layout.appraise_screen);
             backToMainBtn2 = (Button)findViewById(R.id.backToMainBtn2);
+
+            goalText = (TextView)findViewById(R.id.goalText);
+            String goalName = sharedPreferences.getString("goalEntry", "none");
+            goalText.setText(goalName);
+
             backToMainBtn2.setOnClickListener(view -> {
                 screen_count = 0;
                 screenCheck();
@@ -486,6 +484,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setContentView(R.layout.usage_evaluation_screen);
             redefineGoalYesBtn = (Button)findViewById(R.id.redefineGoalYesBtn);
             redefineGoalNoBtn = (Button)findViewById(R.id.redefineGoalNoBtn);
+
+            goalText = (TextView)findViewById(R.id.goalText);
+            String goalName = sharedPreferences.getString("goalEntry", "none");
+            goalText.setText(goalName);
 
             redefineGoalNoBtn.setOnClickListener(view -> {
                 screen_count = 11;
@@ -501,6 +503,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (screen_count == 11) {
             setContentView(R.layout.activity_suggestion_screen);
             backToMainBtn3 = (Button)findViewById(R.id.backToMainBtn3);
+            activitiesText = (TextView)findViewById(R.id.activitiesText);
+
+            String[] activities = getResources().getStringArray(R.array.activities_array);
+            Random random = new Random();
+            int randomNumberOne = random.nextInt(activities.length - 1);
+            int randomNumberTwo = random.nextInt(activities.length - 1);
+
+            String randomActivityOne = activities[randomNumberOne];
+            String randomActivityTwo = activities[randomNumberTwo];
+
+            String userActivityOne = sharedPreferences.getString("activityOne", "none");
+            String userActivityTwo = sharedPreferences.getString("activityTwo", "none");
+            String userActivityThree = sharedPreferences.getString("activityThree", "none");
+
+            Log.d("randActivityOne", randomActivityOne);
+            Log.d("randActivityTwo", randomActivityTwo);
+
+            Log.d("userActivityOne", userActivityOne);
+            Log.d("userActivityTwo", userActivityTwo);
+            Log.d("userActivityThree", userActivityThree);
+
+            activitiesText.setText(userActivityOne + ", " + randomActivityOne + ", " + userActivityTwo + ", " + randomActivityTwo + ", " + userActivityThree);
+
 
             backToMainBtn3.setOnClickListener(view -> {
                 screen_count = 0;

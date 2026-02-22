@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Focusath</string>
+    <string-array name="activities_array">
+        <item>Learn a new skill</item>
+        <item>Read a book</item>
+        <item>Go for a walk</item>
+        <item>Exercise at the gym</item>
+        <item>Hang out with a friend or group of friends</item>
+        <item>Pick up an instrument</item>
+        <item>Play a video game</item>
+        <item>Listen to an album</item>
+        <item>Bake or cook a new recipe</item>
+        <item>Watch a movie</item>
+        <item>Go for a run</item>
+        <item>Clean your room or house</item>
+        <item>Meditate</item>
+        <item>Try a new food spot</item>
+        <item>Try a new hobby</item>
+        <item>Learn about something new</item>
+        <item>Take a nap</item>
+        <item>Go hiking</item>
+        <item>Play a sport</item>
+        <item>Meet some new people</item>
+    </string-array>
 </resources>

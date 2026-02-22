@@ -59,6 +59,7 @@
             android:id="@+id/notiEnableBtn"
             android:text="Enable notifications"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,32 +69,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="17sp"
-            android:text="Clicking this button will enable the app to send a notfication every week">
-        </TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:paddingTop="10sp">
-        <Button
-            android:textSize="13dp"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:background="@drawable/buttonshape"
-            android:id="@+id/notiTestBtn"
-            android:text="Set notification reminder"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="10sp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:textSize="17sp"
-            android:text="Please press the 'Finish' button below once you are ready">
+            android:text="Press the 'Finish' button below once you are ready">
         </TextView>
     </LinearLayout>
     <LinearLayout
