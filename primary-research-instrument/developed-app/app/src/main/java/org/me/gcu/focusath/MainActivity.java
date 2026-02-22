@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 sharedPreferencesNotiSent.edit().putBoolean("notiSent", false).apply();
+                sharedPreferencesUsageTime.edit().putLong("oldUsageTime", totalTime).apply();
 
                 boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
                 Log.d("afterNotiSentMain", String.valueOf(notiSent));
@@ -191,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             TextView timeDiffText = (TextView)findViewById(R.id.timeDiffText);
 
             //TODO: change to hours
-            long currentTime = TimeUnit.MILLISECONDS.toSeconds(totalTime);
+            long currentTime = TimeUnit.MILLISECONDS.toSeconds(totalTime); //note: this will only properly update on the next interval point
             long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
 
             Log.d("currTime", String.valueOf(currentTime));
