@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="For this app to work properly, you must provide permission to the application to track app usage">
+            android:text="This app is my primary research instrument core component of my 4th year Honours Project / Dissertation"> <!-- , it is an application that integrates -->
         </TextView>
     </LinearLayout>
     <LinearLayout

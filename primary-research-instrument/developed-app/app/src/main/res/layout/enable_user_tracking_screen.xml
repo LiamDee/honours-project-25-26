@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="For this app to work properly, you must provide permission to the application to track app usage">
+            android:text="To use this application, you must provide permission for the application to track app usage. No personal information will be captured at any point, only usage information related to installed apps will be captured.">
         </TextView>
     </LinearLayout>
     <LinearLayout

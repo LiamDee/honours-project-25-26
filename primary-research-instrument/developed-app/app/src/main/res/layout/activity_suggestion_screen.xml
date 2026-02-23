@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="remind user of activities">
+            android:text="En-route to achieveing your goal, it's important to subsitute the time formerly spent using your phone with other, healthier activities. Remeber to give these a go when you have the time.">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -55,7 +55,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="encourage user to keep usage down">
+            android:text="Keeping this all in mind, let's see if you can lower your usage for the week.">
         </TextView>
     </LinearLayout>
     <LinearLayout

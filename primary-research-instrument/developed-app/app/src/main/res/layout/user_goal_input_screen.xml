@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="17sp"
-            android:text="First, you will need to enter a goal. This can be any goal you have in mind, whether it's easily achieveable or not. Examples include finishing a university assignment, (other goal), or (other goal).">
+            android:text="First, you will need to enter a goal. This can be any goal you have in mind, whether it's easily achieveable or not. Examples include finishing a university assignment, reaching a new personal best at the gym, or finishing a book.">
         </TextView>
     </LinearLayout>
     <LinearLayout

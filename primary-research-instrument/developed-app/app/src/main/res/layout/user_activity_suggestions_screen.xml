@@ -13,8 +13,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="30sp"
-            android:text="Enter some activities">
+            android:textSize="25sp"
+            android:text="Enter 3 of your favourite activities">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="17sp"
-            android:text="This screen will ask the user to enter three activities, then the activities will be saved">
+            android:text="Next, type in three of your favourite activites, these can be anything from reading, to hiking, or cooking, anything goes.">
         </TextView>
     </LinearLayout>
     <LinearLayout

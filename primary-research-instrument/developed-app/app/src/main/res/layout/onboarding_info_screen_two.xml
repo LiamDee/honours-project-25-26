@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="For this app to work properly, you must provide permission to the application to track app usage">
+            android:text="As previously mentioned, no personal information will be captured at any point. The app will only store usage data from the current week (and past week, whenever applicable). This data will be sent to myself via a pre-composed email for further analysis and is needed to evaluate the viablity of the project as a whole.">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -53,7 +53,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="For this app to work properly, you must provide permission to the application to track app usage">
+            android:text="After the evaluation period has ended, you may uninstall the app (note that you are also free to do so and opt out at any time) or you can keep the app and continue using it as normal">
         </TextView>
     </LinearLayout>
     <LinearLayout
