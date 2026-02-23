@@ -19,6 +19,7 @@ import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,7 +33,13 @@ import androidx.core.content.FileProvider;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.exceptions.CsvValidationException;
+
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
             nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix,
             settingsScreenBtn, editGoalBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn, backToMainBtn2,
-            redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3;
+            redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3, previousGraphBtn, currentGraphBtn;
     private ListView appListView;
     private String CHANNEL_ID = "FocusathChannel1";
     private int NOTIFICATION_ID = 0;
@@ -123,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override protected void onStart() {
         super.onStart();
 
+
         notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
         Log.d("notiSentMain", String.valueOf(notiSent));
 
@@ -163,6 +171,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
                 Log.d("afterNotiSentMain", String.valueOf(notiSent));
+
             } else {
                 if (getGrantStatus()) {
                     screen_count = 0;
@@ -182,6 +191,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
             settingsScreenBtn = (Button)findViewById(R.id.settingsScreenBtn);
+            previousGraphBtn = (Button)findViewById(R.id.previousGraphBtn);
             settingsScreenBtn.setOnClickListener(view ->{
                 screen_count = 7;
                 screenCheck();
@@ -227,7 +237,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //int comp = Math.round(((float) timeDiff / time1) * 100);
 
 
-            Log.d("oldTime", String.valueOf(oldTime)); //should be 131441149
+            Log.d("oldTime", String.valueOf(oldTime));
+
+            previousGraphBtn.setOnClickListener(view -> {
+                screen_count = 12;
+                screenCheck();
+            });
 
 
             //Log.d("total time", String.valueOf(totalTime));
@@ -531,6 +546,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 screen_count = 0;
                 screenCheck();
             });
+        } else if (screen_count == 12) {
+            setContentView(R.layout.previous_week);
+            ListView previousWeekList = (ListView)findViewById(R.id.prevWeekList);
+            currentGraphBtn = (Button)findViewById(R.id.currentGraphBtn);
+
+            ArrayList<String> previousWeekArrayList = new ArrayList<>();
+            try {
+                String fileNamePrevWeek = "appDataDetailsPrev.csv";
+                File exFileDirPrevWeek = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+                File fileToShow = new File (exFileDirPrevWeek, fileNamePrevWeek);
+
+                CSVReader csvReader = new CSVReaderBuilder(new FileReader(fileToShow)).withSkipLines(1).build();
+                String[] nextLine;
+                while ((nextLine = csvReader.readNext()) != null) {
+                    Log.d("prevWeek", nextLine[0]);
+                    previousWeekArrayList.add(nextLine[0]);
+                }
+            } catch (CsvValidationException | IOException e) {
+                e.printStackTrace();
+            }
+            Collections.reverse(previousWeekArrayList);
+            ArrayAdapter<String> previousWeekArrayAdapter = new ArrayAdapter<String>(this, R.layout.previous_week_details, previousWeekArrayList);
+            previousWeekList.setAdapter(previousWeekArrayAdapter);
+
+            currentGraphBtn.setOnClickListener(view -> {
+                screen_count = 0;
+                screenCheck();
+            });
         }
     }
 
@@ -630,10 +673,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         File exFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         fileToEmail = new File (exFileDir, fileName);
 
+        boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
+
         //prep for req-1.2 //TODO: add graphs for prior usage -- ensure new file creation occurs on weekly basis
-        if (fileToEmail.exists()) {
-            Log.d("fileExists", "file already exists");
+        if (notiSent) {
+            if (fileToEmail.exists()) {
+                Log.d("fileExists", "file " + fileName + " already exists, creating file for previous week");
+                String fileNamePrevWeek = "appDataDetailsPrev.csv";
+                File exFileDirPrevWeek = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+                fileToEmail = new File (exFileDirPrevWeek, fileNamePrevWeek);
+
+                try {
+                    FileWriter fileWriter = new FileWriter(fileToEmail);
+                    for (int i = 0; i < appDetails.size(); i++) {
+                        fileWriter.append("\n").append(appDetails.get(i).appName).append("  |  ").append(appDetails.get(i).usageTime);
+                    }
+                    fileWriter.flush();
+                    fileWriter.close();
+                    Log.d("fileStuffPrevWeek", "File " + fileNamePrevWeek + " created successfully, located at: " + exFileDirPrevWeek);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return;
+            }
         }
+
         try {
             FileWriter fileWriter = new FileWriter(fileToEmail);
             for (int i = 0; i < appDetails.size(); i++) {
@@ -641,7 +705,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             fileWriter.flush();
             fileWriter.close();
-            Log.d("fileStuff", "File created successfully, located at: " + exFileDir);
+            Log.d("fileStuff", "File " + fileName + " created successfully, located at: " + exFileDir);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -663,7 +727,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long hours = TimeUnit.MILLISECONDS.toHours(milliseconds); milliseconds -= TimeUnit.HOURS.toMillis(hours);
         long minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
 
-        return (hours + "h " + minutes + "m ");
+        return (hours + "hr " + minutes + "min ");
     }
     public void prepEmail() {
 //        Log.d("emailTest", "yea we here...again");

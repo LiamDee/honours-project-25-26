@@ -59,6 +59,7 @@
             android:id="@+id/notiEnableBtn"
             android:text="Enable notifications"/>
     </LinearLayout>
+    <!-- TODO: add note about how older phones may not need to enable notifications -->
 
     <LinearLayout
         android:layout_width="wrap_content"
