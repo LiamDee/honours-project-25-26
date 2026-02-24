@@ -27,7 +27,8 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="This app is my primary research instrument core component of my 4th year Honours Project / Dissertation"> <!-- , it is an application that integrates -->
+            android:text="This app is my primary research instrument core component of my 4th year Honours Project / Dissertation. The idea of the app is to integrate concepts derived from Reality Therapy to help treat smartphone
+and social media addiction"> <!-- , it is an application that integrates -->
         </TextView>
     </LinearLayout>
     <LinearLayout

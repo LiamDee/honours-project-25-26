@@ -649,7 +649,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (UsageStats usageStats : usageStatsList) {
             try {
                 String packageName = usageStats.getPackageName();
-                Drawable packageIcon = getDrawable(R.drawable.ic_launcher_background);
+                Drawable packageIcon = getDrawable(R.mipmap.ic_launcher_round);
                 String[] packageNames = packageName.split("\\.");
                 String appName = packageNames[packageNames.length - 1].trim();
 
