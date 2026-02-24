@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="To use this application, you must provide permission for the application to track app usage. No personal information will be captured at any point, only usage information related to installed apps will be captured.">
+            android:text="To use this application, you must provide permission for the application to access app usage data. No personal information will be captured at any point, only usage information related to installed apps will be captured. You may opt out of this by uninstalling the app at this stage and letting myself know.">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -44,7 +44,7 @@
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
             android:id="@+id/permissionBtn"
-            android:text="Enable App Usage Tracking"/>
+            android:text="Enable app usage access"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"

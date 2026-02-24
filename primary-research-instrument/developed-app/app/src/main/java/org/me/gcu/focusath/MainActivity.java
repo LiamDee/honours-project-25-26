@@ -3,10 +3,12 @@ package org.me.gcu.focusath;
 import static android.app.AppOpsManager.MODE_ALLOWED;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.AppOpsManager;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -22,6 +24,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
     private Boolean isOnboardingComplete, notiSent, isRedefiningGoal;
     private File fileToEmail;
-    private TextView goalText, activitiesText;
+    private TextView goalText, activitiesText, goalTextView;
+    private ImageView helpIcon;
     private long totalTime;
     //TODO: rename notiSent to something that makes more sense
     //initially from WorkerClass
@@ -192,6 +196,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setContentView(R.layout.activity_main);
             settingsScreenBtn = (Button)findViewById(R.id.settingsScreenBtn);
             previousGraphBtn = (Button)findViewById(R.id.previousGraphBtn);
+            helpIcon = (ImageView)findViewById(R.id.helpIcon);
+            helpIcon.setOnClickListener(view -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Help");
+                builder.setMessage("If you discover any issues, or simply have any questions about the app, please refer to the Quick Start Guide, or email me via ldebuf300@caledonian.ac.uk.")
+                        .setCancelable(true)
+                        .setPositiveButton("Got it", (dialog, which) -> dialog.dismiss());
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            });
+
             settingsScreenBtn.setOnClickListener(view ->{
                 screen_count = 7;
                 screenCheck();
@@ -210,7 +225,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("currTime", String.valueOf(currentTime));
             Log.d("oldTime", String.valueOf(oldTime));
 
-            if (currentTime >= oldTime) {
+            if (oldTime == 0 || oldTime == currentTime) {
+                timeDiffText.setText("No usage difference to compare, please check back later");
+            }
+
+            else if (currentTime > oldTime) {
                 long timeDiff = currentTime - oldTime;
                 Log.d("timeDiff1", String.valueOf(timeDiff));
                 int timePercent = Math.round(((float)timeDiff / currentTime) * 100);
@@ -224,9 +243,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 timeDiffText.setText(timePercent + "% decrease from last week");
             }
 
-            if (oldTime == 0) {
-                timeDiffText.setText("No difference to compare, please check back later");
-            }
+
 
             //long time2 = TimeUnit.MILLISECONDS.toHours(149573890);
 
@@ -271,10 +288,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             nextScreenBtnFive = (Button)findViewById(R.id.nextScreenBtnFive);
             nextScreenBtnFive.setOnClickListener(view -> {
                 //commented for testing, make sure to uncomment when finished testing
-//                if (!getGrantStatus()) {
-//                    Toast.makeText(view.getContext(), "Please enable app usage statistics tracking to continue", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
+                if (!getGrantStatus()) {
+                    Toast.makeText(view.getContext(), "Please enable access to app usage statistics to continue", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 screen_count = 2;
                 screenCheck();
 
@@ -326,7 +343,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (screen_count == 4) {
             setContentView(R.layout.user_goal_input_screen);
             goalEntryField = (EditText)findViewById(R.id.goalEntryField);
+            goalTextView = (TextView)findViewById(R.id.goalTextView);
             nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
+
+            if (isRedefiningGoal == true) {
+                //text changes based on if user is redefining goal
+                goalTextView.setText("Type in a new goal in the field below, note that your new goal cannot be identical to your old one.");
+            }
+
             nextScreenBtnThree.setOnClickListener(view -> {
 
                 goalEntryText = goalEntryField.getText().toString();
@@ -335,7 +359,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 else if (isRedefiningGoal == true) {
-                    //TODO: possibly change paragraph text to make more sense given the context
+
                     String oldGoal =  sharedPreferences.getString("goalEntry", "none");
                     if (oldGoal.equals(goalEntryText)) {
                         Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
@@ -378,14 +402,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (activityFieldOneText.isEmpty() || activityFieldTwoText.isEmpty() || activityFieldThreeText.isEmpty()) {
                     Toast.makeText(view.getContext(), "Please enter some activities to continue", Toast.LENGTH_SHORT).show();
-                    return;
                 } else {
                     if ((Objects.equals(activityFieldOneText, activityFieldTwoText))
                             || (Objects.equals(activityFieldTwoText, activityFieldThreeText))
                             || (Objects.equals(activityFieldOneText, activityFieldThreeText))) {
-                        //TODO: reword to sound less odd
-                        Toast.makeText(view.getContext(), "Your activities must be unique", Toast.LENGTH_SHORT).show();
-                        return;
+                        Toast.makeText(view.getContext(), "Your activities must be unique from one another", Toast.LENGTH_SHORT).show();
                     } else {
                         sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
                         sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
@@ -495,7 +516,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 screenCheck();
             });
         } else if (screen_count == 10) {
-            //TODO: add usage percentage to text
             setContentView(R.layout.usage_evaluation_screen);
             redefineGoalYesBtn = (Button)findViewById(R.id.redefineGoalYesBtn);
             redefineGoalNoBtn = (Button)findViewById(R.id.redefineGoalNoBtn);
@@ -564,6 +584,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     previousWeekArrayList.add(nextLine[0]);
                 }
             } catch (CsvValidationException | IOException e) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("No data to show");
+                builder.setMessage("No previous data exists to show, please check back at a later date.")
+                        .setCancelable(true)
+                        .setPositiveButton("Got it", (dialog, which) -> dialog.dismiss());
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
                 e.printStackTrace();
             }
             Collections.reverse(previousWeekArrayList);
@@ -675,7 +702,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
 
-        //prep for req-1.2 //TODO: add graphs for prior usage -- ensure new file creation occurs on weekly basis
         if (notiSent) {
             if (fileToEmail.exists()) {
                 Log.d("fileExists", "file " + fileName + " already exists, creating file for previous week");

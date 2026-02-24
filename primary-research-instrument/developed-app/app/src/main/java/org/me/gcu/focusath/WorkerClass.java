@@ -73,11 +73,11 @@ public class WorkerClass extends Worker {
                 return;
             }
 
-            //TODO: make notification look nice, replace placeholder values with intended ones
+            //TODO: make notification look nice
             Log.d("notificationWorkerClass", "notification created");
             NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
-                    .setContentTitle("title")
-                    .setContentText("message, restart app if open")
+                    .setContentTitle("Your weekly check-in is now available!")
+                    .setContentText("An update on your app usage is available, open the app to find out more, or please restart the app if it's already open")
                     .setStyle(new NotificationCompat.BigTextStyle())
                     .setSmallIcon(R.drawable.ic_launcher_foreground);
             notiManager.notify(1, notification.build());

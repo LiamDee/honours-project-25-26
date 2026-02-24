@@ -13,10 +13,9 @@
             android:background="@drawable/buttonshape"
             android:textSize="18sp"
             android:layout_width="wrap_content"
-            android:layout_marginStart="10sp"
             android:layout_height="wrap_content"
             android:id="@+id/currentGraphBtn"
-            android:text="Current week graph"/>
+            android:text="Current week"/>
     </LinearLayout>
 
     <LinearLayout
