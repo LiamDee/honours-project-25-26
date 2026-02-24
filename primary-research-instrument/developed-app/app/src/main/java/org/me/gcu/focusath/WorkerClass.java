@@ -35,14 +35,18 @@ public class WorkerClass extends Worker {
 
     @NonNull
     @Override
+    /// every week, runs this function, which runs two other functions
     public Result doWork() {
 
         Log.d("workerSentTest", String.valueOf(hasWorkerBeenSent));
-            sendNoti();
-            changeVars();
+        sendNoti();
+        changeVars();
         return Result.success();
     }
+
+    /// function used to send notification
     public void sendNoti() {
+        /// to send notifications on API levels > 26, a notification channel must be registered
         NotificationManager notiManager = (NotificationManager)getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "FocusathChannel";
@@ -50,20 +54,22 @@ public class WorkerClass extends Worker {
             int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel("default", name, importance);
             channel.setDescription(desc);
-            //NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notiManager.createNotificationChannel(channel);
         }
 
+        /// checks if a worker has been sent, if so, proceeds to next if statement
         if (hasWorkerBeenSent) {
             sharedPreferencesNotiSent.edit().putBoolean("notiSent", true).apply();
             Log.d("notiSentWorker", String.valueOf(notiSent));
 
+            /// if app notifications are disabled, exits function
             if (ActivityCompat.checkSelfPermission(this.getApplicationContext(), Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                 Log.d("notificationWorkerClass", "notifications disabled, skipping...");
                 return;
             }
 
             //TODO: make notification look nice
+            /// builds notification, then sends it to user
             Log.d("notificationWorkerClass", "notification created");
             NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
                     .setContentTitle("Your weekly check-in is now available!")
@@ -77,10 +83,9 @@ public class WorkerClass extends Worker {
         }
 
     }
+    /// function used to change sharedpreference value
     public void changeVars() {
-//        if (hasWorkerBeenSent) {
-//
-//        }
+
         sharedPreferencesWorkerSent.edit().putBoolean("workerSent", true).apply();
         Log.d("workerSent-WorkerClass", String.valueOf(hasWorkerBeenSent));
 
