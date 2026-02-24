@@ -36,20 +36,10 @@ public class WorkerClass extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-//        try {
-//            Thread.sleep(10000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+
         Log.d("workerSentTest", String.valueOf(hasWorkerBeenSent));
-//        if (ActivityCompat.checkSelfPermission(this.getApplicationContext(), Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-//            Log.d("notificationWorkerClass", "notifications disabled, skipping...");
-//            changeVars();
-//        } else {
             sendNoti();
             changeVars();
-        //}
-
         return Result.success();
     }
     public void sendNoti() {
@@ -77,7 +67,7 @@ public class WorkerClass extends Worker {
             Log.d("notificationWorkerClass", "notification created");
             NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
                     .setContentTitle("Your weekly check-in is now available!")
-                    .setContentText("An update on your app usage is available, open the app to find out more, or please restart the app if it's already open")
+                    .setContentText("An update on your app usage is available, open the app to find out more, or please restart the app if it's already open. \n Ensure you also send the email with your app usage statistics.")
                     .setStyle(new NotificationCompat.BigTextStyle())
                     .setSmallIcon(R.drawable.ic_launcher_foreground);
             notiManager.notify(1, notification.build());

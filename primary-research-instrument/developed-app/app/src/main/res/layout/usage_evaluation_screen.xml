@@ -27,16 +27,29 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="Looking back at the past week, it seems that your app usage has had a x% increase. As a reminder, your current goal is:">
+            android:text="Looking back at the past week, it seems that your app usage has had an increase.">
             <!-- the x in the text above will be replaced with an actual value at runtime -->
-
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:text="As a quick reminder, your current goal is:">
         </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="20sp">
+        android:paddingTop="10sp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,7 +62,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="20sp"
+        android:paddingTop="10sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"

@@ -40,6 +40,8 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -63,20 +65,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             settingsScreenBtn, editGoalBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn, backToMainBtn2,
             redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3, previousGraphBtn, currentGraphBtn;
     private ListView appListView;
-    private String CHANNEL_ID = "FocusathChannel1";
-    private int NOTIFICATION_ID = 0;
     private int screen_count = 0;
-    public SharedPreferences sharedPreferences, sharedPreferencesOnBoarding, sharedPreferencesUsageTime;
+    //TODO: rename notiSent to something that makes more sense
+
+    ///sharedPreferencesWorkerSent and sharedPreferencesNotiSent are initially from WorkerClass
+    public SharedPreferences sharedPreferences, sharedPreferencesOnBoarding, sharedPreferencesUsageTime, sharedPreferencesWorkerSent, sharedPreferencesNotiSent;
     private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree, newGoalEntryField;
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
     private Boolean isOnboardingComplete, notiSent, isRedefiningGoal;
     private File fileToEmail;
-    private TextView goalText, activitiesText, goalTextView;
+    private TextView goalText, activitiesText, goalTextView, currentGoalText;
     private ImageView helpIcon;
     private long totalTime;
-    //TODO: rename notiSent to something that makes more sense
-    //initially from WorkerClass
-    public SharedPreferences sharedPreferencesWorkerSent, sharedPreferencesNotiSent;
 
 
 
@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EdgeToEdge.enable(this);
-        //showStatsBtn = (Button)findViewById(R.id.showStatsBtn);
         appListView = (ListView)findViewById(R.id.appListView);
         sharedPreferences = getSharedPreferences("goalString", MODE_PRIVATE);
         sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
@@ -105,9 +104,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //WorkManager.getInstance().pruneWork();
 
 
-//        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-//        StrictMode.setVmPolicy(builder.build());
-
 
 
         try {
@@ -121,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View aview) {
 
     }
+    /// function used to check if permission to access app usage stats has been given
     private boolean getGrantStatus() {
         AppOpsManager appOpsManager = (AppOpsManager)getApplicationContext().getSystemService(Context.APP_OPS_SERVICE);
         int mode = appOpsManager.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS, android.os.Process.myUid(), getApplicationContext().getPackageName());
@@ -138,6 +135,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
         Log.d("notiSentMain", String.valueOf(notiSent));
 
+
+        /// checks if onboarding process has completed (always false on app install), if it has been completed, proceed to main screen as normal
         isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingComplete", false);
         if (!isOnboardingComplete) {
             if (screen_count > 1) {
@@ -149,6 +148,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 screenCheck();
             }
         }
+
+        /// checks if - is true, if so, proceeds to check current usage with old usage, then sends user to appropriate screen depending on usage
+        /// then sets old usage time to current usage time
+        /// if false, sends user to main screen
         else {
             if (notiSent) {
                 Log.d("wasNotiSentMain", "noti has been sent");
@@ -180,23 +183,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (getGrantStatus()) {
                     screen_count = 0;
                     screenCheck();
-//                showStatsBtn.setOnClickListener(view -> {
-//
-//                });
-            }
+                }
 
             }
         }
     }
-    //used to swap between screens, 100% a MUCH better, nicer, and cleaner way to do this
-    // (with switch cases for example) to do this but it'll suffice
-    //TODO: add validation to each onclicklistener -- make sure to check uml flowcharts, see each TODO in each onclicklistener, add toasts when necessary
+    ///used to swap between screens, 100% a MUCH better, nicer, and cleaner way to do this
+    /// (with switch cases for example) to do this but it'll suffice
+    ///TODO: add validation to each onclicklistener -- make sure to check uml flowcharts, see each TODO in each onclicklistener, add toasts when necessary
     public void screenCheck() {
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
             settingsScreenBtn = (Button)findViewById(R.id.settingsScreenBtn);
             previousGraphBtn = (Button)findViewById(R.id.previousGraphBtn);
             helpIcon = (ImageView)findViewById(R.id.helpIcon);
+
+            ///help alert dialog if the user needs assistance
             helpIcon.setOnClickListener(view -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Help");
@@ -207,6 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 alertDialog.show();
             });
 
+            ///goes to settings screen
             settingsScreenBtn.setOnClickListener(view ->{
                 screen_count = 7;
                 screenCheck();
@@ -216,15 +219,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } catch (PackageManager.NameNotFoundException e) {
                 throw new RuntimeException(e);
             }
+
+
             TextView timeDiffText = (TextView)findViewById(R.id.timeDiffText);
 
-            //TODO: change to hours
+            //TODO: change to .toHours
             long currentTime = TimeUnit.MILLISECONDS.toSeconds(totalTime); //note: this will only properly update on the next interval point
             long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
 
             Log.d("currTime", String.valueOf(currentTime));
             Log.d("oldTime", String.valueOf(oldTime));
 
+            ///check to compare usage time from current week to last week
             if (oldTime == 0 || oldTime == currentTime) {
                 timeDiffText.setText("No usage difference to compare, please check back later");
             }
@@ -243,19 +249,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 timeDiffText.setText(timePercent + "% decrease from last week");
             }
 
-
-
-            //long time2 = TimeUnit.MILLISECONDS.toHours(149573890);
-
-            //Log.d("time1", String.valueOf(time1));
-            //Log.d("time2", String.valueOf(time2));
-
-            //long timeDiff = time2 - time1;
-            //int comp = Math.round(((float) timeDiff / time1) * 100);
-
-
             Log.d("oldTime", String.valueOf(oldTime));
 
+
+            ///goes to graph showing user usage from last week
             previousGraphBtn.setOnClickListener(view -> {
                 screen_count = 12;
                 screenCheck();
@@ -263,21 +260,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             //Log.d("total time", String.valueOf(totalTime));
-            //Log.d("comp", String.valueOf(comp));
-            //timeDiffText.setText(comp + "% increase from last week");
         }
-        //note: this has been moved to be the first screen as exiting the intent returns to the first screen, TODO: update uml flowchart to reflect change
-        else if (screen_count == 1){
-            setContentView(R.layout.enable_user_tracking_screen);
 
-//            String acOne = sharedPreferences.getString("activityOne", "none");
-//            Log.d("currentAcOne", acOne);
-//
-//            String acTwo = sharedPreferences.getString("activityTwo", "none");
-//            Log.d("currentAcTwo", acTwo);
-//
-//            String acThree = sharedPreferences.getString("activityThree", "none");
-//            Log.d("currentAcThree", acThree);
+        ///starter screen on install, gives user information about the app
+        else if (screen_count == 1){
+            setContentView(R.layout.onboarding_info_screen);
+            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
+            nextScreenBtn.setOnClickListener(view -> {
+                screen_count = 2;
+                screenCheck();
+            });
+        }
+        ///similar to previous screen, gives more info about the app
+        else if (screen_count == 2) {
+
+            setContentView(R.layout.onboarding_info_screen_two);
+            nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
+            nextScreenBtnTwo.setOnClickListener(view -> {
+                screen_count = 3;
+                screenCheck();
+            });
+        }
+
+        ///asks the user to give the app permission to usage stats (app cant work properly without it)
+        else if (screen_count == 3) {
+
+            setContentView(R.layout.enable_user_tracking_screen);
 
             permissionsBtn = (Button)findViewById(R.id.permissionBtn);
             permissionsBtn.setOnClickListener(view -> {
@@ -285,85 +293,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 setContentView(R.layout.enable_user_tracking_screen);
             });
 
+            ///if permission hasn't been granted, shows toast and doesnt proceed to next screen
             nextScreenBtnFive = (Button)findViewById(R.id.nextScreenBtnFive);
             nextScreenBtnFive.setOnClickListener(view -> {
-                //commented for testing, make sure to uncomment when finished testing
                 if (!getGrantStatus()) {
                     Toast.makeText(view.getContext(), "Please enable access to app usage statistics to continue", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                screen_count = 2;
-                screenCheck();
-
-            });
-        }
-        //no validation needed here
-        else if (screen_count == 2) {
-            setContentView(R.layout.onboarding_info_screen);
-            nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
-            nextScreenBtn.setOnClickListener(view -> {
-                screen_count = 3;
-                screenCheck();
-//                    setContentView(R.layout.activity_main);
-                //}
-
-            });
-
-            //notiTestBtn.setOnClickListener(view -> {
-//                WorkRequest workerClassReq = new OneTimeWorkRequest.Builder(WorkerClass.class).build();
-//                WorkManager.getInstance(this).enqueue(workerClassReq);
-            //createNotiChannel();
-            //scheduleNotification(calendar);
-//                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-//                        .setSmallIcon(R.drawable.ic_launcher_foreground)
-//                        .setContentTitle("a noti")
-//                        .setContentText("look at me im all the text");
-            //if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-//                }
-//                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
-            //});
-        }
-        //no validation needed here
-        else if (screen_count == 3) {
-            setContentView(R.layout.onboarding_info_screen_two);
-            nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
-            nextScreenBtnTwo.setOnClickListener(view -> {
                 screen_count = 4;
                 screenCheck();
             });
         }
+
+        ///screen used to define (and redefine) a goal
         else if (screen_count == 4) {
             setContentView(R.layout.user_goal_input_screen);
             goalEntryField = (EditText)findViewById(R.id.goalEntryField);
             goalTextView = (TextView)findViewById(R.id.goalTextView);
             nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
 
+            /// if user is currently redefining goal (via weekly check), changes the text accordingly
             if (isRedefiningGoal == true) {
-                //text changes based on if user is redefining goal
                 goalTextView.setText("Type in a new goal in the field below, note that your new goal cannot be identical to your old one.");
             }
 
             nextScreenBtnThree.setOnClickListener(view -> {
-
+                /// if goal field is empty, asks user to enter a goal to proceed
                 goalEntryText = goalEntryField.getText().toString();
                 if (goalEntryText.isEmpty()) {
                     Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
                 }
 
+                /// only runs this part of the code if user is currently redefining goal
                 else if (isRedefiningGoal == true) {
 
                     String oldGoal =  sharedPreferences.getString("goalEntry", "none");
+                    /// checks entered goal with current goal, if identical, alerts user that new goal can't be the same as new one
                     if (oldGoal.equals(goalEntryText)) {
                         Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
                     }
+                    /// updates goal, alerts user to updated goal, then goes to next screen
                     else {
                         sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
                         Toast.makeText(view.getContext(), "Goal has been updated to: " + goalEntryText, Toast.LENGTH_LONG).show();
@@ -373,6 +342,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
 
+                /// sets entered goal as current goal, then proceeds to next screen
                 else {
                     sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
                     screen_count = 5;
@@ -381,6 +351,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             });
         }
+        /// screen used to get activities from user
         else if (screen_count == 5) {
             //Log.d("goalEntry", goalEntryText);
 
@@ -400,14 +371,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 activityFieldTwoText = activityFieldTwo.getText().toString();
                 activityFieldThreeText = activityFieldThree.getText().toString();
 
+                /// if any activity field is empty, ask user to fill in all fields
                 if (activityFieldOneText.isEmpty() || activityFieldTwoText.isEmpty() || activityFieldThreeText.isEmpty()) {
-                    Toast.makeText(view.getContext(), "Please enter some activities to continue", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(), "Please enter an activity in all fields to continue", Toast.LENGTH_SHORT).show();
                 } else {
+                    /// if any inputted activities are identical to one another, ask user to ensure activities are unique
                     if ((Objects.equals(activityFieldOneText, activityFieldTwoText))
                             || (Objects.equals(activityFieldTwoText, activityFieldThreeText))
                             || (Objects.equals(activityFieldOneText, activityFieldThreeText))) {
                         Toast.makeText(view.getContext(), "Your activities must be unique from one another", Toast.LENGTH_SHORT).show();
                     } else {
+                        /// sets entered activities, then proceeds to next screen
                         sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
                         sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
                         sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
@@ -419,13 +393,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
         }
 
-        //no validation necessary here
+        ///  screen used to recommend user to enable notifications and queue workrequest
         else if (screen_count == 6) {
             setContentView(R.layout.noti_screen);
             nextScreenBtnSix = (Button)findViewById(R.id.nextScreenBtnSix);
-            //this function is necessary to enable notifications on android apis above 33
             notiEnableBtn = (Button)findViewById(R.id.notiEnableBtn);
+
+            ///this function is necessary to enable notifications on android apis above 33
             notiEnableBtn.setOnClickListener(view -> {
+                /// if notifications aren't enabled, asks user if they want to enable notifications
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                         ActivityCompat.requestPermissions(this, new String[]{(Manifest.permission.POST_NOTIFICATIONS)}, 12);
@@ -433,23 +409,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
 
+            /// builds periodic work request -- repeats in 1 week intervals
             final PeriodicWorkRequest periodicWorkRequest =
                     new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
                             //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
                             .addTag("periodicWork")
                             .build();
-//            notiTestBtn.setOnClickListener(view ->
-//            {
-//                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(view.getContext(), "Please enable notifications to use this feature", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    WorkManager.getInstance().enqueue(periodicWorkRequest);
-//                }
-//            });
 
-
+            /// sets isOnboardingComplete to true to indicate that the onboarding process is completed, then queues the workrequest with WorkManager,
+            /// then sends user to main screen, then logs the old usage time
             nextScreenBtnSix.setOnClickListener(view -> {
                 sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", true).apply();
+
+                //may also put this at end of evaluation screens, due to an issue with the work request not being sent properly
                 WorkManager.getInstance().enqueue(periodicWorkRequest);
                 screen_count = 0;
                 screenCheck();
@@ -457,18 +429,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("totalTime", String.valueOf(totalTime));
             });
         }
+
+        /// settings screen where user can compose email, or edit goal
         else if (screen_count == 7) {
             setContentView(R.layout.settings_screen);
             emailBtn = (Button)findViewById(R.id.emailBtn);
+
+            /// composes an email containing usage stats (see prepEmail() for more info)
             emailBtn.setOnClickListener(view -> {
                 prepEmail();
-                //Log.d("emailTest", "yea we here");
             });
             editGoalBtn = (Button)findViewById(R.id.editGoalBtn);
+
+            /// sends user to edit goal screen
             editGoalBtn.setOnClickListener(view -> {
                 screen_count = 8;
                 screenCheck();
             });
+
+            /// sends user back to main screen
             backToMainBtn = (Button)findViewById(R.id.backToMainBtn);
             backToMainBtn.setOnClickListener(view -> {
                 screen_count = 0;
@@ -476,20 +455,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
 
         }
+
+        /// screen used to redefine goal via settings screen
         else if (screen_count == 8) {
             setContentView(R.layout.redefine_goal_screen);
             submitNewGoalBtn = (Button)findViewById(R.id.submitNewGoalBtn);
             backToSettingsBtn = (Button)findViewById(R.id.backToSettingsBtn);
             newGoalEntryField = (EditText)findViewById(R.id.newGoalEntryField);
+            currentGoalText = (TextView)findViewById(R.id.currentGoalText);
+            String oldGoal =  sharedPreferences.getString("goalEntry", "none");
+
+            currentGoalText.setText("Your current goal is: " + oldGoal);
 
             submitNewGoalBtn.setOnClickListener(view -> {
-                String oldGoal =  sharedPreferences.getString("goalEntry", "none");
                 newGoalEntryText = newGoalEntryField.getText().toString();
+                /// checks if new goal field is empty, then displays message asking user to enter a goal
                 if (newGoalEntryText.isEmpty()) {
                     Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
+
+                /// if new goal is the same as old goal, lets user know that their new goal can't be the same as their old goal
                 } else if (oldGoal.equals(newGoalEntryText)) {
                     Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
                 }
+                /// updates goal, then goes back to settings screen
                 else {
                     sharedPreferences.edit().putString("goalEntry", newGoalEntryText).apply();
                     Toast.makeText(view.getContext(), "Goal has been updated to: " + newGoalEntryText, Toast.LENGTH_LONG).show();
@@ -497,13 +485,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     screenCheck();
                 }
             });
+
+            /// goes back to settings screen
             backToSettingsBtn.setOnClickListener(view -> {
                 screen_count = 7;
                 screenCheck();
             });
 
 
-        } else if (screen_count == 9) {
+        }
+        /// screen used to give appraisal to user if their current usage is lower than last weeks usage
+        else if (screen_count == 9) {
             setContentView(R.layout.appraise_screen);
             backToMainBtn2 = (Button)findViewById(R.id.backToMainBtn2);
 
@@ -511,11 +503,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String goalName = sharedPreferences.getString("goalEntry", "none");
             goalText.setText(goalName);
 
+            /// sends user back to main screen
             backToMainBtn2.setOnClickListener(view -> {
                 screen_count = 0;
                 screenCheck();
             });
-        } else if (screen_count == 10) {
+        }
+        /// screen used to give advice to user if their current usage is higher than lask weeks usage
+        else if (screen_count == 10) {
             setContentView(R.layout.usage_evaluation_screen);
             redefineGoalYesBtn = (Button)findViewById(R.id.redefineGoalYesBtn);
             redefineGoalNoBtn = (Button)findViewById(R.id.redefineGoalNoBtn);
@@ -524,22 +519,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String goalName = sharedPreferences.getString("goalEntry", "none");
             goalText.setText(goalName);
 
+            /// if user doesn't want to redefine goal, sends user to next advice screen (activity_suggestion_screen)
             redefineGoalNoBtn.setOnClickListener(view -> {
                 screen_count = 11;
                 screenCheck();
             });
 
+            /// if user wants to redefine goal, sets variable isRedefiningGoal to true, sends user to goal entry screen
             redefineGoalYesBtn.setOnClickListener(view -> {
                 isRedefiningGoal = true;
                 screen_count = 4;
                 screenCheck();
             });
 
-        } else if (screen_count == 11) {
+        }
+        /// screen used to suggest user replace phone usage with inputted activities (and some of my own)
+        else if (screen_count == 11) {
             setContentView(R.layout.activity_suggestion_screen);
             backToMainBtn3 = (Button)findViewById(R.id.backToMainBtn3);
             activitiesText = (TextView)findViewById(R.id.activitiesText);
 
+            /// creates a string array containing a list of activities (see strings.xml), then picks two at random to add to the activity suggestion text
             String[] activities = getResources().getStringArray(R.array.activities_array);
             Random random = new Random();
             int randomNumberOne = random.nextInt(activities.length - 1);
@@ -561,16 +561,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             activitiesText.setText(userActivityOne + ", " + randomActivityOne + ", " + userActivityTwo + ", " + randomActivityTwo + ", " + userActivityThree);
 
-
+            /// sends user back to main screen
             backToMainBtn3.setOnClickListener(view -> {
                 screen_count = 0;
                 screenCheck();
             });
-        } else if (screen_count == 12) {
+        }
+        /// screen used to display last weeks usage stats
+        else if (screen_count == 12) {
             setContentView(R.layout.previous_week);
             ListView previousWeekList = (ListView)findViewById(R.id.prevWeekList);
             currentGraphBtn = (Button)findViewById(R.id.currentGraphBtn);
 
+            /// retrieves usage stats from prior week via appDataDetailsPrev.csv and adds to an array list
             ArrayList<String> previousWeekArrayList = new ArrayList<>();
             try {
                 String fileNamePrevWeek = "appDataDetailsPrev.csv";
@@ -583,7 +586,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.d("prevWeek", nextLine[0]);
                     previousWeekArrayList.add(nextLine[0]);
                 }
-            } catch (CsvValidationException | IOException e) {
+            }
+            /// if appDataDetailsPrev.csv doesn't exist (is only created on a weekly basis), shows alert asking user to check back later
+            catch (CsvValidationException | IOException e) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("No data to show");
                 builder.setMessage("No previous data exists to show, please check back at a later date.")
@@ -593,10 +598,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 alertDialog.show();
                 e.printStackTrace();
             }
-            Collections.reverse(previousWeekArrayList);
+            /// adds list to listview
             ArrayAdapter<String> previousWeekArrayAdapter = new ArrayAdapter<String>(this, R.layout.previous_week_details, previousWeekArrayList);
             previousWeekList.setAdapter(previousWeekArrayAdapter);
 
+            /// sends user back to main screen
             currentGraphBtn.setOnClickListener(view -> {
                 screen_count = 0;
                 screenCheck();
@@ -605,17 +611,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    /// function used to load usage stats
     public void loadUsage() throws PackageManager.NameNotFoundException {
         long lastWeek = System.currentTimeMillis() - (1000 * 3600 * 24 * 7);
         UsageStatsManager usm = (UsageStatsManager) this.getSystemService(USAGE_STATS_SERVICE);
+
+        /// gets list of app usage data from the last week
         List<UsageStats> appList = usm.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY,
                 lastWeek, System.currentTimeMillis());
         appList = appList.stream().filter(app -> app.getTotalTimeInForeground() > 0).collect(Collectors.toList());
 
         Log.d("usagestats", appList.toString());
 
+        /// if the applist isnt empty, maps it to a treemap, then calls the showusage() function
         if (!appList.isEmpty()) {
-            Map<String, UsageStats> sortedMap = new TreeMap();
+            Map<String, UsageStats> sortedMap = new TreeMap<>();
             for (UsageStats usageStats : appList) {
                 sortedMap.put(usageStats.getPackageName(), usageStats);
             }
@@ -624,6 +634,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+        /// function used to display usage in the form of a list view
         public void showUsage(Map<String, UsageStats> sortedMap) throws PackageManager.NameNotFoundException {
         ArrayList<AppDetails> appDetailsArrayList = new ArrayList<>();
         List<UsageStats> usageStatsList = new ArrayList<>(sortedMap.values());
@@ -631,8 +642,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Collections.sort(usageStatsList, (z1, z2) ->
                 Long.compare(z1.getTotalTimeInForeground(), z2.getTotalTimeInForeground()));
 
+        /// sets totalTime based on the sum of app usage time
         totalTime = usageStatsList.stream().map(UsageStats::getTotalTimeInForeground).mapToLong(Long::longValue).sum();
 
+        /// for each app,
         for (UsageStats usageStats : usageStatsList) {
             try {
                 String packageName = usageStats.getPackageName();
@@ -640,15 +653,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String[] packageNames = packageName.split("\\.");
                 String appName = packageNames[packageNames.length - 1].trim();
 
+                /// checks if information about the current app exists, if so, changes app icon and name to corresponding details
                 if (doesAppInfoExist(usageStats)) {
                     ApplicationInfo applicationInfo = getApplicationContext().getPackageManager().getApplicationInfo(packageName, 0);
                     packageIcon = getApplicationContext().getPackageManager().getApplicationIcon(applicationInfo);
                     appName = getApplicationContext().getPackageManager().getApplicationLabel(applicationInfo).toString();
                 }
 
+                /// gets percentage and usage time of each app
                 int usagePercent = (int) (usageStats.getTotalTimeInForeground() * 100 / totalTime);
                 String usageTime = convertUsageTime(usageStats.getTotalTimeInForeground());
 
+                /// adds app details to the arraylist
                 AppDetails usageStatThing = new AppDetails(packageIcon, appName, usagePercent, usageTime);
                 appDetailsArrayList.add(usageStatThing);
 
@@ -658,17 +674,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 e.printStackTrace();
             }
 
-
-//            Log.d("filepath", s);
         }
-
-
-
-        //writeAppListToFile(appDetailsArrayList);
-
+        /// reverses array list to show most used app first, then calls function to create file to store app usage data
+        Collections.reverse(appDetailsArrayList);
         generateFile(appDetailsArrayList);
 
-        Collections.reverse(appDetailsArrayList);
+        /// adds array list of app details to listview
         AppAdapter appAdapter = new AppAdapter(this, appDetailsArrayList);
 
         ListView appListView = findViewById(R.id.appListView);
@@ -678,23 +689,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
-//    private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
-//        try {
-//            FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
-//            ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
-//            for (int i = 0; i < appStuff.size(); i++) {
-//                outputStream.writeObject("\n" + appStuff.get(i).appName + "  |  " + appStuff.get(i).usageTime);
-//            }
-//            //outputStream.flush();
-//            outputStream.close();
-//            fileOutputStream.close();
-//            Log.d("fileDebug", "app details written to file!");
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-
+    /// function used to create the file(s) containing app usage stats
     private void generateFile(ArrayList<AppDetails> appDetails) {
         String fileName = "appDataDetails.csv";
         File exFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
@@ -702,18 +697,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
 
+        /// part of function only runs on weekly check
         if (notiSent) {
+            /// if appDataDetails.csv already exists, creates a similar file, appDataDetailsPrev.csv
             if (fileToEmail.exists()) {
                 Log.d("fileExists", "file " + fileName + " already exists, creating file for previous week");
                 String fileNamePrevWeek = "appDataDetailsPrev.csv";
                 File exFileDirPrevWeek = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
                 fileToEmail = new File (exFileDirPrevWeek, fileNamePrevWeek);
 
+                /// writes the details of the current app to the file
                 try {
                     FileWriter fileWriter = new FileWriter(fileToEmail);
                     for (int i = 0; i < appDetails.size(); i++) {
-                        fileWriter.append("\n").append(appDetails.get(i).appName).append("  |  ").append(appDetails.get(i).usageTime);
-                    }
+                        fileWriter.append("\n").append(appDetails.get(i).appName)
+                                .append("  |  ").append(appDetails.get(i).usageTime)
+                                .append("  |  ").append(String.valueOf(appDetails.get(i).usagePercent))
+                                .append("%");                    }
                     fileWriter.flush();
                     fileWriter.close();
                     Log.d("fileStuffPrevWeek", "File " + fileNamePrevWeek + " created successfully, located at: " + exFileDirPrevWeek);
@@ -724,10 +724,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
+        /// writes the details of the current app to the file
         try {
             FileWriter fileWriter = new FileWriter(fileToEmail);
             for (int i = 0; i < appDetails.size(); i++) {
-                fileWriter.append("\n").append(appDetails.get(i).appName).append("  |  ").append(appDetails.get(i).usageTime);
+                fileWriter.append("\n").append(appDetails.get(i).appName)
+                        .append("  |  ").append(appDetails.get(i).usageTime)
+                        .append("  |  ").append(String.valueOf(appDetails.get(i).usagePercent))
+                        .append("%");
             }
             fileWriter.flush();
             fileWriter.close();
@@ -737,6 +741,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /// function used to check if information about the app exists
     private boolean doesAppInfoExist(UsageStats usageStats) {
         try {
             getApplicationContext().getPackageManager().getApplicationInfo(usageStats.getPackageName(), 0);
@@ -746,6 +751,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /// converts raw usage time (measured in milliseconds) to hours and minutes, and returns both values with attached strings
     private String convertUsageTime(long milliseconds) {
         if (milliseconds < 0) {
             throw new IllegalArgumentException("IllegalArgument");
@@ -755,39 +761,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return (hours + "hr " + minutes + "min ");
     }
+    /// function used to prepare the email containing usage stats for the week
     public void prepEmail() {
-//        Log.d("emailTest", "yea we here...again");
-//        Intent intent = new Intent(Intent.ACTION_SENDTO);
-//        intent.setData(Uri.parse("mailto:"));
-//        intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
-//        intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
-//        File file = getFileStreamPath("myfile.txt");
-//        Log.d("file dir", String.valueOf(getFilesDir()));
-////        String s = file.getAbsolutePath();
-////        File file1 = new File(s);
-////        String fileName = "myfile.txt";
-////        File file = new File(getFilesDir(), "myfile.txt");
-////        File extDir = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
-//        Uri uri = Uri.fromFile(file);
-//        intent.putExtra(Intent.EXTRA_STREAM, uri);
-//
-//        //-- this would be the file containing usage data
-////        if (intent.resolveActivity(getPackageManager()) != null) {
-////            startActivity(intent);
-////        }
-//        Intent intent1 = Intent.createChooser(intent, "Send using: ");
-//        intent1.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-//        startActivity(intent1);
         Uri fileUri = FileProvider.getUriForFile(this, getPackageName()+".provider", fileToEmail);
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("vnd.android.cursor.dir/email");
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"ldebuf300@caledonian.ac.uk" });
         intent.putExtra(Intent.EXTRA_STREAM, fileUri);
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Test Email");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Weekly email with my app usage stats");
         startActivity(Intent.createChooser(intent, "Send email using: "));
-
-
     }
 
 }

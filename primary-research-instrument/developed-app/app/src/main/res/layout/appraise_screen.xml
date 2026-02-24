@@ -40,6 +40,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
+            android:textStyle="italic"
             android:text="As a quick reminder, your current goal is:">
         </TextView>
     </LinearLayout>
@@ -47,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="20sp">
+        android:paddingTop="10sp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +61,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="20sp"
+        android:paddingTop="10sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"
