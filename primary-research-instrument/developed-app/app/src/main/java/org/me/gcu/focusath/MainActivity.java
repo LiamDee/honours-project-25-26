@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button permissionsBtn, showStatsBtn, emailBtn, notiEnableBtn, notiTestBtn,
             nextScreenBtn, nextScreenBtnTwo, nextScreenBtnThree, nextScreenBtnFour, nextScreenBtnFive, nextScreenBtnSix,
             settingsScreenBtn, editGoalBtn, submitNewGoalBtn, backToMainBtn, backToSettingsBtn, backToMainBtn2,
-            redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3, previousGraphBtn, currentGraphBtn;
+            redefineGoalYesBtn, redefineGoalNoBtn, backToMainBtn3, previousGraphBtn, currentGraphBtn, editActivitiesBtn;
     private ListView appListView;
     private int screen_count = 0;
     //TODO: rename notiSent to something that makes more sense
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public SharedPreferences sharedPreferences, sharedPreferencesOnBoarding, sharedPreferencesUsageTime, sharedPreferencesWorkerSent, sharedPreferencesNotiSent;
     private EditText goalEntryField, activityFieldOne, activityFieldTwo, activityFieldThree, newGoalEntryField;
     private String goalEntryText, activityFieldOneText, activityFieldTwoText, activityFieldThreeText, newGoalEntryText;
-    private Boolean isOnboardingComplete, notiSent, isRedefiningGoal;
+    private Boolean isOnboardingComplete, notiSent, isRedefiningGoal, isEditingActivities;
     private File fileToEmail;
     private TextView goalText, activitiesText, goalTextView, currentGoalText;
     private ImageView helpIcon;
@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sharedPreferencesUsageTime = getSharedPreferences("oldUsageTime", MODE_PRIVATE);
 
         isRedefiningGoal = false;
+        isEditingActivities = false;
 
         sharedPreferencesNotiSent = getSharedPreferences("notiSent", MODE_PRIVATE);
         sharedPreferencesWorkerSent = getSharedPreferences("workerSent", MODE_PRIVATE);
@@ -353,16 +354,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         /// screen used to get activities from user
         else if (screen_count == 5) {
-            //Log.d("goalEntry", goalEntryText);
 
             setContentView(R.layout.user_activity_suggestions_screen);
-
-//            String currentGoal = sharedPreferences.getString("goalEntry", "none");
-//            Log.d("currentGoal", currentGoal);
 
             activityFieldOne = (EditText)findViewById(R.id.activityFieldOne);
             activityFieldTwo = (EditText)findViewById(R.id.activityFieldTwo);
             activityFieldThree = (EditText)findViewById(R.id.activityFieldThree);
+
+            /// if user is currently editing activity, prefill edittext fields with given info
+            if (isEditingActivities == true) {
+                String activityOne = sharedPreferences.getString("activityOne", "none");
+                String activityTwo = sharedPreferences.getString("activityTwo", "none");
+                String activityThree = sharedPreferences.getString("activityThree", "none");
+
+                activityFieldOne.setText(activityOne);
+                activityFieldTwo.setText(activityTwo);
+                activityFieldThree.setText(activityThree);
+
+            }
 
             nextScreenBtnFour = (Button)findViewById(R.id.nextScreenBtnFour);
             nextScreenBtnFour.setOnClickListener(view -> {
@@ -385,6 +394,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
                         sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
                         sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
+
+                        /// if currently editing activities, send toast indicating change, then return to settings screen
+                        if (isEditingActivities == true) {
+                            Toast.makeText(view.getContext(), "Activities have been updated", Toast.LENGTH_LONG).show();
+                            screen_count = 7;
+                            screenCheck();
+                            isEditingActivities = false;
+                            return;
+                        }
 
                         screen_count = 6;
                         screenCheck();
@@ -444,6 +462,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             /// sends user to edit goal screen
             editGoalBtn.setOnClickListener(view -> {
                 screen_count = 8;
+                screenCheck();
+            });
+
+            editActivitiesBtn = (Button)findViewById(R.id.editActivitiesBtn);
+            editActivitiesBtn.setOnClickListener(view -> {
+                isEditingActivities = true;
+                screen_count = 5;
                 screenCheck();
             });
 

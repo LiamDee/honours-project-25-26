@@ -19,13 +19,13 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="30sp"
+        android:paddingTop="10sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:text="Clicking the button below will pre-compose an email with the current usage stats attached to the email. This must be done on a weekly basis (if you have notifications enabled, you will receive a notification whenever the time comes).">
         </TextView>
     </LinearLayout>
@@ -47,14 +47,42 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="30sp"
+        android:paddingTop="10sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:textSize="18dp"
-            android:text="Click the button below to redefine your goal, you can do this as frequently as you want with no penalty.">
+            android:textSize="15dp"
+            android:text="Click this button below to redefine your goal, you can do this as frequently as you want with no penalty.">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp">
+        <Button
+            android:background="@drawable/buttonshape"
+            android:textSize="20sp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:id="@+id/editGoalBtn"
+            android:text="Redefine Goal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="10sp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="15dp"
+            android:text="Click this button below to redefine your activities, you can do this as frequently as you want with no penalty.">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -66,11 +94,11 @@
         android:layout_weight="1">
         <Button
             android:background="@drawable/buttonshape"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:id="@+id/editGoalBtn"
-            android:text="Redefine Goal"/>
+            android:id="@+id/editActivitiesBtn"
+            android:text="Redefine Activity"/>
     </LinearLayout>
 
     <LinearLayout

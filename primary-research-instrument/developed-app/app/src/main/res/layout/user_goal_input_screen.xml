@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/goalEntryField"
             android:autofillHints="goalEntry"
-            android:maxLength="25"
+            android:maxLength="30"
             android:gravity="center_horizontal"
             android:inputType="textNoSuggestions|textVisiblePassword"
             android:hint="Type in a goal"
