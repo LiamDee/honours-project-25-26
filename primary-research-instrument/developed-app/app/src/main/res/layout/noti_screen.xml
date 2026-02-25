@@ -82,7 +82,7 @@
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:id="@+id/nextScreenBtnSix"
+            android:id="@+id/toMainScreenBtn"
             android:text="Finish"/>
     </LinearLayout>
 

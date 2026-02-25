@@ -22,4 +22,40 @@
         <item>Play a sport</item>
         <item>Meet some new people</item>
     </string-array>
+
+    <string name="how_does_it_work_text">Within the next few screens, you will be asked to allow for the app to access app usage data, provide a goal, and three activities of your
+        choosing. Once this has been set up, in one-week intervals, the app will compare your usage for the current week with last week, and provide appropriate guidance based on
+        said usage. Further information can be found within the Quick Start Guide provided.</string>
+
+    <string name="what_is_app_about_text">This app is my primary research instrument core component of my 4th year Honours Project / Dissertation. The idea of the app is to
+        integrate concepts derived from Reality Therapy alongside usage tracking technologies to help address smartphone and social media addiction</string>
+
+    <string name="what_happens_after_text">After the evaluation period has ended, you may uninstall the app (note that you are also free to do so and opt out at any time) or you can
+        keep the app and continue using it as normal. Two years afterwards, any data relating to the evaluation period will be permanently removed.</string>
+
+    <string name="how_will_data_used_text">As previously mentioned, no personal information will be captured at any point. The app will only store usage data from the current week
+        (and past week, whenever applicable). This data will be sent to myself via a pre-composed email for further analysis and is needed to evaluate the viability of the project
+        as a whole.</string>
+
+    <string name="good_usage_text">You\'ve seemed to have decreased your app usage over the week, which is a good thing! Hopefully, by keeping your usage down, it\'s put you closer to
+        achieving your set goal (or maybe it already has!)</string>
+
+    <string name="before_using_app_text">To use this application, you must provide permission for the application to access app usage data. No personal information will be captured at
+        any point, only usage information related to installed apps will be captured. You may opt out of this by uninstalling the app at this stage and letting myself know.</string>
+
+    <string name="email_button_text">Clicking this button below will pre-compose an email with the current usage stats attached to the email. This must be done on a weekly basis
+        (if you have notifications enabled, you will receive a notification whenever the time comes).</string>
+
+    <string name="redefine_goal_settings_text">Click this button below to redefine your goal, you can do this as frequently as you want with no penalty.</string>
+
+    <string name="redefine_activity_text">Click this button below to redefine your activities, you can do this as frequently as you want with no penalty.</string>
+
+    <string name="enter_goal_text">First, you will need to enter a goal. It\'s best to enter a goal that you want to achieve that you think is being delayed by excessive app
+        / mobile phone usage. Examples include finishing a university assignment, reaching a new personal best at the gym, or finishing a book.</string>
+
+    <string name="enter_activities_text">Next, type in three of your favourite activities. These can be anything from reading, to hiking, or cooking, anything goes. Some activities
+        have also been supplied for you as well.</string>
+
+    <string name="activity_suggestion_screen_text">En-route to achieving your goal, it\'s important to substitute the time formerly spent using your phone with other, healthier activities.
+        Remember to give these a go when you have the time.</string>
 </resources>

@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="15dp"
-            android:text="Clicking the button below will pre-compose an email with the current usage stats attached to the email. This must be done on a weekly basis (if you have notifications enabled, you will receive a notification whenever the time comes).">
+            android:text="@string/email_button_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -54,7 +54,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="15dp"
-            android:text="Click this button below to redefine your goal, you can do this as frequently as you want with no penalty.">
+            android:text="@string/redefine_goal_settings_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -82,7 +82,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="15dp"
-            android:text="Click this button below to redefine your activities, you can do this as frequently as you want with no penalty.">
+            android:text="@string/redefine_activity_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -94,11 +94,11 @@
         android:layout_weight="1">
         <Button
             android:background="@drawable/buttonshape"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:id="@+id/editActivitiesBtn"
-            android:text="Redefine Activity"/>
+            android:text="Redefine Activities"/>
     </LinearLayout>
 
     <LinearLayout

@@ -24,7 +24,6 @@ public class WorkerClass extends Worker {
     public SharedPreferences sharedPreferencesWorkerSent = getApplicationContext().getSharedPreferences("workerSent", MODE_PRIVATE);
     public SharedPreferences sharedPreferencesNotiSent = getApplicationContext().getSharedPreferences("notiSent", MODE_PRIVATE);
     boolean hasWorkerBeenSent = sharedPreferencesWorkerSent.getBoolean("workerSent", false);
-    //TODO: rename notiSent to something that makes more sense
     boolean notiSent = sharedPreferencesNotiSent.getBoolean("notiSent", false);
 
 
@@ -68,14 +67,13 @@ public class WorkerClass extends Worker {
                 return;
             }
 
-            //TODO: make notification look nice
             /// builds notification, then sends it to user
             Log.d("notificationWorkerClass", "notification created");
             NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
                     .setContentTitle("Your weekly check-in is now available!")
                     .setContentText("An update on your app usage is available, open the app to find out more, or please restart the app if it's already open. \n Ensure you also send the email with your app usage statistics.")
                     .setStyle(new NotificationCompat.BigTextStyle())
-                    .setSmallIcon(R.drawable.ic_launcher_foreground);
+                    .setSmallIcon(R.mipmap.app_icon_round);
             notiManager.notify(1, notification.build());
 
         } else {

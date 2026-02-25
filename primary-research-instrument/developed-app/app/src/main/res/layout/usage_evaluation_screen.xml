@@ -28,7 +28,6 @@
             android:gravity="center_horizontal"
             android:textSize="18sp"
             android:text="Looking back at the past week, it seems that your app usage has had an increase.">
-            <!-- the x in the text above will be replaced with an actual value at runtime -->
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -69,7 +68,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="Have a think about if your current usage is getting in the way of you achieveing this goal.">
+            android:text="Have a think about if your current usage is getting in the way of you achieving this goal.">
         </TextView>
     </LinearLayout>
     <LinearLayout

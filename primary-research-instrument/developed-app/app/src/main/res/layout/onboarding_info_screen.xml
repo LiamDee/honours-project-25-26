@@ -20,22 +20,21 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="20sp"
+        android:paddingTop="10sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="This app is my primary research instrument core component of my 4th year Honours Project / Dissertation. The idea of the app is to integrate concepts derived from Reality Therapy to help treat smartphone
-and social media addiction"> <!-- , it is an application that integrates -->
+            android:text="@string/what_is_app_about_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="20sp">
+        android:paddingTop="10sp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,14 +46,14 @@ and social media addiction"> <!-- , it is an application that integrates -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="20sp"
+        android:paddingTop="10sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="For this app to work properly, you must provide permission to the application to track app usage">
+            android:text="@string/how_does_it_work_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -68,7 +67,7 @@ and social media addiction"> <!-- , it is an application that integrates -->
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:id="@+id/nextScreenBtn"
+            android:id="@+id/nextInfoScreenBtn"
             android:text="Next"/>
     </LinearLayout>
 

@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="17sp"
-            android:text="Next, type in three of your favourite activites, these can be anything from reading, to hiking, or cooking, anything goes. Some activities have also been supplied for you as well.">
+            android:text="@string/enter_activities_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -89,7 +89,7 @@
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:id="@+id/nextScreenBtnFour"
+            android:id="@+id/toNotiScreenBtn"
             android:text="Submit"/>
     </LinearLayout>
 

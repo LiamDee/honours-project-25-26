@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="En-route to achieveing your goal, it's important to subsitute the time formerly spent using your phone with other, healthier activities. Remeber to give these a go when you have the time.">
+            android:text="@string/activity_suggestion_screen_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -68,7 +68,7 @@
             android:layout_width="270dp"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:id="@+id/backToMainBtn3"
+            android:id="@+id/backToMainFromActivitySuggestBtn"
             android:text="Understood"/>
     </LinearLayout>
 

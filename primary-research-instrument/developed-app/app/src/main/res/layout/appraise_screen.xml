@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="You've seem to have decreased your app usage over the week, which is a good thing! Hopefully, by keeping your usage down, it's put you closer to achieving your set goal (or maybe it already has!)">
+            android:text="@string/good_usage_text">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -81,7 +81,7 @@
             android:layout_width="270dp"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:id="@+id/backToMainBtn2"
+            android:id="@+id/backToMainFromAppraiseBtn"
             android:text="Understood"/>
     </LinearLayout>
 
