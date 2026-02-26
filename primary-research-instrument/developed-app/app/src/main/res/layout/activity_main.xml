@@ -6,46 +6,102 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivity">
 
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Press to log stats" />-->
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/showStatsBtn"-->
+<!--            android:text="Log stats"/>-->
+<!--    </LinearLayout>-->
     <LinearLayout
         android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Press to log stats" />
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingTop="50sp">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/showStatsBtn"
-            android:text="Log stats"/>
+            android:background="@drawable/buttonshape"
+            android:textSize="20sp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:id="@+id/settingsScreenBtn"
+            android:text="Settings"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_info_24"
+            android:layout_marginStart="10dp"
+            android:adjustViewBounds="true"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/helpIcon"
+            app:tint="@color/grey" />
 
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10sp"
+        android:background="@android:color/darker_gray"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Press to email stats to me" />
+        android:layout_height="wrap_content"
+        android:paddingTop="15sp"
+        android:paddingBottom="15sp">
 
         <Button
+            android:background="@drawable/buttonshape"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/emailBtn"
-            android:text="Email me with weekly stats"/>
+            android:id="@+id/previousGraphBtn"
+            android:text="Previous week" />
 
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10sp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No difference to compare, please check back later"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/timeDiffText"
+        android:gravity="center_horizontal"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10sp"
+        android:background="@android:color/darker_gray"/>
     <ListView
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:id="@+id/appListView" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
 
 
 

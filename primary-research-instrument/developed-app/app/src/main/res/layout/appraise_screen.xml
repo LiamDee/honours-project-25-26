@@ -13,21 +13,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="27sp"
-            android:text="What is this app about?">
+            android:textSize="25sp"
+            android:text="App usage is looking good!">
         </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="10sp"
+        android:paddingTop="20sp"
         android:layout_gravity="center">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="@string/what_is_app_about_text">
+            android:text="@string/good_usage_text">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:text="As a quick reminder, your current goal is:">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -39,8 +53,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="27sp"
-            android:text="How does it work?">
+            android:textSize="25sp"
+            android:id="@+id/goalText"
+            android:text="Goal name">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -53,23 +68,21 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:text="@string/how_does_it_work_text">
+            android:text="Remember, you can always update your current goal by heading into the settings.">
         </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:paddingTop="20sp">
         <Button
             android:textSize="20sp"
-            android:layout_width="200dp"
+            android:layout_width="270dp"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:id="@+id/nextInfoScreenBtn"
-            android:text="Next"/>
+            android:id="@+id/backToMainFromAppraiseBtn"
+            android:text="Understood"/>
     </LinearLayout>
-
 
 </LinearLayout>

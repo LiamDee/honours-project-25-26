@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingBottom="40sp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:text="Enter 3 of your favourite activities">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="17sp"
+            android:text="@string/enter_activities_text">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityFieldOne"
+            android:maxLength="30"
+            android:gravity="center_horizontal"
+            android:ems="12"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:hint="Type in an activity">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityFieldTwo"
+            android:maxLength="30"
+            android:gravity="center_horizontal"
+            android:ems="12"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:hint="Type in another activity">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityFieldThree"
+            android:maxLength="30"
+            android:gravity="center_horizontal"
+            android:ems="12"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:hint="Type in one more activity">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp">
+        <Button
+            android:textSize="20sp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
+            android:id="@+id/toNotiScreenBtn"
+            android:text="Submit"/>
+    </LinearLayout>
+
+</LinearLayout>
