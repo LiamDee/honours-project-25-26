@@ -68,7 +68,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:textSize="17sp"
-            android:text="Press the 'Finish' button below once you are ready">
+            android:text="@string/end_of_onboarding_text">
         </TextView>
     </LinearLayout>
     <LinearLayout

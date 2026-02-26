@@ -54,7 +54,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    //TODO: check every view to ensure no placeholder text remains in prod
     private Button permissionsBtn, emailBtn, notiEnableBtn, nextInfoScreenBtn, toAppUsagePermsScreenBtn, toEnterActivitiesTextBtn,
             toNotiScreenBtn, toEnterGoalScreenBtn, toMainScreenBtn, settingsScreenBtn, editGoalBtn, submitNewGoalBtn, backToMainBtn,
             backToSettingsBtn, backToMainFromAppraiseBtn, redefineGoalYesBtn, redefineGoalNoBtn, backToMainFromActivitySuggestBtn, previousGraphBtn, currentGraphBtn,
@@ -181,7 +180,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     ///used to swap between screens, 100% a MUCH better, nicer, and cleaner way to do this
     /// (with switch cases for example) to do this but it'll suffice
-    ///TODO: make sure to check uml flowcharts, see each TODO in each onclicklistener
     public void screenCheck() {
         if (screen_count == 0) {
             setContentView(R.layout.activity_main);
@@ -214,9 +212,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             TextView timeDiffText = (TextView)findViewById(R.id.timeDiffText);
 
-            //TODO: change to .toHours
-            long currentTime = TimeUnit.MILLISECONDS.toSeconds(totalTime); //note: this will only properly update on the next interval point
-            long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
+            long currentTime = TimeUnit.MILLISECONDS.toHours(totalTime); //note: this will only properly update on the next interval point
+            long oldTime = TimeUnit.MILLISECONDS.toHours(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
 
             Log.d("currTime", String.valueOf(currentTime));
             Log.d("oldTime", String.valueOf(oldTime));
@@ -416,8 +413,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             /// builds periodic work request -- repeats in 1-week intervals
             final PeriodicWorkRequest periodicWorkRequest =
-                    new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
-                            //TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
+                    new PeriodicWorkRequest.Builder(WorkerClass.class, 7, TimeUnit.DAYS, 15, TimeUnit.MINUTES)
                             .addTag("periodicWork")
                             .build();
 

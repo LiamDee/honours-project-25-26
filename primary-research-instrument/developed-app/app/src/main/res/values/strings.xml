@@ -27,7 +27,7 @@
         choosing. Once this has been set up, in one-week intervals, the app will compare your usage for the current week with last week, and provide appropriate guidance based on
         said usage. Further information can be found within the Quick Start Guide provided.</string>
 
-    <string name="what_is_app_about_text">This app is my primary research instrument core component of my 4th year Honours Project / Dissertation. The idea of the app is to
+    <string name="what_is_app_about_text">This app is my primary research instrument and core component of my 4th year Honours Project. The idea of the app is to
         integrate concepts derived from Reality Therapy alongside usage tracking technologies to help address smartphone and social media addiction</string>
 
     <string name="what_happens_after_text">After the evaluation period has ended, you may uninstall the app (note that you are also free to do so and opt out at any time) or you can
@@ -58,4 +58,8 @@
 
     <string name="activity_suggestion_screen_text">En-route to achieving your goal, it\'s important to substitute the time formerly spent using your phone with other, healthier activities.
         Remember to give these a go when you have the time.</string>
+
+    <string name="end_of_onboarding_text">Once you are at the main screen, please head to the settings and tap the compose email button, then, send the email containing app usage stats.
+        You will be sending these stats every week, and it\'s an extremely important part of the app / project in general, so please don\'t forget to do this. Press the \'Finish\' button
+        below once you are ready to being using the app.</string>
 </resources>
