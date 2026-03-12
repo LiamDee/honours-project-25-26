@@ -8,6 +8,8 @@
 %\usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
 \graphicspath{{images/}}
 \usepackage[export]{adjustbox}
 %\usepackage{parskip}
@@ -21,7 +23,7 @@
 
 \addbibresource{references.bib}% Syntax for version >= 1.2
 
-\title{Focusath - Usage tracking \& psychology-based mobile application to help address social media and smartphone addiction in young adults}	% Title
+\title{Usage tracking \& psychology-based mobile application to help address social media and smartphone addiction in young adults}	% Title
 \author{Liam De Buffalo}		% Author
 \date{\today}	% Date
 
@@ -133,8 +135,29 @@ Finally, I would like to thank my family and friends outside of GCU who have bee
 
 \newpage
 \tableofcontents
-
+\listoftables
 \newpage
+
+
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{Abbreviation / Acronym} & \textbf{Description / Definition}                        \\ \midrule
+\textit{RT}                     & Reality Therapy                                          \\ \midrule
+\textit{WDEP}                   & Wants, Direction, Evaluation, and Planning \& Commitment \\ \midrule
+\textit{SRS}                    & Software Requirements Specification                      \\ \midrule
+\textit{PRI}                    & Primary Research Instrument                              \\ \midrule
+\textit{SA}                     & Smartphone Addiction                                     \\ \midrule
+\textit{SMA}                    & Social Media Addiction                                   \\ \bottomrule
+\end{tabular}%
+}
+\caption{List of Abbreviations and Acronyms}
+\label{tab:acronym-table}
+\end{table}
+\newpage
+
+
 
 \section{Introduction}
 This section will provide a brief overview on smartphones and social media. It will then provide context on the 
