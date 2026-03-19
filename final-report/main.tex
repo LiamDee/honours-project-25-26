@@ -134,8 +134,8 @@ mobile app. \newline
 
 This project showcases an Android-based mobile application that integrates concepts from Reality Therapy alongside usage tracking technologies, with
 the overall objective being to lower an individuals usage in an attempt to address the issue of Social Media and Smartphone Addiction. To evaluate
-the project, a small group of participants were given the application to use over a three-week span, and were asked to send their usage data
-each week during this span. By the end of this period, they were also provided a survey where they could provide their own opinions.  \newline
+the project, a small group of participants were given the application to use over a three-week period, and were asked to send their usage data
+each week during this time. By the end of this period, they were also provided a survey where they could provide their own opinions on the app.  \newline
 
 Results from the evaluation show that 
 
@@ -159,6 +159,7 @@ Finally, I would like to thank my family and friends outside of GCU who have bee
 
 \newpage
 \tableofcontents
+\listoffigures
 \listoftables
 \newpage
 
@@ -172,6 +173,7 @@ Finally, I would like to thank my family and friends outside of GCU who have bee
 \textit{WDEP}                   & Wants, Direction, Evaluation, and Planning \& Commitment \\ \midrule
 \textit{SRS}                    & Software Requirements Specification                      \\ \midrule
 \textit{PRI}                    & Primary Research Instrument                              \\ \midrule
+\textit{SDLC}                   & Software Development Lifecycle                           \\ \midrule
 \textit{SA}                     & Smartphone Addiction                                     \\ \midrule
 \textit{SMA}                    & Social Media Addiction                                   \\ \bottomrule
 \end{tabular}%
@@ -583,7 +585,7 @@ usage tracking.
 
 This section will provide an in-depth look at the process behind building the PRI. This section will 
 include a brief analysis on the research methodology used, discussion on the described problem's
-characteristics, and then a extensive look at the PRI, including commentary 
+characteristics, and then a extensive look at the creation of the PRI, including commentary 
 and justification behind design choices, technologies used, and the features implemented. When necessary, this
 section will also reference the literature review.
 
@@ -598,9 +600,50 @@ primary objective of this project as stated in section 1.2.2 is to: \newline
 with the use of usage tracking and psychological methods.}\newline
 
 and ensuring the objective is met involves testing the developed application with a small group of users, and evaluating based on captured data if
-the PRI meets the project's main objective, research statement, and hypothesis.
+the PRI meets the project's main objective, research statement, and hypothesis. 
 
+%maybe mention change in eval method
 
+\subsection{Lifecycle}
+Early in the planning stage of the project, the project intended to make use of an iterative development methodology, more specifically, the agile methodology, due to
+its focus on flexibility, adaptability to any changes in requirements, and frequent use in mobile app development \autocite{RefWorks:RefID:160}. However, during the
+requirements analysis stage of the project, a change to a Hybrid methodology was made. This model aims to let development teams combine approaches from
+multiple methodologies and tailor the Software Development Lifecycle to fit their needs \autocite{RefWorks:RefID:162-hossain2023software}. In this case,
+approaches from iterative and waterfall methodologies were combined to create a methodology that fit the needs of the project at that point in time.
+specifically, the waterfall methodology was used for the Requirements Analysis, Design, and Evaluation stage, while the iterative methodology was used for
+the Implementation and Testing stage. This allowed for requirements to be "fully" defined and for designs to be as detailed as possible, while also
+allowing for the creation of multiple prototypes and for issues to be identified and solved during the creation of each prototype. \newline
+
+% \begin{figure}[H]
+% \centering
+% 	\includegraphics[width=0.60\linewidth]{iterative-waterfall.png}
+% 	\captionof{figure}{\textit{Iterative Waterfall methodology \autocite{RefWorks:RefID:161-trivedi2013comparative}}}
+% 	\label{fig:iterativewaterfall}
+% \end{figure}
+
+This change in methodology was deemed to be necessary, as it felt more appropriate for the project as a whole when compared to agile and waterfall separately. Agile
+methodologies, while fitting for any software project, puts a focus on constant customer feedback during the SDLC \autocite{RefWorks:RefID:162-hossain2023software}, 
+something that there would be a lack of in this project's case. The Waterfall methodology, while a lot simpler to plan with, its lack of flexibility when it comes to changes 
+in project scope and lack of prototype creation in particular \autocite{RefWorks:RefID:162-hossain2023software}, made it usage unfitting for the project. Combining parts 
+of these methodologies however, made for a methodology that was fitting for the project as a whole. Though this was a unforeseen risk according to the risk matrix and risk 
+register composed before the beginning of development (see Appendix B), this change did not negatively affect development, despite this shift occurring slightly into the 
+execution of the project, as the project was able to stick to its defined timeline throughout the duration of the project execution (see Appendix C). \newline
+
+The Hybrid model was used by using a waterfall approach for the Requirements Analysis, Design, and Evaluation stage, and combining it with an iterative approach for the 
+Implementation and Testing stage. The requirements were defined during the beginning of the project's execution stage within a Software Design Specification 
+(see Appendix D), then, based on the requirements specified, designs surrounding those requirements were created.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{git-branches.png}
+	\captionof{figure}{\textit{GitHub branches for each requirement}}
+	\label{fig:gitbranch}
+\end{figure}
+
+Figure 1 showcases the process behind implementing and testing the PRI. When building prototypes of the PRI, a GitHub branch that matched the name of the requirement was created, then, within
+that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. If that part of the requirement passed all test
+cases as intended, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process repeated until the implementation of 
+all requirements were completed.
 
 
 
@@ -617,6 +660,31 @@ the PRI meets the project's main objective, research statement, and hypothesis.
 \newpage
 
 \subsection{Testing}
+At the end of each prototype iteration, Incremental Integration Testing was carried out to ensure that the requirements were implemented as intended according to how the requirement was
+defined in the SRS. Incremental Integration Testing can be defined as testing components of a software system, one by one, adding components together until eventually the entire system
+is being tested. %cite 
+As the nature of development involved creating a component based on the requirements specified, and only continuing once the component had been created to match the specification, this
+method of testing felt most appropriate.
+
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l|l|l|l|l@{}}
+\toprule
+\textbf{Test ID} & \textbf{Action}                                                                                                                  & \textbf{Expected Outcome}                                                                                                                                                                 & \textbf{Actual Outcome}                                                                                                                                                                   & \textbf{Evidence} & Assumptions / Context (If necessary) \\ \midrule
+2.1              & \begin{tabular}[c]{@{}l@{}}User clicks on \\ “previous week” button \\ while no data for the\\ previous week exists\end{tabular} & \begin{tabular}[c]{@{}l@{}}A dialog pops up \\ explaining to the user \\ that no data for the \\ previous week currently \\ exists, and that \\ they should check back later\end{tabular} & \begin{tabular}[c]{@{}l@{}}A dialog pops up \\ explaining to the user \\ that no data for the \\ previous week currently \\ exists, and that \\ they should check back later\end{tabular} & Req\_2.1.webm     &                                      \\ \bottomrule
+\end{tabular}%
+}
+\caption{Example of a test case}
+\label{tab:test-case-example}
+\end{table}
+
+An example of how testing was carried out can be seen in Table 2. The test case includes the test ID, mapped to match the requirement number, the 
+action taken by a user that would trigger the component, the expected outcome of the test, the actual outcome of said test, evidence to show the 
+outcome of the test, usually in the form of a screen recorded video or screen capture, and any additional context or assumptions needed to understand
+the test case. A comprehensive list of the test cases and their results can be found in Appendix E. \newline
+
 
 \newpage
 
@@ -628,7 +696,7 @@ This section provides details on the evaluation of the project in relation to th
 \noindent\textit{The combination of usage tracking and intervention methods rooted in psychology within the created mobile 
 application will help to address and reduce smartphone \& social media usage in young adults.} \newline\newline
 It also gives critical analysis and discussion of the results and findings from the evaluation, before drawing initial conclusions based on the
-project hypothesis, research statement and objectives.
+project hypothesis, research statement and objectives.\newline
 
 When evaluating if the PRI meets the hypothesis, objective, and research statement, a mixed-method approach was used.
 The evaluation results are based off of captured usage data from each user, as well as a user's own opinions of their experience using the 
@@ -667,8 +735,38 @@ PRI via a survey given at the end of the evaluation period, and a mixed-method a
 \newpage
 \section*{Appendix}
 \subsection*{Appendix A - GitHub Repository}
-The GitHub repository containing the source code for the PRI, as well as other documentation related to the Honours Project, is available via:\newline
+The GitHub repository containing the source code for the PRI, as well as all other documentation related to the Honours Project, is available via:\newline\newline
 https://github.com/LiamDee/honours-project-25-26
 
+\subsection*{Appendix B - Risk Matrix \& Risk Register}
+\textbf{Risk Register}
+\begin{figure}*[H]
+\centering
+	\includegraphics[width=1\linewidth]{riskregisterscreenshot.png}
+	\captionof{figure}[]{\textit{Risk Register (originally from RS\&PI Project Planning report)}}
+	\label{fig:riskregister}
+\end{figure}
+
+
+\textbf{Risk Matrix}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{riskmatrix.png}
+	\captionof{figure}[]{\textit{Risk Matrix (originally from RS\&PI Project Planning report)}}
+	\label{fig:riskmatrix}
+\end{figure}
+
+\subsection*{Appendix C - Gantt Chart}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{GCU_Project_Plan_New.png}
+	\captionof{figure}[]{\textit{Project Plan Gantt Chart (originally from RS\&PI Project Planning report)}}
+	\label{fig:projectplan}
+\end{figure}
+
+
+\subsection*{Appendix D - Software Requirements Specification}
+
+\subsection*{Appendix E - Test Case results}
 
 \end{document}

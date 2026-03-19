@@ -344,6 +344,50 @@
       \endverb
       \keyw{Sciences: Comprehensive Works; Self harm; Cell phones; Social media; Mental health and psychiatry; Medical risk factors; Electronic medical records; Questionnaires; Apps; Parents & parenting; Mental health; Smartphones; Mental depression; Social networks; Cross-sectional studies; Mental health care; Self report; Self destructive behavior; Young adults; Researchers; Health services; Sleep; Anxiety; Electronic health records; Consent; Self-injury; Cohort analysis; Natural language processing; Caregivers; Digital media; Observational studies; Suicides & suicide attempts; Social; United Kingdom--UK}
     \endentry
+    \entry{RefWorks:RefID:160}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=65dbdc27e78f6b15858f9a4e0d083888}{%
+           family={Chandarana},
+           familyi={C\bibinitperiod},
+           given={Namaswi},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=727b8a0a5cb053bf35e5e90b4eaa4439}{%
+           family={Gada},
+           familyi={G\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a217e46cb0da5d4ada349ac251d5d1e4}{%
+           family={Kukkadapu},
+           familyi={K\bibinitperiod},
+           given={Sushma},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{fullhash}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{fullhashraw}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{bibnamehash}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{authorbibnamehash}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{authornamehash}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{authorfullhash}{8403f84bbe0521a7c6b24c945f2c7371}
+      \strng{authorfullhashraw}{8403f84bbe0521a7c6b24c945f2c7371}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Research Journal of Modernization in Engineering Technology and Science}
+      \field{month}{08}
+      \field{title}{A COMPREHENSIVE REVIEW OF AGILE METHODOLOGIES IN MOBILE APP DEVELOPMENT}
+      \field{volume}{06}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.56726/IRJMETS61006
+      \endverb
+    \endentry
     \entry{RefWorks:RefID:144-denecke2022implementation}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=98da54a4ed86048c289668fae369ff05}{%
@@ -527,6 +571,37 @@
       \field{year}{2012}
       \field{pages}{427\bibrangedash 440}
       \range{pages}{14}
+    \endentry
+    \entry{RefWorks:RefID:162-hossain2023software}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c8434749590f02bfb9c1250327c6eb51}{%
+           family={Hossain},
+           familyi={H\bibinitperiod},
+           given={Mohammad\bibnamedelima Ikbal},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{fullhash}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{fullhashraw}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{bibnamehash}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{authorbibnamehash}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{authornamehash}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{authorfullhash}{c8434749590f02bfb9c1250327c6eb51}
+      \strng{authorfullhashraw}{c8434749590f02bfb9c1250327c6eb51}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal For Multidisciplinary Research}
+      \field{number}{5}
+      \field{title}{Software development life cycle ({SDLC}) methodologies for information systems project management}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 36}
+      \range{pages}{36}
     \endentry
     \entry{RefWorks:RefID:66-hou2019social}{article}{}{}
       \name{author}{5}{}{%
