@@ -388,6 +388,75 @@
       \verb 10.56726/IRJMETS61006
       \endverb
     \endentry
+    \entry{davepregoner:hal-05073466}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=94ba7942df65f11fcc180fe2f106fafe}{%
+           family={Dave\bibnamedelima Pregoner},
+           familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5bc90b4ec3af9e9e8cbd30b0ddc334b}{%
+           family={Leopardas},
+           familyi={L\bibinitperiod},
+           given={Reanne},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52698fb76dc3c264b976c39e4afb370c}{%
+           family={Ganancial},
+           familyi={G\bibinitperiod},
+           given={Ivy\bibnamedelima Joy},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a9782f76f7c5a5045ee9f8aeacbd08e}{%
+           family={Baguhin},
+           familyi={B\bibinitperiod},
+           given={Marnelle},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6c2ced921683c58d7aea260cd37624e}{%
+           family={Sedo},
+           familyi={S\bibinitperiod},
+           given={Flordelis},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Iligan Medical Center College}%
+      }
+      \strng{namehash}{2a0628ac24b7571550b187ca32849fd0}
+      \strng{fullhash}{f33a6125043cc5d09a4fe3c4f688ff21}
+      \strng{fullhashraw}{f33a6125043cc5d09a4fe3c4f688ff21}
+      \strng{bibnamehash}{2a0628ac24b7571550b187ca32849fd0}
+      \strng{authorbibnamehash}{2a0628ac24b7571550b187ca32849fd0}
+      \strng{authornamehash}{2a0628ac24b7571550b187ca32849fd0}
+      \strng{authorfullhash}{f33a6125043cc5d09a4fe3c4f688ff21}
+      \strng{authorfullhashraw}{f33a6125043cc5d09a4fe3c4f688ff21}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IMCC Journal of Science}}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{{Ethical Issues in Conducting Research Using Human Participants in the Post-COVID Era}}
+      \field{volume}{5}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{file}
+      \verb https://hal.science/hal-05073466v1/file/Pregoner-et-al-2025.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://hal.science/hal-05073466
+      \endverb
+      \verb{url}
+      \verb https://hal.science/hal-05073466
+      \endverb
+      \keyw{research ; post-COVID era ; human participants ; ethical issues}
+    \endentry
     \entry{RefWorks:RefID:144-denecke2022implementation}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=98da54a4ed86048c289668fae369ff05}{%
