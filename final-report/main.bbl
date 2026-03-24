@@ -148,6 +148,47 @@
       \field{title}{Cognitive behavior therapy: Basics and beyond}
       \field{year}{2020}
     \endentry
+    \entry{RefWorks:RefID:164-bernard2016analyzing}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=045c2708ffa1145220a6a7a76ed8a903}{%
+           family={Bernard},
+           familyi={B\bibinitperiod},
+           given={H.\bibnamedelimi Russell},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2760db8e1bc224ca0537ab2dfc996e09}{%
+           family={Wutich},
+           familyi={W\bibinitperiod},
+           given={Amber},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8141e0036c6e127cf933b129e68a514d}{%
+           family={Ryan},
+           familyi={R\bibinitperiod},
+           given={Gery\bibnamedelima W.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE publications}%
+      }
+      \strng{namehash}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{fullhash}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{fullhashraw}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{bibnamehash}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{authorbibnamehash}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{authornamehash}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{authorfullhash}{20c042a2b9b60a8959094235ba38c6b7}
+      \strng{authorfullhashraw}{20c042a2b9b60a8959094235ba38c6b7}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analyzing qualitative data: Systematic approaches}
+      \field{year}{2016}
+    \endentry
     \entry{RefWorks:RefID:78-bhalerao2020analysis}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=ec0d16ad858fd979e0edffa2bd0baea5}{%
@@ -1460,6 +1501,44 @@
       \field{volume}{22}
       \field{year}{2021}
       \field{pages}{162}
+      \range{pages}{1}
+    \endentry
+    \entry{RefWorks:RefID:165-sutton2015qualitative}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=06f687271a0f760e9e2ab980ea0f1b3b}{%
+           family={Sutton},
+           familyi={S\bibinitperiod},
+           given={Jane},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=148616920e00cc620351f166d7d50470}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={Zubin},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{fullhash}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{fullhashraw}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{bibnamehash}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{authorbibnamehash}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{authornamehash}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{authorfullhash}{4d36d8b5dd705d2574a7737a2429d38d}
+      \strng{authorfullhashraw}{4d36d8b5dd705d2574a7737a2429d38d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Canadian journal of hospital pharmacy}
+      \field{note}{pmid:26157184}
+      \field{number}{3}
+      \field{title}{Qualitative research: Data collection, analysis, and management}
+      \field{volume}{68}
+      \field{year}{2015}
+      \field{pages}{226}
       \range{pages}{1}
     \endentry
     \entry{RefWorks:RefID:147-throuvala2020mind}{article}{}{}
