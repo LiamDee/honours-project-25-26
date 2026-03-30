@@ -113,6 +113,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% COME BACK HERE BEFORE YOU SUBMIT
+% are appendices all updated and include the right info? do you need to include more?
+% are tables, code listings, and figures referenced in writing linked to the right item?
+% are the use of abbreviations and other such things consistent?
+% is the github repo public?
+% is there any unnecessary info that can be removed?
+% has it been proofread?
+
+% updates from interim report:
+% replaced usage of the word treat with address
+% removed first para from lit review
+% highlighted that app based solutions are easy to access compared to traditional treatment
+% added list of acronyms
+
+
+%TODO:
+% 1.4
+% 3.4 - 3.6
+% 4.3
+% 5.1, 5.2, 5.4
+% all of 6
+% still need to (from interim report):
+% introduce the term "persuasive computing" in intro
+% highlight what specific tools / techniques from cbt and rt can be adapted into a mobile app in lit review
+% instead of agile development, go with iterative development
+% maybe remove urls from references - makes it look cleaner
+
 \newpage
 
 \begin{abstract} %may need to shorten
@@ -185,17 +212,6 @@ Finally, I would like to thank my family and friends outside of GCU who have bee
 \label{tab:acronym-table}
 \end{table}
 \newpage
-
-% updates from interim report:
-% replaced usage of the word treat with address
-% removed first para from lit review
-% highlighted that app based solutions are easy to access compared to traditional treatment
-% added list of acronyms
-
-% still need to (from interim report):
-% introduce the term "persuasive computing" in intro
-% highlight what specific tools / techniques from cbt and rt can be adapted into a mobile app in lit review
-% instead of agile development, go with iterative development
 
 
 \section{Introduction}
@@ -617,12 +633,12 @@ specifically, the waterfall methodology was used for the Requirements Analysis, 
 the Implementation and Testing stage. This allowed for requirements to be "fully" defined and for designs to be as detailed as possible, while also
 allowing for the creation of multiple prototypes and for issues to be identified and solved during the creation of each prototype. \newline
 
-% \begin{figure}[H]
-% \centering
-% 	\includegraphics[width=0.60\linewidth]{iterative-waterfall.png}
-% 	\captionof{figure}{\textit{Iterative Waterfall methodology \autocite{RefWorks:RefID:161-trivedi2013comparative}}}
-% 	\label{fig:iterativewaterfall}
-% \end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.60\linewidth]{iterative-waterfall.png}
+	\captionof{figure}{\textit{Typical iterative Waterfall methodology \autocite{RefWorks:RefID:161-trivedi2013comparative}}}
+	\label{fig:iterativewaterfall}
+\end{figure}
 
 This change in methodology was deemed to be necessary, as it felt more appropriate for the project as a whole when compared to agile and waterfall separately. Agile
 methodologies, while fitting for any software project, puts a focus on constant customer feedback during the SDLC \autocite{RefWorks:RefID:162-hossain2023software}, 
@@ -648,7 +664,7 @@ that branch, that requirement was implemented, then tested upon via Incremental 
 cases as intended, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process repeated until the implementation of 
 all requirements were completed.
 
-
+\newpage
 
 \subsection{Requirements Analysis}
 
@@ -697,22 +713,80 @@ This section provides details on the evaluation of the project in relation to th
 \noindent\textit{The combination of usage tracking and intervention methods rooted in psychology within the created mobile 
 application will help to address and reduce smartphone \& social media usage in young adults.} \newline\newline
 It also gives critical analysis and discussion of the results and findings from the evaluation, before drawing initial conclusions based on the
-project hypothesis, research statement and objectives.\newline
+project hypothesis, research statement and objectives. Given the aforementioned hypothesis, the intention of the evaluation was to find if:
 
-When evaluating if the PRI meets the hypothesis, objective, and research statement, a mixed-method approach was used. (define mixed-method approach)
+\begin{enumerate}
+	\item The mobile phone usage from a participant decreased when comparing their usage from the start of the evaluation to the end.
+	\item If there was a decrease in usage, was the PRI actually a contributing factor to it?
+\end{enumerate}
+
+\noindent When evaluating if the PRI met the project's hypothesis, objective, and research statement, a mixed-method approach was used. (define mixed-method approach)
 The evaluation results are based off of the captured usage data from each participant, as well as the participant's own opinions of their experience using the 
 PRI via a survey given at the end of the evaluation period. While the obtained usage stats will be the main focus, the results from the survey help
 to provide additional context and insights that quantitative data cannot easily do.
 
 \subsection{PRI-Evaluation results}
-Participants who agreed to take part in the evaluation were given the PRI for a period of 3 weeks.
+Participants who agreed to take part in the evaluation were given the PRI for a period of 3 weeks. Alongside this, they were given a Quick Start Guide that
+gave extensive details regarding using the app, as well as instructions on how to install the app and troubleshooting advice. Once they had set up the 
+application, they were also asked to send their usage immediately afterwards. This was to use said usage stats as a baseline to compare the usage for the next three weeks.
+While the data extracted initially shows the total usage which includes all apps used by a participant, the data was then further parsed by the author to analyse if
+there was a shift in usage of social media apps. \newline %tying back to the fact that the phone could be used for productivity use, not just social media (quote og source)
 
-Once they had set up the application, they were also asked to send their usage to use said usage stats as a baseline to compare the usage for the next three weeks.
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{eval-data-with-3c-basline-outlier.png}
+	\captionof{figure}{\textit{Results from PRI evaluation}}
+	\label{fig:eval-data-with-3c-basline-outlier}
+\end{figure}
+
+Figure 2 shows the initial results from the evaluation, with the total usage from each participant. The x-axis shows the timeline of the evaluation period, from baseline to week 3. 
+The y-axis shows the usage in hours. Table 3 shows a sample of the usage data captured, showing the name of the app package (unique identifier for android apps), the usage time
+for the app, and the percentage of the usage time. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}|l|l|l|@{}}
+\toprule
+android     & 24:50:00 & 61\% \\ \midrule
+maps        & 04:18    & 10\% \\ \midrule
+One UI Home & 01:21    & 3\%  \\ \bottomrule
+\end{tabular}%
+\caption{Sample of usage data from participant 3C.}
+\label{tab:3c-usage-sample}
+\end{table}
+
+Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table 3, the the "android" 
+package, (referring to the home screen? quote a source) takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
+made to leave out the usage time for "android". Figure 3 below shows the same chart as Figure 2, but without the outlier data.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{eval-data-no-3c-basline-outlier.png}
+	\captionof{figure}{\textit{Results from PRI evaluation, without the outlier data}}
+	\label{fig:eval-data-without-3c-basline-outlier}
+\end{figure}
+
+1A's usage is relatively consistent between baseline and week-2, though doesn't take a noticeable drop, but takes a substantial
+drop in week-3. This may be because\dots (expand on this, possibly due to how androids UsageStatsManager queries data) 2B's usage fluctuates a lot throughout the 
+timeframe, initially rising before falling again, and then settling in the middle for week-3. 3C's usage does take a drop overall when comparing baseline to week-3, and 
+remains under 10 hours for the remainder of the evaluation period after the baseline data. 4D's usage experiences a slight increase before dropping slightly, though experiences 
+an increase when compared from the baseline to week-3.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{eval-data-social-media-only.png}
+	\captionof{figure}{\textit{Results from PRI evaluation, only showing social media usage}}
+	\label{fig:eval-data-social-media}
+\end{figure}
+
+Figure 4 shows the same graph as Figure 3, but only including social media usage from each participant. While the graph is relatively the same, there are some
+differences. For example, unlike the total usage, 1A's social media usage never increases, rather, taking a small decline instead. 4D's social media usage starts, and
+remains quite low, though does take a small increase in week-1 before levelling out by the latter weeks.
 
 \subsection{Post-Evaluation survey results}
 Part of using a mixed-method approach involves collected qualitative data, which can be defined as written text, images, audio 
-recordings, etc...\autocite{RefWorks:RefID:164-bernard2016analyzing}. While the data from the previous section are an important piece
-of the evaluation as a whole, getting this kind of data helps to understand thoughts and feelings from participants, and help in understanding
+recordings to name a few \autocite{RefWorks:RefID:164-bernard2016analyzing}. While the data from the previous section are an important piece
+of the evaluation as a whole, getting this kind of data helps to understand the thoughts and feelings from participants, and help in understanding
 and contextualising the behaviours represented in the previous section \autocite{RefWorks:RefID:165-sutton2015qualitative}.\newline
 
 At the end of the evaluation testing period, participants were sent a survey to fill out. This survey gave participants the opportunity to express their
@@ -724,7 +798,7 @@ participants provided a response to them.\newline
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{Q3-evaluation-survey.png}
-	\captionof{figure}[]{\textit{Results from question 3 from the post-evaluation survey}}
+	\captionof{figure}{\textit{Results from question 3 from the post-evaluation survey}}
 	\label{fig:question3surveyresults}
 \end{figure}
 
@@ -734,7 +808,7 @@ implemented the WDEP system to a good degree. As demonstrated in Figure 3, only 
 lowered usage, with one respondent feeling as if other factors had a bigger impact than the app by itself, and the other feeling like there wasn't any
 reduction in their usage. When asked to provide a reason to their choice, one respondent said in reference to the app lowering their usage:\newline
 
-\textit{"It works pretty well! I feel as if seeing your values and hobbies increases motivation to not chase social media and other applications"}
+\textit{"It works pretty well! I feel as if seeing your values and hobbies increases motivation to not chase social media and other applications"}\newline
 
 Another response, in reference to the participant not seeing a usage drop, stated:\newline
 
@@ -743,7 +817,7 @@ Another response, in reference to the participant not seeing a usage drop, state
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{Q11-evaluation-survey.png}
-	\captionof{figure}[]{\textit{Results from question 11 from the post-evaluation survey}}
+	\captionof{figure}{\textit{Results from question 11 from the post-evaluation survey}}
 	\label{fig:question11surveyresults}
 \end{figure}
 
@@ -789,8 +863,8 @@ the project has aligned itself with in accordance to the definitions provided by
 Arguably, the largest issue the project had to consider during its lifespan were Ethical Issues. As previously mentioned when discussing
 the project's primary objectives in section 1.2.2, for conduction the evaluation, human participants were required to carry out said
 evaluation as intended. This aspect by itself already constitutes as an ethical issue, given the use of human participants for a project
-of this nature means that..(citation here with consequence)...but this use of human participants brings forth another issue. The evaluation involved collecting app usage data 
-from participants, as well as responses from the post-evaluation survey. \newline
+of this nature means that..(citation here with consequence)...but this use of human participants brings forth another issue. The evaluation 
+involved collecting app usage data from participants, as well as responses from the post-evaluation survey. \newline
 
 Similarly, during the requirements analysis stage of the project's
 execution, a survey was distributed, and 1-to-1 interviews were conducted. Given the use of software tools to carry out these parts of the
@@ -832,13 +906,14 @@ https://github.com/LiamDee/honours-project-25-26
 
 \subsection*{Appendix B - Risk Matrix \& Risk Register}
 \textbf{Risk Register}
-\begin{figure}*[H]
+\begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{riskregisterscreenshot.png}
 	\captionof{figure}[]{\textit{Risk Register (originally from RS\&PI Project Planning report)}}
 	\label{fig:riskregister}
 \end{figure}
 
+\newpage
 
 \textbf{Risk Matrix}
 \begin{figure}[H]

@@ -1651,6 +1651,44 @@
       \field{pages}{770\bibrangedash 796}
       \range{pages}{27}
     \endentry
+    \entry{RefWorks:RefID:161-trivedi2013comparative}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0b90ff880bd3cc26cf3c9748345f8782}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Prakriti},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92a4274bb5308ff64e692d24fcbc91fa}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Ashwani},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{91782e044b8794519050403aae6b7791}
+      \strng{fullhash}{91782e044b8794519050403aae6b7791}
+      \strng{fullhashraw}{91782e044b8794519050403aae6b7791}
+      \strng{bibnamehash}{91782e044b8794519050403aae6b7791}
+      \strng{authorbibnamehash}{91782e044b8794519050403aae6b7791}
+      \strng{authornamehash}{91782e044b8794519050403aae6b7791}
+      \strng{authorfullhash}{91782e044b8794519050403aae6b7791}
+      \strng{authorfullhashraw}{91782e044b8794519050403aae6b7791}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{2013} 2nd International Conference on Information Management in the Knowledge Economy}
+      \field{title}{A comparative study between iterative waterfall and incremental software development life cycle model for optimizing the resources using computer simulation}
+      \field{year}{2013}
+      \field{pages}{188\bibrangedash 194}
+      \range{pages}{7}
+    \endentry
     \entry{RefWorks:RefID:124-ubochi2019apples}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b2e3dc15bff52335841cd39205b8bb68}{%
