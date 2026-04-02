@@ -11,6 +11,7 @@
 \usepackage{booktabs}
 \usepackage{float}
 \graphicspath{{images/}}
+\usepackage{colortbl}
 \usepackage[export]{adjustbox}
 %\usepackage{parskip}
 \usepackage{fancyhdr}
@@ -117,20 +118,21 @@
 % are appendices all updated and include the right info? do you need to include more?
 % are tables, code listings, and figures referenced in writing linked to the right item?
 % are the use of abbreviations and other such things consistent?
-% is the github repo public?
+% is the github repo public? - do this on the 6th?
 % is there any unnecessary info that can be removed?
 % has it been proofread?
+% have all sources been included?
 
 % updates from interim report:
 % replaced usage of the word treat with address
 % removed first para from lit review
 % highlighted that app based solutions are easy to access compared to traditional treatment
 % added list of acronyms
+% collapsed project outline, objectives and hypothesis into a single section (Project Overview, Aims, and Methodology)
 
 
 %TODO:
-% 1.4
-% 3.4 - 3.6
+% 3.1, 3.5 - 3.6
 % 4.3
 % 5.1, 5.2, 5.4
 % all of 6
@@ -139,6 +141,7 @@
 % highlight what specific tools / techniques from cbt and rt can be adapted into a mobile app in lit review
 % instead of agile development, go with iterative development
 % maybe remove urls from references - makes it look cleaner
+% sort appendices properly
 
 \newpage
 
@@ -276,7 +279,7 @@ reviewed the effectiveness of psychological intervention mobile apps, and while 
 concluded that the apps showed promise, none of 
 the literature specifically looked at addressing the issue of SA or SMA.\newline 
 
-\subsection{Project Overview}
+\subsection{Project Overview, Aims, and Methodology}
 
 \subsubsection{Project Outline}
 
@@ -329,7 +332,7 @@ Collect results from the evaluation and see if the app was impactful at reducing
 Then evaluate based on the results, and see if the problem statement and hypothesis were met.\newline 
 
 
-\subsection{Project Hypothesis}
+\subsubsection{Project Hypothesis}
 Testing the hypothesis will involve providing participants with the developed application for a period of three weeks. % maybe change / remove ...for a period of three weeks.
 During this period, participants will attempt to reduce their smartphone \& social media usage by using the developed mobile 
 application with usage tracking and psychological intervention methods. Given this, the hypothesis for 
@@ -338,8 +341,6 @@ this project is: \newline
 \noindent\textit{The combination of usage tracking and intervention methods rooted in psychology within the created mobile 
 application will help to address and reduce smartphone \& social media usage in young adults.}
 \newpage
-
-\subsection{Aims and Methodology}
 
 \subsection{Structure of the Report}
 Before continuing with the remainder of this paper, a brief overview of the structure of the report is provided. \newline
@@ -659,18 +660,128 @@ Implementation and Testing stage. The requirements were defined during the begin
 	\label{fig:gitbranch}
 \end{figure}
 
-Figure 1 showcases the process behind implementing and testing the PRI. When building prototypes of the PRI, a GitHub branch that matched the name of the requirement was created, then, within
-that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. If that part of the requirement passed all test
-cases as intended, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process repeated until the implementation of 
-all requirements were completed.
+Figure \ref{fig:gitbranch} showcases the process behind implementing and testing the PRI. When building prototypes of the PRI, a GitHub branch that matched the name of the requirement was 
+created, then, within that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. If that 
+part of the requirement passed all test cases as intended, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process 
+repeated until the implementation of all requirements were completed.
 
 \newpage
 
 \subsection{Requirements Analysis}
+When performing the requirements analysis for the project, the research statement as stated in section 1.2.1 was analysed to identify the main components of the application. Combining this with
+the knowledge gained after performing the literature review provided the blueprint from where functional (and non-functional) requirements could be identified. As a reminder, the research
+statement was:\newline
+
+\textit{To create a mobile application that integrates psychological intervention methods alongside usage tracking technologies to help address smartphone and social media addiction}\newline
+
+From the research statement alone, two integral components can be identified:
+
+\begin{enumerate}
+	\item A psychological intervention method that can be integrated into a mobile application
+	\item A code-based technical method of tracking smartphone and social media usage
+\end{enumerate}
+
+From here, these components can then be broken down into smaller parts that then make up a list of functional requirements after ensuring they fit within the findings of the literature
+review, with some aspects from both components being used to identify a requirement. Additionally, interviews were conducted with nine participants to help identify new requirements or 
+to add pieces to existing requirements. Full interview transcripts and how to access them can be found within Appendix X. \newline
+
+\subsubsection{Psychological Intervention Method}
+
+The psychological intervention method is a critical piece of infrastructure for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
+choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
+specifically section 2.3 made mention of two psychological intervention methods, Cognitive Behavioural Therapy and Reality Therapy. \newline
+
+% could probably cut this section
+CBT was defined as an "active, problem-focused, time-sensitive treatment approach" using targeted, short-term strategies. CBT strategies used in mobile apps include behavioural activation, cognitive
+restructuring, and problem solving (see section 2.3 for more detail). RT, derived from choice therapy, makes use of the Wants, Direction, Evaluation, and Planning \& Commitment (WDEP) system, where 
+a person defines a goal and if there current action is stopping them from that goal. From there, they are encouraged to replace the activity with a better alternative. \newline
+% could probably cut this section
+
+After analysing both frameworks, it was concluded that RT was the choice of framework to use. The primary reason for using this framework instead of CBT ties back to one of the main criticisms
+of SA \& SMA mobile apps found within the literature review, that being that current apps on the market do not provide any opportunity for end-users to be made aware of their usage or SA \& SMA
+as a whole. RT's framework inherently gives a person the opportunity to understand what's stopping them from achieving their goal, where in this
+case, their smartphone usage and/or SA \& SMA would be the aspect affecting them. Meanwhile, CBT in its framework doesn't inherently provide this opportunity. \newline
+
+\subsubsection{Usage Tracking Method}
+
+Deriving a method of tracking a user's smartphone and social media usage was a simpler endeavour. As mentioned in section 2.4, Apple's iOS operating system disallows apps from tracking a user's usage
+due to privacy concerns, with the only "viable" alternative being using a "jailbroken" device, which would complicate multiple parts of the project. On the contrary, Google's Android operating system
+allows for apps to track a user's usage via the "android.app.usage" package within its API, so long that a user permits the app to do so.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth]{usagestatsmanager-api-doc.png}
+	\captionof{figure}{\textit{UsageStatsManager class from android.app.usage, taken from Android's API documentation within Android Studio \autocite{androiddevelopment-usagestatsmanager}}}
+	\label{fig:usagestatsmanager}
+\end{figure}
+
+The "android.app.usage" package contains many classes that provide detailed statistics about a user's Android device, but the class of interest for use within the PRI is the "UsageStatsManager" 
+class. Figure \ref{fig:usagestatsmanager} shows how this class returns a request for usage data, with the documentation noting that requesting usage data within a time interval will include that
+interval \autocite{androiddevelopment-usagestatsmanager}, as seen within Figure \ref{fig:usagestatsmanager}. This class was mentioned within the literature review when discussing what methods could 
+be used to track usage of a user's device, and is the class of choice for developing the app, as it contains a method "queryUsageStats" that can be used to retrieve usage stats within a specified 
+time range \autocite{androiddevelopment-usagestatsmanager}.
+
+\subsubsection{Functional (and Non-Functional) Requirements}
+
+As mentioned at the beginning of this section, requirements were identified by taking the findings from the literature review and combining them alongside the analysis of the research statement and
+user interviews that were performed as well. 
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.5}             &                                                                                                                                                                                                                                                                   \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}When launching the app for the first time, guide the user by providing information \\ on SM and SMA, helping the user set up a goal, and suggesting alternative activities to \\ partake in.\end{tabular}                              \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & User launches the application for the first time, also includes textual user inputs when setting goals                                                                                                                                                            \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}Take the user inputted goal, and set it as the current goal until it is manually updated \\ by the user, as well as any alternative activities the user can come up with\end{tabular}                                                  \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}Display a brief overview of the purpose of the app, alongside prompts for user input \\ such as goals, and a user's own activity suggestions. Upon completion, display the main \\ view of the app (see functional requirement 1.1)\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                                               \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must not have completed the onboarding process / User must have never ran the app before                                                                                                                                                                     \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & \begin{tabular}[c]{@{}l@{}}Similar to functional requirement 1.4, handle user input by restricting the character \\ limit to a pre-determined amount\end{tabular}                                                                                                     \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & \begin{tabular}[c]{@{}l@{}}If the user closes the app during the onboarding phase, reset the onboarding phases to the \\ first step; similar to if the user had opened the app for the first time again\end{tabular}                                              \\ \bottomrule
+\end{tabular}%
+}
+\caption{Functional Requirement 1.5}
+\label{tab:func-req-1-5-main}
+\end{table}
+
+Table  \ref{tab:func-req-1-5-main} shows an example of how a requirement was defined within the SRS. It contains a description of how it would function normally, the inputs required from an end-user
+to ensure its functionality, the processing required by the application, the output the app should show to an end-user after processing, constraints of the requirement, how the app should handle
+any data used for the requirement, and how the app should handle errors the requirement may be prone to. This requirements document was frequently referenced when making design decisions and when
+implementing the requirement.
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|ll@{}}
+\toprule
+\textbf{Req. ID} & \textbf{Requirement Name}                                                                                                        & \textbf{Requirement Description}                                                                                                                                                                                                           \\ \midrule
+\textbf{REQ-1.1} & View overall application usage                                                                                                   & \begin{tabular}[c]{@{}l@{}}Allow the user to access a visual \\ graph showcasing their app usage over \\ the past week\end{tabular}                                                                                                        \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.2} & \begin{tabular}[c]{@{}l@{}}Compare app usage from one \\ week to the last\end{tabular}                                           & \begin{tabular}[c]{@{}l@{}}Allow the user to compare their \\ app usage stats from one week to \\ another, with the function also giving \\ a percentage of the usage increase or decrease\end{tabular}                                    \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.3} & \begin{tabular}[c]{@{}l@{}}Give guidance based on RT to the user \\ if overall app usage is higher than last week’s\end{tabular} & \begin{tabular}[c]{@{}l@{}}If a user has seen a substantial increase in app \\ usage from one week to another, provide step-by-step \\ guidance to the user, similar to that seen when\\ launching the app for the first time\end{tabular} \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.4} & Update current goal                                                                                                              & \begin{tabular}[c]{@{}l@{}}Allow the user to update their current goal, originally \\ defined when launching the app for the first time\end{tabular}                                                                                       \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.5} & \begin{tabular}[c]{@{}l@{}}Guide the user through setting up \\ the app for continued use\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}When launching the app for the first time, guide the \\ user by providing information on SM and SMA, helping \\ the user set up a goal, and suggesting alternative \\ activities to partake in\end{tabular}     \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.6} & \begin{tabular}[c]{@{}l@{}}Send current usage statistics for \\ future analysis\end{tabular}                                     & \begin{tabular}[c]{@{}l@{}}Allow the user to send their current usage statistics to \\ the project leader for analysis and evaluation\end{tabular}                                                                                         \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.7} & Suggest alternative activities                                                                                                   & \begin{tabular}[c]{@{}l@{}}Provide the user with alternative activities to do \\ instead of using their smartphone / social media\end{tabular}                                                                                             \\ \cmidrule(l){2-3} 
+\textbf{REQ-1.8} & Update current set of activities                                                                                                 & \begin{tabular}[c]{@{}l@{}}Allow the user to update their current set of activities \\ originally defined when launching the app for the first time.\end{tabular}                                                                          \\ \bottomrule
+\end{tabular}%
+}
+\caption{Functional Requirements Master List}
+\label{tab:func-req-master-list}
+\end{table}
+
+Table \ref{tab:func-req-master-list} provides a full list of all the functional requirements identified throughout the project's lifespan. With the exception of "REQ-1.8", where the requirement
+was identified and defined later during development, all requirements were identified during the initial requirements analysis phase of development. A comprehensive breakdown of each functional 
+requirement identified in detail, similar in manner to Table \ref{tab:func-req-1-5-main}, alongside non-functional requirements can be found in Appendix X, as well as the Software Requirements 
+Specification document separately via the GitHub repository.
+
 
 \newpage
 
 \subsection{Design}
+Given the lifecycle used for the project which was outlined in section 3.3, the next step was to design both design diagrams that represent how the requirement should typically function for an 
+end-user and user interfaces for each screen necessary per requirement.
 
 \newpage
 
@@ -699,7 +810,7 @@ method of testing felt most appropriate.
 \label{tab:test-case-example}
 \end{table}
 
-An example of how testing was carried out can be seen in Table 2. The test case includes the test ID, mapped to match the requirement number, the 
+An example of how testing was carried out can be seen in Table \ref{tab:test-case-example}. The test case includes the test ID, mapped to match the requirement number, the 
 action taken by a user that would trigger the component, the expected outcome of the test, the actual outcome of said test, evidence to show the 
 outcome of the test, usually in the form of a screen recorded video or screen capture, and any additional context or assumptions needed to understand
 the test case. A comprehensive list of the test cases and their results can be found in Appendix E. \newline
@@ -739,8 +850,8 @@ there was a shift in usage of social media apps. \newline %tying back to the fac
 	\label{fig:eval-data-with-3c-basline-outlier}
 \end{figure}
 
-Figure 2 shows the initial results from the evaluation, with the total usage from each participant. The x-axis shows the timeline of the evaluation period, from baseline to week 3. 
-The y-axis shows the usage in hours. Table 3 shows a sample of the usage data captured, showing the name of the app package (unique identifier for android apps), the usage time
+Figure \ref{fig:eval-data-with-3c-basline-outlier} shows the initial results from the evaluation, with the total usage from each participant. The x-axis shows the timeline of the evaluation period, from baseline to week 3. 
+The y-axis shows the usage in hours. Table \ref{tab:3c-usage-sample} shows a sample of the usage data captured, showing the name of the app package (unique identifier for android apps), the usage time
 for the app, and the percentage of the usage time. 
 
 \begin{table}[H]
@@ -755,9 +866,9 @@ One UI Home & 01:21    & 3\%  \\ \bottomrule
 \label{tab:3c-usage-sample}
 \end{table}
 
-Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table 3, the the "android" 
+Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table \ref{tab:3c-usage-sample}, the the "android" 
 package, (referring to the home screen? quote a source) takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
-made to leave out the usage time for "android". Figure 3 below shows the same chart as Figure 2, but without the outlier data.
+made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart as Figure \ref{tab:3c-usage-sample}, but without the outlier data.
 
 \begin{figure}[H]
 \centering
@@ -779,9 +890,9 @@ an increase when compared from the baseline to week-3.
 	\label{fig:eval-data-social-media}
 \end{figure}
 
-Figure 4 shows the same graph as Figure 3, but only including social media usage from each participant. While the graph is relatively the same, there are some
-differences. For example, unlike the total usage, 1A's social media usage never increases, rather, taking a small decline instead. 4D's social media usage starts, and
-remains quite low, though does take a small increase in week-1 before levelling out by the latter weeks.
+Figure \ref{fig:eval-data-social-media} shows the same graph as Figure \ref{fig:eval-data-without-3c-basline-outlier}, but only including social media usage from each participant. 
+While the graph is relatively the same, there are some differences. For example, unlike the total usage, 1A's social media usage never increases, rather, taking a small decline 
+instead. 4D's social media usage starts, and remains quite low, though does take a small increase in week-1 before levelling out by the latter weeks.
 
 \subsection{Post-Evaluation survey results}
 Part of using a mixed-method approach involves collected qualitative data, which can be defined as written text, images, audio 
@@ -804,7 +915,7 @@ participants provided a response to them.\newline
 
 A complete collection of the responses and their associated questions can be found in Appendix F, however, the sentiment derived from 
 the results of QS1 show that users felt more informed about their usage after using the app, and on average, users felt as if the app
-implemented the WDEP system to a good degree. As demonstrated in Figure 3, only two of the respondents felt that the app contributed to their
+implemented the WDEP system to a good degree. As demonstrated in Figure \ref{fig:question3surveyresults}, only two of the respondents felt that the app contributed to their
 lowered usage, with one respondent feeling as if other factors had a bigger impact than the app by itself, and the other feeling like there wasn't any
 reduction in their usage. When asked to provide a reason to their choice, one respondent said in reference to the app lowering their usage:\newline
 
@@ -840,6 +951,7 @@ right direction in addressing SA and SMA.
 
 \subsection{Discussion}
 
+% make sure to mention section 2.2 when discussing results
 
 %and a mixed-method approach 
 
@@ -902,7 +1014,16 @@ justification, and ethical approval was granted.
 \section*{Appendix}
 \subsection*{Appendix A - GitHub Repository}
 The GitHub repository containing the source code for the PRI, as well as all other documentation related to the Honours Project, is available via:\newline\newline
+
 https://github.com/LiamDee/honours-project-25-26
+
+
+\subsection*{Appendix X - Requirements Analysis Interview Transcripts}
+Due to its large volume of content, a link containing each interview transcript has been provided instead, separated into different folders inside a GitHub repository.
+This can be found by following the link below:\newline\newline
+
+https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/interview-transcripts
+
 
 \subsection*{Appendix B - Risk Matrix \& Risk Register}
 \textbf{Risk Register}
@@ -932,9 +1053,188 @@ https://github.com/LiamDee/honours-project-25-26
 \end{figure}
 
 
-\subsection*{Appendix D - Software Requirements Specification}
+\subsection*{Appendix D - Software Requirements Specification - Functional \& Non-Functional Requirements}
+The SRS document can be found within the project's GitHub repository, via: \newline\newline
+https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/requirements-specification
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.1}             &                                                                                                                                                                                                                                                                                                                      \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}Allow the user to access a visual graph showcasing \\ their app usage over the past week.\end{tabular}                                                                                                                                                                                    \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & \begin{tabular}[c]{@{}l@{}}User opens the app (This will be the default view after \\ the user completes the initial set-up).\end{tabular}                                                                                                                                                                           \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}Collect usage statistics for the current week. \\ Save the stats in a separate file for further evaluation.\end{tabular}                                                                                                                                                                  \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}Present app usage statistics to the user in the form of a visual, such as a \\ graph, containing their most used apps for the current week, how many \\ hours /minutes they’re using the app for, if (when applicable) there has been a \\ downward or upward trend in usage.\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                                                                                                  \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & \begin{tabular}[c]{@{}l@{}}User must finish the onboarding process before being able to access this view.\\ Access for the PRI to access app usage data must be granted.\end{tabular}                                                                                                                                \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & App usage data must be parsed before generating any visuals.                                                                                                                                                                                                                                                         \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & If no usage statistics are available, display a message saying the user has no stats to show.                                                                                                                                                                                                                        \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.1}
+\label{tab:func-req-1-1}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.2}             &                                                                                                                                                                                                                                                                 \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}Allow the  user to compare their app usage stats \\ from one week to another, with the function also giving a \\ percentage of the usage increase or decrease.\end{tabular}                                                          \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & \begin{tabular}[c]{@{}l@{}}User swipes to view previous graph \\ (user is initially on default view, see section 6.1).\end{tabular}                                                                                                                             \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}Overall app usage from the current week is compared with last \\ week’s usage, it then checks if there has been an upward or \\ downward trend in usage.\end{tabular}                                                                \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}Output app usage from last week in the form of a graph. \\ As well as this, output a message to the user, giving details on if their usage has \\ increased, or decreased, and by how much in the form of a percentage.\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                                             \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must have app usage stats available from the week prior for the functionality to work                                                                                                                                                                      \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & App usage stats from the current week and the week prior are compared with each other                                                                                                                                                                           \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & \begin{tabular}[c]{@{}l@{}}If the user has no previous statistics available from the week prior, \\ display a message saying that no previous data is available.\end{tabular}                                                                                   \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.2}
+\label{tab:func-req-1-2}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.3}             &                                                                                                                                                                                                                                                                                                                                                                                                      \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}If a user has seen a substantial increase in app usage from one week to another, \\ provide step-by-step guidance to the user, similar to that seen when launching\\  the app for the first time\end{tabular}                                                                                                                                                             \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & User opens the app a week after tracking usage stats initially began                                                                                                                                                                                                                                                                                                                                 \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}Application checks if there was an increase or decrease in app usage \\ from last week compared to the current week.\end{tabular}                                                                                                                                                                                                                                         \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}If there was an increase in usage, provide the user with RT-based guidance regarding their \\ app usage, this includes asking the user to (re)define a goal, evaluate if smartphone / social \\ media usage is getting in the way of achieving that goal. If there is no noticeable \\ increase, display a different message, and provide different guidance\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                                                                                                                                                                                  \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & Usage stats from week prior need to be available to compare with current week                                                                                                                                                                                                                                                                                                                        \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & App needs to check for an increase in overall app usage                                                                                                                                                                                                                                                                                                                                              \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & If 1 week hasn't elapsed from when usage stats were initially collected, then do nothing.                                                                                                                                                                                                                                                                                                            \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.3}
+\label{tab:func-req-1-3}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.4}             &                                                                                                                                                                                  \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}Allow the user to update their current goal, originally defined when launching the app \\ for the first time.\end{tabular}                            \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & User clicks “Change current goal” button in settings view, user inputs a new goal                                                                                                \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & Current goal is updated with newly inputted goal.                                                                                                                                \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}Software communicates that the goal has been updated to the user, and \\ update any views containing the goal accordingly\end{tabular}                \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                              \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must have a goal defined prior to updating the goal                                                                                                                         \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & Handle user input by limiting character input to a pre-determined amount                                                                                                         \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & \begin{tabular}[c]{@{}l@{}}If current goal is identical to previous goal, return a message saying that the new \\ goal should be different from their previous one.\end{tabular} \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.4}
+\label{tab:func-req-1-4}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.5}             &                                                                                                                                                                                                                                                                   \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}When launching the app for the first time, guide the user by providing information \\ on SM and SMA, helping the user set up a goal, and suggesting alternative activities to \\ partake in.\end{tabular}                              \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & User launches the application for the first time, also includes textual user inputs when setting goals                                                                                                                                                            \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}Take the user inputted goal, and set it as the current goal until it is manually updated \\ by the user, as well as any alternative activities the user can come up with\end{tabular}                                                  \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}Display a brief overview of the purpose of the app, alongside prompts for user input \\ such as goals, and a user's own activity suggestions. Upon completion, display the main \\ view of the app (see functional requirement 1.1)\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                                               \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must not have completed the onboarding process / User must have never ran the app before                                                                                                                                                                     \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & \begin{tabular}[c]{@{}l@{}}Similar to functional requirement 1.4, handle user input by restricting the character \\ limit to a pre-determined amount\end{tabular}                                                                                                     \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & \begin{tabular}[c]{@{}l@{}}If the user closes the app during the onboarding phase, reset the onboarding phases to the \\ first step; similar to if the user had opened the app for the first time again\end{tabular}                                              \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.5}
+\label{tab:func-req-1-5}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.6}             &                                                                                                                                                                                                                                                                                                                                                         \\ \midrule
+\textbf{Description}         & Allow the user to send their current usage statistics to the project leader for analysis and evaluation.                                                                                                                                                                                                                                                \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & User clicks a button titled “Send usage statistics” on the settings screen.                                                                                                                                                                                                                                                                             \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}The app processes and parses the collected usage statistics into a readable file format, such as .csv, it then \\ saves the file into the app's file path, it then checks if an email application is installed, if so, it then auto-fills\\  an email containing the file, ready to send on further user input.\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & A pre-typed email, containing the file with all the usage statistics.                                                                                                                                                                                                                                                                                   \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                                                                                                                                     \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must have an email application installed on their device.                                                                                                                                                                                                                                                                                          \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & The usage statistics data must be parsed into an easily readable format, such as .csv.                                                                                                                                                                                                                                                                  \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & \begin{tabular}[c]{@{}l@{}}Check if the user has an email application installed, if not, display a message telling the user that they \\ must have an email app installed to send the data over.\end{tabular}                                                                                                                                           \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.6}
+\label{tab:func-req-1-6}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.7}             &                                                                                                                                                                                                                                            \\ \midrule
+\textbf{Description}         & Provide the user with alternative activities to do instead of using their smartphone / social media.                                                                                                                                       \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & N/A                                                                                                                                                                                                                                        \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & \begin{tabular}[c]{@{}l@{}}Pick a set amount of hard-coded (and user-inputted, if in the guidance portion of the app) activity \\ suggestions from a list, and prompt the user to engage with these activities when possible.\end{tabular} \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & Display the list of activities for the user to partake in.                                                                                                                                                                                 \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                                                                        \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must be currently given guidance by the app, or is in the onboarding section of the app                                                                                                                                               \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & N/A                                                                                                                                                                                                                                        \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & N/A                                                                                                                                                                                                                                        \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.7}
+\label{tab:func-req-1-7}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\textbf{REQ-1.8}             &                                                                                                                                                                                       \\ \midrule
+\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}Allow the user to update their current set of activities originally defined when launching the app \\ for the first time.\end{tabular}                     \\ \cmidrule(l){2-2} 
+\textbf{Software Input}      & User clicks “Change activities” button in settings view, user inputs a new goal                                                                                                       \\ \cmidrule(l){2-2} 
+\textbf{Software Processing} & Current set of activities is updated with newly inputted activities.                                                                                                                  \\ \cmidrule(l){2-2} 
+\textbf{Software Output}     & \begin{tabular}[c]{@{}l@{}}Software communicates that the set of activities has been updated to the user, and\\ updates any views containing the goal accordingly\end{tabular}        \\ \cmidrule(l){2-2} 
+\textbf{Other}               & N/A                                                                                                                                                                                   \\ \cmidrule(l){2-2} 
+\textbf{Constraints}         & User must have a set of activities defined prior to updating their activities                                                                                                         \\ \cmidrule(l){2-2} 
+\textbf{Data Handling}       & Handle user input by limiting character input to a pre-determined amount                                                                                                              \\ \cmidrule(l){2-2} 
+\textbf{Error Handling}      & \begin{tabular}[c]{@{}l@{}}If one of the activities are identical to an existing one, return a message saying that each \\ activity should be different from each other.\end{tabular} \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Functional Requirement 1.8}
+\label{tab:func-req-1-8}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Req. ID}                       & \textbf{Description}                                                                                         & \textbf{Response Time} \\ \midrule
+\multicolumn{1}{l|}{\textbf{PERF-1.1}} & \begin{tabular}[c]{@{}l@{}}Time between regular tasks such as \\ going from one view to another\end{tabular} & 0.5-1 second(s)        \\ \cmidrule(l){2-3} 
+\multicolumn{1}{l|}{\textbf{PERF-1.2}} & \begin{tabular}[c]{@{}l@{}}Time between processing tasks \\ such as submitting data.\end{tabular}            & 2-3 seconds            \\ \bottomrule
+\end{tabular}%
+\caption[]{Non-Functional requirements}
+\label{tab:non-func-req}
+\end{table}
 
 \subsection*{Appendix E - Test Case results}
+\textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
+the GitHub repository (see Appendix A).\newline
+
+\textbf{Iteration Req-1.1}
+
 
 \subsection*{Appendix F - Post-Evaluation survey results}
 

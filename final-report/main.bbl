@@ -74,8 +74,10 @@
       \strng{authornamehash}{40e46151715776d38056588ec31fbca0}
       \strng{authorfullhash}{40e46151715776d38056588ec31fbca0}
       \strng{authorfullhashraw}{40e46151715776d38056588ec31fbca0}
+      \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -86,6 +88,39 @@
       \endverb
       \verb{url}
       \verb https://developer.android.com/guide/components/fundamentals
+      \endverb
+    \endentry
+    \entry{androiddevelopment-usagestatsmanager}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
+           family={Android-Developers},
+           familyi={A\bibinithyphendelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{40e46151715776d38056588ec31fbca0}
+      \strng{fullhash}{40e46151715776d38056588ec31fbca0}
+      \strng{fullhashraw}{40e46151715776d38056588ec31fbca0}
+      \strng{bibnamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorbibnamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authornamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorfullhash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorfullhashraw}{40e46151715776d38056588ec31fbca0}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Android Developers}
+      \field{title}{UsageStatsManager | API reference | Android Developers}
+      \verb{urlraw}
+      \verb https://developer.android.com/reference/android/app/usage/UsageStatsManager
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/reference/android/app/usage/UsageStatsManager
       \endverb
     \endentry
     \entry{applesupport-ifanappasks}{misc}{}{}
@@ -274,10 +309,10 @@
       \field{pages}{6\bibrangedash 13}
       \range{pages}{8}
       \verb{urlraw}
-      \verb https://www.proquest.com/scholarly-journals/choice-theory-reality-therapy-overview/docview/1625136609/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Apsychology\&atitle=CHOICE+THEORY+AND+REALITY+THERAPY\%253A+AN+OVERVIEW\&title=International+Journal+of+Choice+Theory+and+Reality+Therapy\&issn=\&date=2014-10-01\&volume=34\&issue=1\&spage=6\&au=Bradley\%252C+Ezrina+L\&isbn=\&jtitle=International+Journal+of+Choice+Theory+and+Reality+Therapy\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/
+      \verb https://www.proquest.com/scholarly-journals/choice-theory-reality-therapy-overview/docview/1625136609/se-2
       \endverb
       \verb{url}
-      \verb https://www.proquest.com/scholarly-journals/choice-theory-reality-therapy-overview/docview/1625136609/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Apsychology%5C&atitle=CHOICE+THEORY+AND+REALITY+THERAPY%5C%253A+AN+OVERVIEW%5C&title=International+Journal+of+Choice+Theory+and+Reality+Therapy%5C&issn=%5C&date=2014-10-01%5C&volume=34%5C&issue=1%5C&spage=6%5C&au=Bradley%5C%252C+Ezrina+L%5C&isbn=%5C&jtitle=International+Journal+of+Choice+Theory+and+Reality+Therapy%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
+      \verb https://www.proquest.com/scholarly-journals/choice-theory-reality-therapy-overview/docview/1625136609/se-2
       \endverb
       \keyw{Psychology; Control; Reality therapy; Choice; Reality; Self-control; Choice theory; Control theory; Decision making; Physiology; Therapy; Behavior; Emotions; Macroeconomics}
     \endentry
@@ -965,10 +1000,10 @@
       \verb 10.2196/59656
       \endverb
       \verb{urlraw}
-      \verb https://www.proquest.com/scholarly-journals/interventions-digital-addiction-umbrella-review/docview/3222368316/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Ahealthcompleteshell\&atitle=Interventions+for+Digital+Addiction\%253A+Umbrella+Review+of+Meta-Analyses\&title=Journal+of+Medical+Internet+Research\&issn=\&date=2025-01-01\&volume=27\&issue=\&spage=e59656\&au=Lu\%252C+Peng\%253BQiu\%252C+Jiamin\%253BHuang\%252C+Shiqi\%253BWang\%252C+Xinman\%253BHan\%252C+Shasha\%253BZhu\%252C+Sui\%253BYoujing+Ning\%253BFang-fang\%252C+Zeng\%253BYuan\%252C+Yuan\&isbn=\&jtitle=Journal+of+Medical+Internet+Research\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/10.2196\%252F59656 https://doi.org/10.2196/59656
+      \verb https://doi.org/10.2196/59656
       \endverb
       \verb{url}
-      \verb https://www.proquest.com/scholarly-journals/interventions-digital-addiction-umbrella-review/docview/3222368316/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Ahealthcompleteshell%5C&atitle=Interventions+for+Digital+Addiction%5C%253A+Umbrella+Review+of+Meta-Analyses%5C&title=Journal+of+Medical+Internet+Research%5C&issn=%5C&date=2025-01-01%5C&volume=27%5C&issue=%5C&spage=e59656%5C&au=Lu%5C%252C+Peng%5C%253BQiu%5C%252C+Jiamin%5C%253BHuang%5C%252C+Shiqi%5C%253BWang%5C%252C+Xinman%5C%253BHan%5C%252C+Shasha%5C%253BZhu%5C%252C+Sui%5C%253BYoujing+Ning%5C%253BFang-fang%5C%252C+Zeng%5C%253BYuan%5C%252C+Yuan%5C&isbn=%5C&jtitle=Journal+of+Medical+Internet+Research%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/10.2196%5C%252F59656%20https://doi.org/10.2196/59656
+      \verb https://doi.org/10.2196/59656
       \endverb
       \keyw{Medical Sciences--Computer Applications; digital addiction; interventions; umbrella reviews; systematic review; internet addiction; loneliness; quality of life; well-being; internet; psychological; pharmacological treatment; cognitive behavioral therapy; Random effects; Exercise; Analysis; Anxiety; Prevention programs; Self esteem; Psychotherapy; Intervention; Quasi-experimental methods; Games; Data analysis; Psychosocial intervention; Clinical trials; Screen time; Mental depression; Addictions; Stress; Meta-analysis; Psychosocial factors; Decision makers; Associations; Group counseling; Cognitive-behavioral factors; Mental health; Self control; Uncertainty; Cognition; Medical research; Evaluation; Medical decision making; Time; Symptoms; Educational programs}
     \endentry
@@ -1025,10 +1060,10 @@
       \field{pages}{802}
       \range{pages}{1}
       \verb{urlraw}
-      \verb https://www.proquest.com/books/mobile-sensing-psychology-methods-applications/docview/2919441599/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:book\&genre=book\&sid=ProQ:ProQ\%253Apsycinfo\&atitle=\&title=Mobile+sensing+in+psychology\%253A+Methods+and+applications\&issn=\&date=2024-01-01\&volume=\&issue=\&spage=\&au=\&isbn=9781462553105\&jtitle=\&btitle=Mobile+sensing+in+psychology\%253A+Methods+and+applications\&rft_id=info:eric/2024-33139-000\&rft_id=info:doi/
+      \verb https://www.proquest.com/books/mobile-sensing-psychology-methods-applications/docview/2919441599/se-2
       \endverb
       \verb{url}
-      \verb https://www.proquest.com/books/mobile-sensing-psychology-methods-applications/docview/2919441599/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:book%5C&genre=book%5C&sid=ProQ:ProQ%5C%253Apsycinfo%5C&atitle=%5C&title=Mobile+sensing+in+psychology%5C%253A+Methods+and+applications%5C&issn=%5C&date=2024-01-01%5C&volume=%5C&issue=%5C&spage=%5C&au=%5C&isbn=9781462553105%5C&jtitle=%5C&btitle=Mobile+sensing+in+psychology%5C%253A+Methods+and+applications%5C&rft_id=info:eric/2024-33139-000%5C&rft_id=info:doi/
+      \verb https://www.proquest.com/books/mobile-sensing-psychology-methods-applications/docview/2919441599/se-2
       \endverb
       \keyw{mobile sensing; psychology; knowledge; competencies; methods; applications; Non-Empirical (Discussion); Human; Psychology: Professional & Research; book; Sensor Technology; Knowledge (General); Methodology; Professional Competence; Mobile Devices; 2260:Research Methods & Experimental Design}
     \endentry
@@ -1466,10 +1501,10 @@
       \field{type}{phdthesis}
       \field{year}{2025}
       \verb{urlraw}
-      \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation\&genre=dissertations\&sid=ProQ:ProQuest+Dissertations+\%2526+Theses+Global\&atitle=\&title=Augmented+Digital+Fotonovela+\%2528SMAART+App\%2529+to+Mitigate+Health+Consequences+Among+Adolescents+Resulting+from+Social+Media+Addiction\&issn=\&date=2025-01-01\&volume=\&issue=\&spage=\&au=Santhosh\%252C+Joseph\&isbn=9798288851650\&jtitle=\&btitle=\&rft_id=info:eric/\&rft_id=info:doi/
+      \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2
       \endverb
       \verb{url}
-      \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation%5C&genre=dissertations%5C&sid=ProQ:ProQuest+Dissertations+%5C%2526+Theses+Global%5C&atitle=%5C&title=Augmented+Digital+Fotonovela+%5C%2528SMAART+App%5C%2529+to+Mitigate+Health+Consequences+Among+Adolescents+Resulting+from+Social+Media+Addiction%5C&issn=%5C&date=2025-01-01%5C&volume=%5C&issue=%5C&spage=%5C&au=Santhosh%5C%252C+Joseph%5C&isbn=9798288851650%5C&jtitle=%5C&btitle=%5C&rft_id=info:eric/%5C&rft_id=info:doi/
+      \verb https://www.proquest.com/dissertations-theses/augmented-digital-fotonovela-smaart-app-mitigate/docview/3231139889/se-2
       \endverb
       \keyw{Adolescent health consequence; Behavior algorithm; Design science research; Social media addiction; Taxonomy; Information technology; Bioinformatics; Artificial intelligence; Web studies; 0489:Information Technology; 0646:Internet and social media studies; 0715:Bioinformatics; 0800:Artificial intelligence}
     \endentry
@@ -2049,10 +2084,10 @@
       \verb 10.1037/adb0000315
       \endverb
       \verb{urlraw}
-      \verb https://www.proquest.com/scholarly-journals/treatments-internet-gaming-disorder-addiction/docview/1940533247/se-2?accountid=15977 https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST\&vid=44GLCU_INST:44GLCU_VU2\&?url_ver=Z39.88-2004\&rft_val_fmt=info:ofi/fmt:kev:mtx:journal\&genre=article\&sid=ProQ:ProQ\%253Apsycarticles\&atitle=Treatments+for+Internet+gaming+disorder+and+Internet+addiction\%253A+A+systematic+review\&title=Psychology+of+Addictive+Behaviors\&issn=0893164X\&date=2017-12-01\&volume=31\&issue=8\&spage=979\&au=Zajac\%252C+Kristyn\%253BGinley\%252C+Meredith+K.\%253BChang\%252C+Rocio\%253BPetry\%252C+Nancy+M.\&isbn=\&jtitle=Psychology+of+Addictive+Behaviors\&btitle=\&rft_id=info:eric/2017-40993-001\&rft_id=info:doi/10.1037\%252Fadb0000315 https://doi.org/10.1037/adb0000315
+      \verb https://doi.org/10.1037/adb0000315
       \endverb
       \verb{url}
-      \verb https://www.proquest.com/scholarly-journals/treatments-internet-gaming-disorder-addiction/docview/1940533247/se-2?accountid=15977%20https://discover.gcu.ac.uk/discovery/openurl?institution=44GLCU_INST%5C&vid=44GLCU_INST:44GLCU_VU2%5C&?url_ver=Z39.88-2004%5C&rft_val_fmt=info:ofi/fmt:kev:mtx:journal%5C&genre=article%5C&sid=ProQ:ProQ%5C%253Apsycarticles%5C&atitle=Treatments+for+Internet+gaming+disorder+and+Internet+addiction%5C%253A+A+systematic+review%5C&title=Psychology+of+Addictive+Behaviors%5C&issn=0893164X%5C&date=2017-12-01%5C&volume=31%5C&issue=8%5C&spage=979%5C&au=Zajac%5C%252C+Kristyn%5C%253BGinley%5C%252C+Meredith+K.%5C%253BChang%5C%252C+Rocio%5C%253BPetry%5C%252C+Nancy+M.%5C&isbn=%5C&jtitle=Psychology+of+Addictive+Behaviors%5C&btitle=%5C&rft_id=info:eric/2017-40993-001%5C&rft_id=info:doi/10.1037%5C%252Fadb0000315%20https://doi.org/10.1037/adb0000315
+      \verb https://doi.org/10.1037/adb0000315
       \endverb
     \endentry
   \enddatalist
