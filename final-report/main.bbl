@@ -662,6 +662,36 @@
       \field{pages}{11}
       \range{pages}{1}
     \endentry
+    \entry{RefWorks:RefID:166-ghritlahare2025role}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=48d27ba2591c780f349343956c269f0a}{%
+           family={Ghritlahare},
+           familyi={G\bibinitperiod},
+           given={Akhilesh},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{48d27ba2591c780f349343956c269f0a}
+      \strng{fullhash}{48d27ba2591c780f349343956c269f0a}
+      \strng{fullhashraw}{48d27ba2591c780f349343956c269f0a}
+      \strng{bibnamehash}{48d27ba2591c780f349343956c269f0a}
+      \strng{authorbibnamehash}{48d27ba2591c780f349343956c269f0a}
+      \strng{authornamehash}{48d27ba2591c780f349343956c269f0a}
+      \strng{authorfullhash}{48d27ba2591c780f349343956c269f0a}
+      \strng{authorfullhashraw}{48d27ba2591c780f349343956c269f0a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{The Role of Flowcharts in Problem Solving and Process Visualization}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.5281/zenodo.15358152
+      \endverb
+    \endentry
     \entry{RefWorks:RefID:140-hofmann2012efficacy}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=a38d1c025c34e2c18ffdf3df388549d1}{%
