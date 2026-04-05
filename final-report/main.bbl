@@ -57,6 +57,46 @@
       \field{pages}{113\bibrangedash 132}
       \range{pages}{20}
     \endentry
+    \entry{RefWorks:RefID:167-role}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6b6a7a1eb973d16308192e328a6d08c0}{%
+           family={Almani},
+           familyi={A\bibinitperiod},
+           given={Amirah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b001d108ce06d913a9510c24fd63f6f}{%
+           family={Alrwais},
+           familyi={A\bibinitperiod},
+           given={Omer},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{fullhash}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{fullhashraw}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{bibnamehash}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{authorbibnamehash}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{authornamehash}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{authorfullhash}{b4d581cd75b9947e7163037c05517fa5}
+      \strng{authorfullhashraw}{b4d581cd75b9947e7163037c05517fa5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Research Journal of Innovations in Engineering and Technology}
+      \field{month}{01}
+      \field{title}{The Role of Wireframes in Enhancing User Interface Design}
+      \field{volume}{08}
+      \field{year}{2024}
+      \field{pages}{134\bibrangedash 140}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.47001/IRJIET/2024.812020
+      \endverb
+    \endentry
     \entry{androiddevelopment-appfundamentals}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
@@ -1096,6 +1136,32 @@
       \verb https://www.proquest.com/books/mobile-sensing-psychology-methods-applications/docview/2919441599/se-2
       \endverb
       \keyw{mobile sensing; psychology; knowledge; competencies; methods; applications; Non-Empirical (Discussion); Human; Psychology: Professional & Research; book; Sensor Technology; Knowledge (General); Methodology; Professional Competence; Mobile Devices; 2260:Research Methods & Experimental Design}
+    \endentry
+    \entry{RefWorks:RefID:168-natarajan2025wireframes}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=86f0f221c75eb0f5f72d22165800bb4c}{%
+           family={Natarajan},
+           familyi={N\bibinitperiod},
+           given={Janani},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{fullhash}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{fullhashraw}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{bibnamehash}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{authorbibnamehash}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{authornamehash}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{authorfullhash}{86f0f221c75eb0f5f72d22165800bb4c}
+      \strng{authorfullhashraw}{86f0f221c75eb0f5f72d22165800bb4c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{From Wireframes to Interfaces: Developing a Practical Framework for {UI}/{UX} Design}
+      \field{year}{2025}
     \endentry
     \entry{RefWorks:RefID:75-oliveira2021effectiveness}{article}{}{}
       \name{author}{6}{}{%
