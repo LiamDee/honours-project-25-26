@@ -19,6 +19,50 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{camh-writing-addiction}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1b415c69b42fcc515ea3e2e3643017af}{%
+           family={Addiction},
+           familyi={A\bibinitperiod},
+           given={Centre},
+           giveni={C\bibinitperiod},
+           givenun=0,
+           prefix={for},
+           prefixi={f\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=a1bdc209ae714c874f0783245d80f7a8}{%
+           family={Health},
+           familyi={H\bibinitperiod},
+           given={Mental},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{fullhash}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{fullhashraw}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{bibnamehash}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{authorbibnamehash}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{authornamehash}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{authorfullhash}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \strng{authorfullhashraw}{12a8c90ee21ce2e3cf0ce5199470f250}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Writing effectively about mental illness including addiction | CAMH}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.camh.ca/en/driving-change/about-camh/for-reporters/tips-for-writing-about-mental-health-and-addiction
+      \endverb
+      \verb{url}
+      \verb https://www.camh.ca/en/driving-change/about-camh/for-reporters/tips-for-writing-about-mental-health-and-addiction
+      \endverb
+    \endentry
     \entry{RefWorks:RefID:133-allen2020social}{inbook}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=776c27cdd32acc150aa8161f41468058}{%
@@ -646,6 +690,45 @@
       \field{title}{Smartphone addiction? There's an app for that!-How “smartphone addiction apps” frame smartphone addiction through discourse and affordances}
       \field{type}{phdthesis}
       \field{year}{2017}
+    \endentry
+    \entry{nida-addiction}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=17a45f6ad07073659b025cf4433eaf35}{%
+           family={Drug\bibnamedelima Abuse},
+           familyi={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={National\bibnamedelima Institute},
+           giveni={N\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0,
+           prefix={on},
+           prefixi={o\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{fullhash}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{fullhashraw}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{bibnamehash}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{authorbibnamehash}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{authornamehash}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{authorfullhash}{17a45f6ad07073659b025cf4433eaf35}
+      \strng{authorfullhashraw}{17a45f6ad07073659b025cf4433eaf35}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NIDA: Addiction Science}
+      \field{title}{Words Matter: Preferred Language for Talking About Addiction | National Institute on Drug Abuse}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://nida.nih.gov/research-topics/addiction-science/words-matter-preferred-language-talking-about-addiction
+      \endverb
+      \verb{url}
+      \verb https://nida.nih.gov/research-topics/addiction-science/words-matter-preferred-language-talking-about-addiction
+      \endverb
     \endentry
     \entry{RefWorks:RefID:135-gajecki2014mobile}{article}{}{}
       \name{author}{5}{}{%
@@ -1453,6 +1536,36 @@
       \field{pages}{75\bibrangedash 92}
       \range{pages}{18}
     \endentry
+    \entry{RefWorks:RefID:174-phillips2021uk}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e9e4790946626fda622758a3e1aeb64e}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{fullhash}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{fullhashraw}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{bibnamehash}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{authorbibnamehash}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{authornamehash}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{authorfullhash}{e9e4790946626fda622758a3e1aeb64e}
+      \strng{authorfullhashraw}{e9e4790946626fda622758a3e1aeb64e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Law \& Security Review}
+      \field{title}{{UK} further education sector journey to compliance with the general data protection regulation and the data protection act {2018}}
+      \field{volume}{42}
+      \field{year}{2021}
+      \field{pages}{105586}
+      \range{pages}{1}
+    \endentry
     \entry{RefWorks:RefID:134-primack2017social}{article}{}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=1ffa048bfa67082f52c8daed38bd0d31}{%
@@ -1546,6 +1659,44 @@
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S0749379717300168
       \endverb
+    \endentry
+    \entry{RefWorks:RefID:175-punchoojit2015research}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a71b284dd662894be356049e5f6cebe3}{%
+           family={Punchoojit},
+           familyi={P\bibinitperiod},
+           given={Lumpapun},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ded1c3fcf4432d2ecaf76f9e056f0adf}{%
+           family={Hongwarittorrn},
+           familyi={H\bibinitperiod},
+           given={Nuttanont},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{fullhash}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{fullhashraw}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{bibnamehash}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{authorbibnamehash}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{authornamehash}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{authorfullhash}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \strng{authorfullhashraw}{c6fe8dbebb540db1b911b6cd94db9e01}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{2015} 2nd National Foundation for Science and Technology Development Conference on Information and Computer Science ({NICS})}
+      \field{title}{Research ethics in human-computer interaction: a review of ethical concerns in the past five years}
+      \field{year}{2015}
+      \field{pages}{180\bibrangedash 185}
+      \range{pages}{6}
     \endentry
     \entry{RefWorks:RefID:42-esmaeili2018method}{article}{}{}
       \name{author}{2}{}{%

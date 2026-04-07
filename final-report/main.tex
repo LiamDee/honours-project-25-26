@@ -153,14 +153,14 @@
 %TODO:
 % 3.1, 3.6
 % 4.3
-% 5.1, 5.2, 5.4
 % all of 6
 % still need to (from interim report):
 % introduce the term "persuasive computing" in intro
 % highlight what specific tools / techniques from cbt and rt can be adapted into a mobile app in lit review
 % instead of agile development, go with iterative development -- already kinda done
 % maybe remove urls from references - makes it look cleaner - done
-% sort appendices properly - done i think
+% sort appendices properly - done
+% consider note on 5.4
 
 \newpage
 
@@ -673,7 +673,7 @@ execution of the project, as the project was able to stick to its defined timeli
 
 The Hybrid model was used by using a waterfall approach for the Requirements Analysis, Design, and Evaluation stage, and combining it with an iterative approach for the 
 Implementation and Testing stage. The requirements were defined during the beginning of the project's execution stage within a Software Design Specification 
-(see Appendix D), then, based on the requirements specified, designs surrounding those requirements were created.
+(see Appendix F), then, based on the requirements specified, designs surrounding those requirements were created.
 
 \begin{figure}[H]
 \centering
@@ -705,7 +705,8 @@ From the research statement alone, two integral components can be identified:
 
 From here, these components can then be broken down into smaller parts that then make up a list of functional requirements after ensuring they fit within the findings of the literature
 review, with some aspects from both components being used to identify a requirement. Additionally, interviews were conducted with nine participants to help identify new requirements or 
-to add pieces to existing requirements. Full interview transcripts and how to access them can be found within Appendix X. \newline
+to add pieces to existing requirements. Full interview transcripts, instructions on accessing them, and detailed notes taken during each interview
+can be found within Appendices E and F. \newline
 
 \subsubsection{Psychological Intervention Method}
 
@@ -795,7 +796,7 @@ implementing the requirement.
 
 Table \ref{tab:func-req-master-list} provides a full list of all the functional requirements identified throughout the project's lifespan. With the exception of "REQ-1.8", where the requirement
 was identified and defined later during development, all requirements were identified during the initial requirements analysis phase of development. A comprehensive breakdown of each functional 
-requirement identified in detail, similar in manner to Table \ref{tab:func-req-1-5-main}, alongside non-functional requirements can be found in Appendix X, as well as the SRS document separately 
+requirement identified in detail, similar in manner to Table \ref{tab:func-req-1-5-main}, alongside non-functional requirements can be found in Appendix F, as well as the SRS document separately 
 via the GitHub repository.
 
 
@@ -829,7 +830,7 @@ utilised during this process, with the level of complexity in the designs varyin
 
 As mentioned at the beginning of this section, this process of creating a flowchart based on the requirement was repeated until all requirements outlined had a flowchart diagram. From there, the designs
 were reviewed for any possible refinements, for which only one flowchart needed refinement, that being requirement 1.3. Requirements were created in sequential order according to the requirement number 
-(Req-1.1 $\rightarrow$ Req-1.2 $\rightarrow$ Req-1.3 $\rightarrow$ etc\dots). A complete list of the flowchart diagrams created can be found in Appendix Z.
+(Req-1.1 $\rightarrow$ Req-1.2 $\rightarrow$ Req-1.3 $\rightarrow$ etc\dots). A complete list of the flowchart diagrams created can be found in Appendix G.
 
 \begin{figure}[H]
 \centering
@@ -891,7 +892,7 @@ met. Concerning how the screens needed for each requirement should be ordered, t
 
 An example of the UI interface design created can be seen in Figure \ref{fig:ui-wireframe-example}. The UI in this example seen showcases three core elements, the "Header Text" in large, bold text, denoting
 the heading for that screen, smaller text shown by the "Lorem ipsum" text, used for communication information to a user, and a button shown by the rectangle with the drop-shadow, denoting interactive
-elements for the screen. A full list of the screens created can be found in Appendix (x).\newline
+elements for the screen. A full list of the screens created can be found in Appendix H.\newline
 
 \begin{figure}[H]
 \centering
@@ -1035,7 +1036,7 @@ public class WorkerClass extends Worker {
  \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{class-structure.png}
-	\captionof{figure}{\textit{Class structure of PRI}}
+	\captionof{figure}{\textit{Class structure of PRI at the prototyping stage}}
 	\label{fig:class-structure}
 \end{figure}
 
@@ -1181,7 +1182,7 @@ this method of testing felt most appropriate. %if you can cite meaning of Increm
 An example of how testing was carried out can be seen in Table \ref{tab:test-case-example}. The test case includes the test ID, mapped to match the requirement number, the 
 action taken by a user that would trigger the component, the expected outcome of the test, the actual outcome of said test, evidence to show the 
 outcome of the test, usually in the form of a screen recorded video or screen capture, and any additional context or assumptions needed to understand
-the test case. A comprehensive list of the test cases and their results can be found in Appendix E. \newline
+the test case. A comprehensive list of the test cases and their results can be found in Appendix I. \newline
 
 
 
@@ -1284,7 +1285,7 @@ participants provided a response to them.\newline
 	\label{fig:question3surveyresults}
 \end{figure}
 
-A complete collection of the responses and their associated questions can be found in Appendix F, however, the sentiment derived from 
+A complete collection of the responses and their associated questions can be found in Appendix J, however, the sentiment derived from 
 the results of QS1 show that users felt more informed about their usage after using the app, and on average, users felt as if the app
 implemented the WDEP system to a good degree. As demonstrated in Figure \ref{fig:question3surveyresults}, only two of the respondents felt that the app contributed to their
 lowered usage, with one respondent feeling as if other factors had a bigger impact than the app by itself, and the other feeling like there wasn't any
@@ -1339,9 +1340,24 @@ Within the Social Issues section, it will also provide additional commentary and
 the project has aligned itself with in accordance to the definitions provided by the United Nations. 
 
 \subsection{Legal Issues}
+While the project didn't encounter any issues related to copyright, the project did have to deal with issues to data protection, particularly in
+relation to the Data Protection Act 2018 and the UK General Data Protection Regulation, two laws that relate to protecting the personal data of
+individuals \autocite{RefWorks:RefID:174-phillips2021uk}. \newline
+
+When a human participant was involved at any stage of the project, it was clearly outlined to them what kind of data would be collected and
+processed. For example, during the evaluation stage, when the user opens the app for the first time, the user is given full clarity on the
+purpose of them using the app, as well as what kinds of data the app would be collecting. At no point does the app capture any personally
+identifiable information from a participant. \newline
+
+Alongside this, any data taken from participants was ensured to be compliant under the Data Protection Act 1998. When ensuring the protection of 
+user data, all information was kept in a local folder on the author's PC at his home, as well as on an external USB.
 
 \subsection{Social Issues}
-
+The projects primary subject matter involved addressing the issue of addiction pertaining to social media and smartphones. When discussing
+the topic of addiction, it's important that the issue is addressed in a non-stigmatizing manner and with respect to those who may be dealing
+with such issues \autocite{nida-addiction, camh-writing-addiction}. Throughout the report, the issue of addiction has been discussed in a way that
+doesn't stigmatize those who may be dealing with, or have dealt with such issues. As well as this, at no point within the report does the author 
+claim the PRI to be a treatment for the issue of SA \& SMA, rather, as a teaching opportunity for someone to learn about the issue.
 
 \subsubsection{Sustainable Development Goals}
 This project has aligned itself with Sustainable Development Goals 3 and 4. Below are the definitions provided by the United Nations:
@@ -1353,8 +1369,8 @@ This project has aligned itself with Sustainable Development Goals 3 and 4. Belo
 
 Target 3.4 (Reduce Mortality From Non-communicable Diseases And Promote Mental Health) for SDG 3 states that by 2030, it should:\newline
 
-\textit{...reduce by one third premature mortality from non-communicable diseases through prevention and treatment and \textbf\textit{{promote 
-mental health and well-being}}} \autocite{globalgoals-goal3}.\newline
+\textit{...reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote 
+mental health and well-being} \autocite{globalgoals-goal3}.\newline
 
 The project's intention from the very beginning was to encourage healthier smartphone and social media usage. It attempts to achieve this by encouraging the user to partake in activities
 from outside their smartphone and social media and set goals for themselves that they can achieve away from their smartphone and social media. \newline
@@ -1370,32 +1386,40 @@ these two goals.
 Arguably, the largest issue the project had to consider during its lifespan were Ethical Issues. As previously mentioned when discussing
 the project's primary objectives in section 1.2.2, for conduction the evaluation, human participants were required to carry out said
 evaluation as intended. This aspect by itself already constitutes as an ethical issue, given the use of human participants for a project
-of this nature means that..(citation here with consequence)...but this use of human participants brings forth another issue. The evaluation 
+of this nature raises concerns regarding the autonomy, well-being of participants, as well as the requirement of seeking ethical approval 
+\autocite{RefWorks:RefID:175-punchoojit2015research}, but this specific use of human participants brings forth another issue. The evaluation 
 involved collecting app usage data from participants, as well as responses from the post-evaluation survey. \newline
 
-Similarly, during the requirements analysis stage of the project's
-execution, a survey was distributed, and 1-to-1 interviews were conducted. Given the use of software tools to carry out these parts of the
-project, this raises issues with data protection, informed consent, and the privacy of participants \autocite{davepregoner:hal-05073466}.
-Dealing with such issues required taking different precautions at each step. When ensuring the privacy of participants at any stage,
-identifying information was either redacted, anonymised, or not collected at all. Alongside this, any data taken from participants was
-ensured to be compliant under the Data Protection Act 1998. When ensuring the protection of user data, all information
-was kept in a local folder on the author's PC at his home, as well as on an external USB. When conducting user interviews and the evaluation,
-participants were given a consent form to sign before taking part in anything related to the project, and before taking part in any
-survey, participants were asked to provide informed consent to take part and were given as much information as possible, something which
-was noted as an issue by \textcite{davepregoner:hal-05073466}. \newline
+Similarly, during the requirements analysis stage of the project's execution, a survey was distributed, and 1-to-1 interviews were 
+conducted. Given the use of software tools to carry out these parts of the project, this raises issues with data protection, informed 
+consent, and the privacy of participants \autocite{davepregoner:hal-05073466}. Dealing with such issues required taking different precautions 
+at each step. When ensuring the privacy of participants at any stage, identifying information was either redacted, anonymised, or not 
+collected at all. \newline
+
+When conducting user interviews and the evaluation, participants were given a consent form to sign before taking part in anything related 
+to the project, and before taking part in any survey, participants were asked to provide informed consent to take part and were given as 
+much information as possible, something which was noted as an issue by \textcite{davepregoner:hal-05073466}. \newline
 
 To conduct any part of the project where human participants are required, ethical approval via an ethics form is required to be submitted 
 prior to conducting any part of it. All the details written about previously were mentioned within the ethics form, alongside reasonable 
 justification, and ethical approval was granted.
 
-\subsection{Professional Issues}
-Following the completion of this project, there are a few aspects that have been reflected on
+\subsection{Professional Issues} %possibly expand?
+Following the completion of this project, there are a few aspects that have been reflected on that the author believes have undertaken well, and
+others the author wishes would've been undertaken differently. For one, section 3.3 details the SDLC used during the project's execution, and 
+how there was a change in SDLC midway through the project. Instead of this conducting this change midway through the project, this change 
+could've occurred before any work was carried out, or could've been prevented altogether if deeper research was conducted at that stage. \newline
+
+The author believes that issues related to transparency were handled well. Information related to how the data of participants would be used, as
+well what their involvement would and wouldn't entail were communicated at every possible step, and participants were offered the choice of 
+opting out of any project-related activity at any given time, without notice. Participants were told to forward any issues or questions they
+may have to the author, showing a level of accountability and responsibility taken by the author. 
 
 
 \newpage
-\section{Conclusions, Project Critique, and Further Work}
+\section{Conclusions and Further Work}
 
-\subsection{Conclusion}
+\subsection{Summary}
 
 \subsection{Project Critique}
 
@@ -1447,7 +1471,7 @@ The GitHub repository containing the source code for the PRI, as well as all oth
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix X - Requirements Analysis Interview Transcripts}
+\subsection*{Appendix D - Requirements Analysis Interview Transcripts}
 Due to its large volume of content, a link containing each interview transcript has been provided instead, separated into different folders inside a GitHub repository.
 This can be found by following the link below:\newline
 
@@ -1455,12 +1479,253 @@ This can be found by following the link below:\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix (x) - Requirements Analysis Interview Notes}
-Image scans of notes taken during the requirements analysis interviews can be found below.
+\subsection*{Appendix E - Requirements Analysis Interview Notes}
+Notes were taken with each interviewee, providing a brief summary of the interviewee's response to a given question. Image scans of these notes 
+taken during the requirements analysis interviews can be found below. Note that notes for the interview with A1 weren't taken.
+
+\pagebreak
+\noindent\textbf{Interview with B2}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 1}}
+	\label{fig:interview-b2-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 2}}
+	\label{fig:interview-b2-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 3}}
+	\label{fig:interview-b2-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 4}}
+	\label{fig:interview-b2-4}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-5_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 5}}
+	\label{fig:interview-b2-5}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with C3}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 1}}
+	\label{fig:interview-c3-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 2}}
+	\label{fig:interview-c3-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 3}}
+	\label{fig:interview-c3-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 4}}
+	\label{fig:interview-c3-4}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with D4}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 1}}
+	\label{fig:interview-d4-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 2}}
+	\label{fig:interview-d4-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 3}}
+	\label{fig:interview-d4-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 4}}
+	\label{fig:interview-d4-4}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-5_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 5}}
+	\label{fig:interview-d4-5}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with E5}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 1}}
+	\label{fig:interview-e5-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 2}}
+	\label{fig:interview-e5-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 3}}
+	\label{fig:interview-e5-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 4}}
+	\label{fig:interview-e5-4}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-5_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 5}}
+	\label{fig:interview-e5-5}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with F6}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 1}}
+	\label{fig:interview-f6-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 2}}
+	\label{fig:interview-f6-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 3}}
+	\label{fig:interview-f6-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 4}}
+	\label{fig:interview-f6-4}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with G7}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 1}}
+	\label{fig:interview-g7-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 2}}
+	\label{fig:interview-g7-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 3}}
+	\label{fig:interview-g7-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 4}}
+	\label{fig:interview-g7-4}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with H8}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 1}}
+	\label{fig:interview-h8-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 2}}
+	\label{fig:interview-h8-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 3}}
+	\label{fig:interview-h8-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 4}}
+	\label{fig:interview-h8-4}
+\end{figure}
+
+\pagebreak
+\noindent\textbf{Interview with I9}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-1_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 1}}
+	\label{fig:interview-i9-1}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-2_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 2}}
+	\label{fig:interview-i9-2}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-3_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 3}}
+	\label{fig:interview-i9-3}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-4_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 4}}
+	\label{fig:interview-i9-4}
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-5_page-0001.jpg}
+	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 5}}
+	\label{fig:interview-i9-5}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix D - Software Requirements Specification - Functional \& Non-Functional Requirements}
+\subsection*{Appendix F - Software Requirements Specification - Functional \& Non-Functional Requirements}
 The SRS document can be found within the project's GitHub repository, via: \newline
 
 \noindent https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/requirements-specification
@@ -1640,7 +1905,7 @@ The SRS document can be found within the project's GitHub repository, via: \newl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
-\subsection*{Appendix Y - Flowchart Diagrams}
+\subsection*{Appendix G - Flowchart Diagrams}
 \textbf{NOTE:} Flowchart diagrams were created in an "unregistered" version of StarUML, which applies a watermark to any diagrams exported. This explains the large "UNREGISTERED" watermark
 on each image. \newline
 
@@ -1718,7 +1983,7 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix Z - User Interface designs}
+\subsection*{Appendix H - User Interface designs}
 \textbf{NOTE:} UI designs should not be interpreted as being in sequential order.
 
 \begin{figure}[H]
@@ -1808,7 +2073,7 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection*{Appendix E - Test Case results}
+\subsection*{Appendix I - Test Case results}
 \textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
 the GitHub repository (see Appendix A) and inside the Test Case document at:\newline
 
@@ -1956,7 +2221,7 @@ Test ID                  & Action                                               
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix F - Post-Evaluation survey results}
+\subsection*{Appendix J - Post-Evaluation survey results}
 \underline{\textbf{QS1}}\newline\newline
 \noindent Q1: The app was built to be informative to some degree; on a 1 to 5 scale, how much did you find yourself informed in some way 
 after using the app? This could be on your overall usage, usage patterns, etc...
