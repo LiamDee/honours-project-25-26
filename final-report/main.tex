@@ -158,9 +158,9 @@
 % still need to (from interim report):
 % introduce the term "persuasive computing" in intro
 % highlight what specific tools / techniques from cbt and rt can be adapted into a mobile app in lit review
-% instead of agile development, go with iterative development
-% maybe remove urls from references - makes it look cleaner
-% sort appendices properly
+% instead of agile development, go with iterative development -- already kinda done
+% maybe remove urls from references - makes it look cleaner - done
+% sort appendices properly - done i think
 
 \newpage
 
@@ -812,7 +812,8 @@ have a better understanding on what UI elements would be included. \newline
 
 The type of diagram used for designing the application based on the requirements was a Flowchart diagram, a diagram which uses components, typically shapes, that represent logic, order, and decision-points within a system
 to model said system or related processes, making it easy for developers to understand event sequences or the overall structure of a system \autocite{RefWorks:RefID:166-ghritlahare2025role}.This type 
-of diagram was decided upon due to how easily it can convey the idea of how a requirement should function (cite). Flowchart diagrams were the exclusive diagram used for designing the application.
+of diagram was decided upon due to how easily it can convey the idea of how a requirement should function \autocite{RefWorks:RefID:169-xinogalos2013flowchartbased}. Flowchart diagrams were the 
+exclusive diagram used for designing the application.
 
 \begin{figure}[H]
 \centering
@@ -918,45 +919,250 @@ While creating these screens, it was also determined that some of the screens ca
 \subsection{Implementation}
 As noted previously in section 3.3, this part of the project, alongside the testing part of the project, made use of an iterative approach. At this stage, implementing the project would consist
 of using the information gathered for each requirement during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
-them according to the documentation. 
+them according to the documentation. Implementing each requirement facilitated backend development via implementing the functionality for the requirement and frontend development via implementing
+the user interface the end-user would interact with. Therefore, the primary type of development executed can be considered full-stack. \newline
 
-some requirements were made before others as some requirements couldn't be implemented before others were implemented first
+Figure \ref{fig:gitbranch} from section 3.3 provides the implication, however, it should be plainly stated that the requirements weren't implemented in sequential order, as the author found that it
+would prove troublesome attempting to implement some requirements before others (e.g. trying to implement functionality to allow a user to update a goal (Req-1.4) before functionality for setting
+a goal has been implemented (Req-1.5)). Rather, requirements were implemented in an order of what would be feasible to implement at that point in development.
 
 \subsubsection{Proof-of-Concept Prototype(s)}
+Before beginning work on any of the requirements, a subfolder that would contain a basic prototype for ensuring the UsageStatsManager class can return the data necessary for the app to function 
+as intended and ensuring the app's notification system was created. This would serve as a blueprint from where the app would then be built upon. Backend development was the primary type of 
+development carried out at this point.
 
-\begin{lstlisting}[language=Java, style=mystyle, caption={some code}]
-private boolean doesAppInfoExist(UsageStats usageStats) {
-        try {
-            getApplicationContext().getPackageManager().getApplicationInfo(usageStats.getPackageName(), 0);
-            return true;
-        } catch (PackageManager.NameNotFoundException e) {
-            return false;
-        }
-    }
+\begin{lstlisting}[language=Java, style=mystyle, caption={loadUsage() function}, label=lst:loadUsage]
+public void loadUsage() throws PackageManager.NameNotFoundException {
+	long lastWeek = System.currentTimeMillis() - (1000*3600*24*7);
+	UsageStatsManager usm = (UsageStatsManager)this.getSystemService(USAGE_STATS_SERVICE);
+	List<UsageStats> appList = usm.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY,
+			lastWeek, System.currentTimeMillis());
+	appList = appList.stream().filter(app -> app.getTotalTimeInForeground() > 0).collect(Collectors.toList());
+
+	Log.d("usagestats", appList.toString());
+
+	if (!appList.isEmpty()) {
+		Map<String, UsageStats> sortedMap = new TreeMap();
+		for (UsageStats usageStats : appList) {
+			sortedMap.put(usageStats.getPackageName(), usageStats);
+		}
+		Log.d("moreStats", sortedMap.toString());
+		showUsage(sortedMap);
+	}
+
+}
 \end{lstlisting}
 
-\subsubsection{Req-1.5/1.7}
+Code \ref{lst:loadUsage} shows the function used to fetch the usage data for the user. This function is called on app startup, as it gets called within the onCreate method. The function calls the
+"queryUsageStats" method from the UsageStatsManager class to get the usage stats from the last week, then stores it in a list, then, if the list isn't empty, maps it to a tree map then calls 
+another function "showUsage" to show the usage to the user. \newline
+
+After ensuring that all the necessary information was able to be fetched from the UsageStatsManager class, a separate folder was created that focused on fully developing the app. The folder
+structure can be seen below in figure \ref{fig:folder-structure}.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.45\linewidth]{folder-structure.png}
+	\captionof{figure}{\textit{Folder structure of GitHub repo}}
+	\label{fig:folder-structure}
+\end{figure}
+
+This is where a secondary prototype was created, used for ensuring the app was able to send notifications reminding the user to send their usage statistics was able to be implemented. As the 
+evaluation involved testing the application with human participants, implementing a reminder system was thought to be a necessary feature to ensure the data is sent in a timely manner. To 
+achieve this, implementing notifications was the idea decided upon.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={PeriodicWorkRequest class used for sending notifications}, label=lst:periodicworkrequest]
+final PeriodicWorkRequest periodicWorkRequest =
+		new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
+		.addTag("periodicWork")
+		.build();
+
+notiTestBtn.setOnClickListener(view ->
+		WorkManager.getInstance().enqueue(periodicWorkRequest));
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={WorkerClass class used for sending notifications}, label=lst:workerclass]
+public class WorkerClass extends Worker {
+
+    public WorkerClass(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
+
+    @NonNull
+    @Override
+    public Result doWork() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        sendNoti();
+
+        return Result.success();
+    }
+    public void sendNoti() {
+        NotificationManager notiManager = (NotificationManager)getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "FocusathChannel";
+            String desc = "App notification channel for Focusath";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("default", name, importance);
+            channel.setDescription(desc);
+            //NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notiManager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
+                .setContentTitle("title")
+                .setContentText("message")
+                .setSmallIcon(R.mipmap.ic_launcher);
+        notiManager.notify(1, notification.build());
+    }
+
+}
+
+\end{lstlisting}
+
+ Code \ref{lst:periodicworkrequest} and \ref{lst:workerclass} shows the code and class used for sending notifications. Code \ref{lst:periodicworkrequest} defines a PeriodicWorkRequest variable
+ that triggers the code in code \ref{lst:workerclass} every 5 seconds, 15 minutes or later from the last trigger, then, creates an OnClickListener that queues the PeriodicWorkRequest. Code 
+ \ref{lst:workerclass} executes the doWork() method which calls sendNoti() function, this builds the notification to be sent to the user, before displaying it to the user. Seeing as the code in both 
+ snippets were for ensuring functionality, both would be refined over the course of development. \newline
+
+ This prototype would also establish the class structure for the app, as can be seen in figure \ref{fig:class-structure} below. By the end of development, RecyclerViewAdapter would be the only class
+ removed.
+
+ \begin{figure}[H]
+\centering
+	\includegraphics[width=0.45\linewidth]{class-structure.png}
+	\captionof{figure}{\textit{Class structure of PRI}}
+	\label{fig:class-structure}
+\end{figure}
+
+\subsubsection{Req-1.5 / 1.7}
+This branch focused on creating the onboarding process, the process the user goes through when opening the app for the first time. The code 
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Checks if user has completed onboarding process}, label=lst:isOnboardingCompleteCheck]
+isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingComplete", false);
+	if (!isOnboardingComplete) {
+		if (screen_count > 1) {
+			sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", false).apply();
+			screenCheck();
+		} else {
+			sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", false).apply();
+			screen_count = 1;
+			screenCheck();
+		}
+	}
+	else {
+		if (getGrantStatus()) {
+			screen_count = 0;
+			showStatsBtn.setOnClickListener(view -> {
+
+			});
+		}
+	}
+\end{lstlisting}
+
+Code \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, called within onStart()
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={SharedPreference used when checking if onboarding process is complete}, label=lst:SharedPref]
+sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Code used for swapping between screens (shortened for brevity)}, label=lst:screenCheckCode]
+public void screenCheck() {
+	//TODO: move onboarding usage tracking code to here
+	if (screen_count == 0) {
+		setContentView(R.layout.activity_main);
+		try {
+			loadUsage();
+		} catch (PackageManager.NameNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	//note: this has been moved to be the first screen as exiting the intent returns to the first screen, TODO: update uml flowchart to reflect change
+	else if (screen_count == 1){
+		setContentView(R.layout.enable_user_tracking_screen);
+	//...
+	}
+	//...
+}
+\end{lstlisting}
+
+Code \ref{lst:screenCheckCode} shows an example of the code used for swapping between screens
 
 \subsubsection{Req-1.1}
+This branch focused on building the graph showing the user their app usage, similar to what was seen in figure \ref{fig:ui-wireframe-main-screen}.
 
 \subsubsection{Req-1.4}
+This branch focused on adding functionality for the user to change their goal via the settings screen
 
 \subsubsection{Req-1.6}
+This branch focused on 
+
+
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Original implemention of writing the app list to a .csv file}, label=lst:og-app-list-csv]
+private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
+    try {
+        FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
+        ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
+        for (int i = 0; i < appStuff.size(); i++) {
+            outputStream.writeObject("\n" + appStuff.get(i).appName + "  |  " + appStuff.get(i).usageTime);
+        }
+        //outputStream.flush();
+        outputStream.close();
+        fileOutputStream.close();
+        Log.d("fileDebug", "app details written to file!");
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }
+}
+\end{lstlisting}
+
+this dont work D:
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={New implemention of writing the app list to a .csv file}, label=lst:new-app-list-csv]
+private void generateFile(ArrayList<AppDetails> appDetails) {
+    String fileName = "appDataDetails.csv";
+    File exFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+    fileToEmail = new File (exFileDir, fileName);
+    try {
+        FileWriter fileWriter = new FileWriter(fileToEmail);
+        for (int i = 0; i < appDetails.size(); i++) {
+            fileWriter.append("\n").append(appDetails.get(i).appName).append("  |  ").append(appDetails.get(i).usageTime);
+        }
+        fileWriter.flush();
+        fileWriter.close();
+        Log.d("fileStuff", "File created successfully, located at: " + exFileDir);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+\end{lstlisting}
+
+but this work :D
+
+
+
 
 \subsubsection{Req-1.3}
 
 \subsubsection{Req-1.2}
 
-\subsubsection{Clean up}
+\subsubsection{Req 1.8 / Clean up}
+This was the last branch created during development, and focused on getting the app ready for human evaluation. This was done by replacing the placeholder text with actual text,
 
 \newpage
 
 \subsection{Testing}
 At the end of each prototype iteration, Incremental Integration Testing was carried out to ensure that the requirements were implemented as intended according to how the requirement was
 defined in the SRS. Incremental Integration Testing can be defined as testing components of a software system, one by one, adding components together until eventually the entire system
-is being tested. %cite 
-As the nature of development involved creating a component based on the requirements specified, and only continuing once the component had been created to match the specification, this
-method of testing felt most appropriate.
+is being tested. As the nature of development involved creating a component based on the requirements specified, and only continuing once the component had been created to match the specification, 
+this method of testing felt most appropriate. %if you can cite meaning of Incremental Integration Testing, add it. if not, so be it
 
 
 \begin{table}[H]
@@ -983,8 +1189,10 @@ the test case. A comprehensive list of the test cases and their results can be f
 \newpage
 \section{Evaluation \& Results Discussion}
 This section provides details on the evaluation of the project in relation to the hypothesis stated in section 1.3, which was: \newline\newline
+
 \noindent\textit{The combination of usage tracking and intervention methods rooted in psychology within the created mobile 
 application will help to address and reduce smartphone \& social media usage in young adults.} \newline\newline
+
 It also gives critical analysis and discussion of the results and findings from the evaluation, before drawing initial conclusions based on the
 project hypothesis, research statement and objectives. Given the aforementioned hypothesis, the intention of the evaluation was to find if:
 
@@ -993,17 +1201,18 @@ project hypothesis, research statement and objectives. Given the aforementioned 
 	\item If there was a decrease in usage, was the PRI actually a contributing factor to it?
 \end{enumerate}
 
-\noindent When evaluating if the PRI met the project's hypothesis, objective, and research statement, a mixed-method approach was used. (define mixed-method approach)
-The evaluation results are based off of the captured usage data from each participant, as well as the participant's own opinions of their experience using the 
-PRI via a survey given at the end of the evaluation period. While the obtained usage stats will be the main focus, the results from the survey help
-to provide additional context and insights that quantitative data cannot easily do.
+\noindent When evaluating if the PRI met the project's hypothesis, objective, and research statement, a mixed-method approach was used. This approach can be defined as utilising quantitative and
+qualitative methods in a study to obtain a deeper understanding of a phenomenon \autocite{RefWorks:RefID:171-johnson2007definition}. The evaluation results are based off of the captured usage 
+data from each participant, as well as the participant's own opinions of their experience using the PRI via a survey given at the end of the evaluation period. While the obtained usage stats 
+will be the main focus, the results from the survey help to provide additional context and insights that quantitative data cannot easily do.
 
 \subsection{PRI-Evaluation results}
 Participants who agreed to take part in the evaluation were given the PRI for a period of 3 weeks. Alongside this, they were given a Quick Start Guide that
 gave extensive details regarding using the app, as well as instructions on how to install the app and troubleshooting advice. Once they had set up the 
 application, they were also asked to send their usage immediately afterwards. This was to use said usage stats as a baseline to compare the usage for the next three weeks.
 While the data extracted initially shows the total usage which includes all apps used by a participant, the data was then further parsed by the author to analyse if
-there was a shift in usage of social media apps. \newline %tying back to the fact that the phone could be used for productivity use, not just social media (quote og source)
+there was a shift in usage of social media apps. As discovered in section 2.2 in the literature review, \textcite{RefWorks:RefID:35-dosselaar2017smartphone} noted that people use their
+smartphones for productivity reasons, and not just for social media. \newline
 
 \begin{figure}[H]
 \centering
@@ -1013,7 +1222,7 @@ there was a shift in usage of social media apps. \newline %tying back to the fac
 \end{figure}
 
 Figure \ref{fig:eval-data-with-3c-basline-outlier} shows the initial results from the evaluation, with the total usage from each participant. The x-axis shows the timeline of the evaluation period, from baseline to week 3. 
-The y-axis shows the usage in hours. Table \ref{tab:3c-usage-sample} shows a sample of the usage data captured, showing the name of the app package (unique identifier for android apps), the usage time
+The y-axis shows the usage in hours. Table \ref{tab:3c-usage-sample} shows a sample of the usage data captured, showing the name of the app package (a unique identifier for an android app), the usage time
 for the app, and the percentage of the usage time. 
 
 \begin{table}[H]
@@ -1028,8 +1237,8 @@ One UI Home & 01:21    & 3\%  \\ \bottomrule
 \label{tab:3c-usage-sample}
 \end{table}
 
-Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table \ref{tab:3c-usage-sample}, the the "android" 
-package, (referring to the home screen? quote a source) takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
+Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table \ref{tab:3c-usage-sample}, the "android" 
+package, which refers to the android home screen, takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
 made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart as Figure \ref{tab:3c-usage-sample}, but without the outlier data.
 
 \begin{figure}[H]
@@ -1133,6 +1342,30 @@ the project has aligned itself with in accordance to the definitions provided by
 
 \subsection{Social Issues}
 
+
+\subsubsection{Sustainable Development Goals}
+This project has aligned itself with Sustainable Development Goals 3 and 4. Below are the definitions provided by the United Nations:
+
+\begin{itemize}
+	\item Ensure healthy lives and promote well-being for all at all ages \autocite{un-sdg-3}.
+	\item Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all \autocite{un-sdg-4}.
+\end{itemize}
+
+Target 3.4 (Reduce Mortality From Non-communicable Diseases And Promote Mental Health) for SDG 3 states that by 2030, it should:\newline
+
+\textit{...reduce by one third premature mortality from non-communicable diseases through prevention and treatment and \textbf\textit{{promote 
+mental health and well-being}}} \autocite{globalgoals-goal3}.\newline
+
+The project's intention from the very beginning was to encourage healthier smartphone and social media usage. It attempts to achieve this by encouraging the user to partake in activities
+from outside their smartphone and social media and set goals for themselves that they can achieve away from their smartphone and social media. \newline
+
+In relation to goal 4, a key component of the app is making the user aware of their habits, and what they can do to lower their smartphone and social media usage should it be at a high level. This is
+also help through the use of the WDEP system introduced by Reality Therapy, whose system intrinsically includes learning opportunities through self-evaluation. This teaching aspect was also a 
+component that was intended to be included following the literature review. \newline
+
+Through the promotion of better smartphone habits, and through provided opportunities for the user to learn about their smartphone habits, the author believes the project correctly aligns with
+these two goals.
+
 \subsection{Ethical Issues}
 Arguably, the largest issue the project had to consider during its lifespan were Ethical Issues. As previously mentioned when discussing
 the project's primary objectives in section 1.2.2, for conduction the evaluation, human participants were required to carry out said
@@ -1156,7 +1389,7 @@ prior to conducting any part of it. All the details written about previously wer
 justification, and ethical approval was granted.
 
 \subsection{Professional Issues}
-
+Following the completion of this project, there are a few aspects that have been reflected on
 
 
 \newpage
@@ -1177,17 +1410,9 @@ justification, and ethical approval was granted.
 \newpage
 \section{Appendix}
 \subsection*{Appendix A - GitHub Repository}
-The GitHub repository containing the source code for the PRI, as well as all other documentation related to the Honours Project, is available via:\newline\newline
+The GitHub repository containing the source code for the PRI, as well as all other documentation related to the Honours Project, is available via:\newline
 
 \noindent https://github.com/LiamDee/honours-project-25-26
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection*{Appendix X - Requirements Analysis Interview Transcripts}
-Due to its large volume of content, a link containing each interview transcript has been provided instead, separated into different folders inside a GitHub repository.
-This can be found by following the link below:\newline\newline
-
-\noindent https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/interview-transcripts
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1222,9 +1447,23 @@ This can be found by following the link below:\newline\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection*{Appendix X - Requirements Analysis Interview Transcripts}
+Due to its large volume of content, a link containing each interview transcript has been provided instead, separated into different folders inside a GitHub repository.
+This can be found by following the link below:\newline
+
+\noindent https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/interview-transcripts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Appendix (x) - Requirements Analysis Interview Notes}
+Image scans of notes taken during the requirements analysis interviews can be found below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection*{Appendix D - Software Requirements Specification - Functional \& Non-Functional Requirements}
-The SRS document can be found within the project's GitHub repository, via: \newline\newline
-https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/requirements-specification
+The SRS document can be found within the project's GitHub repository, via: \newline
+
+\noindent https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/requirements-specification
 
 \begin{table}[H]
 \centering
@@ -1400,14 +1639,6 @@ https://github.com/LiamDee/honours-project-25-26/tree/main/documentation/require
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix E - Test Case results}
-\textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
-the GitHub repository (see Appendix A).\newline
-
-\textbf{Iteration Req-1.1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newpage
 \subsection*{Appendix Y - Flowchart Diagrams}
 \textbf{NOTE:} Flowchart diagrams were created in an "unregistered" version of StarUML, which applies a watermark to any diagrams exported. This explains the large "UNREGISTERED" watermark
@@ -1576,6 +1807,259 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\subsection*{Appendix E - Test Case results}
+\textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
+the GitHub repository (see Appendix A) and inside the Test Case document at:\newline
+
+\noindent https://github.com/LiamDee/honours-project-25-26/raw/refs/heads/main/documentation/test-case-document/Focusath\%20-\%20Test\%20Cases.docx \newline
+
+\noindent\textbf{Iteration Req-1.1}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Test ID                  & Action                                                                                                                                                          & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                          & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                               & Evidence      & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular} \\ \midrule
+\multicolumn{1}{l|}{1.1} & \begin{tabular}[c]{@{}l@{}}User installs app \\ for the first time\end{tabular}                                                                                 & \begin{tabular}[c]{@{}l@{}}User is taken through \\ the onboarding process\end{tabular}                                              & \begin{tabular}[c]{@{}l@{}}User is taken through \\ the onboarding process\end{tabular}                                                 & Req\_1.1.webm &                                                                                 \\
+\multicolumn{1}{l|}{1.2} & \begin{tabular}[c]{@{}l@{}}User closes the app \\ midway through the \\ onboarding process\end{tabular}                                                         & \begin{tabular}[c]{@{}l@{}}User is taken back to the \\ beginning of the onboarding \\ process after re-opening the app\end{tabular} & \begin{tabular}[c]{@{}l@{}}User is taken to their current \\ section of the onboarding \\ process after re-opening the app\end{tabular} & Req\_1.2.webm &                                                                                 \\
+\multicolumn{1}{l|}{1.3} & \begin{tabular}[c]{@{}l@{}}User completes the\\ onboarding process by\\ pressing the “Finish” \\ button at the \\ “Enable Notifications” \\ screen\end{tabular} & \begin{tabular}[c]{@{}l@{}}User is taken to the main \\ screen of the application\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}User is taken to the main \\ screen of the application\end{tabular}                                          & Req\_1.3.webm &                                                                                 \\
+\multicolumn{1}{l|}{1.4} & \begin{tabular}[c]{@{}l@{}}User closes the app after \\ completing the onboarding \\ process\end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}User is taken to the main \\ screen after re-opening the app\end{tabular}                                 & \begin{tabular}[c]{@{}l@{}}User is taken to the main \\ screen after re-opening the app\end{tabular}                                    & Req\_1.4.webm &                                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.1}
+\label{tab:iteration-req-1_1}
+\end{table}
+
+\noindent\textbf{Iteration Req-1.2}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Test ID                  & Action                                                                                                                                                                     & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                                                                               & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                                                                                & Evidence      & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular} \\ \midrule
+\multicolumn{1}{l|}{2.1} & \begin{tabular}[c]{@{}l@{}}User clicks on \\ “previous week” \\ button while no \\ data for the previous \\ week exists\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}A dialog pops up \\ explaining to the user \\ that no data for the \\ previous week currently \\ exists, and that they \\ should check back later\end{tabular} & \begin{tabular}[c]{@{}l@{}}A dialog pops up \\ explaining to the user \\ that no data for the\\ previous week currently \\ exists, and that they \\ should check back later\end{tabular} & Req\_2.1.webm &                                                                                 \\
+\multicolumn{1}{l|}{2.2} & \begin{tabular}[c]{@{}l@{}}User clicks on \\ “previous week” \\ button while data \\ does exist for the \\ previous week\end{tabular}                                      & \begin{tabular}[c]{@{}l@{}}User is shown their usage \\ from the past week\end{tabular}                                                                                                   & \begin{tabular}[c]{@{}l@{}}User is shown their \\ usage from the past week\end{tabular}                                                                                                  & Req\_2.2.png  &                                                                                 \\
+\multicolumn{1}{l|}{2.3} & \begin{tabular}[c]{@{}l@{}}User clicks on the \\ “current week” \\ button while on the \\ previous week screen \\ to view their usage for \\ the current week\end{tabular} & \begin{tabular}[c]{@{}l@{}}User is taken back to the \\ main screen of the app \\ that shows their usage for \\ the current week\end{tabular}                                             & \begin{tabular}[c]{@{}l@{}}User is taken back to \\ the main screen of the \\ app that shows their \\ usage for the current week\end{tabular}                                            & Req\_2.3.webm &                                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.2}
+\label{tab:iteration-req-1_2}
+\end{table}
+
+\noindent\textbf{Iteration Req-1.3}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|lllll@{}}
+\toprule
+Test ID & Action                                                                                                                          & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                                         & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                                           & Evidence      & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular} \\ \midrule
+3.1     & \begin{tabular}[c]{@{}l@{}}App finds that usage for \\ the current week exceeds \\ usage from the last week\end{tabular}        & \begin{tabular}[c]{@{}l@{}}Begin user journey \\ guiding them through \\ to reducing their app usage\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}Begin user journey \\ guiding them through \\ to reducing their app usage\end{tabular}                                   & Req\_3.1.webm &                                                                                 \\
+3.2     & \begin{tabular}[c]{@{}l@{}}App finds that usage for the \\ current week doesn’t exceed \\ usage from the last week\end{tabular} & \begin{tabular}[c]{@{}l@{}}Display a screen \\ praising user for their \\ lowered usage, alongside \\ their current goal\end{tabular}               & \begin{tabular}[c]{@{}l@{}}Display a screen \\ praising user for their \\ lowered usage, alongside \\ their current goal\end{tabular}               & Req\_3.2.webm &                                                                                 \\
+3.3     & \begin{tabular}[c]{@{}l@{}}User clicks “yes” button to \\ redefine goal when asked\end{tabular}                                 & \begin{tabular}[c]{@{}l@{}}User is taken to the \\ goal entry screen\end{tabular}                                                                   & \begin{tabular}[c]{@{}l@{}}User is taken to the \\ goal entry screen\end{tabular}                                                                   & Req\_3.3.webm &                                                                                 \\
+3.4     & \begin{tabular}[c]{@{}l@{}}User clicks “no” button to \\ skip redefining goal when asked\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}User is taken to the self-\\ evaluation screen, skipping the\\  goal entry screen\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}User is taken to the self-\\ evaluation screen, skipping the\\  goal entry screen\end{tabular}                           & Req\_3.4.webm &                                                                                 \\
+3.5     & \begin{tabular}[c]{@{}l@{}}Provide activity suggestions \\ to user when on the activity \\ suggestions screen\end{tabular}      & \begin{tabular}[c]{@{}l@{}}User is shown 3 of their provided \\ activities, alongside 2 pre-existing \\ activities provided by the app\end{tabular} & \begin{tabular}[c]{@{}l@{}}User is shown 3 of their provided \\ activities, alongside 2 pre-existing \\ activities provided by the app\end{tabular} & Req\_3.5.webm &                                                                                 \\
+3.6     & \begin{tabular}[c]{@{}l@{}}Check if current goal is \\ identical to new goal – \\ current goal is identical\end{tabular}        & \begin{tabular}[c]{@{}l@{}}Show an error message telling \\ the user their goal cannot be \\ identical\end{tabular}                                 & \begin{tabular}[c]{@{}l@{}}Show an error message telling \\ the user their goal cannot be \\ identical\end{tabular}                                 & Req\_3.6.webm &                                                                                 \\
+3.7     & \begin{tabular}[c]{@{}l@{}}Check if current goal is \\ identical to new goal – \\ current goal isn’t identical\end{tabular}     & \begin{tabular}[c]{@{}l@{}}Save new goal as current goal, \\ then take user to the self-evaluation \\ screen to continue user journey\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Save new goal as current goal, \\ then take user to the self-evaluation \\ screen to continue user journey\end{tabular}  & Req\_3.7.webm &                                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.3}
+\label{tab:iteration-req-1_3}
+\end{table}
+
+\noindent\textbf{Iteration Req-1.4}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|lllll@{}}
+\toprule
+Test ID & Action                                                                                         & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                      & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                           & Evidence      & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular} \\ \midrule
+4.1     & \begin{tabular}[c]{@{}l@{}}App checks if new goal \\ is identical to current goal\end{tabular} & \begin{tabular}[c]{@{}l@{}}Show an error message \\ telling the user their goal \\ cannot be identical\end{tabular}              & \begin{tabular}[c]{@{}l@{}}Show an error message \\ telling the user their goal \\ cannot be identical\end{tabular} & Req-4.1.png   &                                                                                 \\
+4.2     & \begin{tabular}[c]{@{}l@{}}App checks if new goal \\ exceeds character limit\end{tabular}      & \begin{tabular}[c]{@{}l@{}}Show an error message \\ telling the user that their \\ goal exceeds the character limit\end{tabular} & \begin{tabular}[c]{@{}l@{}}User is unable to input \\ more characters past the limit\end{tabular}                   & Req\_4.2.webm &                                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.4}
+\label{tab:iteration-req-1_4}
+\end{table}
+
+\noindent\textbf{Iteration Req-1.5 / 1.7}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|lllll@{}}
+\toprule
+Test ID & Action                                                                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                                  & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                                    & Evidence        & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular}                                                            \\ \midrule
+5-7.1   & \begin{tabular}[c]{@{}l@{}}App checks if user has \\ finished onboarding process – \\ user hasn’t finished onboarding process\end{tabular}                                    & \begin{tabular}[c]{@{}l@{}}User is taken through the \\ onboarding process for the\\ app\end{tabular}                                        & \begin{tabular}[c]{@{}l@{}}User is taken through the \\ onboarding process for the\\ app\end{tabular}                                        & Req\_5-7.1.png  & \begin{tabular}[c]{@{}l@{}}workerSentMain is used to \\ determine if the onboarding \\ process has completed\end{tabular}                  \\
+5-7.2   & \begin{tabular}[c]{@{}l@{}}App checks if user has finished \\ onboarding process – user has finished \\ onboarding process\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}User is taken to main \\ screen of the app\end{tabular}                                                           & \begin{tabular}[c]{@{}l@{}}User is taken to main \\ screen of the app\end{tabular}                                                           & Req\_5-7.2.png  & \begin{tabular}[c]{@{}l@{}}workerSentMain is used to \\ determine if the onboarding \\ process has completed\end{tabular}                  \\
+5-7.3   & \begin{tabular}[c]{@{}l@{}}When asked to define a goal \\ for the first time, user attempts \\ to exceed character limit\end{tabular}                                         & \begin{tabular}[c]{@{}l@{}}Send error message to user \\ explaining that the goal cannot \\ exceed the character limit\end{tabular}          & \begin{tabular}[c]{@{}l@{}}Send error message to user \\ explaining that the goal cannot \\ exceed the character limit\end{tabular}          & Req\_5-7.3.webm &                                                                                                                                            \\
+5-7.4   & \begin{tabular}[c]{@{}l@{}}User clicks submit button \\ when inputting goal\end{tabular}                                                                                      & \begin{tabular}[c]{@{}l@{}}App saves inputted goal \\ as the current goal\end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}App saves inputted goal \\ as the current goal\end{tabular}                                                       & Req\_5-7.4.webm &                                                                                                                                            \\
+5-7.5   & \begin{tabular}[c]{@{}l@{}}User clicks submit button \\ when inputting their set of activities\end{tabular}                                                                   & \begin{tabular}[c]{@{}l@{}}App saves inputted activities \\ as user’s activities\end{tabular}                                                & \begin{tabular}[c]{@{}l@{}}App saves inputted activities \\ as user’s activities\end{tabular}                                                & Req\_5-7.5.webm &                                                                                                                                            \\
+5-7.6   & \begin{tabular}[c]{@{}l@{}}App checks if usage tracking \\ is enabled – usage tracking isn’t \\ enabled when user attempts to \\ proceed with onboarding process\end{tabular} & \begin{tabular}[c]{@{}l@{}}App doesn’t continue with \\ onboarding process until usage \\ tracking is enabled\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}App doesn’t continue with \\ onboarding process until usage \\ tracking is enabled\end{tabular}                   & Req\_5-7.6.png  &                                                                                                                                            \\
+5-7.7   & \begin{tabular}[c]{@{}l@{}}If notifications are enabled, \\ send user a notification after a \\ week has passed\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}User is sent a notification \\ notifying them that their \\ weekly usage update is available to view\end{tabular} & \begin{tabular}[c]{@{}l@{}}User is sent a notification \\ notifying them that their \\ weekly usage update is available to view\end{tabular} & Req\_5-7.7.png  & \begin{tabular}[c]{@{}l@{}}Assumes user doesn’t turn \\ off notifications in-between\\  the time taken to send a notification\end{tabular} \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.5 / 1.7}
+\label{tab:iteration-req-1_5_7}
+\end{table}
+
+\noindent\textbf{Iteration Req-1.6}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|lllll@{}}
+\toprule
+Test ID & Action                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                                       & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                                         & Evidence      & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular}           \\ \midrule
+6.1     & \begin{tabular}[c]{@{}l@{}}User clicks button to send \\ email containing app usage \\ stats for analysis\end{tabular} & \begin{tabular}[c]{@{}l@{}}App pre-populates email \\ containing a title, the \\ receiver, and a .csv file \\ containing usage stats\end{tabular} & \begin{tabular}[c]{@{}l@{}}App pre-populates email \\ containing a title, the \\ receiver, and a .csv file \\ containing usage stats\end{tabular} & Req\_6.1.webm & \begin{tabular}[c]{@{}l@{}}Assumes the user has an \\ Email client installed\end{tabular} \\
+6.2     & \begin{tabular}[c]{@{}l@{}}User clicks button to send \\ email containing app usage \\ stats for analysis\end{tabular} & \begin{tabular}[c]{@{}l@{}}App processes current usage \\ stats into a .csv file when \\ “send usage stats” button is clicked\end{tabular}        & \begin{tabular}[c]{@{}l@{}}App already processes \\ data into a .csv when the app is opened\end{tabular}                                          & Req-6.2.png   & \begin{tabular}[c]{@{}l@{}}Assumes app usage data \\ file already exists\end{tabular}   	 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.6}
+\label{tab:iteration-req-1_6}
+\end{table}
+
+\noindent\textbf{Iteration Req-1.8}
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l|lllll@{}}
+\toprule
+Test ID & Action                                                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                                & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                                  & Evidence      & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular} \\ \midrule
+8.1     & \begin{tabular}[c]{@{}l@{}}User clicks submit button \\ while having new activities \\ that are identical to another \\ inputted activity\end{tabular} & \begin{tabular}[c]{@{}l@{}}Send error dialog to user \\ explaining that their \\ activities must be unique \\ from each other\end{tabular} & \begin{tabular}[c]{@{}l@{}}Send error dialog to user \\ explaining that their \\ activities must be unique \\ from each other\end{tabular} & Req-8.1.png   &                                                                                 \\
+8.2     & \begin{tabular}[c]{@{}l@{}}User attempts to enter an \\ activity that’s over the \\ character limit\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}Send error dialog to user \\ explaining that each \\ activity mu\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}User is unable to enter more \\ than 30 characters into the \\ input boxes\end{tabular}                         & Req\_8.2.webm &                                                                                 \\ 
+8.3     & \begin{tabular}[c]{@{}l@{}}User clicks submit and \\ passes input validation checks\end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}App overwrites current \\ saved activities with \\ newly inputted activities\end{tabular}                       & \begin{tabular}[c]{@{}l@{}}App overwrites current \\ saved activities with \\ newly inputted activities\end{tabular}                       & Req\_8.3.webm &                                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Requirement 1.8}
+\label{tab:iteration-req-1_8}
+\end{table}
+
+\noindent\textbf{Miscellaneous Testing}
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Test ID                  & Action                                                                                                              & \begin{tabular}[c]{@{}l@{}}Expected \\ Outcome\end{tabular}                                                                                                                         & \begin{tabular}[c]{@{}l@{}}Actual \\ Outcome\end{tabular}                                                                                                                           & Evidence                                                                                         & \begin{tabular}[c]{@{}l@{}}Assumptions / \\ Context (If necessary)\end{tabular} \\ \midrule
+\multicolumn{1}{l|}{M.1} & \begin{tabular}[c]{@{}l@{}}User clicks information \\ icon on the main screen\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}A dialog pops up, asking the user to\\ refer to the quick start guide or to\\ email the developer of the app if they \\ need any assistance\end{tabular} & \begin{tabular}[c]{@{}l@{}}A dialog pops up, asking the user to\\ refer to the quick start guide or to\\ email the developer of the app if they \\ need any assistance\end{tabular} & Misc-Req-M.1.png                                                                                 &                                                                                 \\
+\multicolumn{1}{l|}{M.2} & \begin{tabular}[c]{@{}l@{}}On startup, app compares \\ saved usage time with the\\  current usage time\end{tabular} & \begin{tabular}[c]{@{}l@{}}The usage increase / decrease text \\ updates accordingly to indicate \\ usage increase or decrease\end{tabular}                                         & \begin{tabular}[c]{@{}l@{}}The usage increase / decrease text \\ updates accordingly to indicate \\ usage increase or decrease\end{tabular}                                         & \begin{tabular}[c]{@{}l@{}}Misc-Req-M.2-LogCat.png\\ \\ Misc-Req-M.2-MainScreen.png\end{tabular} &                                                                                 \\ \bottomrule
+\end{tabular}%
+}
+\caption[]{Test cases for Miscellaneous Functionality}
+\label{tab:iteration-misc}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection*{Appendix F - Post-Evaluation survey results}
+\underline{\textbf{QS1}}\newline\newline
+\noindent Q1: The app was built to be informative to some degree; on a 1 to 5 scale, how much did you find yourself informed in some way 
+after using the app? This could be on your overall usage, usage patterns, etc...
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q1.png}
+	\captionof{figure}[]{\textit{Question 1 from Question Set 1}}
+	\label{fig:qs1-q1}
+\end{figure}
+
+\noindent Q2: The application's main aspect was incorporating the use of concepts from Reality Therapy, namely the "Wants, Direction, Evaluation, 
+Plan" system. On a 1 to 5 scale, how much do you believe the app successfully integrated this system?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q2.png}
+	\captionof{figure}[]{\textit{Question 2 from Question Set 1}}
+	\label{fig:qs1-q2}
+\end{figure}
+
+\noindent Q3: In your personal opinion, do you believe the app was a major contributing factor to a reduction (if there was one) in your smartphone and social media usage?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q3.png}
+	\captionof{figure}[]{\textit{Question 3 from Question Set 1}}
+	\label{fig:qs1-q3}
+\end{figure}
+
+\noindent Q3-B: As a follow up, why do you think so?  [Optional]
+\begin{itemize}
+	\item It works pretty well! I feel as if seeing your values and hobbies increases motivation to not chase social media and other applications 
+	\item At this time of year as a student based outside the city of my university I was regularly on my device to check on my classes and assignments 
+	\item Knowing my usage stats made me much more determined to lower it 
+\end{itemize}
+
+\noindent Q4: In your personal opinion, has the application helped you in some way in achieveing the goal(s) you set out in the application?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q4.png}
+	\captionof{figure}[]{\textit{Question 4 from Question Set 1}}
+	\label{fig:qs1-q4}
+\end{figure}
+
+\noindent\underline{\textbf{QS2}}\newline\newline
+\noindent Q1: Was the application easy to use?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q1.png}
+	\captionof{figure}[]{\textit{Question 1 from Question Set 2}}
+	\label{fig:qs2-q1}
+\end{figure}
+
+\noindent Q2: Did you encounter any issues when using the app?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q2.png}
+	\captionof{figure}[]{\textit{Question 2 from Question Set 2}}
+	\label{fig:qs2-q2}
+\end{figure}
+
+\noindent Q2-B: As a follow up, what kind of issues did you encounter, if any? [Optional] 
+\begin{itemize}
+	\item none that I am aware of
+	\item I find that the email prompt would be better and easier to understand is it was titled "report" or something similar
+\end{itemize}
+
+\noindent Q3: How would you rate the user interface / user experience in its current state? (1 being poor, 5 being excellent)
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q3.png}
+	\captionof{figure}[]{\textit{Question 3 from Question Set 2}}
+	\label{fig:qs2-q3}
+\end{figure}
+
+\noindent Q4: Outside of the evaluation period, would you find yourself using the app in its current state long term, or even recommending it to a friend?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q4.png}
+	\captionof{figure}[]{\textit{Question 4 from Question Set 2}}
+	\label{fig:qs2-q4}
+\end{figure}
+
+\noindent Q5: If you have used similar apps to this one, would you call it an overall better experience?
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q5.png}
+	\captionof{figure}[]{\textit{Question 5 from Question Set 2}}
+	\label{fig:qs2-q5}
+\end{figure}
+
+\noindent Q5-B: As a follow up, what do other apps do better than this one that this app could take note of?  [Optional]
+\begin{itemize}
+	\item an app called Screen Zen which gives more options to limit screen usage. 
+\end{itemize}
+
+\noindent Q6: In general, what could be done to improve the app? It can be something small or something significant. [Optional]
+\begin{itemize}
+	\item if the notification frequency was a daily event instead of weekly that could provide more interaction an
+	\item Stats on how my most used apps usage have changed 
+\end{itemize}
+
+\noindent Q7: Do you have any closing thoughts regarding the totality of your experience or regarding this genre of apps as a whole? [Optional]
+\begin{itemize}
+	\item I believe this app is a step in the right direction on limiting phone and social media addiction
+\end{itemize}
 
 \end{document}

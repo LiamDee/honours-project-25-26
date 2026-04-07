@@ -732,6 +732,42 @@
       \verb 10.5281/zenodo.15358152
       \endverb
     \endentry
+    \entry{globalgoals-goal3}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7bd6e4c591a4982ad52f849a213469d4}{%
+           family={Goals},
+           familyi={G\bibinitperiod},
+           given={The\bibnamedelima Global},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{fullhash}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{fullhashraw}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{bibnamehash}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{authorbibnamehash}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{authornamehash}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{authorfullhash}{7bd6e4c591a4982ad52f849a213469d4}
+      \strng{authorfullhashraw}{7bd6e4c591a4982ad52f849a213469d4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Global Goals}
+      \field{title}{Goal 3: Good health and well-being - The Global Goals}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://globalgoals.org/goals/3-good-health-and-well-being/
+      \endverb
+      \verb{url}
+      \verb https://globalgoals.org/goals/3-good-health-and-well-being/
+      \endverb
+    \endentry
     \entry{RefWorks:RefID:140-hofmann2012efficacy}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=a38d1c025c34e2c18ffdf3df388549d1}{%
@@ -870,6 +906,49 @@
       \field{title}{Social media addiction: Its impact, mediation, and intervention}
       \field{volume}{13}
       \field{year}{2019}
+    \endentry
+    \entry{RefWorks:RefID:171-johnson2007definition}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=107e88a58d33903ffe04fd8b9287dd88}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={R.\bibnamedelimi Burke},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acbb4a2129202adf39481529f85eb39d}{%
+           family={Onwuegbuzie},
+           familyi={O\bibinitperiod},
+           given={Anthony\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69950ce0d2f4138b17549f6c6a7728e3}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={Lisa\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{fullhash}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{fullhashraw}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{bibnamehash}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{authorbibnamehash}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{authornamehash}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{authorfullhash}{51cc6c2bde4611c18c44eda4494119fe}
+      \strng{authorfullhashraw}{51cc6c2bde4611c18c44eda4494119fe}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of mixed methods research}
+      \field{number}{2}
+      \field{title}{Toward a definition of mixed methods research}
+      \field{volume}{1}
+      \field{year}{2007}
+      \field{pages}{112\bibrangedash 133}
+      \range{pages}{22}
     \endentry
     \entry{RefWorks:RefID:139-kaczkurkin2015cognitivebehavioral}{article}{}{}
       \name{author}{2}{}{%
@@ -1162,6 +1241,82 @@
       \field{labeltitlesource}{title}
       \field{title}{From Wireframes to Interfaces: Developing a Practical Framework for {UI}/{UX} Design}
       \field{year}{2025}
+    \endentry
+    \entry{un-sdg-3}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d661e9167bd3a268ea03a3ee152926c}{%
+           family={Nations},
+           familyi={N\bibinitperiod},
+           given={United},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{fullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{fullhashraw}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{bibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorbibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authornamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorfullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorfullhashraw}{2d661e9167bd3a268ea03a3ee152926c}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{United Nations}
+      \field{title}{Goal 3 | Department of Economic and Social Affairs}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://sdgs.un.org/goals/goal3
+      \endverb
+      \verb{url}
+      \verb https://sdgs.un.org/goals/goal3
+      \endverb
+    \endentry
+    \entry{un-sdg-4}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d661e9167bd3a268ea03a3ee152926c}{%
+           family={Nations},
+           familyi={N\bibinitperiod},
+           given={United},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{fullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{fullhashraw}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{bibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorbibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authornamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorfullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorfullhashraw}{2d661e9167bd3a268ea03a3ee152926c}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{United Nations}
+      \field{title}{Goal 4 | Department of Economic and Social Affairs}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://sdgs.un.org/goals/goal4
+      \endverb
+      \verb{url}
+      \verb https://sdgs.un.org/goals/goal4
+      \endverb
     \endentry
     \entry{RefWorks:RefID:75-oliveira2021effectiveness}{article}{}{}
       \name{author}{6}{}{%
@@ -2032,6 +2187,38 @@
       \field{year}{2016}
       \field{pages}{173\bibrangedash 200}
       \range{pages}{28}
+    \endentry
+    \entry{RefWorks:RefID:169-xinogalos2013flowchartbased}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=90b7159b31e8ad25877c807b1fec7852}{%
+           family={Xinogalos},
+           familyi={X\bibinitperiod},
+           given={Stelios},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{fullhash}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{fullhashraw}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{bibnamehash}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{authorbibnamehash}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{authornamehash}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{authorfullhash}{90b7159b31e8ad25877c807b1fec7852}
+      \strng{authorfullhashraw}{90b7159b31e8ad25877c807b1fec7852}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{2013} {IEEE} Global Engineering Education Conference ({EDUCON})}
+      \field{title}{Using flowchart-based programming environments for simplifying programming and software engineering processes}
+      \field{year}{2013}
+      \field{pages}{1313\bibrangedash 1322}
+      \range{pages}{10}
     \endentry
     \entry{RefWorks:RefID:48-yao2017combined}{article}{}{}
       \name{author}{9}{}{%
