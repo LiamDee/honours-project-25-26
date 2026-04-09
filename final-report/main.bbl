@@ -141,7 +141,7 @@
       \verb 10.47001/IRJIET/2024.812020
       \endverb
     \endentry
-    \entry{androiddevelopment-appfundamentals}{misc}{}{}
+    \entry{androiddevelopment-verification}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
            family={Android-Developers},
@@ -162,6 +162,41 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Android Developers}
+      \field{title}{Android developer verification | Android Developers}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://developer.android.com/developer-verification
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/developer-verification
+      \endverb
+    \endentry
+    \entry{androiddevelopment-appfundamentals}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
+           family={Android-Developers},
+           familyi={A\bibinithyphendelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{40e46151715776d38056588ec31fbca0}
+      \strng{fullhash}{40e46151715776d38056588ec31fbca0}
+      \strng{fullhashraw}{40e46151715776d38056588ec31fbca0}
+      \strng{bibnamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorbibnamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authornamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorfullhash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorfullhashraw}{40e46151715776d38056588ec31fbca0}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -193,10 +228,10 @@
       \strng{authornamehash}{40e46151715776d38056588ec31fbca0}
       \strng{authorfullhash}{40e46151715776d38056588ec31fbca0}
       \strng{authorfullhashraw}{40e46151715776d38056588ec31fbca0}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{2}
+      \field{extradate}{3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -228,10 +263,10 @@
       \strng{authornamehash}{40e46151715776d38056588ec31fbca0}
       \strng{authorfullhash}{40e46151715776d38056588ec31fbca0}
       \strng{authorfullhashraw}{40e46151715776d38056588ec31fbca0}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{3}
+      \field{extradate}{4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -244,6 +279,39 @@
       \endverb
       \verb{url}
       \verb https://developer.android.com/reference/android/app/usage/UsageStatsManager
+      \endverb
+    \endentry
+    \entry{androiddevelopment-blog}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8a7f4996f8df1ac024e33d6000a5afb7}{%
+           family={Android-Developers-Blog},
+           familyi={A\bibinithyphendelim D\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{fullhash}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{fullhashraw}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{bibnamehash}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{authorbibnamehash}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{authornamehash}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{authorfullhash}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \strng{authorfullhashraw}{8a7f4996f8df1ac024e33d6000a5afb7}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Android Developers Blog}
+      \field{title}{Android developer verification: Balancing openness and choice with safety}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://android-developers.googleblog.com/2026/03/android-developer-verification.html
+      \endverb
+      \verb{url}
+      \verb https://android-developers.googleblog.com/2026/03/android-developer-verification.html
       \endverb
     \endentry
     \entry{applesupport-ifanappasks}{misc}{}{}

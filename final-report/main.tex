@@ -376,7 +376,7 @@ used, and discussion and justification on the design choices, technological comp
 the results from testing the application for bugs. \newline
 
 
-\noindent\textbf{Chapter 4 - Evaluation and Discussion - }
+\noindent\textbf{Chapter 4 - Evaluation and Results Discussion - }
 This chapter presents a in-depth discussion of the results of the evaluation, including the findings themselves, reasoning on the 
 findings, and initial conclusions from the findings. \newline
 
@@ -1701,13 +1701,67 @@ gap of intervention apps that deal with the aforementioned issue was found. The 
 A literature review was carried out to investigate existing applications that use psychological intervention methods when addressing related issues, how SA and SMA are contextualized
 within existing apps, and the issues they raise, existing psychological frameworks that can be integrated into a mobile application, and methods to track a user's app usage. \newline
 
-Following the findings from the literature review, the project 
+Following the findings from the literature review, an effort to create a mobile application that used usage tracking technologies and psychological intervention methods
+while following a "develop and test" approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid 
+methodology, an analysis of the requirements necessary for the app to function as intended was undertaken, as well as picking a psychological intervention and usage tracking method, those being
+Reality Therapy and using the android.app.usage package, respectively. Flowchart design diagrams showing the app flow for each requirement and UI wireframes that depict 
+how each app screen should look were then created. After this, the process of coding the app based on the information created and obtained began, with close attention paid
+to the prior information. After each iteration, testing was performed to ensure the app worked without issue. Finally, an evaluation with multiple participants took place where
+they used the app over a three-week span and sent their usage data for further analysis at one week intervals, before answering a survey at the end of the three-week period.
 
 \subsection{Results}
+To reiterate what was stated in section 4, based off of the hypothesis, the intention of the evaluation was to find out if:
 
-\subsection{Project Critique}
+\begin{enumerate}
+	\item The mobile phone usage from a participant decreased when comparing their usage from the start of the evaluation to the end.
+	\item If there was a decrease in usage, was the PRI actually a contributing factor to it?
+\end{enumerate}
+
+\subsubsection{Was there a decrease in usage?}
+The quantitative data gathered and presented in section 4.1 reveal that only two of the four participants usage decreased overall when comparing their usage at the start to 
+the end of the evaluation period, with this result staying consistent when only social media apps are included in the dataset. Therefore, this first point is proven to be
+plausible, or somewhat true.
+
+\subsubsection{Was the PRI a factor in a reduction in usage?}
+The qualitative data gathered and presented in section 4.2 reveal that participants who experienced a usage drop at some point during the evaluation period positively 
+attributed the app to be a significant factor in, and carry the opinion that the app helped them achieve their set goal. Therefore, this second point is proven to be true 
+beyond a reasonable doubt.
+
+\subsubsection{Conclusion}
+To conclude, the PRI and project as a whole successfully satisfies the research statement and project hypothesis, however, does so to an extent. The project does indeed
+create a mobile app that uses psychological intervention methods with usage tracking technologies to address the issue of SA and SMA, and has also shown to reduce the 
+smartphone usage in young adults, however, from the results of the evaluation, the PRI only reduced the smartphone and social media usage in two of the four 
+participants, though this is juxtaposed from the opinions from the participants themselves, who believe that the app played a significant role in reducing their smartphone 
+and social media usage.
+
+\subsection{Limitations \& Project Critique}
+Despite proving the research statement and project hypothesis to be true, the project is limited in some regards. A limitation of the project was the use of only one 
+psychological intervention method. The project only uses a single concept from a single psychological framework, that being the WDEP system from Reality Therapy. The 
+decision to use a single intervention method from a single framework was made to limit scope creep and to keep development as simple as possible. Within the intro and
+literature review, CBT is referenced as a psychological framework that has seen use and success in apps similar to the one made for the project, so, integrating
+frameworks such as ones seen in CBT would be an area of improvement. \newline
+
+Although not a issue for the current iteration of the project, from September of 2026 onwards, apps to be installed on Android devices in certain regions will have to 
+be from verified Android developers \autocite{androiddevelopment-verification}. This means that future research that involves evaluating an app on a real device with human 
+participants will require a researcher to be an Android verified developer, or go through the process of side-loading the app \autocite{androiddevelopment-blog}. \newline
+
+The project was limited during the evaluation phase, due to the number of participants involved. While the intention was to gather ten participants for the evaluation, only 
+four participants were gathered. The reasoning behind this lacklustre turnout may be due to poor recruiting efforts when it came to gathering participants, as recruiting 
+efforts were limited to a small group of people. Should a project of this calibre be attempted again, promoting the evaluation to a wider group of individuals, perhaps in 
+physical areas such as university campuses may prove to be an effective method of gathering participants.
 
 \subsection{Further Work}
+When it comes to other work this project could potentially influence, investigating what psychological framework between CBT, RT, or another psychological framework 
+in an app of this nature, and which one proves to be more beneficial from a quantitative and qualitative standpoint could an area that could use further coverage, and this 
+could influence further use of a framework, establishing it as a standard when addressing the issue of SA and SMA. \newline
+
+On the contrary, and as alluded to in the previous section, future work could benefit from integrating more than one psychological intervention method, such as CBT, and 
+its various methods mentioned in the literature review such as behavioural activation, cognitive restructuring, and problem solving. From a technical standpoint, using
+app restriction functionality with usage tracking alongside either, or both psychological frameworks could shed further light on this topic area.\newline
+
+Expanding the target audience to include other age groups such as adolescents or older individuals could prove beneficial when evaluating apps of this nature in future 
+studies, as it could provide deeper insights into the smartphone and social media usage habits of those groups.
+
 
 
 
