@@ -83,7 +83,7 @@
 	\degree \\[0.8 cm]
 
 	
-	\begin{minipage}{0.8\textwidth}
+	\begin{minipage}{1\textwidth}
 		\begin{flushleft} \large	
             \emph{Project Title: }
 			\thetitle \\ [0.2 cm]
@@ -135,9 +135,9 @@
 
 % COME BACK HERE BEFORE YOU SUBMIT
 % are appendices all updated and include the right info? do you need to include more?
-% are tables, code listings, and figures referenced in writing linked to the right item?
+% are tables, code snippets, and figures referenced in writing linked to the right item?
 % are the use of abbreviations and other such things consistent?
-% is the github repo public? - do this on the 6th?
+% is the github repo public?
 % is there any unnecessary info that can be removed?
 % has it been proofread?
 % have all sources been included?
@@ -151,7 +151,6 @@
 
 
 %TODO:
-% 3.1, 3.6
 % 4.3
 % all of 6
 % still need to (from interim report):
@@ -386,7 +385,7 @@ This chapter gives commentary on any Legal, Social, Ethical, and Professional th
 additional discussion provided towards the Sustainable Development Goals the project aligns with when discussing social issues. \newline
 
 
-\noindent\textbf{Chapter 6 - Conclusions, Project Critique, and Further Work - }
+\noindent\textbf{Chapter 6 - Conclusions and Further Work - }
 This chapter concludes the report by summarizing the project in it's entirety up to this point, before then presenting a final answer 
 to the project's hypothesis. It then continues by providing critical analysis of the project and it's limitations, and finally, discusses 
 what further work the project may lead in the future.
@@ -631,10 +630,10 @@ characteristics, and then a extensive look at the creation of the PRI, including
 and justification behind design choices, technologies used, and the features implemented. When necessary, this
 section will also reference the literature review.
 
-\subsection{Problem Discussion and Analysis (title pending)} % this section discusses the og problem and analyses the characteristics with relation to the lit review conclusions
-The aim of this project is 
-
 \subsection{Research Methodology}
+The aim of this project is to create a mobile application that helps to address the issues of SA and SMA in young adults by integrating concepts and methodologies from RT alongside usage 
+tracking technologies, then, with a group of users, test the application for a period of three weeks and assess whether the PRI meets the project objective and hypothesis.\newline
+
 The research methodology chosen for this project was a "develop and test" methodology. This methodology was appropriate for the objective as the 
 primary objective of this project as stated in section 1.2.2 is to: \newline
 
@@ -917,7 +916,7 @@ While creating these screens, it was also determined that some of the screens ca
 
 \newpage
 
-\subsection{Implementation}
+\subsection{Implementation} %change instances of code to snippets where necessary
 As noted previously in section 3.3, this part of the project, alongside the testing part of the project, made use of an iterative approach. At this stage, implementing the project would consist
 of using the information gathered for each requirement during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
 them according to the documentation. Implementing each requirement facilitated backend development via implementing the functionality for the requirement and frontend development via implementing
@@ -928,9 +927,9 @@ would prove troublesome attempting to implement some requirements before others 
 a goal has been implemented (Req-1.5)). Rather, requirements were implemented in an order of what would be feasible to implement at that point in development.
 
 \subsubsection{Proof-of-Concept Prototype(s)}
-Before beginning work on any of the requirements, a subfolder that would contain a basic prototype for ensuring the UsageStatsManager class can return the data necessary for the app to function 
-as intended and ensuring the app's notification system was created. This would serve as a blueprint from where the app would then be built upon. Backend development was the primary type of 
-development carried out at this point.
+Before beginning work on any of the requirements, a subfolder that would contain a basic prototype for ensuring the UsageStatsManager class discussed in section 2.4 of the literature review can 
+return the data necessary for the app to function as intended and ensuring the app's notification system was created. This would serve as a blueprint from where the app would then be built upon. 
+Backend development was the primary type of development carried out at this point.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={loadUsage() function}, label=lst:loadUsage]
 public void loadUsage() throws PackageManager.NameNotFoundException {
@@ -1028,7 +1027,8 @@ public class WorkerClass extends Worker {
  Code \ref{lst:periodicworkrequest} and \ref{lst:workerclass} shows the code and class used for sending notifications. Code \ref{lst:periodicworkrequest} defines a PeriodicWorkRequest variable
  that triggers the code in code \ref{lst:workerclass} every 5 seconds, 15 minutes or later from the last trigger, then, creates an OnClickListener that queues the PeriodicWorkRequest. Code 
  \ref{lst:workerclass} executes the doWork() method which calls sendNoti() function, this builds the notification to be sent to the user, before displaying it to the user. Seeing as the code in both 
- snippets were for ensuring functionality, both would be refined over the course of development. \newline
+ snippets were for ensuring functionality, both would be refined over the course of development. Note that the code \ref{lst:periodicworkrequest} would later be changed to trigger every 7 days, and
+ the current trigger time was in place for testing and debugging.\newline
 
  This prototype would also establish the class structure for the app, as can be seen in figure \ref{fig:class-structure} below. By the end of development, RecyclerViewAdapter would be the only class
  removed.
@@ -1040,8 +1040,10 @@ public class WorkerClass extends Worker {
 	\label{fig:class-structure}
 \end{figure}
 
-\subsubsection{Req-1.5 / 1.7}
-This branch focused on creating the onboarding process, the process the user goes through when opening the app for the first time. The code 
+\subsubsection{Req-1.5 / 1.7} %make sure to highlight stuff mentioned in requirements
+This branch focused on creating the onboarding process, the process the user goes through when opening the app for the first time, and expands on the groundwork established with the previous
+prototype. Development with regards to the SRS began with these requirements as this would establish the core functionality of the app, so building from this point onwards was thought to be the 
+easiest.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Checks if user has completed onboarding process}, label=lst:isOnboardingCompleteCheck]
 isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingComplete", false);
@@ -1065,15 +1067,16 @@ isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingCompl
 	}
 \end{lstlisting}
 
-Code \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, called within onStart()
+Code \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, and is called every time the user initialises the app. The code uses a
+"SharedPreference", an API used to store key-value data, even after the app is closed \autocite{androiddevelopment-sharedpref}. At the end of the onboarding process, the SharedPreference for the onboarding process is set to true, so when
+the app is opened, the skips the initial check, and then checks if the app has been granted access to usage statistics. This SharedPreference API was also used to store and retrieve the goal and 
+activities entered by a user.
 
-\begin{lstlisting}[language=Java, style=mystyle, caption={SharedPreference used when checking if onboarding process is complete}, label=lst:SharedPref]
-sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
-\end{lstlisting}
+% \begin{lstlisting}[language=Java, style=mystyle, caption={SharedPreference used when checking if onboarding process is complete}, label=lst:SharedPref]
+% sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
+% \end{lstlisting}
 
-
-
-\begin{lstlisting}[language=Java, style=mystyle, caption={Code used for swapping between screens (shortened for brevity)}, label=lst:screenCheckCode]
+\begin{lstlisting}[language=Java, style=mystyle, caption={Code used for swapping between screens}, label=lst:screenCheckCode]
 public void screenCheck() {
 	//TODO: move onboarding usage tracking code to here
 	if (screen_count == 0) {
@@ -1093,20 +1096,131 @@ public void screenCheck() {
 }
 \end{lstlisting}
 
-Code \ref{lst:screenCheckCode} shows an example of the code used for swapping between screens
+Code \ref{lst:screenCheckCode} shows an example of the code used for swapping between screens. A screen is linked to a corresponding number, and whenever, for example, a button is clicked, the code
+calls the method screenCheck(), then swaps to the corresponding screen. The code shown has been shortened, due to the function being particularly large, but the full function can be found in 
+Appendix I. \newline
+
+Initially, this method of swapping between screens was used when debugging the application, but this method of swapping between screens was used for the remainder of development for simplicity 
+purposes.\newline 
+
+A constraint for requirement 1.5 defined in the SRS (see Appendix F) stated that characters entered by the user should be restricted to a pre-determined amount. This is achieved in the XML file seen
+in listing \ref{lst:edittext} below where the structure for the goal entry screen is defined. XML files in android app development define the layout for a UI, and house contain components such as
+buttons, and text, referred to as widgets.  The parameter "android:maxLength" sets the max length that can be entered in an input box.
+
+\begin{lstlisting}[language=XML, style=mystyle, caption={XML code for the EditText widget}, label=lst:edittext]
+ <EditText
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:id="@+id/goalEntryField"
+	android:autofillHints="goalEntry"
+	android:maxLength="25"
+	android:gravity="center_horizontal"
+	android:inputType="textNoSuggestions|textVisiblePassword"
+	android:hint="Type in a goal"
+	android:ems="10">
+</EditText>
+\end{lstlisting}
 
 \subsubsection{Req-1.1}
-This branch focused on building the graph showing the user their app usage, similar to what was seen in figure \ref{fig:ui-wireframe-main-screen}.
+This branch focused on building the graph showing the user their app usage. Figuring out how to display the graph wasn't an issue, as this was already achieved in the prototype discussed in 
+section 3.6.1, so this branch was used to adapt the screen to match the UI wireframe shown in figure \ref{fig:ui-wireframe-main-screen}. \newline
+
+When displaying the graph in the UI, the app uses a widget called a ListView whose contents can be adapted to show what a developer wants. In this case, the contents of each item in the lists 
+consist of the icon of an app, the app name, the usage time measured in hours and minutes, and the usage percentage. All of the details are populated using the code seen in code 
+\ref{lst:loadUsage}.
+
+\begin{lstlisting}[language=XML, style=mystyle, caption={XML code used by the ListView widget for displaying code}, label=lst:appdetailswidget]
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<LinearLayout
+		android:layout_height="50dp"
+		android:scaleType="centerCrop"
+		android:id="@+id/appIcon"/>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="5sp"
+			android:layout_marginTop="15sp">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="AppName"
+				android:textSize="15sp"
+				android:textStyle="bold"
+				android:id="@+id/app_name_text"
+				android:gravity="center_horizontal"/>
+			<View
+				android:layout_width="30dp"
+				android:layout_height="1dp"
+				android:layout_marginTop="10sp"
+				android:layout_marginStart="10sp"
+				android:background="@android:color/darker_gray"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="0h"
+				android:textSize="15sp"
+				android:textStyle="bold"
+				android:layout_marginStart="10sp"
+				android:id="@+id/usage_time_text"
+				android:gravity="center_horizontal"/>
+			<View
+				android:layout_width="30dp"
+				android:layout_height="1dp"
+				android:layout_marginTop="10sp"
+				android:layout_marginStart="10sp"
+				android:background="@android:color/darker_gray"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="50\%"
+				android:textAlignment="textEnd"
+				android:textSize="15sp"
+				android:textStyle="bold"
+				android:layout_marginStart="10sp"
+				android:id="@+id/usage_percent_text" />
+	</LinearLayout>
+</LinearLayout>
+\end{lstlisting}
+
+Code \ref{lst:appdetailswidget} shows the XML code the ListView widget uses when displaying the usage statistics code. It consists of TextView widgets that are used as placeholders that are then
+filled in by the actual values. Note that the code has been refined for the final version to fit smaller screen sizes, but the general structure remains the same.
 
 \subsubsection{Req-1.4}
-This branch focused on adding functionality for the user to change their goal via the settings screen
+This branch focused on adding functionality for the user to change their goal via the settings screen. Because the goal entry screen was already created previously for requirement 1.5/1.7, the XML
+code was simply recycled and refined slightly, therefore most of the coding consisted of creating the UI for the settings screen, and adding input validation for the goal re-entry screen.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Code for goal re-entry screen}, label=lst:goal-re-entry-screen]
+ submitNewGoalBtn.setOnClickListener(view -> {
+	String oldGoal =  sharedPreferences.getString("goalEntry", "none");
+	newGoalEntryText = newGoalEntryField.getText().toString();
+	if (newGoalEntryText.isEmpty()) {
+		Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
+	} else if (oldGoal.equals(newGoalEntryText)) {
+		Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
+	}
+	else {
+		sharedPreferences.edit().putString("goalEntry", newGoalEntryText).apply();
+		Toast.makeText(view.getContext(), "Goal has been updated to: " + newGoalEntryText, Toast.LENGTH_LONG).show();
+		screen_count = 7;
+		screenCheck();
+	}
+});
+\end{lstlisting}
+
+Code \ref{lst:goal-re-entry-screen} shows the code for the goal re-entry screen. When the button to submit a new goal is pressed, the code checks if the text entry field is empty or is the same
+as the current goal, and displays a message accordingly. If the text entered passes both checks, it updates the goal via the previously discussed SharedPreference API, then displays a message notifying
+the user about the update, then goes back to the settings screen using the screenCheck() function. \newline
+
+Because the XML widgets for the settings screen had already been created prior, the settings screen's XML code was simply updated to establish an actual layout, rather than a placeholder one.
 
 \subsubsection{Req-1.6}
-This branch focused on 
+This branch focused on allowing a user to draft an email containing their usage stats for the week, as outlined in requirement 1.6. There was one significant issue encountered during the 
+implementation of requirement 1.6. While opening the email client of a user wasn't an issue, the actual issue came from attempting to attach the .csv file to the email draft.
 
-
-
-\begin{lstlisting}[language=Java, style=mystyle, caption={Original implemention of writing the app list to a .csv file}, label=lst:og-app-list-csv]
+\begin{lstlisting}[language=Java, style=mystyle, caption={Original implemention of writing the app list to a file}, label=lst:og-app-list-csv]
 private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
     try {
         FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
@@ -1124,7 +1238,19 @@ private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
 }
 \end{lstlisting}
 
-this dont work D:
+Shown above in code \ref{lst:og-app-list-csv} is the code used to write the usage data to a file. Originally, the usage data file is stored in the app's internal storage, and while this successfully 
+wrote the usage data to the text file, this created an unforeseen consequence, that being the email client couldn't access the file, and therefore couldn't attach the file.
+
+ \begin{figure}[H]
+\centering
+	\includegraphics[width=0.45\linewidth]{implementation-figures/attach-before-noemail.png}
+	\captionof{figure}{\textit{File attachment issue (email recipient has been hidden)}}
+	\label{fig:file-attach-before}
+\end{figure}
+
+This required rewriting a majority of the function used to create the file. Instead of storing the file in internal storage, the file now had to be stored in a directory inside external storage, and
+instead of using the FileOutputSteam class, which is better suited for multimedia files, the function now uses the FileWriter class, better suited for textual data 
+\autocite{java-fileoutputstream, java-filewriter}. This rewritten code, and the successful attachment is shown below in code \ref{lst:new-app-list-csv} and figure \ref{fig:file-attach-after}.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={New implemention of writing the app list to a .csv file}, label=lst:new-app-list-csv]
 private void generateFile(ArrayList<AppDetails> appDetails) {
@@ -1145,17 +1271,145 @@ private void generateFile(ArrayList<AppDetails> appDetails) {
 }
 \end{lstlisting}
 
-but this work :D
-
-
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.45\linewidth]{implementation-figures/attach-after-noemail.png}
+	\captionof{figure}{\textit{File attachment issue, now fixed (email recipient has been hidden)}}
+	\label{fig:file-attach-after}
+\end{figure}
 
 
 \subsubsection{Req-1.3}
+This branch is where the WDEP system from RT mentioned in section 2.3.3 of the literature review would see its continued implementation, in the form of implementing requirement 1.3. The first step 
+in implementing this was to create conditions the code can reach to show separate screens depending on if a user had seen an increase or decrease in their usage over the last week. This involved 
+figuring out a way to store a users old usage time to compare, as the comparison would be used to send the user to correct set of screens.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Checking for usage increase / decrease}, label=lst:check-usage-increase]
+long currentTime =  TimeUnit.MILLISECONDS.toSeconds(totalTime);
+long oldTime = TimeUnit.MILLISECONDS.toSeconds(sharedPreferencesUsageTime.getLong("oldUsageTime", 0));
+
+if (currentTime > oldTime) {
+	Log.d("changeScreen1", "screen time has increased, different screen will appear here");
+	screen_count = 10;
+	screenCheck();
+} else {
+	Log.d("changeScreen2", "screen time has droppped, different screen will appear here");
+	screen_count = 9;
+	screenCheck();
+}
+
+sharedPreferencesNotiSent.edit().putBoolean("notiSent", false).apply();
+sharedPreferencesUsageTime.edit().putLong("oldUsageTime", totalTime).apply();
+\end{lstlisting}
+
+Code \ref{lst:check-usage-increase} shows the code used when the app checks for a usage increase or decrease, called once a week. currentTime is defined as the time value retrieved from the 
+loadUsage() function (see code \ref{lst:loadUsage}) while oldTime is the stored SharedPreference value of the variable, last updated from the prior week, when the function was last ran. The code will then 
+swap to a corresponding screen depending on if there was an increase or decrease in usage. The code uses seconds as its time unit for debugging, while the final product makes use of hours 
+instead. \newline
+
+Because the user has the option of redefining their goal if they have seen a usage increase, the code for defining a goal had to be rewritten slightly. Shown below in code 
+\ref{lst:goal-definition-rewrite}, the code now checks if boolean value isRedefiningGoal is true, and if it is, updates the entered goal from the user. isRedefiningGoal will be true if this 
+screen is reached from the screens used when receiving advice from the app.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Goal definintion screen, rewritten for requirement 1.3}, label=lst:goal-definition-rewrite]
+ else if (isRedefiningGoal == true) {
+	//TODO: possibly change paragraph text to make more sense given the context
+	String oldGoal =  sharedPreferences.getString("goalEntry", "none");
+	if (oldGoal.equals(goalEntryText)) {
+		Toast.makeText(view.getContext(), "New goal cannot be identical to old goal", Toast.LENGTH_SHORT).show();
+	}
+	else {
+		sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
+		Toast.makeText(view.getContext(), "Goal has been updated to: " + goalEntryText, Toast.LENGTH_LONG).show();
+		screen_count = 11;
+		screenCheck();
+		isRedefiningGoal = false;
+	}
+}
+\end{lstlisting}
+
+Code \ref{lst:pick-activities} below shows the code used for displaying a set of activities from the user. While the user activities are simply retrieved from the stored value using the 
+SharedPreference API, the random hard-coded activities are retrieved from a separate string array file called strings.xml (see Appendix J), then two pseudorandom numbers are selected, and 
+using those two numbers, two activities from the string array are picked at "random". All activities are the concatenated together and are shown to the user.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Code used for displaying activities to a user}, label=lst:pick-activities]
+String[] activities = getResources().getStringArray(R.array.activities_array);
+Random random = new Random();
+int randomNumberOne = random.nextInt(activities.length - 1);
+int randomNumberTwo = random.nextInt(activities.length - 1);
+
+String randomActivityOne = activities[randomNumberOne];
+String randomActivityTwo = activities[randomNumberTwo];
+
+String userActivityOne = sharedPreferences.getString("activityOne", "none");
+String userActivityTwo = sharedPreferences.getString("activityTwo", "none");
+String userActivityThree = sharedPreferences.getString("activityThree", "none");
+
+activitiesText.setText(userActivityOne + ", " + randomActivityOne + ", " + userActivityTwo + ", " + randomActivityTwo + ", " + userActivityThree);
+\end{lstlisting}
 
 \subsubsection{Req-1.2}
+This branch was used to add the (at the time) final requirement for the app, that being the graph used for displaying the usage for the previous week to the user. While a wireframe diagram for this
+screen was never created, re-using the idea of displaying the data in a list format was the decision made. \newline
+
+The next step was establishing a method of storing the prior week's usage data to show the user. Because the code for creating a file already existed (see snippet \ref{lst:new-app-list-csv}), the 
+code was simply adapted to create a separate .csv file if there was already an existing file. This adapted code can be seen below in snippet \ref{lst:added-store-usage}
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Adapted code for storing usage data}, label=lst:added-store-usage]
+if (notiSent) {
+	if (fileToEmail.exists()) {
+		Log.d("fileExists", "file " + fileName + " already exists, creating file for previous week");
+		String fileNamePrevWeek = "appDataDetailsPrev.csv";
+		File exFileDirPrevWeek = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+		fileToEmail = new File (exFileDirPrevWeek, fileNamePrevWeek);
+		//...
+	}
+}
+\end{lstlisting}
+
+The data from the .csv file then needs to be parsed properly to display it to the user, and this was achieved by using the external library OpenCSV abd the CSVReader class. The code shown below
+in snippet \ref{lst:reading-csv-data} reads the file line-by-line, then adds it to an array list. Similar to what was achieved for requirement 1.1, this array list is then added to a 
+ListView widget, then shown to the user. The full code snippet can be found in Appendix K.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Code used for reading .csv file data}, label=lst:reading-csv-data]
+CSVReader csvReader = new CSVReaderBuilder(new FileReader(fileToShow)).withSkipLines(1).build();
+String[] nextLine;
+while ((nextLine = csvReader.readNext()) != null) {
+	Log.d("prevWeek", nextLine[0]);
+	previousWeekArrayList.add(nextLine[0]);
+}
+\end{lstlisting}
 
 \subsubsection{Req 1.8 / Clean up}
-This was the last branch created during development, and focused on getting the app ready for human evaluation. This was done by replacing the placeholder text with actual text,
+This was the last branch created during development, and focused on getting the app ready for human evaluation. This branch was also when the last requirement, requirement 1.8, was implemented.
+Implementing requirement 1.8 was easy, as it was conducted in a similar manner to requirement 1.3, that being to add a boolean variable, check if its true, perform input validation, then update 
+the set of activities. A small snippet of the code used can be found below in code \ref{lst:editing-activity}, but the full code snippet where this was performed can be found in Appendix L.
+
+\begin{lstlisting}[language=Java, style=mystyle, caption={Code added to activities definition code block}, label=lst:editing-activity]
+ if (isEditingActivities == true) {
+	String activityOne = sharedPreferences.getString("activityOne", "none");
+	String activityTwo = sharedPreferences.getString("activityTwo", "none");
+	String activityThree = sharedPreferences.getString("activityThree", "none");
+
+	activityFieldOne.setText(activityOne);
+	activityFieldTwo.setText(activityTwo);
+	activityFieldThree.setText(activityThree);
+
+}
+//...
+ /// if currently editing activities, send toast indicating change, then return to settings screen
+if (isEditingActivities == true) {
+	Toast.makeText(view.getContext(), "Activities have been updated", Toast.LENGTH_LONG).show();
+	screen_count = 7;
+	screenCheck();
+	isEditingActivities = false;
+	return;
+}
+\end{lstlisting}
+
+Aside from adding this functionality, this branch replaced all of the placeholder text from previous branches with actual text, most of which was added to the strings.xml file mentioned in
+section 3.6.6, added some extra functionality not explicitly noted in the SRS such as a help alert on the main screen, adjusted some of the time-sensitive values to reflect the intended
+values, and added an app logo.
 
 \newpage
 
@@ -1185,9 +1439,9 @@ outcome of the test, usually in the form of a screen recorded video or screen ca
 the test case. A comprehensive list of the test cases and their results can be found in Appendix I. \newline
 
 
-
-
 \newpage
+
+
 \section{Evaluation \& Results Discussion}
 This section provides details on the evaluation of the project in relation to the hypothesis stated in section 1.3, which was: \newline\newline
 
@@ -1322,6 +1576,8 @@ right direction in addressing SA and SMA.
 
 
 \subsection{Discussion}
+
+
 
 % make sure to mention section 2.2 when discussing results
 
@@ -2072,8 +2328,315 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection*{Appendix I - screenCheck() function (branch req-1.5/1.7)}
+\begin{lstlisting}[language=Java, style=mystyle, label=lst:screenCheckFull]
+public void screenCheck() {
+	//TODO: move onboarding usage tracking code to here
+	if (screen_count == 0) {
+		setContentView(R.layout.activity_main);
+		try {
+			loadUsage();
+		} catch (PackageManager.NameNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	//note: this has been moved to be the first screen as exiting the intent returns to the first screen, TODO: update uml flowchart to reflect change
+	else if (screen_count == 1){
+		setContentView(R.layout.enable_user_tracking_screen);
 
-\subsection*{Appendix I - Test Case results}
+//            String acOne = sharedPreferences.getString("activityOne", "none");
+//            Log.d("currentAcOne", acOne);
+//
+//            String acTwo = sharedPreferences.getString("activityTwo", "none");
+//            Log.d("currentAcTwo", acTwo);
+//
+//            String acThree = sharedPreferences.getString("activityThree", "none");
+//            Log.d("currentAcThree", acThree);
+
+		permissionsBtn = (Button)findViewById(R.id.permissionBtn);
+		permissionsBtn.setOnClickListener(view -> {
+			startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
+			setContentView(R.layout.enable_user_tracking_screen);
+		});
+
+		nextScreenBtnFive = (Button)findViewById(R.id.nextScreenBtnFive);
+		nextScreenBtnFive.setOnClickListener(view -> {
+			//commented for testing, make sure to uncomment when finished testing
+//                if (!getGrantStatus()) {
+//                    Toast.makeText(view.getContext(), "Please enable app usage statistics tracking to continue", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+			screen_count = 2;
+			screenCheck();
+
+		});
+	}
+	//no validation needed here
+	else if (screen_count == 2) {
+		setContentView(R.layout.onboarding_info_screen);
+		nextScreenBtn = (Button)findViewById(R.id.nextScreenBtn);
+		nextScreenBtn.setOnClickListener(view -> {
+			screen_count = 3;
+			screenCheck();
+//                    setContentView(R.layout.activity_main);
+			//})
+
+		};
+
+		//notiTestBtn.setOnClickListener(view -> {
+//                WorkRequest workerClassReq = new OneTimeWorkRequest.Builder(WorkerClass.class).build();
+//                WorkManager.getInstance(this).enqueue(workerClassReq);
+		//createNotiChannel();
+		//scheduleNotification(calendar);
+//                NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+//                        .setSmallIcon(R.drawable.ic_launcher_foreground)
+//                        .setContentTitle("a noti")
+//                        .setContentText("look at me im all the text");
+		//if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+		// TODO: Consider calling
+		//    ActivityCompat#requestPermissions
+		// here to request the missing permissions, and then overriding
+		//   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+		//                                          int[] grantResults)
+		// to handle the case where the user grants the permission. See the documentation
+		// for ActivityCompat#requestPermissions for more details.
+		return;
+//                }
+//                NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, builder.build());
+		//});
+	}
+	//no validation needed here
+	else if (screen_count == 3) {
+		setContentView(R.layout.onboarding_info_screen_two);
+		nextScreenBtnTwo = (Button)findViewById(R.id.nextScreenBtnTwo);
+		nextScreenBtnTwo.setOnClickListener(view -> {
+			screen_count = 4;
+			screenCheck();
+		});
+	}
+	else if (screen_count == 4) {
+		setContentView(R.layout.user_goal_input_screen);
+		goalEntryField = (EditText)findViewById(R.id.goalEntryField);
+		nextScreenBtnThree = (Button)findViewById(R.id.nextScreenBtnThree);
+		nextScreenBtnThree.setOnClickListener(view -> {
+
+			goalEntryText = goalEntryField.getText().toString();
+			if (goalEntryText.isEmpty()) {
+				Toast.makeText(view.getContext(), "Please enter a goal to continue", Toast.LENGTH_SHORT).show();
+			} else {
+				sharedPreferences.edit().putString("goalEntry", goalEntryText).apply();
+				screen_count = 5;
+				screenCheck();
+			}
+
+		});
+	}
+	else if (screen_count == 5) {
+		//Log.d("goalEntry", goalEntryText);
+
+		setContentView(R.layout.user_activity_suggestions_screen);
+
+//            String currentGoal = sharedPreferences.getString("goalEntry", "none");
+//            Log.d("currentGoal", currentGoal);
+
+		activityFieldOne = (EditText)findViewById(R.id.activityFieldOne);
+		activityFieldTwo = (EditText)findViewById(R.id.activityFieldTwo);
+		activityFieldThree = (EditText)findViewById(R.id.activityFieldThree);
+
+		nextScreenBtnFour = (Button)findViewById(R.id.nextScreenBtnFour);
+		nextScreenBtnFour.setOnClickListener(view -> {
+
+			activityFieldOneText = activityFieldOne.getText().toString();
+			activityFieldTwoText = activityFieldTwo.getText().toString();
+			activityFieldThreeText = activityFieldThree.getText().toString();
+
+			if (activityFieldOneText.isEmpty() || activityFieldTwoText.isEmpty() || activityFieldThreeText.isEmpty()) {
+				Toast.makeText(view.getContext(), "Please enter some activities to continue", Toast.LENGTH_SHORT).show();
+				return;
+			} else {
+				if ((Objects.equals(activityFieldOneText, activityFieldTwoText))
+						|| (Objects.equals(activityFieldTwoText, activityFieldThreeText))
+						|| (Objects.equals(activityFieldOneText, activityFieldThreeText))) {
+					//TODO: reword to sound less odd
+					Toast.makeText(view.getContext(), "Your activities must be unique", Toast.LENGTH_SHORT).show();
+					return;
+				} else {
+					sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
+					sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
+					sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
+
+					screen_count = 6;
+					screenCheck();
+				}
+			}
+		});
+	}
+
+	//no validation necessary here
+	else if (screen_count == 6) {
+		setContentView(R.layout.noti_screen);
+		nextScreenBtnSix = (Button)findViewById(R.id.nextScreenBtnSix);
+		//this function is necessary to enable notifications on android apis above 33
+		notiEnableBtn = (Button)findViewById(R.id.notiEnableBtn);
+		notiEnableBtn.setOnClickListener(view -> {
+			if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+					ActivityCompat.requestPermissions(this, new String[]{(Manifest.permission.POST_NOTIFICATIONS)}, 12);
+				}
+			}
+		});
+
+		notiTestBtn = (Button)findViewById(R.id.notiTestBtn);
+		final PeriodicWorkRequest periodicWorkRequest =
+				new PeriodicWorkRequest.Builder(WorkerClass.class, 5, TimeUnit.SECONDS, 15, TimeUnit.MINUTES)
+						//TODO: adjust repeatinterval to "1, TimeUnit.WEEKS" for prod
+						.addTag("periodicWork")
+						.build();
+		//TODO: add check to prevent multiple workerclass calls
+		notiTestBtn.setOnClickListener(view ->
+		{
+			if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+				Toast.makeText(view.getContext(), "Please enable notifications to use this feature", Toast.LENGTH_SHORT).show();
+			} else {
+				WorkManager.getInstance().enqueue(periodicWorkRequest);
+			}
+		});
+
+
+		nextScreenBtnSix.setOnClickListener(view -> {
+			sharedPreferencesOnBoarding.edit().putBoolean("isOnboardingComplete", true).apply();
+			screen_count = 0;
+			screenCheck();
+		}
+	);
+}
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Appendix J - Activities string array from strings.xml}
+\begin{lstlisting}[language=XML, style=mystyle, caption={XML code for storing the string array of activities}, label=lst:stringsXML]
+<string-array name="activities_array">
+	<item>Learn a new skill</item>
+	<item>Read a book</item>
+	<item>Go for a walk</item>
+	<item>Exercise at the gym</item>
+	<item>Hang out with a friend or group of friends</item>
+	<item>Pick up an instrument</item>
+	<item>Play a video game</item>
+	<item>Listen to an album</item>
+	<item>Bake or cook a new recipe</item>
+	<item>Watch a movie</item>
+	<item>Go for a run</item>
+	<item>Clean your room or house</item>
+	<item>Meditate</item>
+	<item>Try a new food spot</item>
+	<item>Try a new hobby</item>
+	<item>Learn about something new</item>
+	<item>Take a nap</item>
+	<item>Go hiking</item>
+	<item>Play a sport</item>
+	<item>Meet some new people</item>
+</string-array>
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Appendix K - Code used to show the previous weeks' usage}
+
+\begin{lstlisting}[language=Java, style=mystyle, label=lst:showPrevUsageGraph]
+setContentView(R.layout.previous_week);
+ListView previousWeekList = (ListView)findViewById(R.id.prevWeekList);
+currentGraphBtn = (Button)findViewById(R.id.currentGraphBtn);
+
+ArrayList<String> previousWeekArrayList = new ArrayList<>();
+try {
+	String fileNamePrevWeek = "appDataDetailsPrev.csv";
+	File exFileDirPrevWeek = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
+	File fileToShow = new File (exFileDirPrevWeek, fileNamePrevWeek);
+
+	CSVReader csvReader = new CSVReaderBuilder(new FileReader(fileToShow)).withSkipLines(1).build();
+	String[] nextLine;
+	while ((nextLine = csvReader.readNext()) != null) {
+		Log.d("prevWeek", nextLine[0]);
+		previousWeekArrayList.add(nextLine[0]);
+	}
+} catch (CsvValidationException | IOException e) {
+	e.printStackTrace();
+}
+Collections.reverse(previousWeekArrayList);
+ArrayAdapter<String> previousWeekArrayAdapter = new ArrayAdapter<String>(this, R.layout.previous_week_details, previousWeekArrayList);
+previousWeekList.setAdapter(previousWeekArrayAdapter);
+
+currentGraphBtn.setOnClickListener(view -> {
+	screen_count = 0;
+	screenCheck();
+});
+
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Appendix L - Code used for updating a set of activities}
+
+\begin{lstlisting}[language=Java, style=mystyle, label=lst:updateActivities]
+setContentView(R.layout.user_activity_suggestions_screen);
+
+activityFieldOne = (EditText)findViewById(R.id.activityFieldOne);
+activityFieldTwo = (EditText)findViewById(R.id.activityFieldTwo);
+activityFieldThree = (EditText)findViewById(R.id.activityFieldThree);
+
+/// if user is currently editing activity, prefill edittext fields with given info
+if (isEditingActivities == true) {
+	String activityOne = sharedPreferences.getString("activityOne", "none");
+	String activityTwo = sharedPreferences.getString("activityTwo", "none");
+	String activityThree = sharedPreferences.getString("activityThree", "none");
+
+	activityFieldOne.setText(activityOne);
+	activityFieldTwo.setText(activityTwo);
+	activityFieldThree.setText(activityThree);
+
+}
+
+toNotiScreenBtn = (Button)findViewById(R.id.toNotiScreenBtn);
+toNotiScreenBtn.setOnClickListener(view -> {
+
+	activityFieldOneText = activityFieldOne.getText().toString();
+	activityFieldTwoText = activityFieldTwo.getText().toString();
+	activityFieldThreeText = activityFieldThree.getText().toString();
+
+	/// if any activity field is empty, ask user to fill in all fields
+	if (activityFieldOneText.isEmpty() || activityFieldTwoText.isEmpty() || activityFieldThreeText.isEmpty()) {
+		Toast.makeText(view.getContext(), "Please enter an activity in all fields to continue", Toast.LENGTH_SHORT).show();
+	} else {
+		/// if any inputted activities are identical to one another, ask user to ensure activities are unique
+		if ((Objects.equals(activityFieldOneText, activityFieldTwoText))
+				|| (Objects.equals(activityFieldTwoText, activityFieldThreeText))
+				|| (Objects.equals(activityFieldOneText, activityFieldThreeText))) {
+			Toast.makeText(view.getContext(), "Your activities must be unique from one another", Toast.LENGTH_SHORT).show();
+		} else {
+			/// sets entered activities, then proceeds to next screen
+			sharedPreferences.edit().putString("activityOne", activityFieldOneText).apply();
+			sharedPreferences.edit().putString("activityTwo", activityFieldTwoText).apply();
+			sharedPreferences.edit().putString("activityThree", activityFieldThreeText).apply();
+
+			/// if currently editing activities, send toast indicating change, then return to settings screen
+			if (isEditingActivities == true) {
+				Toast.makeText(view.getContext(), "Activities have been updated", Toast.LENGTH_LONG).show();
+				screen_count = 7;
+				screenCheck();
+				isEditingActivities = false;
+				return;
+			}
+
+			screen_count = 6;
+			screenCheck();
+		}
+	}
+});
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Appendix M - Test Case results}
 \textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
 the GitHub repository (see Appendix A) and inside the Test Case document at:\newline
 
@@ -2221,7 +2784,7 @@ Test ID                  & Action                                               
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix J - Post-Evaluation survey results}
+\subsection*{Appendix N - Post-Evaluation survey results}
 \underline{\textbf{QS1}}\newline\newline
 \noindent Q1: The app was built to be informative to some degree; on a 1 to 5 scale, how much did you find yourself informed in some way 
 after using the app? This could be on your overall usage, usage patterns, etc...

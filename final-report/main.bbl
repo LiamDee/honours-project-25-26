@@ -162,11 +162,13 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradate}{1}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Android Developers}
       \field{title}{Application fundamentals | App architecture | Android Developers}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://developer.android.com/guide/components/fundamentals
       \endverb
@@ -174,7 +176,7 @@
       \verb https://developer.android.com/guide/components/fundamentals
       \endverb
     \endentry
-    \entry{androiddevelopment-usagestatsmanager}{misc}{}{}
+    \entry{androiddevelopment-sharedpref}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
            family={Android-Developers},
@@ -195,11 +197,48 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradate}{2}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Android Developers}
+      \field{title}{Save simple data with SharedPreferences | App data and files | Android Developers}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://developer.android.com/training/data-storage/shared-preferences
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/training/data-storage/shared-preferences
+      \endverb
+    \endentry
+    \entry{androiddevelopment-usagestatsmanager}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=40e46151715776d38056588ec31fbca0}{%
+           family={Android-Developers},
+           familyi={A\bibinithyphendelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{40e46151715776d38056588ec31fbca0}
+      \strng{fullhash}{40e46151715776d38056588ec31fbca0}
+      \strng{fullhashraw}{40e46151715776d38056588ec31fbca0}
+      \strng{bibnamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorbibnamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authornamehash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorfullhash}{40e46151715776d38056588ec31fbca0}
+      \strng{authorfullhashraw}{40e46151715776d38056588ec31fbca0}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Android Developers}
       \field{title}{UsageStatsManager | API reference | Android Developers}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://developer.android.com/reference/android/app/usage/UsageStatsManager
       \endverb
@@ -1465,6 +1504,76 @@
       \endverb
       \verb{url}
       \verb https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.647606
+      \endverb
+    \endentry
+    \entry{java-fileoutputstream}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={Oracle},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{bibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorbibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \field{extraname}{1}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Java™ Platform, Standard Edition 8 API Specification}
+      \field{title}{FileOutputSteam (Java Platform SE 8 )}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://docs.oracle.com/javase/8/docs/api/java/io/FileOutputStream.html
+      \endverb
+      \verb{url}
+      \verb https://docs.oracle.com/javase/8/docs/api/java/io/FileOutputStream.html
+      \endverb
+    \endentry
+    \entry{java-filewriter}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={Oracle},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{bibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorbibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \field{extraname}{2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Java™ Platform, Standard Edition 8 API Specification}
+      \field{title}{FileWriter (Java Platform SE 8 )}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html
+      \endverb
+      \verb{url}
+      \verb https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html
       \endverb
     \endentry
     \entry{RefWorks:RefID:94-ouellette2022usefulness}{article}{}{}
