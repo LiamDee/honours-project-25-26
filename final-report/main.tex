@@ -148,18 +148,16 @@
 % highlighted that app based solutions are easy to access compared to traditional treatment
 % added list of acronyms
 % collapsed project outline, objectives and hypothesis into a single section (Project Overview, Aims, and Methodology)
-
+% introduced the term "persuasive computing" in intro
 
 %TODO:
-% 4.3
 % all of 6
+
 % still need to (from interim report):
-% introduce the term "persuasive computing" in intro
-% highlight what specific tools / techniques from cbt and rt can be adapted into a mobile app in lit review
+% introduce the term "persuasive computing" in intro - done
 % instead of agile development, go with iterative development -- already kinda done
 % maybe remove urls from references - makes it look cleaner - done
 % sort appendices properly - done
-% consider note on 5.4
 
 \newpage
 
@@ -185,7 +183,8 @@ the overall objective being to lower an individuals usage in an attempt to addre
 the project, a small group of participants were given the application to use over a three-week period, and were asked to send their usage data
 each week during this time. By the end of this period, they were also provided a survey where they could provide their own opinions on the app.  \newline
 
-Results from the evaluation show that 
+Results from the evaluation show that the PRI was somewhat successful in reducing the usage of smartphones and social media in young adults by using
+concepts from Reality Therapy and usage tracking technologies.
 
 %some of which in the form of mobile applications, and others in the form of therapy-based treatment. While both have shown promise
 %and evidence in treating similar issues, there lacks a foundation which combines both of these treatments into a single mobile app.
@@ -266,17 +265,17 @@ subsets of behavioural addiction
 and researched over the last 15 years, with researchers looking into potential causes and 
 correlations with other health effects.\newline
 
-\textcite{RefWorks:RefID:78-bhalerao2020analysis} analyzed SA and provided potential causes 
+\textcite{RefWorks:RefID:78-bhalerao2020analysis} analyze SA and provided potential causes 
 behind SA, one of which being how the current generation has been brought up alongside the internet 
 and technology, therefore possibly feeling a preference to communicate over the internet instead of 
-in-person, fueling the dwindling need for face-to-face communication. \textcite{RefWorks:RefID:68-king2017impact} 
+in-person, fuelling the dwindling need for face-to-face communication. \textcite{RefWorks:RefID:68-king2017impact} 
 made a series of hypotheses in relation to college students and the effects 
 related to SA, looking at SA's associations with "life stressors" (a measure of stress and anxiety), "digital overload" 
 (a measure of information and communication overload), retention, academic performance, and social well-being. The results 
 found that SA could be positively correlated with life stressors, digital overload, retention, and academic performance, 
 something consistent with previous studies.\newline
 
-Potential treatments have been researched as well. A China-based study from 2019 analyzing SMA 
+Potential treatments have been researched as well. A China-based study from 2019 analysing SMA 
 \autocite{RefWorks:RefID:66-hou2019social} developed a cognitive-behavioural-therapy-based intervention program 
 that used various techniques including reminder cards, journal entries before sleeping, and 
 cognitive reconstruction. The results showed that compared to the control group, those who took part in the 
@@ -315,7 +314,9 @@ tracking technologies to help address smartphone and social media addiction}
 
 \subsubsection{Project Objectives}
 The primary objective of this project is to create an application that can guide the user into reducing their smartphone 
-\& social media usage with the use of usage tracking and psychological methods.\newline
+\& social media usage with the use of usage tracking and psychological methods. This type of app can be considered a kind
+of "persuasive computing", a type of computer system intended on changing the behaviours and attitudes of a user 
+\autocite{RefWorks:RefID:176-davis2009design}.\newline
 
 \noindent\underline{\textbf{Secondary Objectives}}\newline\newline
 \noindent\textbf{Investigate existing mobile apps that use psychological methods to address mental health issues}\newline
@@ -1443,10 +1444,10 @@ the test case. A comprehensive list of the test cases and their results can be f
 
 
 \section{Evaluation \& Results Discussion}
-This section provides details on the evaluation of the project in relation to the hypothesis stated in section 1.3, which was: \newline\newline
+This section provides details on the evaluation of the project in relation to the hypothesis stated in section 1.3, which was: \newline
 
 \noindent\textit{The combination of usage tracking and intervention methods rooted in psychology within the created mobile 
-application will help to address and reduce smartphone \& social media usage in young adults.} \newline\newline
+application will help to address and reduce smartphone \& social media usage in young adults.} \newline
 
 It also gives critical analysis and discussion of the results and findings from the evaluation, before drawing initial conclusions based on the
 project hypothesis, research statement and objectives. Given the aforementioned hypothesis, the intention of the evaluation was to find if:
@@ -1494,7 +1495,8 @@ One UI Home & 01:21    & 3\%  \\ \bottomrule
 
 Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table \ref{tab:3c-usage-sample}, the "android" 
 package, which refers to the android home screen, takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
-made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart as Figure \ref{tab:3c-usage-sample}, but without the outlier data.
+made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart as figure \ref{fig:eval-data-with-3c-basline-outlier}, but 
+without the outlier data.
 
 \begin{figure}[H]
 \centering
@@ -1504,10 +1506,9 @@ made to leave out the usage time for "android". Figure \ref{fig:eval-data-withou
 \end{figure}
 
 1A's usage is relatively consistent between baseline and week-2, though doesn't take a noticeable drop, but takes a substantial
-drop in week-3. This may be because\dots (expand on this, possibly due to how androids UsageStatsManager queries data) 2B's usage fluctuates a lot throughout the 
-timeframe, initially rising before falling again, and then settling in the middle for week-3. 3C's usage does take a drop overall when comparing baseline to week-3, and 
-remains under 10 hours for the remainder of the evaluation period after the baseline data. 4D's usage experiences a slight increase before dropping slightly, though experiences 
-an increase when compared from the baseline to week-3.
+drop in week-3. 2B's usage fluctuates a lot throughout the timeframe, initially rising before falling again, and then settling in the middle for week-3. 3C's usage does take a drop overall 
+when comparing baseline to week-3, and remains under 10 hours for the remainder of the evaluation period after the baseline data. 4D's usage experiences a slight increase before dropping 
+slightly, though experiences an increase when compared from the baseline to week-3. %for 1a, This may be because\dots (expand on this, possibly due to how androids UsageStatsManager queries data) 
 
 \begin{figure}[H]
 \centering
@@ -1576,20 +1577,29 @@ right direction in addressing SA and SMA.
 
 
 \subsection{Discussion}
+The intention of the evaluation was to find if the PRI satisfies the project's hypothesis, and this was done by collecting quantitative data in the form of usage data captured
+from each participant and qualitative data in the form of a survey given to participants at the end of the evaluation period, where participants could provide their opinions on the
+current state of the PRI. \newline
 
+The quantitative data initially revealed that only three participants experienced a drop in smartphone usage at some point during the evaluation, and only two 
+of the participants' usage was lower by the end of the evaluation period. Discussed in section 2.2, \textcite{RefWorks:RefID:35-dosselaar2017smartphone} discussed how smartphones can be used 
+for productivity and not exclusively for social media, so the data was reanalysed to look exclusively at social media apps, and found the results were largely the same between all participants when compared to
+the initial set of data.\newline
 
+The qualitative data revealed that participants found themselves informed about their smartphone and/or social media usage. This was another talking point from 
+\textcite{RefWorks:RefID:35-dosselaar2017smartphone}, as it was discussed that current apps don't provide an opportunity for users to reflect and learn about SA and SMA. Not only this,
+the data revealed that some participants attributed the PRI as a factor in their reduction in smartphone and social media usage, all participants in their opinion felt that the app
+helped them achieve the goal they set out, and most participants said they would recommend the app in its current state to others (see Appendix N), with one participant stating the app is a 
+step in the right direction when addressing the issue of SA and SMA.\newline
 
-% make sure to mention section 2.2 when discussing results
-
-%and a mixed-method approach 
-
-%combining qualitative and quantitative approaches in evaluating. 
-
-
-
+Given this, the PRI can be considered somewhat successful in meeting the project's hypothesis. This is because The quantitative data provided mixed results when it came to reducing the 
+usage of all participants in both a general sense and specifically with social media, however, the qualitative data provided a juxtaposition, with some participants believing the app was 
+helpful in reducing their usage, most saying they would recommend the app to a friend, and all participants believing the app helped them achieve their goals (see Appendix N).
 
 
 \newpage
+
+
 \section{Legal, Social, Ethical, and Professional Issues}
 This section will provide commentary on Legal, Social, Ethical, and Professional (LSEP) issues the project dealt with over its lifespan.
 Within the Social Issues section, it will also provide additional commentary and reflection on the Sustainable Development Goals (SDGs)
@@ -1660,7 +1670,7 @@ To conduct any part of the project where human participants are required, ethica
 prior to conducting any part of it. All the details written about previously were mentioned within the ethics form, alongside reasonable 
 justification, and ethical approval was granted.
 
-\subsection{Professional Issues} %possibly expand?
+\subsection{Professional Issues}
 Following the completion of this project, there are a few aspects that have been reflected on that the author believes have undertaken well, and
 others the author wishes would've been undertaken differently. For one, section 3.3 details the SDLC used during the project's execution, and 
 how there was a change in SDLC midway through the project. Instead of this conducting this change midway through the project, this change 

@@ -656,6 +656,52 @@
       \endverb
       \keyw{research ; post-COVID era ; human participants ; ethical issues}
     \endentry
+    \entry{RefWorks:RefID:176-davis2009design}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c0e5c94de2359263f74a725ce475c233}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Janet},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Claremont, California, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c0e5c94de2359263f74a725ce475c233}
+      \strng{fullhash}{c0e5c94de2359263f74a725ce475c233}
+      \strng{fullhashraw}{c0e5c94de2359263f74a725ce475c233}
+      \strng{bibnamehash}{c0e5c94de2359263f74a725ce475c233}
+      \strng{authorbibnamehash}{c0e5c94de2359263f74a725ce475c233}
+      \strng{authornamehash}{c0e5c94de2359263f74a725ce475c233}
+      \strng{authorfullhash}{c0e5c94de2359263f74a725ce475c233}
+      \strng{authorfullhashraw}{c0e5c94de2359263f74a725ce475c233}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Value Sensitive Design and Participatory Design are two methodological frameworks that account for ethical issues throughout the process of technology design. Through analysis and case studies, this paper argues that such methods should be applied to persuasive technology---computer systems that are intended to change behaviors and attitudes.}
+      \field{booktitle}{Proceedings of the 4th International Conference on Persuasive Technology}
+      \field{isbn}{9781605583761}
+      \field{series}{Persuasive '09}
+      \field{title}{Design methods for ethical persuasive computing}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.1145/1541948.1541957
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1541948.1541957
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1541948.1541957
+      \endverb
+      \keyw{value sensitive design,persuasive technology,participatory design,design methods}
+    \endentry
     \entry{RefWorks:RefID:144-denecke2022implementation}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=98da54a4ed86048c289668fae369ff05}{%
