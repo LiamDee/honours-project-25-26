@@ -134,13 +134,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % COME BACK HERE BEFORE YOU SUBMIT
-% are appendices all updated and include the right info? do you need to include more?
+% are appendices all updated and include the right info? do you need to include more? - yes, and probably not
 % are tables, code snippets, and figures referenced in writing linked to the right item?
 % are the use of abbreviations and other such things consistent?
-% is the github repo public?
+% is the github repo public? - yes
 % is there any unnecessary info that can be removed?
 % has it been proofread?
-% have all sources been included?
+% have all sources been included? - to the best of my knowledge, yes
 
 % updates from interim report:
 % replaced usage of the word treat with address
@@ -151,8 +151,6 @@
 % introduced the term "persuasive computing" in intro
 
 %TODO:
-% all of 6
-
 % still need to (from interim report):
 % introduce the term "persuasive computing" in intro - done
 % instead of agile development, go with iterative development -- already kinda done
@@ -706,7 +704,7 @@ From the research statement alone, two integral components can be identified:
 From here, these components can then be broken down into smaller parts that then make up a list of functional requirements after ensuring they fit within the findings of the literature
 review, with some aspects from both components being used to identify a requirement. Additionally, interviews were conducted with nine participants to help identify new requirements or 
 to add pieces to existing requirements. Full interview transcripts, instructions on accessing them, and detailed notes taken during each interview
-can be found within Appendices E and F. \newline
+can be found within Appendices D and E. \newline
 
 \subsubsection{Psychological Intervention Method}
 
@@ -740,7 +738,7 @@ allows for apps to track a user's usage via the "android.app.usage" package with
 
 The "android.app.usage" package contains many classes that provide detailed statistics about a user's Android device, but the class of interest for use within the PRI is the "UsageStatsManager" 
 class. Figure \ref{fig:usagestatsmanager} shows how this class returns a request for usage data, with the documentation noting that requesting usage data within a time interval will include that
-interval \autocite{androiddevelopment-usagestatsmanager}, as seen within Figure \ref{fig:usagestatsmanager}. This class was mentioned within the literature review when discussing what methods could 
+interval \autocite{androiddevelopment-usagestatsmanager}, as seen within figure \ref{fig:usagestatsmanager}. This class was mentioned within the literature review when discussing what methods could 
 be used to track usage of a user's device, and is the class of choice for developing the app, as it contains a method "queryUsageStats" that can be used to retrieve usage stats within a specified 
 time range \autocite{androiddevelopment-usagestatsmanager}.
 
@@ -890,7 +888,7 @@ met. Concerning how the screens needed for each requirement should be ordered, t
 	\label{fig:ui-wireframe-example}
 \end{figure}
 
-An example of the UI interface design created can be seen in Figure \ref{fig:ui-wireframe-example}. The UI in this example seen showcases three core elements, the "Header Text" in large, bold text, denoting
+An example of the UI interface design created can be seen in figure \ref{fig:ui-wireframe-example}. The UI in this example seen showcases three core elements, the "Header Text" in large, bold text, denoting
 the heading for that screen, smaller text shown by the "Lorem ipsum" text, used for communication information to a user, and a button shown by the rectangle with the drop-shadow, denoting interactive
 elements for the screen. A full list of the screens created can be found in Appendix H.\newline
 
@@ -909,7 +907,7 @@ elements for the screen. A full list of the screens created can be found in Appe
 \end{figure}
 
 Each screen was varied in terms of interactive elements, text required, etc. Figures \ref{fig:ui-wireframe-activity-entry-main} and \ref{fig:ui-wireframe-main-screen} show examples of different elements
-that a screen may include. Figure \ref{fig:ui-wireframe-activity-entry-main} adds input fields, shown by the lighter coloured text with the line underneath, while Figure \ref{fig:ui-wireframe-main-screen}
+that a screen may include. Figure \ref{fig:ui-wireframe-activity-entry-main} adds input fields, shown by the lighter coloured text with the line underneath, while figure \ref{fig:ui-wireframe-main-screen}
 removes the header text element and adds a list. The list itself contain other elements, notably an image, alongside text stacked on top of each other. \newline
 
 While creating these screens, it was also determined that some of the screens can be reused in other requirements. For example, the screen used for entering a goal are needed in requirements 1.4 and
@@ -917,7 +915,7 @@ While creating these screens, it was also determined that some of the screens ca
 
 \newpage
 
-\subsection{Implementation} %change instances of code to snippets where necessary
+\subsection{Implementation}
 As noted previously in section 3.3, this part of the project, alongside the testing part of the project, made use of an iterative approach. At this stage, implementing the project would consist
 of using the information gathered for each requirement during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
 them according to the documentation. Implementing each requirement facilitated backend development via implementing the functionality for the requirement and frontend development via implementing
@@ -954,7 +952,7 @@ public void loadUsage() throws PackageManager.NameNotFoundException {
 }
 \end{lstlisting}
 
-Code \ref{lst:loadUsage} shows the function used to fetch the usage data for the user. This function is called on app startup, as it gets called within the onCreate method. The function calls the
+Code snippet \ref{lst:loadUsage} shows the function used to fetch the usage data for the user. This function is called on app startup, as it gets called within the onCreate method. The function calls the
 "queryUsageStats" method from the UsageStatsManager class to get the usage stats from the last week, then stores it in a list, then, if the list isn't empty, maps it to a tree map then calls 
 another function "showUsage" to show the usage to the user. Some of the code seen above was sourced from an external sample project, see Appendix I for more information. \newline
 
@@ -1025,10 +1023,10 @@ public class WorkerClass extends Worker {
 
 \end{lstlisting}
 
- Code \ref{lst:periodicworkrequest} and \ref{lst:workerclass} shows the code and class used for sending notifications. Code \ref{lst:periodicworkrequest} defines a PeriodicWorkRequest variable
- that triggers the code in code \ref{lst:workerclass} every 5 seconds, 15 minutes or later from the last trigger, then, creates an OnClickListener that queues the PeriodicWorkRequest. Code 
+ Code snippet \ref{lst:periodicworkrequest} and \ref{lst:workerclass} shows the code and class used for sending notifications. Code snippet \ref{lst:periodicworkrequest} defines a PeriodicWorkRequest variable
+ that triggers the code in code \ref{lst:workerclass} every 5 seconds, 15 minutes or later from the last trigger, then, creates an OnClickListener that queues the PeriodicWorkRequest. Code snippet
  \ref{lst:workerclass} executes the doWork() method which calls sendNoti() function, this builds the notification to be sent to the user, before displaying it to the user. Seeing as the code in both 
- snippets were for ensuring functionality, both would be refined over the course of development. Note that the code \ref{lst:periodicworkrequest} would later be changed to trigger every 7 days, and
+ snippets were for ensuring functionality, both would be refined over the course of development. Note that code snippet \ref{lst:periodicworkrequest} would later be changed to trigger every 7 days, and
  the current trigger time was in place for testing and debugging.\newline
 
  This prototype would also establish the class structure for the app, as can be seen in figure \ref{fig:class-structure} below. By the end of development, RecyclerViewAdapter would be the only class
@@ -1068,7 +1066,7 @@ isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingCompl
 	}
 \end{lstlisting}
 
-Code \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, and is called every time the user initialises the app. The code uses a
+Code snippet \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, and is called every time the user initialises the app. The code uses a
 "SharedPreference", an API used to store key-value data, even after the app is closed \autocite{androiddevelopment-sharedpref}. At the end of the onboarding process, the SharedPreference for the onboarding process is set to true, so when
 the app is opened, the skips the initial check, and then checks if the app has been granted access to usage statistics. This SharedPreference API was also used to store and retrieve the goal and 
 activities entered by a user.
@@ -1097,15 +1095,15 @@ public void screenCheck() {
 }
 \end{lstlisting}
 
-Code \ref{lst:screenCheckCode} shows an example of the code used for swapping between screens. A screen is linked to a corresponding number, and whenever, for example, a button is clicked, the code
-calls the method screenCheck(), then swaps to the corresponding screen. The code shown has been shortened, due to the function being particularly large, but the full function can be found in 
-Appendix I. \newline
+Code snippet \ref{lst:screenCheckCode} shows an example of the code used for swapping between screens. A screen is linked to a corresponding number, and whenever, for example, a button is clicked, the code
+calls the method screenCheck(), then swaps to the corresponding screen. The code snippet shown has been shortened, due to the function being particularly large, but the full function can be found in 
+Appendix J. \newline
 
 Initially, this method of swapping between screens was used when debugging the application, but this method of swapping between screens was used for the remainder of development for simplicity 
 purposes.\newline 
 
 A constraint for requirement 1.5 defined in the SRS (see Appendix F) stated that characters entered by the user should be restricted to a pre-determined amount. This is achieved in the XML file seen
-in listing \ref{lst:edittext} below where the structure for the goal entry screen is defined. XML files in android app development define the layout for a UI, and house contain components such as
+in code snippet \ref{lst:edittext} below where the structure for the goal entry screen is defined. XML files in android app development define the layout for a UI, and house contain components such as
 buttons, and text, referred to as widgets.  The parameter "android:maxLength" sets the max length that can be entered in an input box.
 
 \begin{lstlisting}[language=XML, style=mystyle, caption={XML code for the EditText widget}, label=lst:edittext]
@@ -1127,7 +1125,7 @@ This branch focused on building the graph showing the user their app usage. Figu
 section 3.6.1, so this branch was used to adapt the screen to match the UI wireframe shown in figure \ref{fig:ui-wireframe-main-screen}. \newline
 
 When displaying the graph in the UI, the app uses a widget called a ListView whose contents can be adapted to show what a developer wants. In this case, the contents of each item in the lists 
-consist of the icon of an app, the app name, the usage time measured in hours and minutes, and the usage percentage. All of the details are populated using the code seen in code 
+consist of the icon of an app, the app name, the usage time measured in hours and minutes, and the usage percentage. All of the details are populated using the code seen in code snippet
 \ref{lst:loadUsage}.
 
 \begin{lstlisting}[language=XML, style=mystyle, caption={XML code used by the ListView widget for displaying code}, label=lst:appdetailswidget]
@@ -1186,7 +1184,7 @@ consist of the icon of an app, the app name, the usage time measured in hours an
 </LinearLayout>
 \end{lstlisting}
 
-Code \ref{lst:appdetailswidget} shows the XML code the ListView widget uses when displaying the usage statistics code. It consists of TextView widgets that are used as placeholders that are then
+Code snippet \ref{lst:appdetailswidget} shows the XML code the ListView widget uses when displaying the usage statistics code. It consists of TextView widgets that are used as placeholders that are then
 filled in by the actual values. Note that the code has been refined for the final version to fit smaller screen sizes, but the general structure remains the same.
 
 \subsubsection{Req-1.4}
@@ -1211,7 +1209,7 @@ code was simply recycled and refined slightly, therefore most of the coding cons
 });
 \end{lstlisting}
 
-Code \ref{lst:goal-re-entry-screen} shows the code for the goal re-entry screen. When the button to submit a new goal is pressed, the code checks if the text entry field is empty or is the same
+Code snippet \ref{lst:goal-re-entry-screen} shows the code for the goal re-entry screen. When the button to submit a new goal is pressed, the code checks if the text entry field is empty or is the same
 as the current goal, and displays a message accordingly. If the text entered passes both checks, it updates the goal via the previously discussed SharedPreference API, then displays a message notifying
 the user about the update, then goes back to the settings screen using the screenCheck() function. \newline
 
@@ -1239,7 +1237,7 @@ private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
 }
 \end{lstlisting}
 
-Shown above in code \ref{lst:og-app-list-csv} is the code used to write the usage data to a file. Originally, the usage data file is stored in the app's internal storage, and while this successfully 
+Shown above in code snippet \ref{lst:og-app-list-csv} is the code used to write the usage data to a file. Originally, the usage data file is stored in the app's internal storage, and while this successfully 
 wrote the usage data to the text file, this created an unforeseen consequence, that being the email client couldn't access the file, and therefore couldn't attach the file.
 
  \begin{figure}[H]
@@ -1251,7 +1249,7 @@ wrote the usage data to the text file, this created an unforeseen consequence, t
 
 This required rewriting a majority of the function used to create the file. Instead of storing the file in internal storage, the file now had to be stored in a directory inside external storage, and
 instead of using the FileOutputSteam class, which is better suited for multimedia files, the function now uses the FileWriter class, better suited for textual data 
-\autocite{java-fileoutputstream, java-filewriter}. This rewritten code, and the successful attachment is shown below in code \ref{lst:new-app-list-csv} and figure \ref{fig:file-attach-after}.
+\autocite{java-fileoutputstream, java-filewriter}. This rewritten code, and the successful attachment is shown below in code snippet \ref{lst:new-app-list-csv} and figure \ref{fig:file-attach-after}.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={New implemention of writing the app list to a .csv file}, label=lst:new-app-list-csv]
 private void generateFile(ArrayList<AppDetails> appDetails) {
@@ -1303,12 +1301,12 @@ sharedPreferencesNotiSent.edit().putBoolean("notiSent", false).apply();
 sharedPreferencesUsageTime.edit().putLong("oldUsageTime", totalTime).apply();
 \end{lstlisting}
 
-Code \ref{lst:check-usage-increase} shows the code used when the app checks for a usage increase or decrease, called once a week. currentTime is defined as the time value retrieved from the 
-loadUsage() function (see code \ref{lst:loadUsage}) while oldTime is the stored SharedPreference value of the variable, last updated from the prior week, when the function was last ran. The code will then 
+Code snippet \ref{lst:check-usage-increase} shows the code used when the app checks for a usage increase or decrease, called once a week. currentTime is defined as the time value retrieved from the 
+loadUsage() function (see code snippet \ref{lst:loadUsage}) while oldTime is the stored SharedPreference value of the variable, last updated from the prior week, when the function was last ran. The code will then 
 swap to a corresponding screen depending on if there was an increase or decrease in usage. The code uses seconds as its time unit for debugging, while the final product makes use of hours 
 instead. \newline
 
-Because the user has the option of redefining their goal if they have seen a usage increase, the code for defining a goal had to be rewritten slightly. Shown below in code 
+Because the user has the option of redefining their goal if they have seen a usage increase, the code for defining a goal had to be rewritten slightly. Shown below in code snippet 
 \ref{lst:goal-definition-rewrite}, the code now checks if boolean value isRedefiningGoal is true, and if it is, updates the entered goal from the user. isRedefiningGoal will be true if this 
 screen is reached from the screens used when receiving advice from the app.
 
@@ -1330,7 +1328,7 @@ screen is reached from the screens used when receiving advice from the app.
 \end{lstlisting}
 
 Code \ref{lst:pick-activities} below shows the code used for displaying a set of activities from the user. While the user activities are simply retrieved from the stored value using the 
-SharedPreference API, the random hard-coded activities are retrieved from a separate string array file called strings.xml (see Appendix J), then two pseudorandom numbers are selected, and 
+SharedPreference API, the random hard-coded activities are retrieved from a separate string array file called strings.xml (see Appendix K), then two pseudorandom numbers are selected, and 
 using those two numbers, two activities from the string array are picked at "random". All activities are the concatenated together and are shown to the user.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Code used for displaying activities to a user}, label=lst:pick-activities]
@@ -1354,7 +1352,7 @@ This branch was used to add the (at the time) final requirement for the app, tha
 screen was never created, re-using the idea of displaying the data in a list format was the decision made. \newline
 
 The next step was establishing a method of storing the prior week's usage data to show the user. Because the code for creating a file already existed (see snippet \ref{lst:new-app-list-csv}), the 
-code was simply adapted to create a separate .csv file if there was already an existing file. This adapted code can be seen below in snippet \ref{lst:added-store-usage}
+code was simply adapted to create a separate .csv file if there was already an existing file. This adapted code can be seen below in code snippet \ref{lst:added-store-usage}
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Adapted code for storing usage data}, label=lst:added-store-usage]
 if (notiSent) {
@@ -1370,7 +1368,7 @@ if (notiSent) {
 
 The data from the .csv file then needs to be parsed properly to display it to the user, and this was achieved by using the external library OpenCSV abd the CSVReader class. The code shown below
 in snippet \ref{lst:reading-csv-data} reads the file line-by-line, then adds it to an array list. Similar to what was achieved for requirement 1.1, this array list is then added to a 
-ListView widget, then shown to the user. The full code snippet can be found in Appendix K.
+ListView widget, then shown to the user. The full code block can be found in Appendix L.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Code used for reading .csv file data}, label=lst:reading-csv-data]
 CSVReader csvReader = new CSVReaderBuilder(new FileReader(fileToShow)).withSkipLines(1).build();
@@ -1384,7 +1382,7 @@ while ((nextLine = csvReader.readNext()) != null) {
 \subsubsection{Req 1.8 / Clean up}
 This was the last branch created during development, and focused on getting the app ready for human evaluation. This branch was also when the last requirement, requirement 1.8, was implemented.
 Implementing requirement 1.8 was easy, as it was conducted in a similar manner to requirement 1.3, that being to add a boolean variable, check if its true, perform input validation, then update 
-the set of activities. A small snippet of the code used can be found below in code \ref{lst:editing-activity}, but the full code snippet where this was performed can be found in Appendix L.
+the set of activities. A small snippet of the code used can be found below in code snippet \ref{lst:editing-activity}, but the full code block where this was performed can be found in Appendix M.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Code added to activities definition code block}, label=lst:editing-activity]
  if (isEditingActivities == true) {
@@ -1437,7 +1435,7 @@ this method of testing felt most appropriate. %if you can cite meaning of Increm
 An example of how testing was carried out can be seen in Table \ref{tab:test-case-example}. The test case includes the test ID, mapped to match the requirement number, the 
 action taken by a user that would trigger the component, the expected outcome of the test, the actual outcome of said test, evidence to show the 
 outcome of the test, usually in the form of a screen recorded video or screen capture, and any additional context or assumptions needed to understand
-the test case. A comprehensive list of the test cases and their results can be found in Appendix I. \newline
+the test case. A comprehensive list of the test cases and their results can be found in Appendix N. \newline
 
 
 \newpage
@@ -1517,7 +1515,7 @@ slightly, though experiences an increase when compared from the baseline to week
 	\label{fig:eval-data-social-media}
 \end{figure}
 
-Figure \ref{fig:eval-data-social-media} shows the same graph as Figure \ref{fig:eval-data-without-3c-basline-outlier}, but only including social media usage from each participant. 
+Figure \ref{fig:eval-data-social-media} shows the same graph as figure \ref{fig:eval-data-without-3c-basline-outlier}, but only including social media usage from each participant. 
 While the graph is relatively the same, there are some differences. For example, unlike the total usage, 1A's social media usage never increases, rather, taking a small decline 
 instead. 4D's social media usage starts, and remains quite low, though does take a small increase in week-1 before levelling out by the latter weeks.
 
@@ -1540,9 +1538,9 @@ participants provided a response to them.\newline
 	\label{fig:question3surveyresults}
 \end{figure}
 
-A complete collection of the responses and their associated questions can be found in Appendix J, however, the sentiment derived from 
+A complete collection of the responses and their associated questions can be found in Appendix O, however, the sentiment derived from 
 the results of QS1 show that users felt more informed about their usage after using the app, and on average, users felt as if the app
-implemented the WDEP system to a good degree. As demonstrated in Figure \ref{fig:question3surveyresults}, only two of the respondents felt that the app contributed to their
+implemented the WDEP system to a good degree. As demonstrated in figure \ref{fig:question3surveyresults}, only two of the respondents felt that the app contributed to their
 lowered usage, with one respondent feeling as if other factors had a bigger impact than the app by itself, and the other feeling like there wasn't any
 reduction in their usage. When asked to provide a reason to their choice, one respondent said in reference to the app lowering their usage:\newline
 
@@ -1589,12 +1587,12 @@ the initial set of data.\newline
 The qualitative data revealed that participants found themselves informed about their smartphone and/or social media usage. This was another talking point from 
 \textcite{RefWorks:RefID:35-dosselaar2017smartphone}, as it was discussed that current apps don't provide an opportunity for users to reflect and learn about SA and SMA. Not only this,
 the data revealed that some participants attributed the PRI as a factor in their reduction in smartphone and social media usage, all participants in their opinion felt that the app
-helped them achieve the goal they set out, and most participants said they would recommend the app in its current state to others (see Appendix N), with one participant stating the app is a 
+helped them achieve the goal they set out, and most participants said they would recommend the app in its current state to others (see Appendix O), with one participant stating the app is a 
 step in the right direction when addressing the issue of SA and SMA.\newline
 
 Given this, the PRI can be considered somewhat successful in meeting the project's hypothesis. This is because The quantitative data provided mixed results when it came to reducing the 
 usage of all participants in both a general sense and specifically with social media, however, the qualitative data provided a juxtaposition, with some participants believing the app was 
-helpful in reducing their usage, most saying they would recommend the app to a friend, and all participants believing the app helped them achieve their goals (see Appendix N).
+helpful in reducing their usage, most saying they would recommend the app to a friend, and all participants believing the app helped them achieve their goals (see Appendix O).
 
 
 \newpage
