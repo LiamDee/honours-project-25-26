@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
+/// sources code from https://github.com/AmjadIbraheem/UsageStats as a template
 public class AppAdapter extends ArrayAdapter<AppDetails> {
     public AppAdapter(Context context, ArrayList<AppDetails> usageStatsThingArrayList) {
         super(context, 0, usageStatsThingArrayList);

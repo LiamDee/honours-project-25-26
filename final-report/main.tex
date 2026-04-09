@@ -956,7 +956,7 @@ public void loadUsage() throws PackageManager.NameNotFoundException {
 
 Code \ref{lst:loadUsage} shows the function used to fetch the usage data for the user. This function is called on app startup, as it gets called within the onCreate method. The function calls the
 "queryUsageStats" method from the UsageStatsManager class to get the usage stats from the last week, then stores it in a list, then, if the list isn't empty, maps it to a tree map then calls 
-another function "showUsage" to show the usage to the user. \newline
+another function "showUsage" to show the usage to the user. Some of the code seen above was sourced from an external sample project, see Appendix I for more information. \newline
 
 After ensuring that all the necessary information was able to be fetched from the UsageStatsManager class, a separate folder was created that focused on fully developing the app. The folder
 structure can be seen below in figure \ref{fig:folder-structure}.
@@ -1670,6 +1670,10 @@ To conduct any part of the project where human participants are required, ethica
 prior to conducting any part of it. All the details written about previously were mentioned within the ethics form, alongside reasonable 
 justification, and ethical approval was granted.
 
+The code used for the PRI sources a small sample of the code from an external sample project as a basis for loading, and showing the usage for
+a user. This code has been attributed to the respective author in both the source code for the PRI, as well as the report in section 3.5.1, and
+within Appendix I.
+
 \subsection{Professional Issues}
 Following the completion of this project, there are a few aspects that have been reflected on that the author believes have undertaken well, and
 others the author wishes would've been undertaken differently. For one, section 3.3 details the SDLC used during the project's execution, and 
@@ -2337,8 +2341,15 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Appendix I - Note on the loadUsage() function}
+While a majority of the code was written by the author, some of the code used for loading the usage, as well as in other places, was sourced from an external sample project by 
+Amajd Ibraheem. The repository containing the code can be found via: \newline
 
-\subsection*{Appendix I - screenCheck() function (branch req-1.5/1.7)}
+https://github.com/AmjadIbraheem/UsageStats
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Appendix J - screenCheck() function (branch req-1.5/1.7)}
 \begin{lstlisting}[language=Java, style=mystyle, label=lst:screenCheckFull]
 public void screenCheck() {
 	//TODO: move onboarding usage tracking code to here
@@ -2523,8 +2534,8 @@ public void screenCheck() {
 \end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Appendix J - Activities string array from strings.xml}
-\begin{lstlisting}[language=XML, style=mystyle, caption={XML code for storing the string array of activities}, label=lst:stringsXML]
+\subsection*{Appendix K - Activities string array from strings.xml}
+\begin{lstlisting}[language=XML, style=mystyle, label=lst:stringsXML]
 <string-array name="activities_array">
 	<item>Learn a new skill</item>
 	<item>Read a book</item>
@@ -2550,7 +2561,7 @@ public void screenCheck() {
 \end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Appendix K - Code used to show the previous weeks' usage}
+\subsection*{Appendix L - Code used to show the previous weeks' usage (uses code from https://gitlab.ciit-training.com/amjad/UsageStats as a template)}
 
 \begin{lstlisting}[language=Java, style=mystyle, label=lst:showPrevUsageGraph]
 setContentView(R.layout.previous_week);
@@ -2585,7 +2596,7 @@ currentGraphBtn.setOnClickListener(view -> {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix L - Code used for updating a set of activities}
+\subsection*{Appendix M - Code used for updating a set of activities}
 
 \begin{lstlisting}[language=Java, style=mystyle, label=lst:updateActivities]
 setContentView(R.layout.user_activity_suggestions_screen);
@@ -2646,7 +2657,7 @@ toNotiScreenBtn.setOnClickListener(view -> {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix M - Test Case results}
+\subsection*{Appendix N - Test Case results}
 \textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
 the GitHub repository (see Appendix A) and inside the Test Case document at:\newline
 
@@ -2794,7 +2805,7 @@ Test ID                  & Action                                               
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{Appendix N - Post-Evaluation survey results}
+\subsection*{Appendix O - Post-Evaluation survey results}
 \underline{\textbf{QS1}}\newline\newline
 \noindent Q1: The app was built to be informative to some degree; on a 1 to 5 scale, how much did you find yourself informed in some way 
 after using the app? This could be on your overall usage, usage patterns, etc...

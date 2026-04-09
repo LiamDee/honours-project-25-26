@@ -1,5 +1,6 @@
 package org.me.gcu.focusath;
 import android.graphics.drawable.Drawable;
+/// sources code from https://github.com/AmjadIbraheem/UsageStats as a template
 public class AppDetails {
     public Drawable appIcon;
     public String appName;

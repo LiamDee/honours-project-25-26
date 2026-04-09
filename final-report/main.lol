@@ -14,4 +14,3 @@
 \contentsline {lstlisting}{\numberline {14}{\ignorespaces Adapted code for storing usage data}}{48}{lstlisting.14}%
 \contentsline {lstlisting}{\numberline {15}{\ignorespaces Code used for reading .csv file data}}{49}{lstlisting.15}%
 \contentsline {lstlisting}{\numberline {16}{\ignorespaces Code added to activities definition code block}}{49}{lstlisting.16}%
-\contentsline {lstlisting}{\numberline {17}{\ignorespaces XML code for storing the string array of activities}}{134}{lstlisting.17}%

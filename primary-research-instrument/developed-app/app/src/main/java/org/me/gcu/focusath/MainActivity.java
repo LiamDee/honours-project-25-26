@@ -617,7 +617,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    /// function used to load usage stats
+    /// function used to load usage stats, uses code from https://github.com/AmjadIbraheem/UsageStats as a template
     public void loadUsage() throws PackageManager.NameNotFoundException {
         long lastWeek = System.currentTimeMillis() - (1000 * 3600 * 24 * 7);
         UsageStatsManager usm = (UsageStatsManager) this.getSystemService(USAGE_STATS_SERVICE);
@@ -640,7 +640,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-        /// function used to display usage in the form of a list view
+        /// function used to display usage in the form of a list view, sources code from https://github.com/AmjadIbraheem/UsageStats as a template
         public void showUsage(Map<String, UsageStats> sortedMap) throws PackageManager.NameNotFoundException {
         ArrayList<AppDetails> appDetailsArrayList = new ArrayList<>();
         List<UsageStats> usageStatsList = new ArrayList<>(sortedMap.values());
