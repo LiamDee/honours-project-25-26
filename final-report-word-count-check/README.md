@@ -1,0 +1,4 @@
+# Note about this version of the report
+This folder contains a heavily shortened and butchered version of the final report, and is used for checking the main body of the report is within the allocated word count. All content that's not counted towards the word count for the final report, but is counted towards the word count in LaTeX has been removed. This includes all references, and the Appendix section. All unnecessary images have also been removed to reduce the file size.
+
+## This version of the report is in no way meant to be interpreted, and should not be interpreted as the "true" final version of the report.
