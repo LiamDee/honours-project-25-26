@@ -51,7 +51,7 @@
 \newcommand{\degree}{BSc (Hons) Computing}
 \newcommand{\supervisor}{Dr. Mario Mata}
 \newcommand{\secondmarker}{Prof. Hua Tianfield}
-\newcommand{\wordcount}{14083}
+\newcommand{\wordcount}{14734}
 \newcommand{\sdgs}{3, 4}
 \newcommand{\module}{MHW225671}
 
@@ -76,7 +76,7 @@
    % \vspace*{0.5 cm}
     \includegraphics[scale = 0.05]{newlogo.png}\\[0.5 cm]
     \text{Honours Project - \module}\\[0.5 cm]
-    \textsc{\LARGE FINAL REPORT}\\[0.5 cm]	
+    \textsc{\LARGE EXPANDED FINAL REPORT}\\[0.5 cm]	
     \text{2025-26} \\[0.5 cm]	
     \text{\large Department of Computer Science} \\[0.8 cm]	
 	\text{ Submitted for the Degree of:}\\[0.2 cm]		
@@ -232,7 +232,7 @@ Finally, I would like to thank my family and friends outside of GCU who have bee
 This section will provide a brief overview on smartphones and social media. It will then provide context on the 
 issue of smartphone addiction and social media addiction, including how people develop such addictions, and the 
 effects they have on an individual. Existing apps and studies that attempt to deal with the issue are also 
-discussed. It will also provide an overview on the project and it's objectives to be achieved in the literature 
+discussed. It will also provide an overview on the project and its objectives to be achieved in the literature 
 \& technology review and during development of the app.
 
 
@@ -258,7 +258,28 @@ subsets of behavioural addiction
 and researched over the last 15 years, with researchers looking into potential causes and 
 correlations with other health effects.\newline
 
-\textcite{RefWorks:RefID:78-bhalerao2020analysis} analyze SA and provided potential causes 
+New forms of media "harming the minds of the youth" isn't a new concept by any means. Going as far back to the 
+invention of the radio, worries from parents about addictions related to radio, television, video games, the 
+internet, and smartphones affecting young people have been prevalent, due to the youth's carelessness in regards 
+to new technologies, but also due to the dystopian over-exaggeration on the dangerous effects that these 
+at-the-time new technologies could have on society that these groups express 
+\autocite{RefWorks:RefID:91-abeele2021media, RefWorks:RefID:96-adorjan2021smartphone}. \newline
+This isn't to say their concerns aren't valid, but rather to point out that the sentiment has been 
+shared with emerging digital mediums.\newline
+
+While SA isn't classified the same way other addictions such as drug addiction is classified, the nature of it is 
+instead classified as a behavioural addiction \autocite{RefWorks:RefID:68-king2017impact}, and in a similar manner, 
+SMA is considered to be a subset of Internet Addiction \autocite{RefWorks:RefID:66-hou2019social}, which itself is 
+considered a subset of behavioural addiction \autocite{RefWorks:RefID:95-chou2005review}. While both are 
+typically categorised as separate types of addiction, it has been argued by some that SA may be correlated with 
+SMA, due to smartphones themselves being enablers for addictive behaviours, including SMA 
+\autocite{RefWorks:RefID:73-kuss2017social}. \newline
+
+Despite this, the use of the term "addiction" has received pushback, due to the sensationalist language the term brings \autocite{RefWorks:RefID:96-adorjan2021smartphone}, and also 
+because both terms don't fit the typical perception of addiction with the term "Problematic Smartphone/Social Media Use" being used as an alternative 
+term \autocite{RefWorks:RefID:97-rozgonjuk2018problematic}.\newline
+
+\textcite{RefWorks:RefID:78-bhalerao2020analysis} analyse SA and provided potential causes 
 behind SA, one of which being how the current generation has been brought up alongside the internet 
 and technology, therefore possibly feeling a preference to communicate over the internet instead of 
 in-person, fuelling the dwindling need for face-to-face communication. \textcite{RefWorks:RefID:68-king2017impact} 
@@ -266,7 +287,16 @@ made a series of hypotheses in relation to college students and the effects
 related to SA, looking at SA's associations with "life stressors" (a measure of stress and anxiety), "digital overload" 
 (a measure of information and communication overload), retention, academic performance, and social well-being. The results 
 found that SA could be positively correlated with life stressors, digital overload, retention, and academic performance, 
-something consistent with previous studies.\newline
+something consistent with previous studies, with social well-being as the only factor with no significant correlation.\newline
+
+A 2018 study from Turkish researcher \textcite{RefWorks:RefID:100-aksoy2018qualitative} 
+looked to define a set of causes behind social media addiction and found that most individuals who considered themselves addicted to social media
+were addicted due to factors such as a lack of friends outside of social media, the fact that social media was a "social activity requirement", a need to fulfil a task of some kind, ensuring 
+that they were kept updated on current events, and the fact that social media was now ingrained with social life in a general sense.\newline
+
+Another study from Turkish researchers \textcite{RefWorks:RefID:99-özcan2017smartphone} 
+mentioned how alongside young people (defined as between 18-29) ranking first in internet usage, they're also more prone to problematic smartphone use, possibly due to the characteristics 
+the phone carries that triggers heavy smartphone usage.
 
 Potential treatments have been researched as well. A China-based study from 2019 analysing SMA 
 \autocite{RefWorks:RefID:66-hou2019social} developed a cognitive-behavioural-therapy-based intervention program 
@@ -275,7 +305,32 @@ cognitive reconstruction. The results showed that compared to the control group,
 program saw improvements in mental health, engagement in learning, sleep quality, and also saw a 
 drop in SM usage. \newline
 
-The "AntiSocial" app, developed by Australian company BugBean for Android devices allowed users to restrict access to 
+For mobile applications specifically, in 2013, a group of German researchers, 
+\textcite{RefWorks:RefID:74-löchtefeld2013appdetox}, developed an android-based mobile application called
+"AppDetox", where the main objective was to provide a "medication" for SA, with the app allowing users to set 
+restriction-based rules on apps that prevent the user from opening the app at specific times of the day, until the 
+user removed the rule, and after a set amount of time. It also displayed information on their set rules, times 
+they've broken said rules, and usage statistics on all their apps. Their analysis found that users mostly set 
+restrictions on messaging apps such as WhatsApp and WeChat, and broke self-created rules at roughly a 7:1 ratio. 
+\newpage
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.40\linewidth]{appdetox1A.png}
+	\captionof{figure}{{Rules tab of AppDetox \autocite{RefWorks:RefID:74-löchtefeld2013appdetox}}}
+	\label{fig:appdetox1A}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.40\linewidth]{appdetox1B.png}
+	\captionof{figure}{{Violations tab of AppDetox \autocite{RefWorks:RefID:74-löchtefeld2013appdetox}}}
+	\label{fig:appdetox1B}
+\end{minipage}
+\end{figure}
+
+The "AntiSocial" app, developed by Australian company BugBean, allowed users to restrict access to 
 certain apps and provided app usage statistics, but also added other functionality like usage comparisons
 with others that were within their age group, location, and occupation. It also showed users how many 
 times they picked up their device, and how long they used certain apps for 
@@ -347,7 +402,7 @@ Then evaluate based on the results, and see if the problem statement and hypothe
 
 
 \subsubsection{Project Hypothesis}
-Testing the hypothesis will involve providing participants with the developed application for a period of three weeks. % maybe change / remove ...for a period of three weeks.
+Testing the hypothesis will involve providing participants with the developed application for a period of three weeks.
 During this period, participants will attempt to reduce their smartphone \& social media usage by using the developed mobile 
 application with usage tracking and psychological intervention methods. Given this, the hypothesis for 
 this project is: \newline
@@ -450,7 +505,13 @@ which may bias user retention, the studies demonstrate that the viability of a m
 using psychological frameworks has grown, and that developing such app is doable, as long
 as aspects such as other psychological frameworks, and user incentive are considered. The studies also highlight that
 while apps such as the ones discussed are in their infancy and may not deliver the same results as traditional treatment, the
-ease of access compared to traditional treatment provides another point to its potential viability.
+ease of access compared to traditional treatment provides another point to its potential viability. \newline
+
+An interesting note is that privacy is rarely, if ever, brought 
+up when discussing the design and development of these apps, emphasising that "best practices should be known and shared" 
+\autocite{RefWorks:RefID:75-oliveira2021effectiveness}, implying that the privacy of an end-user isn't considered when 
+developing these apps, though this may be due to the apps being developed for research purposes, and not intended to be 
+used by a wider audience.\newline
 
 
 \subsection{Investigate the contextualization of SA and SMA in existing apps}
@@ -466,7 +527,7 @@ topic of SA, and points out the irony in attempting to treat SA with the use of 
 shared in \textcite{RefWorks:RefID:126-petrucco2021user}, stating that proposing technology as a solution to 
 an issue caused by technology itself is paradoxical in nature. \newline
 
-Dosselaar says that developers lack a deep understanding of the topic, and points out the overall complexity of the issue, 
+\textcite{RefWorks:RefID:35-dosselaar2017smartphone} says that developers lack a deep understanding of the topic, and points out the overall complexity of the issue, 
 mentioning how SA is a product of many other factors; not just the phone, and the apps simplify what is often a complex 
 issue by acting as a one-size-fits-all solution \autocite{RefWorks:RefID:35-dosselaar2017smartphone, RefWorks:RefID:132-monge2019race}. 
 They also fail to consider context behind smartphone usage, noting how it can be productive 
@@ -549,10 +610,11 @@ such as Internet Addiction and Internet Gaming Disorder
 \autocite{RefWorks:RefID:48-yao2017combined,RefWorks:RefID:49-zajac2017treatments}, though has had limited research
 \autocite{RefWorks:RefID:143-bradley2014choice} when treating SA and SMA compared to CBT. \newline
 
-\textcite{RefWorks:RefID:42-esmaeili2018method} developed a mobile app 
-integrating RT. The app was hypothesized to reduce anxiety, SM usage, among others, and was developed for Android 
+Regarding its usage in intervention apps and their associated results, a study by 
+\textcite{RefWorks:RefID:42-esmaeili2018method} was the most recent study found that developed a mobile app 
+integrating RT. The app was hypothesised to reduce anxiety, SM usage, among others, and was developed for Android 
 devices. It implemented teachings about SMA, as well as app restriction functions, with the results being that 
-anxiety and SM usage fell when compared to the control group.
+metrics such as anxiety and SM usage fell when compared to the control group.
 
 
 \subsection{Investigate methods to track app usage}
@@ -599,6 +661,7 @@ screenshots must be taken at a specified time, as mistiming it could yield less 
 metrics \autocite{RefWorks:RefID:123-2024mobile}.
 
 \subsubsection{Discussion}
+An overarching theme of all these studies was the primary use of Android as the development platform. 
 Both studies chose Android as their development platform of choice, mentioning that iOS apps don't allow for app 
 usage tracking due to privacy restrictions 
 \autocite{RefWorks:RefID:118-rosa2022problematic, RefWorks:RefID:116-bye2024cohort, applesupport-ifanappasks}. 
@@ -698,14 +761,14 @@ can be found within Appendices D and E. \newline
 
 \subsubsection{Psychological Intervention Method}
 
-The psychological intervention method is a critical component for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
+The psychological intervention method is a critical component for the PRI, as this would then be used to derive functional requirements of the application, therefore,
 choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
 specifically section 2.3 made mention of two psychological intervention methods, Cognitive Behavioural Therapy and Reality Therapy. \newline
 
 % could probably cut this section
 CBT was defined as an "active, problem-focused, time-sensitive treatment approach" using targeted, short-term strategies. CBT strategies used in mobile apps include behavioural activation, cognitive
 restructuring, and problem solving (see section 2.3 for more detail). RT, derived from choice therapy, makes use of the Wants, Direction, Evaluation, and Planning \& Commitment (WDEP) system, where 
-a person defines a goal and if there current action is stopping them from that goal. From there, they are encouraged to replace the activity with a better alternative. \newline
+a person defines a goal and if their current action is stopping them from that goal. From there, they are encouraged to replace the activity with a better alternative. \newline
 % could probably cut this section
 
 After analysing both frameworks, it was concluded that RT was the choice of framework to use. The primary reason for using this framework instead of CBT ties back to one of the main criticisms
@@ -848,7 +911,7 @@ later iteration shows greater detail, providing more decision-points and error h
 \end{figure}
 
 Figure \ref{fig:req1-5-7-diagram-main} shows the flowchart diagram of requirements 1.5 and 1.7, merged into a single requirement. When creating both requirements, it was identified that requirement 1.7 could
-only function if the app was at a specific point. Requirement 1.7's constraints notes that: \newline
+only function if the app was at a specific point. Requirement 1.7's constraints note that: \newline
 
 \textit{"User must be currently given guidance by the app, or is in the onboarding section of the app"}\newline
 
@@ -1241,7 +1304,7 @@ This required rewriting a majority of the function used to create the file. Inst
 instead of using the FileOutputSteam class, which is better suited for multimedia files, the function now uses the FileWriter class, better suited for textual data 
 \autocite{java-fileoutputstream, java-filewriter}. This rewritten code, and the successful attachment is shown below in code snippet \ref{lst:new-app-list-csv} and figure \ref{fig:file-attach-after}.
 
-\begin{lstlisting}[language=Java, style=mystyle, caption={New implemention of writing the app list to a .csv file}, label=lst:new-app-list-csv]
+\begin{lstlisting}[language=Java, style=mystyle, caption={New implementation of writing the app list to a .csv file}, label=lst:new-app-list-csv]
 private void generateFile(ArrayList<AppDetails> appDetails) {
     String fileName = "appDataDetails.csv";
     File exFileDir = this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
@@ -1271,7 +1334,7 @@ private void generateFile(ArrayList<AppDetails> appDetails) {
 \subsubsection{Req-1.3}
 This branch is where the WDEP system from RT mentioned in section 2.3.3 of the literature review would see its continued implementation in the form of implementing requirement 1.3. The first step 
 in implementing this was to create conditions the code can reach to show separate screens depending on if a user had seen an increase or decrease in their usage over the last week. This involved 
-figuring out a way to store a users old usage time to compare, as the comparison would be used to send the user to correct set of screens.
+figuring out a way to store a user's old usage time to compare, as the comparison would be used to send the user to correct set of screens.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Checking for usage increase / decrease}, label=lst:check-usage-increase]
 long currentTime =  TimeUnit.MILLISECONDS.toSeconds(totalTime);
@@ -1300,7 +1363,7 @@ Because the user has the option of redefining their goal if they have seen a usa
 \ref{lst:goal-definition-rewrite}, the code now checks if Boolean value isRedefiningGoal is true, and if it is, updates the entered goal from the user. isRedefiningGoal will be true if this 
 screen is reached from the screens used when receiving advice from the app.
 
-\begin{lstlisting}[language=Java, style=mystyle, caption={Goal definintion screen, rewritten for requirement 1.3}, label=lst:goal-definition-rewrite]
+\begin{lstlisting}[language=Java, style=mystyle, caption={Goal definition screen, rewritten for requirement 1.3}, label=lst:goal-definition-rewrite]
  else if (isRedefiningGoal == true) {
 	//TODO: possibly change paragraph text to make more sense given the context
 	String oldGoal =  sharedPreferences.getString("goalEntry", "none");
@@ -1690,7 +1753,7 @@ A literature review was carried out to investigate existing applications that us
 existing apps and the issues they raise, existing psychological frameworks that can be integrated into a mobile application, and methods to track a user's app usage. \newline
 
 Following the findings from the literature review, an effort to create a mobile application that used usage tracking technologies and psychological intervention methods while following a 
-”develop and test” approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid methodology.Thereafter, an analysis of the requirements 
+”develop and test” approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid methodology. Thereafter, an analysis of the requirements 
 necessary for the app to function as intended was undertaken, as well as picking a psychological intervention and usage tracking method, those being Reality Therapy and using the
 android.app.usage package, respectively. Flowchart design diagrams showing the app flow for each requirement and UI wireframes that depict how each app screen should look were then created. 
 After this, the process of coding the app based on the information created and obtained began. After each iteration, testing was performed to ensure the app worked without issue. Finally, an 
