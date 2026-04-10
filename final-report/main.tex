@@ -51,7 +51,7 @@
 \newcommand{\degree}{BSc (Hons) Computing}
 \newcommand{\supervisor}{Dr. Mario Mata}
 \newcommand{\secondmarker}{Prof. Hua Tianfield}
-\newcommand{\wordcount}{10000}
+\newcommand{\wordcount}{10968}
 \newcommand{\sdgs}{3, 4}
 \newcommand{\module}{MHW225671}
 
@@ -135,11 +135,11 @@
 
 % COME BACK HERE BEFORE YOU SUBMIT
 % are appendices all updated and include the right info? do you need to include more? - yes, and probably not
-% are tables, code snippets, and figures referenced in writing linked to the right item?
+% are tables, code snippets, and figures referenced in writing linked to the right item?- yes
 % are the use of abbreviations and other such things consistent?
 % is the github repo public? - yes
-% is there any unnecessary info that can be removed?
-% has it been proofread?
+% is there any unnecessary info that can be removed? - i dont consider it unnecessary, but yes
+% has it been proofread? - yes
 % have all sources been included? - to the best of my knowledge, yes
 
 % updates from interim report:
@@ -150,7 +150,7 @@
 % collapsed project outline, objectives and hypothesis into a single section (Project Overview, Aims, and Methodology)
 % introduced the term "persuasive computing" in intro
 
-%TODO:
+%TODO: ALL DONE
 % still need to (from interim report):
 % introduce the term "persuasive computing" in intro - done
 % instead of agile development, go with iterative development -- already kinda done
@@ -159,25 +159,20 @@
 
 \newpage
 
-\begin{abstract} %may need to shorten
-%This should be an overview of the student's project in less than half a page. It should summarise what they have actually done on their project: why it was done, how it was done and what were the conclusions. In particular, main objectives, main approaches/technologies used, actual solution/implementation, highlights of evaluation findings.
-
-Throughout the rise of social media and smartphones, an ever-growing topic of discussion has been the issue of individuals developing an 
-overdependence on said technologies, referred to as "Social Media Addiction" and "Smartphone Addiction" respectively. Research into the topic 
-discussing the potential causes for it, and possible methods to treat the issue have been performed extensively in the past, with the latter 
-looking towards psychological-based treatments such as Cognitive-Based Therapy and Reality Therapy, and in recent years, some looking at mobile 
-application that use some form of usage tracking to address the issue. Research has shown that psychological-based treatments has provided 
-promising results in treating similar issues such as anxiety, and has even seen integration with mobile apps, with it also showing viability 
-when addressing other mental health concerns. Similarly, studies conducted show viability in utilising usage tracking when addressing the issue,
-particularly when integrated into a mobile app. However, little work has been done to utilise both of these concepts together into a single
-mobile app. \newline
+\begin{abstract}
+Throughout the rise of social media and smartphones, an ever-growing topic of discussion has been individuals developing an overdependence on such technologies, referred to as ”Social Media 
+Addiction” and ”Smartphone Addiction.” Research into the topic discussing the potential causes for it, and possible methods to treat the issue, have been per- formed extensively in the 
+past—with the latter looking towards psychological-based treatments such as Cognitive-Based Therapy and Reality Therapy. In recent years, mobile applications that use some form of usage tracking 
+have also been looked into to address the issue. Research has shown that psychological-based treatments have produced promising results in treating similar issues such as anxiety; with studies 
+showing viability when addressing other mental health concerns. Similarly, studies conducted show viability in utilising usage tracking when addressing the issue, particularly when integrated 
+into a mobile app. However, little work has been done to utilise both of these concepts together into a single mobile app.\newline
 
 % While psychological-based treatments have shown promising results treating similar mental health conditions, and while
 % research has shown mobile mental health apps could be a viable alternative to traditional treatment, little work has been done applying both solutions together to Social Media Addiction and 
 % Smartphone Addiction. \newline
 
 This project showcases an Android-based mobile application that integrates concepts from Reality Therapy alongside usage tracking technologies, with
-the overall objective being to lower an individuals usage in an attempt to address the issue of Social Media and Smartphone Addiction. To evaluate
+the overall objective being to lower an individual's usage in an attempt to address the issue of Social Media and Smartphone Addiction. To evaluate
 the project, a small group of participants were given the application to use over a three-week period, and were asked to send their usage data
 each week during this time. By the end of this period, they were also provided a survey where they could provide their own opinions on the app.  \newline
 
@@ -234,11 +229,9 @@ Finally, I would like to thank my family and friends outside of GCU who have bee
 
 
 \section{Introduction}
-This section will provide a brief overview on smartphones and social media. It will then provide context on the 
-issue of smartphone addiction and social media addiction, including how people develop such addictions, and the 
-effects they have on an individual. Existing apps and studies that attempt to deal with the issue are also 
-mentioned. It will also provide an overview on the project and it's objectives to be achieved in the literature 
-\& technology review and during development of the app.
+This section will provide context on the issue of smartphone addiction and social media addiction, including how people develop such addictions, and the 
+effects they have on an individual. Existing apps and studies that attempt to deal with the issue are discussed. It will also provide an overview on the project and it's objectives to be achieved in the literature 
+\& technology review and during development.
 
 
 \subsection{Project Background}
@@ -321,31 +314,31 @@ of "persuasive computing", a type of computer system intended on changing the be
 Research into how existing mobile applications make use of psychological methods when addressing issues such as 
 depression and anxiety to understand how viable using mobile apps are to address similar issues.\newline
 
-\noindent\textbf{Investigate the contextualization of SA and SMA in existing apps}\newline
+\noindent\underline{\textbf{Investigate the contextualization of SA and SMA in existing apps}}\newline
 Research how the issue of SA and SMA are contextualized within existing intervention apps and what issues could
 arise from how they are presented. This will help in enabling growth in a user when it comes to learning about
 SA and SMA.\newline
 
-\noindent\textbf{Investigate psychological frameworks}\newline
+\noindent\underline{\textbf{Investigate psychological frameworks}}\newline
 Research how psychological methods have been used in the past, specifically to treat SA or SMA, and see if such 
 methods have been integrated with mobile apps to gain a further understanding on how these methods could be 
 integrated or improved upon.\newline
 
-\noindent\textbf{Investigate methods to track app usage}\newline
+\noindent\underline{\textbf{Investigate methods to track app usage}}\newline
 Research into how apps currently track phone activity, and how they can be utilized in the context of the project,
 as a major component of the application makes use of usage tracking.\newline
 
 \noindent\underline{\textbf{Primary Objectives}}\newline\newline
-\noindent\textbf{Develop the smartphone intervention app}\newline
+\noindent\underline{\textbf{Develop the smartphone intervention app}}\newline
 Create the application based on the knowledge gained from the literature and technology review. This will involve
 integrating the chosen psychological framework and usage tracking method before testing the app's functionality
 via test cases to ensure the app functions as intended.  \newline
 
-\noindent\textbf{Gather participants for evaluating the app and perform evaluation}\newline
+\noindent\underline{\textbf{Gather participants for evaluating the app and perform evaluation}}\newline
 Participants will be used when evaluating the developed application. They will be given an overview of the app 
 before being given a consent form to sign to consent to participating in the research. \newline
 
-\noindent\textbf{Analyze the results and obtain a conclusion}\newline
+\noindent\underline{\textbf{Analyse the results and obtain a conclusion}}\newline
 Collect results from the evaluation and see if the app was impactful at reducing smartphone and social media usage. 
 Then evaluate based on the results, and see if the problem statement and hypothesis were met.\newline 
 
@@ -362,31 +355,28 @@ application will help to address and reduce smartphone \& social media usage in 
 
 \subsection{Structure of the Report}
 Before continuing with the remainder of this paper, a brief overview of the structure of the report is provided, giving
-a short summary of each upcoming chapter. \newline
+a short summary of each upcoming chapter.
 
-\noindent\textbf{Chapter 2 - Literature and Technology Review - }
+\subsubsection{Chapter 2 - Literature and Technology Review}
 This chapter provides an extended review of the current literature surrounding topic areas relevant to the report while also
-analysing technical methods utilised by apps with a similar intention to the PRI outlined within the primary objectives. \newline
+analysing technical methods utilised by apps with a similar intention to the PRI outlined within the primary objectives.
 
-\noindent\textbf{Chapter 3 - Execution - }
+\subsubsection{Chapter 3 - Execution}
 This chapter provides an extensive look towards the development of the PRI, providing commentary towards the research methodology
 used, and discussion and justification on the design choices, technological components used, features implemented when developing the PRI, and
-the results from testing the application for bugs. \newline
+the results from testing the application.
 
+\subsubsection{Chapter 4 - Evaluation and Results Discussion}
+This chapter presents an in-depth discussion of the results of the evaluation, including the findings themselves, reasoning on the 
+findings, and initial conclusions from the findings.
 
-\noindent\textbf{Chapter 4 - Evaluation and Results Discussion - }
-This chapter presents a in-depth discussion of the results of the evaluation, including the findings themselves, reasoning on the 
-findings, and initial conclusions from the findings. \newline
-
-
-\noindent\textbf{Chapter 5 - Legal, Social, Ethical, and Professional Issues - }
+\subsubsection{Chapter 5 - Legal, Social, Ethical, and Professional Issues}
 This chapter gives commentary on any Legal, Social, Ethical, and Professional the project encountered over its lifespan, with
-additional discussion provided towards the Sustainable Development Goals the project aligns with when discussing social issues. \newline
+additional discussion provided towards the Sustainable Development Goals the project aligns with when discussing social issues.
 
-
-\noindent\textbf{Chapter 6 - Conclusions and Further Work - }
-This chapter concludes the report by summarizing the project in it's entirety up to this point, before then presenting a final answer 
-to the project's hypothesis. It then continues by providing critical analysis of the project and it's limitations, and finally, discusses 
+\subsubsection{Chapter 6 - Conclusions and Further Work}
+This chapter concludes the report by summarizing the project in its entirety up to this point, before then presenting a final answer 
+to the project's hypothesis. It then continues by providing critical analysis of the project and its limitations, and finally, discusses 
 what further work the project may lead in the future.
 
 
@@ -589,7 +579,7 @@ Android API which gives access to phone usage stats and history. Because of this
 manually granted by the user. The results of the study showed that those with high levels of smartphone usage 
 did experience more difficulty in not using their phone. \newline
 
-\textcite{RefWorks:RefID:116-bye2024cohort} analyzed the effects technology has on 
+\textcite{RefWorks:RefID:116-bye2024cohort} analysed the effects technology has on 
 the mental health of young people, developing an app called the "3S-YP" app 
 that constantly collected "smartphone metadata" from participants. 
 While they don't detail the development of the app, they mention that smartphone metadata was collected using 
@@ -621,11 +611,8 @@ usage tracking.
 
 
 \section{Execution}
-%This section should provide a detailed description of the research methods which will used in the project. This will include the process of creating the artefact and evaluating the outcome.  This should make reference to the literature review findings where appropriate. 
-
 This section will provide an in-depth look at the process behind building the PRI. This section will 
-include a brief analysis on the research methodology used, discussion on the described problem's
-characteristics, and then a extensive look at the creation of the PRI, including commentary 
+include a brief analysis on the research methodology used, and then an extensive look at the creation of the PRI, including commentary 
 and justification behind design choices, technologies used, and the features implemented. When necessary, this
 section will also reference the literature review.
 
@@ -645,19 +632,20 @@ the PRI meets the project's main objective, research statement, and hypothesis.
 %maybe mention change in eval method
 
 \subsection{Lifecycle}
-Early in the planning stage of the project, the project intended to make use of an iterative development methodology, more specifically, the agile methodology, due to
+Early in the planning stage of the project, the project intended to make use of the agile methodology, due to
 its focus on flexibility, adaptability to any changes in requirements, and frequent use in mobile app development \autocite{RefWorks:RefID:160}. However, during the
 requirements analysis stage of the project, a change to a Hybrid methodology was made. This model aims to let development teams combine approaches from
-multiple methodologies and tailor the Software Development Lifecycle to fit their needs \autocite{RefWorks:RefID:162-hossain2023software}. In this case,
-approaches from iterative and waterfall methodologies were combined to create a methodology that fit the needs of the project at that point in time.
-specifically, the waterfall methodology was used for the Requirements Analysis, Design, and Evaluation stage, while the iterative methodology was used for
-the Implementation and Testing stage. This allowed for requirements to be "fully" defined and for designs to be as detailed as possible, while also
-allowing for the creation of multiple prototypes and for issues to be identified and solved during the creation of each prototype. \newline
+multiple methodologies and tailor the Software Development Lifecycle to fit their needs \autocite{RefWorks:RefID:162-hossain2023software}. 
+% In this case,
+% approaches from iterative and waterfall methodologies were combined to create a methodology that fit the needs of the project at that point in time.
+% specifically, the waterfall methodology was used for the Requirements Analysis, Design, and Evaluation stage, while the iterative methodology was used for
+% the Implementation and Testing stage. This allowed for requirements to be "fully" defined and for designs to be as detailed as possible, while also
+% allowing for the creation of multiple prototypes and for issues to be identified and solved during the creation of each prototype. \newline
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.60\linewidth]{iterative-waterfall.png}
-	\captionof{figure}{\textit{Typical iterative Waterfall methodology \autocite{RefWorks:RefID:161-trivedi2013comparative}}}
+	\captionof{figure}{{Typical iterative Waterfall methodology \autocite{RefWorks:RefID:161-trivedi2013comparative}}}
 	\label{fig:iterativewaterfall}
 \end{figure}
 
@@ -665,7 +653,7 @@ This change in methodology was deemed to be necessary, as it felt more appropria
 methodologies, while fitting for any software project, puts a focus on constant customer feedback during the SDLC \autocite{RefWorks:RefID:162-hossain2023software}, 
 something that there would be a lack of in this project's case. The Waterfall methodology, while a lot simpler to plan with, its lack of flexibility when it comes to changes 
 in project scope and lack of prototype creation in particular \autocite{RefWorks:RefID:162-hossain2023software}, made it usage unfitting for the project. Combining parts 
-of these methodologies however, made for a methodology that was fitting for the project as a whole. Though this was a unforeseen risk according to the risk matrix and risk 
+of these methodologies however, made for a methodology that was fitting for the project as a whole. Though this was an unforeseen risk according to the risk matrix and risk 
 register composed before the beginning of development (see Appendix B), this change did not negatively affect development, despite this shift occurring slightly into the 
 execution of the project, as the project was able to stick to its defined timeline throughout the duration of the project execution (see Appendix C). \newline
 
@@ -676,13 +664,14 @@ Implementation and Testing stage. The requirements were defined during the begin
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{git-branches.png}
-	\captionof{figure}{\textit{GitHub branches for each requirement}}
+	\captionof{figure}{{GitHub branches for each requirement}}
 	\label{fig:gitbranch}
 \end{figure}
 
-Figure \ref{fig:gitbranch} showcases the process behind implementing and testing the PRI. When building prototypes of the PRI, a GitHub branch that matched the name of the requirement was 
-created, then, within that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. If that 
-part of the requirement passed all test cases as intended, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process 
+Figure \ref{fig:gitbranch} showcases the process behind implementing and testing the PRI. 
+% When building prototypes of the PRI, a GitHub branch that matched the name of the requirement was 
+% created, then, within that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. 
+If that part of the requirement passed all test cases, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process 
 repeated until the implementation of all requirements were completed.
 
 \newpage
@@ -703,19 +692,18 @@ From the research statement alone, two integral components can be identified:
 
 From here, these components can then be broken down into smaller parts that then make up a list of functional requirements after ensuring they fit within the findings of the literature
 review, with some aspects from both components being used to identify a requirement. Additionally, interviews were conducted with nine participants to help identify new requirements or 
-to add pieces to existing requirements. Full interview transcripts, instructions on accessing them, and detailed notes taken during each interview
-can be found within Appendices D and E. \newline
+to add pieces to existing requirements. Interview details can be found within Appendices D and E. \newline
 
 \subsubsection{Psychological Intervention Method}
 
-The psychological intervention method is a critical piece of infrastructure for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
-choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
+% The psychological intervention method is a critical piece of infrastructure for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
+Choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
 specifically section 2.3 made mention of two psychological intervention methods, Cognitive Behavioural Therapy and Reality Therapy. \newline
 
 % could probably cut this section
-CBT was defined as an "active, problem-focused, time-sensitive treatment approach" using targeted, short-term strategies. CBT strategies used in mobile apps include behavioural activation, cognitive
-restructuring, and problem solving (see section 2.3 for more detail). RT, derived from choice therapy, makes use of the Wants, Direction, Evaluation, and Planning \& Commitment (WDEP) system, where 
-a person defines a goal and if there current action is stopping them from that goal. From there, they are encouraged to replace the activity with a better alternative. \newline
+% CBT was defined as an "active, problem-focused, time-sensitive treatment approach" using targeted, short-term strategies. CBT strategies used in mobile apps include behavioural activation, cognitive
+% restructuring, and problem solving (see section 2.3 for more detail). RT, derived from choice therapy, makes use of the Wants, Direction, Evaluation, and Planning \& Commitment (WDEP) system, where 
+% a person defines a goal and if there current action is stopping them from that goal. From there, they are encouraged to replace the activity with a better alternative. \newline
 % could probably cut this section
 
 After analysing both frameworks, it was concluded that RT was the choice of framework to use. The primary reason for using this framework instead of CBT ties back to one of the main criticisms
@@ -725,18 +713,19 @@ case, their smartphone usage and/or SA \& SMA would be the aspect affecting them
 
 \subsubsection{Usage Tracking Method}
 
-Deriving a method of tracking a user's smartphone and social media usage was a simpler endeavour. As mentioned in section 2.4, Apple's iOS operating system disallows apps from tracking a user's usage
+% Deriving a method of tracking a user's smartphone and social media usage was a simpler endeavour. 
+As mentioned in section 2.4, Apple's iOS operating system disallows apps from tracking a user's usage
 due to privacy concerns, with the only "viable" alternative being using a "jailbroken" device, which would complicate multiple parts of the project. On the contrary, Google's Android operating system
 allows for apps to track a user's usage via the "android.app.usage" package within its API, so long that a user permits the app to do so.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{usagestatsmanager-api-doc.png}
-	\captionof{figure}{\textit{UsageStatsManager class from android.app.usage, taken from Android's API documentation within Android Studio \autocite{androiddevelopment-usagestatsmanager}}}
+	\captionof{figure}{{UsageStatsManager class from android.app.usage, taken from Android's API documentation within Android Studio \autocite{androiddevelopment-usagestatsmanager}}}
 	\label{fig:usagestatsmanager}
 \end{figure}
 
-The "android.app.usage" package contains many classes that provide detailed statistics about a user's Android device, but the class of interest for use within the PRI is the "UsageStatsManager" 
+The "android.app.usage" package contains many classes that provide detailed statistics about a user's device, namely, the "UsageStatsManager" 
 class. Figure \ref{fig:usagestatsmanager} shows how this class returns a request for usage data, with the documentation noting that requesting usage data within a time interval will include that
 interval \autocite{androiddevelopment-usagestatsmanager}, as seen within figure \ref{fig:usagestatsmanager}. This class was mentioned within the literature review when discussing what methods could 
 be used to track usage of a user's device, and is the class of choice for developing the app, as it contains a method "queryUsageStats" that can be used to retrieve usage stats within a specified 
@@ -745,7 +734,7 @@ time range \autocite{androiddevelopment-usagestatsmanager}.
 \subsubsection{Functional (and Non-Functional) Requirements}
 
 As mentioned at the beginning of this section, requirements were identified by taking the findings from the literature review and combining them alongside the analysis of the research statement and
-user interviews that were performed as well. All requirements were then compiled into a single document, the Software Requirements Specification document.
+user interviews that were performed as well. All requirements were then compiled into a Software Requirements Specification document.
 
 \begin{table}[H]
 \centering
@@ -769,8 +758,10 @@ user interviews that were performed as well. All requirements were then compiled
 
 Table  \ref{tab:func-req-1-5-main} shows an example of how a requirement was defined within the SRS. It contains a description of how it would function normally, the inputs required from an end-user
 to ensure its functionality, the processing required by the application, the output the app should show to an end-user after processing, constraints of the requirement, how the app should handle
-any data used for the requirement, and how the app should handle errors the requirement may be prone to. This requirements document was frequently referenced when making design decisions and when
-implementing the requirement.
+any data used for the requirement, and how the app should handle errors the requirement may be prone to. 
+
+% This requirements document was frequently referenced when making design decisions and when
+% implementing the requirement.
 
 \begin{table}[H]
 \centering
@@ -792,32 +783,38 @@ implementing the requirement.
 \label{tab:func-req-master-list}
 \end{table}
 
-Table \ref{tab:func-req-master-list} provides a full list of all the functional requirements identified throughout the project's lifespan. With the exception of "REQ-1.8", where the requirement
-was identified and defined later during development, all requirements were identified during the initial requirements analysis phase of development. A comprehensive breakdown of each functional 
-requirement identified in detail, similar in manner to Table \ref{tab:func-req-1-5-main}, alongside non-functional requirements can be found in Appendix F, as well as the SRS document separately 
-via the GitHub repository.
+
+% With the exception of "REQ-1.8", where the requirement
+% was identified and defined later during development, all requirements were identified during the initial requirements analysis phase of development. 
+Table \ref{tab:func-req-master-list} provides a full list of all the functional requirements identified throughout the project's lifespan. A comprehensive breakdown of each functional  requirement identified in detail, 
+similar in manner to Table \ref{tab:func-req-1-5-main}, alongside non-functional requirements can be found in Appendix F, as well as the SRS document separately via the GitHub repository.
 
 
 \newpage
 
 \subsection{Design}
-Given the lifecycle used for the project which was outlined in section 3.3, the next step was to design both design diagrams that represent how the requirement should typically function for an 
-end-user and user interfaces for each screen necessary per requirement. Before performing this step, a decision had to made on if the design diagrams for each requirement should be created first
-before creating the user interfaces, or if each design diagram and UI should be created on a "per-requirement" basis. Ultimately, it was decided to create diagrams for each requirement first, as
-when it came time to work on the interfaces, the author would have the best understanding possible up to that point on how parts of the application would interact with each other, and therefore would
-have a better understanding on what UI elements would be included. \newline
+% Given the lifecycle used for the project which was outlined in section 3.3, 
+
+The next step was to design both design diagrams that represent how the requirement should typically function for an  end-user and user interfaces for each screen necessary per requirement. 
+
+% The next step was to design both design diagrams that represent how the requirement should typically function for an 
+% end-user and user interfaces for each screen necessary per requirement. Before performing this step, a decision had to made on if the design diagrams for each requirement should be created first
+% before creating the user interfaces, or if each design diagram and UI should be created on a "per-requirement" basis. Ultimately, it was decided to create diagrams for each requirement first, as
+% when it came time to work on the interfaces, the author would have the best understanding possible up to that point on how parts of the application would interact with each other, and therefore would
+% have a better understanding on what UI elements would be included. \newline
 
 \subsubsection{Diagram Design}
 
 The type of diagram used for designing the application based on the requirements was a Flowchart diagram, a diagram which uses components, typically shapes, that represent logic, order, and decision-points within a system
-to model said system or related processes, making it easy for developers to understand event sequences or the overall structure of a system \autocite{RefWorks:RefID:166-ghritlahare2025role}.This type 
-of diagram was decided upon due to how easily it can convey the idea of how a requirement should function \autocite{RefWorks:RefID:169-xinogalos2013flowchartbased}. Flowchart diagrams were the 
-exclusive diagram used for designing the application.
+to model said system or related processes, making it easy for developers to understand event sequences or the overall structure of a system \autocite{RefWorks:RefID:166-ghritlahare2025role}.
+% This type 
+% of diagram was decided upon due to how easily it can convey the idea of how a requirement should function \autocite{RefWorks:RefID:169-xinogalos2013flowchartbased}. Flowchart diagrams were the 
+% exclusive diagram used for designing the application.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{example-flow-chart-req-1_2.jpg}
-	\captionof{figure}{\textit{Req-1.2 Flowchart Diagram}}
+	\captionof{figure}{{Req-1.2 Flowchart Diagram}}
 	\label{fig:req1-2-flowchart-diagram}
 \end{figure}
 
@@ -826,15 +823,18 @@ lines represent the path taken by the program during execution, the diamond shap
 of the app. Typically, more shapes are used to represent other parts of a system design, however, to keep the design as simple possible to understand, the prior three shapes were the only ones 
 utilised during this process, with the level of complexity in the designs varying depending on if elements such as error handling were part of the requirement. \newline
 
-As mentioned at the beginning of this section, this process of creating a flowchart based on the requirement was repeated until all requirements outlined had a flowchart diagram. From there, the designs
-were reviewed for any possible refinements, for which only one flowchart needed refinement, that being requirement 1.3. Requirements were created in sequential order according to the requirement number 
-(Req-1.1 $\rightarrow$ Req-1.2 $\rightarrow$ Req-1.3 $\rightarrow$ etc\dots). A complete list of the flowchart diagrams created can be found in Appendix G.
+% As mentioned at the beginning of this section, 
+This process of creating a flowchart based on the requirement was repeated until all requirements outlined had a flowchart diagram. From there, the designs
+were reviewed for any possible refinements, for which only one flowchart needed refinement, that being requirement 1.3. A complete list of the flowchart diagrams created can be found in Appendix G.
+% Requirements were created in sequential order according to the requirement number 
+% (Req-1.1 $\rightarrow$ Req-1.2 $\rightarrow$ Req-1.3 $\rightarrow$ etc\dots). 
+
 
 \begin{figure}[H]
 \centering
 	\centering
 	\includegraphics[width=0.40\linewidth]{diagrams/req-1.3-diagram-old.jpg}
-	\captionof{figure}{\textit{First iteration of requirement 1.3's flowchart design}}
+	\captionof{figure}{{First iteration of requirement 1.3's flowchart design}}
 	\label{fig:req-1_3-old}
 \end{figure}
 
@@ -842,49 +842,58 @@ were reviewed for any possible refinements, for which only one flowchart needed 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\linewidth]{diagrams/req-1_3-diagram.jpg}
-	\captionof{figure}{\textit{Final iteration of requirement 1.3's flowchart design}}
+	\captionof{figure}{{Final iteration of requirement 1.3's flowchart design}}
 	\label{fig:req-1_3-new}
 \end{figure}
 
-Figures \ref{fig:req-1_3-old} and \ref{fig:req-1_3-new} show the first and last iterations respectively of the flowchart design for requirement 1.3. While the design for the requirement is the same, the 
-later iteration shows greater detail, providing more decision-points and error handling in the scenario the user wants to redefine their goal, while also making some changes to the wording of the process points.
+Figures \ref{fig:req-1_3-old} and \ref{fig:req-1_3-new} show the first and last iterations respectively of the flowchart design for requirement 1.3. The later iteration shows greater detail, providing more 
+decision-points and error handling in the scenario the user wants to redefine their goal, while also making some changes to the wording of the process points.
+
+% While the design for the requirement is the same, 
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.32\linewidth]{diagrams/req-1_5__1_7-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.5 / Req-1.7 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.5 / Req-1.7 Flowchart Diagram}}
 	\label{fig:req1-5-7-diagram-main}
 \end{figure}
 
 Figure \ref{fig:req1-5-7-diagram-main} shows the flowchart diagram of requirements 1.5 and 1.7, merged into a single requirement. When creating both requirements, it was identified that requirement 1.7 could
-only function if the app was at a specific point. Requirement 1.7's constraints notes that: \newline
+only function if the app was at a specific point (See Appendix F). 
 
-\textit{"User must be currently given guidance by the app, or is in the onboarding section of the app"}\newline
+% Requirement 1.7's constraints notes that: \newline
+
+% \textit{"User must be currently given guidance by the app, or is in the onboarding section of the app"}\newline
 
 This means that the requirement can't be met unless the app is in the onboarding stage (outlined in requirement 1.5) or is currently providing guidance to the user (outlined in requirement 1.3). To avoid 
-replication when creating the flowcharts, requirements 1.5 and 1.7 were merged into a single diagram. While including requirement 1.3 within the merge was considered, requirement 1.3 was left out of the merge, due
-to the general flow being different enough to deem it unique, especially after it's aforementioned redesign.
+replication when creating the flowcharts, requirements 1.5 and 1.7 were merged into a single diagram. 
+% While including requirement 1.3 within the merge was considered, requirement 1.3 was left out of the merge, due
+% to the general flow being different enough to deem it unique, especially after it's aforementioned redesign.
 
 
 \subsubsection{User Interface Design}
-When designing the UI, a wireframing approach was used. This approach involves creating simplistic designs of an interface to establish structure and design flow \autocite{RefWorks:RefID:167-role}.
-Wireframe designs are meant to be basic in terms of visual spectacle, acting as a blueprint for a user interface, and keeping its focus solely on fundamental design elements such as where important
-parts of a UI should go \autocite{RefWorks:RefID:167-role}. The intention from the start was to keep the UI as simple as possible, ensuring that an end-user wasn't overwhelmed from using the app while
-making sure all essential elements for the interface were included, therefore, this approach was deemed to be the most effective way of creating the UI.\newline
+When designing the UI, a wireframing approach was used. This approach involves creating simplistic designs of an interface to establish structure and design flow \autocite{RefWorks:RefID:167-role}. The intention from the start was to 
+keep the UI as simple as possible, ensuring that an end-user wasn't overwhelmed from using the app while making sure all essential elements for the interface were included, therefore, this approach was deemed to be the most effective 
+way of creating the UI.\newline
+
+% Wireframe designs are meant to be basic in terms of visual spectacle, acting as a blueprint for a user interface, and keeping its focus solely on fundamental design elements such as where important
+% parts of a UI should go \autocite{RefWorks:RefID:167-role}. 
 
 The wireframes created for the UI consist of "Mid-Fidelity" wireframes, which can be defined as a compromise between "Low-Fidelity" and "High-Fidelity" wireframes, providing clearer structure of an
-interface while making use of little to no visual flair or colouring \autocite{RefWorks:RefID:168-natarajan2025wireframes}. While all three types of wireframing would be included in the UI design stage
-of a typical SDLC, making exclusive use of Mid-Fidelity wireframes meant less time was spent creating many different types of wireframes, and more time was spent delivering and perfecting a simpler and 
-easy-to-implement UI design.\newline
+interface while making use of little to no visual flair or colouring \autocite{RefWorks:RefID:168-natarajan2025wireframes}. \newline
+% While all three types of wireframing would be included in the UI design stage
+% of a typical SDLC, making exclusive use of Mid-Fidelity wireframes meant less time was spent creating many different types of wireframes, and more time was spent delivering and perfecting a simpler and 
+% easy-to-implement UI design.\newline
 
 Because all of the requirements had already been established (with the exception of requirement 1.8), there was a fairly clear understanding of what UI elements needed to be included to ensure 
 functionality for each requirement. One screen by itself did not meet the functionality for each requirement, meaning the creation of multiple screens were necessary to ensure each requirement was
-met. Concerning how the screens needed for each requirement should be ordered, the flowcharts established how the screens should be ordered.
+met. 
+% Concerning how the screens needed for each requirement should be ordered, the flowcharts established how the screens should be ordered.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Notification Screen.png}
-	\captionof{figure}{\textit{UI wireframe of the "Enable Notifications" screen during the onboarding process - Made for Requirement 1.5/1.7}}
+	\captionof{figure}{{UI wireframe of the "Enable Notifications" screen during the onboarding process - Made for Requirement 1.5/1.7}}
 	\label{fig:ui-wireframe-example}
 \end{figure}
 
@@ -895,20 +904,21 @@ elements for the screen. A full list of the screens created can be found in Appe
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Activity Entry Screen.png}
-	\captionof{figure}{\textit{UI wireframe of the "Activity Entry Screen" screen during the onboarding process - Made for Requirement 1.5/1.7}}
+	\captionof{figure}{{UI wireframe of the "Activity Entry Screen" screen during the onboarding process - Made for Requirement 1.5/1.7}}
 	\label{fig:ui-wireframe-activity-entry-main}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Main Screen.png}
-	\captionof{figure}{\textit{UI wireframe of the Main Screen}}
+	\captionof{figure}{{UI wireframe of the Main Screen}}
 	\label{fig:ui-wireframe-main-screen}
 \end{figure}
 
 Each screen was varied in terms of interactive elements, text required, etc. Figures \ref{fig:ui-wireframe-activity-entry-main} and \ref{fig:ui-wireframe-main-screen} show examples of different elements
-that a screen may include. Figure \ref{fig:ui-wireframe-activity-entry-main} adds input fields, shown by the lighter coloured text with the line underneath, while figure \ref{fig:ui-wireframe-main-screen}
-removes the header text element and adds a list. The list itself contain other elements, notably an image, alongside text stacked on top of each other. \newline
+that a screen may include, such as lists or text entry fields. 
+% Figure \ref{fig:ui-wireframe-activity-entry-main} adds input fields, shown by the lighter coloured text with the line underneath, while figure \ref{fig:ui-wireframe-main-screen}
+% removes the header text element and adds a list. The list itself contain other elements, notably an image, alongside text stacked on top of each other. \newline
 
 While creating these screens, it was also determined that some of the screens can be reused in other requirements. For example, the screen used for entering a goal are needed in requirements 1.4 and
 1.5, meaning time could be saved from not having to create another screen.
@@ -916,19 +926,23 @@ While creating these screens, it was also determined that some of the screens ca
 \newpage
 
 \subsection{Implementation}
-As noted previously in section 3.3, this part of the project, alongside the testing part of the project, made use of an iterative approach. At this stage, implementing the project would consist
-of using the information gathered for each requirement during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
-them according to the documentation. Implementing each requirement facilitated backend development via implementing the functionality for the requirement and frontend development via implementing
-the user interface the end-user would interact with. Therefore, the primary type of development executed can be considered full-stack. \newline
+% As noted previously in section 3.3, this part of the project, alongside the testing part of the project, made use of an iterative approach. 
+At this stage, implementing the project would consist
+of using the information gathered during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
+them according to the documentation.
+% Implementing each requirement facilitated backend development via implementing the functionality for the requirement and frontend development via implementing
+% the user interface the end-user would interact with. Therefore, the primary type of development executed can be considered full-stack. \newline
 
 Figure \ref{fig:gitbranch} from section 3.3 provides the implication, however, it should be plainly stated that the requirements weren't implemented in sequential order, as the author found that it
-would prove troublesome attempting to implement some requirements before others (e.g. trying to implement functionality to allow a user to update a goal (Req-1.4) before functionality for setting
-a goal has been implemented (Req-1.5)). Rather, requirements were implemented in an order of what would be feasible to implement at that point in development.
+would prove troublesome attempting to implement some requirements before others. Rather, requirements were implemented in an order of what would be feasible to implement at that point in development.
+
+% (e.g. trying to implement functionality to allow a user to update a goal (Req-1.4) before functionality for setting
+% a goal has been implemented (Req-1.5)). 
 
 \subsubsection{Proof-of-Concept Prototype(s)}
-Before beginning work on any of the requirements, a subfolder that would contain a basic prototype for ensuring the UsageStatsManager class discussed in section 2.4 of the literature review can 
+Before beginning work on any of the requirements, a subfolder that would contain a basic prototype for ensuring the UsageStatsManager class discussed in section 2.4 can 
 return the data necessary for the app to function as intended and ensuring the app's notification system was created. This would serve as a blueprint from where the app would then be built upon. 
-Backend development was the primary type of development carried out at this point.
+% Backend development was the primary type of development carried out at this point.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={loadUsage() function}, label=lst:loadUsage]
 public void loadUsage() throws PackageManager.NameNotFoundException {
@@ -952,7 +966,7 @@ public void loadUsage() throws PackageManager.NameNotFoundException {
 }
 \end{lstlisting}
 
-Code snippet \ref{lst:loadUsage} shows the function used to fetch the usage data for the user. This function is called on app startup, as it gets called within the onCreate method. The function calls the
+Code snippet \ref{lst:loadUsage} shows the function used to fetch the usage data for the user. This function is called on app start-up. The function calls the
 "queryUsageStats" method from the UsageStatsManager class to get the usage stats from the last week, then stores it in a list, then, if the list isn't empty, maps it to a tree map then calls 
 another function "showUsage" to show the usage to the user. Some of the code seen above was sourced from an external sample project, see Appendix I for more information. \newline
 
@@ -962,13 +976,14 @@ structure can be seen below in figure \ref{fig:folder-structure}.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{folder-structure.png}
-	\captionof{figure}{\textit{Folder structure of GitHub repo}}
+	\captionof{figure}{{Folder structure of GitHub repo}}
 	\label{fig:folder-structure}
 \end{figure}
 
 This is where a secondary prototype was created, used for ensuring the app was able to send notifications reminding the user to send their usage statistics was able to be implemented. As the 
-evaluation involved testing the application with human participants, implementing a reminder system was thought to be a necessary feature to ensure the data is sent in a timely manner. To 
-achieve this, implementing notifications was the idea decided upon.
+evaluation involved testing the application with human participants, implementing a reminder system using notifications was thought to be a necessary feature to ensure the data is sent in a timely manner. 
+% To 
+% achieve this, implementing notifications was the idea decided upon.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={PeriodicWorkRequest class used for sending notifications}, label=lst:periodicworkrequest]
 final PeriodicWorkRequest periodicWorkRequest =
@@ -1023,26 +1038,28 @@ public class WorkerClass extends Worker {
 
 \end{lstlisting}
 
- Code snippet \ref{lst:periodicworkrequest} and \ref{lst:workerclass} shows the code and class used for sending notifications. Code snippet \ref{lst:periodicworkrequest} defines a PeriodicWorkRequest variable
- that triggers the code in code \ref{lst:workerclass} every 5 seconds, 15 minutes or later from the last trigger, then, creates an OnClickListener that queues the PeriodicWorkRequest. Code snippet
- \ref{lst:workerclass} executes the doWork() method which calls sendNoti() function, this builds the notification to be sent to the user, before displaying it to the user. Seeing as the code in both 
- snippets were for ensuring functionality, both would be refined over the course of development. Note that code snippet \ref{lst:periodicworkrequest} would later be changed to trigger every 7 days, and
- the current trigger time was in place for testing and debugging.\newline
+Code snippet \ref{lst:periodicworkrequest} and \ref{lst:workerclass} shows the code and class used for sending notifications. It defines a PeriodicWorkRequest variable
+that triggers the code in code \ref{lst:workerclass} every 5 seconds, 15 minutes or later from the last trigger, then, creates an OnClickListener that queues the PeriodicWorkRequest. Code snippet
+\ref{lst:workerclass} executes the doWork() method which calls sendNoti() function. This builds the notification to be sent to the user, before displaying it to the user. Seeing as the code in both 
+snippets were for ensuring functionality, both would be refined over the course of development. \newline
+% Note that code snippet \ref{lst:periodicworkrequest} would later be changed to trigger every 7 days, and
+% the current trigger time was in place for testing and debugging.
 
- This prototype would also establish the class structure for the app, as can be seen in figure \ref{fig:class-structure} below. By the end of development, RecyclerViewAdapter would be the only class
- removed.
+This prototype would also establish the class structure for the app, as can be seen in figure \ref{fig:class-structure} below. By the end of development, RecyclerViewAdapter would be the only class
+removed.
 
- \begin{figure}[H]
+\begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{class-structure.png}
-	\captionof{figure}{\textit{Class structure of PRI at the prototyping stage}}
+	\captionof{figure}{{Class structure of PRI at the prototyping stage}}
 	\label{fig:class-structure}
 \end{figure}
 
-\subsubsection{Req-1.5 / 1.7} %make sure to highlight stuff mentioned in requirements
+\subsubsection{Req-1.5 / 1.7}
 This branch focused on creating the onboarding process, the process the user goes through when opening the app for the first time, and expands on the groundwork established with the previous
-prototype. Development with regards to the SRS began with these requirements as this would establish the core functionality of the app, so building from this point onwards was thought to be the 
-easiest.
+prototype. Development with regards to the SRS began with these requirements as this would establish the core functionality of the app. 
+% so building from this point onwards was thought to be the 
+% easiest.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Checks if user has completed onboarding process}, label=lst:isOnboardingCompleteCheck]
 isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingComplete", false);
@@ -1066,10 +1083,11 @@ isOnboardingComplete = sharedPreferencesOnBoarding.getBoolean("isOnboardingCompl
 	}
 \end{lstlisting}
 
-Code snippet \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, and is called every time the user initialises the app. The code uses a
+Code snippet \ref{lst:isOnboardingCompleteCheck} shows the code used for checking if the user has completed the onboarding process, and is called every time the user opens the app. The code uses a
 "SharedPreference", an API used to store key-value data, even after the app is closed \autocite{androiddevelopment-sharedpref}. At the end of the onboarding process, the SharedPreference for the onboarding process is set to true, so when
-the app is opened, the skips the initial check, and then checks if the app has been granted access to usage statistics. This SharedPreference API was also used to store and retrieve the goal and 
-activities entered by a user.
+the app is opened, the skips the initial check, and then checks if the app has been granted access to usage statistics. 
+% This SharedPreference API was also used to store and retrieve the goal and 
+% activities entered by a user.
 
 % \begin{lstlisting}[language=Java, style=mystyle, caption={SharedPreference used when checking if onboarding process is complete}, label=lst:SharedPref]
 % sharedPreferencesOnBoarding = getSharedPreferences("isOnboardingComplete", MODE_PRIVATE);
@@ -1103,8 +1121,8 @@ Initially, this method of swapping between screens was used when debugging the a
 purposes.\newline 
 
 A constraint for requirement 1.5 defined in the SRS (see Appendix F) stated that characters entered by the user should be restricted to a pre-determined amount. This is achieved in the XML file seen
-in code snippet \ref{lst:edittext} below where the structure for the goal entry screen is defined. XML files in android app development define the layout for a UI, and house contain components such as
-buttons, and text, referred to as widgets.  The parameter "android:maxLength" sets the max length that can be entered in an input box.
+in code snippet \ref{lst:edittext} below where the structure for the goal entry screen is defined. XML files in android app development define the layout for a UI, and house components such as
+buttons and text, referred to as widgets.  The parameter "android:maxLength" sets the max length that can be entered in an input box.
 
 \begin{lstlisting}[language=XML, style=mystyle, caption={XML code for the EditText widget}, label=lst:edittext]
  <EditText
@@ -1185,7 +1203,8 @@ consist of the icon of an app, the app name, the usage time measured in hours an
 \end{lstlisting}
 
 Code snippet \ref{lst:appdetailswidget} shows the XML code the ListView widget uses when displaying the usage statistics code. It consists of TextView widgets that are used as placeholders that are then
-filled in by the actual values. Note that the code has been refined for the final version to fit smaller screen sizes, but the general structure remains the same.
+filled in by the actual values. 
+% Note that the code has been refined for the final version to fit smaller screen sizes, but the general structure remains the same.
 
 \subsubsection{Req-1.4}
 This branch focused on adding functionality for the user to change their goal via the settings screen. Because the goal entry screen was already created previously for requirement 1.5/1.7, the XML
@@ -1213,13 +1232,13 @@ Code snippet \ref{lst:goal-re-entry-screen} shows the code for the goal re-entry
 as the current goal, and displays a message accordingly. If the text entered passes both checks, it updates the goal via the previously discussed SharedPreference API, then displays a message notifying
 the user about the update, then goes back to the settings screen using the screenCheck() function. \newline
 
-Because the XML widgets for the settings screen had already been created prior, the settings screen's XML code was simply updated to establish an actual layout, rather than a placeholder one.
+% Because the XML widgets for the settings screen had already been created prior, the settings screen's XML code was simply updated to establish an actual layout, rather than a placeholder one.
 
 \subsubsection{Req-1.6}
 This branch focused on allowing a user to draft an email containing their usage stats for the week, as outlined in requirement 1.6. There was one significant issue encountered during the 
 implementation of requirement 1.6. While opening the email client of a user wasn't an issue, the actual issue came from attempting to attach the .csv file to the email draft.
 
-\begin{lstlisting}[language=Java, style=mystyle, caption={Original implemention of writing the app list to a file}, label=lst:og-app-list-csv]
+\begin{lstlisting}[language=Java, style=mystyle, caption={Original implementation of writing the app list to a file}, label=lst:og-app-list-csv]
 private void writeAppListToFile (ArrayList<AppDetails> appStuff) {
     try {
         FileOutputStream fileOutputStream = openFileOutput("myfile.txt", Context.MODE_PRIVATE);
@@ -1243,7 +1262,7 @@ wrote the usage data to the text file, this created an unforeseen consequence, t
  \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{implementation-figures/attach-before-noemail.png}
-	\captionof{figure}{\textit{File attachment issue (email recipient has been hidden)}}
+	\captionof{figure}{{File attachment issue (email recipient has been hidden)}}
 	\label{fig:file-attach-before}
 \end{figure}
 
@@ -1273,13 +1292,13 @@ private void generateFile(ArrayList<AppDetails> appDetails) {
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{implementation-figures/attach-after-noemail.png}
-	\captionof{figure}{\textit{File attachment issue, now fixed (email recipient has been hidden)}}
+	\captionof{figure}{{File attachment issue, now fixed (email recipient has been hidden)}}
 	\label{fig:file-attach-after}
 \end{figure}
 
 
 \subsubsection{Req-1.3}
-This branch is where the WDEP system from RT mentioned in section 2.3.3 of the literature review would see its continued implementation, in the form of implementing requirement 1.3. The first step 
+This branch is where the WDEP system from RT mentioned in section 2.3.3 of the literature review would see its continued implementation. The first step 
 in implementing this was to create conditions the code can reach to show separate screens depending on if a user had seen an increase or decrease in their usage over the last week. This involved 
 figuring out a way to store a users old usage time to compare, as the comparison would be used to send the user to correct set of screens.
 
@@ -1307,8 +1326,9 @@ swap to a corresponding screen depending on if there was an increase or decrease
 instead. \newline
 
 Because the user has the option of redefining their goal if they have seen a usage increase, the code for defining a goal had to be rewritten slightly. Shown below in code snippet 
-\ref{lst:goal-definition-rewrite}, the code now checks if boolean value isRedefiningGoal is true, and if it is, updates the entered goal from the user. isRedefiningGoal will be true if this 
-screen is reached from the screens used when receiving advice from the app.
+\ref{lst:goal-definition-rewrite}, the code now checks if Boolean value isRedefiningGoal is true, and if it is, updates the entered goal from the user. 
+% isRedefiningGoal will be true if this 
+% screen is reached from the screens used when receiving advice from the app.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Goal definintion screen, rewritten for requirement 1.3}, label=lst:goal-definition-rewrite]
  else if (isRedefiningGoal == true) {
@@ -1328,8 +1348,9 @@ screen is reached from the screens used when receiving advice from the app.
 \end{lstlisting}
 
 Code \ref{lst:pick-activities} below shows the code used for displaying a set of activities from the user. While the user activities are simply retrieved from the stored value using the 
-SharedPreference API, the random hard-coded activities are retrieved from a separate string array file called strings.xml (see Appendix K), then two pseudorandom numbers are selected, and 
-using those two numbers, two activities from the string array are picked at "random". All activities are the concatenated together and are shown to the user.
+SharedPreference API, the random hard-coded activities are retrieved from a separate string array file called strings.xml (see Appendix K), then two pseudorandom numbers are selected, and are
+used to pick a random activity.
+% using those two numbers, two activities from the string array are picked at "random". All activities are the concatenated together and are shown to the user.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Code used for displaying activities to a user}, label=lst:pick-activities]
 String[] activities = getResources().getStringArray(R.array.activities_array);
@@ -1348,8 +1369,8 @@ activitiesText.setText(userActivityOne + ", " + randomActivityOne + ", " + userA
 \end{lstlisting}
 
 \subsubsection{Req-1.2}
-This branch was used to add the (at the time) final requirement for the app, that being the graph used for displaying the usage for the previous week to the user. While a wireframe diagram for this
-screen was never created, re-using the idea of displaying the data in a list format was the decision made. \newline
+This branch was used to add the graph used for displaying the usage for the previous week to the user. While a wireframe diagram for this screen was never created, re-using the idea of displaying the data in a list format was the 
+decision made. \newline
 
 The next step was establishing a method of storing the prior week's usage data to show the user. Because the code for creating a file already existed (see snippet \ref{lst:new-app-list-csv}), the 
 code was simply adapted to create a separate .csv file if there was already an existing file. This adapted code can be seen below in code snippet \ref{lst:added-store-usage}
@@ -1366,7 +1387,7 @@ if (notiSent) {
 }
 \end{lstlisting}
 
-The data from the .csv file then needs to be parsed properly to display it to the user, and this was achieved by using the external library OpenCSV abd the CSVReader class. The code shown below
+The data from the .csv file then needs to be parsed properly to display it to the user, and this was achieved by using the external library OpenCSV and the CSVReader class. The code shown below
 in snippet \ref{lst:reading-csv-data} reads the file line-by-line, then adds it to an array list. Similar to what was achieved for requirement 1.1, this array list is then added to a 
 ListView widget, then shown to the user. The full code block can be found in Appendix L.
 
@@ -1380,9 +1401,9 @@ while ((nextLine = csvReader.readNext()) != null) {
 \end{lstlisting}
 
 \subsubsection{Req 1.8 / Clean up}
-This was the last branch created during development, and focused on getting the app ready for human evaluation. This branch was also when the last requirement, requirement 1.8, was implemented.
-Implementing requirement 1.8 was easy, as it was conducted in a similar manner to requirement 1.3, that being to add a boolean variable, check if its true, perform input validation, then update 
-the set of activities. A small snippet of the code used can be found below in code snippet \ref{lst:editing-activity}, but the full code block where this was performed can be found in Appendix M.
+This was the last branch created during development, and focused on getting the app ready for evaluation. This branch was also when the last requirement, requirement 1.8, was identified and implemented.
+Implementing requirement 1.8 was conducted in a similar manner to requirement 1.3, that being to add a Boolean variable, check if its true, perform input validation, then update 
+the set of activities. A small snippet of the code used can be found below in code snippet \ref{lst:editing-activity}, but the full code block can be found in Appendix M.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Code added to activities definition code block}, label=lst:editing-activity]
  if (isEditingActivities == true) {
@@ -1416,7 +1437,7 @@ values, and added an app logo.
 At the end of each prototype iteration, Incremental Integration Testing was carried out to ensure that the requirements were implemented as intended according to how the requirement was
 defined in the SRS. Incremental Integration Testing can be defined as testing components of a software system, one by one, adding components together until eventually the entire system
 is being tested. As the nature of development involved creating a component based on the requirements specified, and only continuing once the component had been created to match the specification, 
-this method of testing felt most appropriate. %if you can cite meaning of Incremental Integration Testing, add it. if not, so be it
+this method of testing felt most appropriate.
 
 
 \begin{table}[H]
@@ -1457,21 +1478,23 @@ project hypothesis, research statement and objectives. Given the aforementioned 
 
 \noindent When evaluating if the PRI met the project's hypothesis, objective, and research statement, a mixed-method approach was used. This approach can be defined as utilising quantitative and
 qualitative methods in a study to obtain a deeper understanding of a phenomenon \autocite{RefWorks:RefID:171-johnson2007definition}. The evaluation results are based off of the captured usage 
-data from each participant, as well as the participant's own opinions of their experience using the PRI via a survey given at the end of the evaluation period. While the obtained usage stats 
-will be the main focus, the results from the survey help to provide additional context and insights that quantitative data cannot easily do.
+data from each participant, as well as the participant's own opinions of their experience using the PRI via a survey given at the end of the evaluation period. 
+% While the obtained usage stats 
+% will be the main focus, the results from the survey help to provide additional context and insights that quantitative data cannot easily do.
 
 \subsection{PRI-Evaluation results}
-Participants who agreed to take part in the evaluation were given the PRI for a period of 3 weeks. Alongside this, they were given a Quick Start Guide that
-gave extensive details regarding using the app, as well as instructions on how to install the app and troubleshooting advice. Once they had set up the 
-application, they were also asked to send their usage immediately afterwards. This was to use said usage stats as a baseline to compare the usage for the next three weeks.
-While the data extracted initially shows the total usage which includes all apps used by a participant, the data was then further parsed by the author to analyse if
+
+% Alongside this, they were given a Quick Start Guide that
+% gave extensive details regarding using the app, as well as instructions on how to install the app and troubleshooting advice. 
+Participants who agreed to take part in the evaluation were given the PRI for a period of 3 weeks. Once they had set up the application, they were also asked to send their usage immediately afterwards. This was to use said usage 
+stats as a baseline to compare the usage for the next three weeks. While the data extracted initially shows the total usage which includes all apps used by a participant, the data was then further parsed by the author to analyse if
 there was a shift in usage of social media apps. As discovered in section 2.2 in the literature review, \textcite{RefWorks:RefID:35-dosselaar2017smartphone} noted that people use their
 smartphones for productivity reasons, and not just for social media. \newline
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{eval-data-with-3c-basline-outlier.png}
-	\captionof{figure}{\textit{Results from PRI evaluation}}
+	\captionof{figure}{{Results from PRI evaluation}}
 	\label{fig:eval-data-with-3c-basline-outlier}
 \end{figure}
 
@@ -1491,33 +1514,32 @@ One UI Home & 01:21    & 3\%  \\ \bottomrule
 \label{tab:3c-usage-sample}
 \end{table}
 
-Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table \ref{tab:3c-usage-sample}, the "android" 
+% Within the dataset, an outlier was detected within the baseline data for participant 3C. 
+Seen above in table \ref{tab:3c-usage-sample}, the "android" 
 package, which refers to the android home screen, takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
-made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart as figure \ref{fig:eval-data-with-3c-basline-outlier}, but 
-without the outlier data.
+made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart but without the outlier data.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{eval-data-no-3c-basline-outlier.png}
-	\captionof{figure}{\textit{Results from PRI evaluation, without the outlier data}}
+	\captionof{figure}{{Results from PRI evaluation, without the outlier data}}
 	\label{fig:eval-data-without-3c-basline-outlier}
 \end{figure}
 
-1A's usage is relatively consistent between baseline and week-2, though doesn't take a noticeable drop, but takes a substantial
-drop in week-3. 2B's usage fluctuates a lot throughout the timeframe, initially rising before falling again, and then settling in the middle for week-3. 3C's usage does take a drop overall 
-when comparing baseline to week-3, and remains under 10 hours for the remainder of the evaluation period after the baseline data. 4D's usage experiences a slight increase before dropping 
-slightly, though experiences an increase when compared from the baseline to week-3. %for 1a, This may be because\dots (expand on this, possibly due to how androids UsageStatsManager queries data) 
+1A's usage is relatively consistent between baseline and week-2, but takes a substantial drop in week-3. 2B's usage fluctuates a lot throughout the timeframe, initially rising before falling 
+again, and then settling in the middle for week-3. 3C's usage does take a drop overall when comparing baseline to week-3, and remains under 10 hours for the remainder of the evaluation period 
+after the baseline data. 4D's usage experiences a slight increase before dropping slightly, though experiences an overall increase.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{eval-data-social-media-only.png}
-	\captionof{figure}{\textit{Results from PRI evaluation, only showing social media usage}}
+	\captionof{figure}{{Results from PRI evaluation, only showing social media usage}}
 	\label{fig:eval-data-social-media}
 \end{figure}
 
 Figure \ref{fig:eval-data-social-media} shows the same graph as figure \ref{fig:eval-data-without-3c-basline-outlier}, but only including social media usage from each participant. 
-While the graph is relatively the same, there are some differences. For example, unlike the total usage, 1A's social media usage never increases, rather, taking a small decline 
-instead. 4D's social media usage starts, and remains quite low, though does take a small increase in week-1 before levelling out by the latter weeks.
+While the graph is relatively the same, there are some differences. For example, unlike the total usage, 1A's social media usage never increases, rather, takes a small decline 
+instead. 4D's social media usage starts, and remains quite low, though does take a small increase in week-1 before levelling out by the later weeks.
 
 \subsection{Post-Evaluation survey results}
 Part of using a mixed-method approach involves collected qualitative data, which can be defined as written text, images, audio 
@@ -1526,19 +1548,18 @@ of the evaluation as a whole, getting this kind of data helps to understand the 
 and contextualising the behaviours represented in the previous section \autocite{RefWorks:RefID:165-sutton2015qualitative}.\newline
 
 At the end of the evaluation testing period, participants were sent a survey to fill out. This survey gave participants the opportunity to express their
-opinions on using the app throughout the evaluation period, with the survey including a variety of multiple choice and open-ended, optional questions. Two question
-sets were provided, one focusing on how the participant felt after using the app, and the other focusing on the overall functionality of the app. The number of 
-respondents matched the number of participants who took part in the evaluation, that being 4. Note that because the open-ended questions were optional, not all 
-participants provided a response to them.\newline
+opinions on the application, with the survey including a variety of multiple choice and open-ended questions. Two question
+sets were provided, one focusing on how the participant felt after using the app, and the other focusing on the overall functionality of the app. 
+
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{Q3-evaluation-survey.png}
-	\captionof{figure}{\textit{Results from question 3 from the post-evaluation survey}}
+	\captionof{figure}{{Results from question 3 from the post-evaluation survey}}
 	\label{fig:question3surveyresults}
 \end{figure}
 
-A complete collection of the responses and their associated questions can be found in Appendix O, however, the sentiment derived from 
+A complete collection of the questions and responses can be found in Appendix O, however, the sentiment derived from 
 the results of QS1 show that users felt more informed about their usage after using the app, and on average, users felt as if the app
 implemented the WDEP system to a good degree. As demonstrated in figure \ref{fig:question3surveyresults}, only two of the respondents felt that the app contributed to their
 lowered usage, with one respondent feeling as if other factors had a bigger impact than the app by itself, and the other feeling like there wasn't any
@@ -1550,34 +1571,34 @@ Another response, in reference to the participant not seeing a usage drop, state
 
 \textit{"At this time of year as a student based outside the city of my university I was regularly on my device to check on my classes and assignments"}\newline
 
-\begin{figure}[H]
-\centering
-	\includegraphics[width=1\linewidth]{Q11-evaluation-survey.png}
-	\captionof{figure}{\textit{Results from question 11 from the post-evaluation survey}}
-	\label{fig:question11surveyresults}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% 	\includegraphics[width=1\linewidth]{Q11-evaluation-survey.png}
+% 	\captionof{figure}{\textit{Results from question 11 from the post-evaluation survey}}
+% 	\label{fig:question11surveyresults}
+% \end{figure}
 
-The responses to QS2 show that respondents generally had a positive experience using the app, with no participant experiencing any substantial issues. One
-participant did however note one smaller issue, stating:\newline
+% The responses to QS2 show that respondents generally had a positive experience using the app, with no participant experiencing any substantial issues. One
+% participant did however note one smaller issue, stating:\newline
 
-\textit{"I find that the email prompt would be better and easier to understand is [sic] it was titled "report" or something similar"}\newline
+% \textit{"I find that the email prompt would be better and easier to understand is [sic] it was titled "report" or something similar"}\newline
 
-Participants were asked if the app experience was better than existing apps that provided similar functionality, while 3 of the participants stated that they haven't
-used apps similar to the PRI, one participant disagreed that the app experience was better than existing apps. When asked to provide a follow-up stating what the PRI
-could take note of, they stated:\newline
+% Participants were asked if the app experience was better than existing apps that provided similar functionality, while 3 of the participants stated that they haven't
+% used apps similar to the PRI, one participant disagreed that the app experience was better than existing apps. When asked to provide a follow-up stating what the PRI
+% could take note of, they stated:\newline
 
-\textit{"an app called Screen Zen which gives more options to limit screen usage."}\newline
+% \textit{"an app called Screen Zen which gives more options to limit screen usage."}\newline
 
-When asked to provide suggestions on how the app could be improved, one response suggested increasing the notification frequency from being sent on a weekly basis
-to a daily basis, while another suggested showing how the app usage for specific apps have changed between weeks. At the end, participants were finally asked to
-provide any closing thoughts regarding their experience, and while only one participant gave a response, they stated that they believe the app is a step in the 
-right direction in addressing SA and SMA.
+% When asked to provide suggestions on how the app could be improved, one response suggested increasing the notification frequency from being sent on a weekly basis
+% to a daily basis, while another suggested showing how the app usage for specific apps have changed between weeks. 
+At the end, participants were finally asked to provide any closing thoughts regarding their experience, and while only one participant gave a response, they stated that they believe the 
+app is a step in the right direction in addressing SA and SMA.
 
 
 \subsection{Discussion}
-The intention of the evaluation was to find if the PRI satisfies the project's hypothesis, and this was done by collecting quantitative data in the form of usage data captured
-from each participant and qualitative data in the form of a survey given to participants at the end of the evaluation period, where participants could provide their opinions on the
-current state of the PRI. \newline
+% The intention of the evaluation was to find if the PRI satisfies the project's hypothesis, and this was done by collecting quantitative data in the form of usage data captured
+% from each participant and qualitative data in the form of a survey given to participants at the end of the evaluation period, where participants could provide their opinions on the
+% current state of the PRI. \newline
 
 The quantitative data initially revealed that only three participants experienced a drop in smartphone usage at some point during the evaluation, and only two 
 of the participants' usage was lower by the end of the evaluation period. Discussed in section 2.2, \textcite{RefWorks:RefID:35-dosselaar2017smartphone} discussed how smartphones can be used 
@@ -1585,10 +1606,9 @@ for productivity and not exclusively for social media, so the data was reanalyse
 the initial set of data.\newline
 
 The qualitative data revealed that participants found themselves informed about their smartphone and/or social media usage. This was another talking point from 
-\textcite{RefWorks:RefID:35-dosselaar2017smartphone}, as it was discussed that current apps don't provide an opportunity for users to reflect and learn about SA and SMA. Not only this,
+\textcite{RefWorks:RefID:35-dosselaar2017smartphone}, as it was discussed that intervention apps don't provide an opportunity for users to reflect and learn about SA and SMA. Not only this,
 the data revealed that some participants attributed the PRI as a factor in their reduction in smartphone and social media usage, all participants in their opinion felt that the app
-helped them achieve the goal they set out, and most participants said they would recommend the app in its current state to others (see Appendix O), with one participant stating the app is a 
-step in the right direction when addressing the issue of SA and SMA.\newline
+helped them achieve the goal they set out, with one participant stating the app is a step in the right direction when addressing the issue of SA and SMA.\newline
 
 Given this, the PRI can be considered somewhat successful in meeting the project's hypothesis. This is because The quantitative data provided mixed results when it came to reducing the 
 usage of all participants in both a general sense and specifically with social media, however, the qualitative data provided a juxtaposition, with some participants believing the app was 
@@ -1601,20 +1621,20 @@ helpful in reducing their usage, most saying they would recommend the app to a f
 \section{Legal, Social, Ethical, and Professional Issues}
 This section will provide commentary on Legal, Social, Ethical, and Professional (LSEP) issues the project dealt with over its lifespan.
 Within the Social Issues section, it will also provide additional commentary and reflection on the Sustainable Development Goals (SDGs)
-the project has aligned itself with in accordance to the definitions provided by the United Nations. 
+the project has aligned itself.
 
 \subsection{Legal Issues}
 While the project didn't encounter any issues related to copyright, the project did have to deal with issues to data protection, particularly in
 relation to the Data Protection Act 2018 and the UK General Data Protection Regulation, two laws that relate to protecting the personal data of
 individuals \autocite{RefWorks:RefID:174-phillips2021uk}. \newline
 
+Any data taken from participants was ensured to be compliant under the Data Protection Act 2018. When ensuring the protection of 
+user data, all information was kept in a local folder on the author's PC at his home, as well as on an external USB.\newline
+
 When a human participant was involved at any stage of the project, it was clearly outlined to them what kind of data would be collected and
 processed. For example, during the evaluation stage, when the user opens the app for the first time, the user is given full clarity on the
 purpose of them using the app, as well as what kinds of data the app would be collecting. At no point does the app capture any personally
-identifiable information from a participant. \newline
-
-Alongside this, any data taken from participants was ensured to be compliant under the Data Protection Act 1998. When ensuring the protection of 
-user data, all information was kept in a local folder on the author's PC at his home, as well as on an external USB.
+identifiable information from a participant.
 
 \subsection{Social Issues}
 The projects primary subject matter involved addressing the issue of addiction pertaining to social media and smartphones. When discussing
@@ -1631,28 +1651,29 @@ This project has aligned itself with Sustainable Development Goals 3 and 4. Belo
 	\item Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all \autocite{un-sdg-4}.
 \end{itemize}
 
-Target 3.4 (Reduce Mortality From Non-communicable Diseases And Promote Mental Health) for SDG 3 states that by 2030, it should:\newline
+Target 3.4 for SDG 3 states that by 2030, it should:\newline
 
 \textit{...reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote 
 mental health and well-being} \autocite{globalgoals-goal3}.\newline
 
 The project's intention from the very beginning was to encourage healthier smartphone and social media usage. It attempts to achieve this by encouraging the user to partake in activities
-from outside their smartphone and social media and set goals for themselves that they can achieve away from their smartphone and social media. \newline
+away from their smartphone and social media and set goals for themselves that they can achieve away from their smartphone and social media. \newline
 
-In relation to goal 4, a key component of the app is making the user aware of their habits, and what they can do to lower their smartphone and social media usage should it be at a high level. This is
-also help through the use of the WDEP system introduced by Reality Therapy, whose system intrinsically includes learning opportunities through self-evaluation. This teaching aspect was also a 
+In relation to goal 4, a key component of the app is making the user aware of their habits, and what they can do to lower their smartphone and social media usage, should it be at a high level. This is
+also helped through the use of the WDEP system introduced by Reality Therapy, whose system intrinsically includes learning opportunities through self-evaluation. This teaching aspect was also a 
 component that was intended to be included following the literature review. \newline
 
 Through the promotion of better smartphone habits, and through provided opportunities for the user to learn about their smartphone habits, the author believes the project correctly aligns with
 these two goals.
 
 \subsection{Ethical Issues}
-Arguably, the largest issue the project had to consider during its lifespan were Ethical Issues. As previously mentioned when discussing
-the project's primary objectives in section 1.2.2, for conduction the evaluation, human participants were required to carry out said
-evaluation as intended. This aspect by itself already constitutes as an ethical issue, given the use of human participants for a project
-of this nature raises concerns regarding the autonomy, well-being of participants, as well as the requirement of seeking ethical approval 
-\autocite{RefWorks:RefID:175-punchoojit2015research}, but this specific use of human participants brings forth another issue. The evaluation 
-involved collecting app usage data from participants, as well as responses from the post-evaluation survey. \newline
+% Arguably, the largest issue the project had to consider during its lifespan were Ethical Issues. 
+
+As previously mentioned when discussing the project's primary objectives in section 1.2.2, for conduction the evaluation, human participants were required to carry out said
+evaluation as intended, which involved collecting app usage data from participants, as well as responses from the post-evaluation survey. 
+This aspect by itself already constitutes as an ethical issue, given the use of human participants for a project
+of this nature raises concerns regarding the autonomy and well-being of participants, \autocite{RefWorks:RefID:175-punchoojit2015research}, but 
+this specific use of human participants brings forth the issue of data collection. \newline
 
 Similarly, during the requirements analysis stage of the project's execution, a survey was distributed, and 1-to-1 interviews were 
 conducted. Given the use of software tools to carry out these parts of the project, this raises issues with data protection, informed 
@@ -1664,7 +1685,7 @@ When conducting user interviews and the evaluation, participants were given a co
 to the project, and before taking part in any survey, participants were asked to provide informed consent to take part and were given as 
 much information as possible, something which was noted as an issue by \textcite{davepregoner:hal-05073466}. \newline
 
-To conduct any part of the project where human participants are required, ethical approval via an ethics form is required to be submitted 
+To conduct any part of the project where human participants are required, ethical approval was required to be granted 
 prior to conducting any part of it. All the details written about previously were mentioned within the ethics form, alongside reasonable 
 justification, and ethical approval was granted.
 
@@ -1674,7 +1695,7 @@ within Appendix I.
 
 \subsection{Professional Issues}
 Following the completion of this project, there are a few aspects that have been reflected on that the author believes have undertaken well, and
-others the author wishes would've been undertaken differently. For one, section 3.3 details the SDLC used during the project's execution, and 
+others the author wishes would've been undertaken differently. Section 3.3 details the SDLC used during the project's execution, and 
 how there was a change in SDLC midway through the project. Instead of this conducting this change midway through the project, this change 
 could've occurred before any work was carried out, or could've been prevented altogether if deeper research was conducted at that stage. \newline
 
@@ -1688,27 +1709,27 @@ may have to the author, showing a level of accountability and responsibility tak
 \section{Conclusions and Further Work}
 
 \subsection{Summary}
-Over the past fifteen years, smartphones and social media have been quickly integrated into wider society. Both of them serve as an important component of everyday life for a large amount of 
-people and have helped connect people with each other from around the globe on a never-before-seen scale. With this however, the issue of individuals developing an overdependence on such
-technology has become a prominent talking point when discussing these technologies, and subsequently, studies have been carried out analysing the issue, its causes, its effects on one's 
-health, and potential solutions, one of which being intervention apps that attempt to help users lower their usage, and another being the use of psychological methods. With that being said, a 
-gap of intervention apps that deal with the aforementioned issue was found. The primary aim of the project was to carry out the research statement, being: \newline
+Over the past fifteen years, smartphones and social media have been quickly integrated into wider society. Both of them serve as an important component of everyday life for a large number of 
+people and have helped connect people with each other from around the globe on a never-before-seen scale. With this, however, the issue of individuals developing an overdependence on such 
+technology has become a prominent talking point when discussing them. Subsequently, studies have been carried out analysing the issue, its causes, its effects on one's health, and potential 
+solutions, one of which being intervention apps that attempt to help users lower their usage, and another being the use of psychological methods. With that being said, a gap of intervention apps
+that deal with the aforementioned issue was found. The primary aim of the project was to carry out the research statement, being: \newline
 
 \textbf{To create a mobile application that integrates psychological intervention methods alongside usage tracking technologies to help address smartphone and social media addiction} \newline
 
-A literature review was carried out to investigate existing applications that use psychological intervention methods when addressing related issues, how SA and SMA are contextualized
-within existing apps, and the issues they raise, existing psychological frameworks that can be integrated into a mobile application, and methods to track a user's app usage. \newline
+A literature review was carried out to investigate existing applications that use psychological intervention methods when addressing related issues, how SA and SMA are contextualized within 
+existing apps and the issues they raise, existing psychological frameworks that can be integrated into a mobile application, and methods to track a user's app usage. \newline
 
-Following the findings from the literature review, an effort to create a mobile application that used usage tracking technologies and psychological intervention methods
-while following a "develop and test" approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid 
-methodology, an analysis of the requirements necessary for the app to function as intended was undertaken, as well as picking a psychological intervention and usage tracking method, those being
-Reality Therapy and using the android.app.usage package, respectively. Flowchart design diagrams showing the app flow for each requirement and UI wireframes that depict 
-how each app screen should look were then created. After this, the process of coding the app based on the information created and obtained began, with close attention paid
-to the prior information. After each iteration, testing was performed to ensure the app worked without issue. Finally, an evaluation with multiple participants took place where
-they used the app over a three-week span and sent their usage data for further analysis at one week intervals, before answering a survey at the end of the three-week period.
+Following the findings from the literature review, an effort to create a mobile application that used usage tracking technologies and psychological intervention methods while following a 
+”develop and test” approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid methodology.Thereafter, an analysis of the requirements 
+necessary for the app to function as intended was undertaken, as well as picking a psychological intervention and usage tracking method, those being Reality Therapy and using the
+android.app.usage package, respectively. Flowchart design diagrams showing the app flow for each requirement and UI wireframes that depict how each app screen should look were then created. 
+After this, the process of coding the app based on the information created and obtained began. After each iteration, testing was performed to ensure the app worked without issue. Finally, an 
+evaluation with multiple participants took place where they used the app over a three-week span and sent their usage data for further analysis at one week intervals, before answering a survey 
+at the end of the three-week period.
 
 \subsection{Results}
-To reiterate what was stated in section 4, based off of the hypothesis, the intention of the evaluation was to find out if:
+To reiterate what was stated in section 4; based off of the hypothesis, the intention of the evaluation was to find out if:
 
 \begin{enumerate}
 	\item The mobile phone usage from a participant decreased when comparing their usage from the start of the evaluation to the end.
@@ -1716,21 +1737,19 @@ To reiterate what was stated in section 4, based off of the hypothesis, the inte
 \end{enumerate}
 
 \subsubsection{Was there a decrease in usage?}
-The quantitative data gathered and presented in section 4.1 reveal that only two of the four participants usage decreased overall when comparing their usage at the start to 
-the end of the evaluation period, with this result staying consistent when only social media apps are included in the dataset. Therefore, this first point is proven to be
-plausible, or somewhat true.
+The quantitative data gathered and presented in section 4.1 reveal that only two of the four participants' usage decreased overall when comparing their usage at the start to the end of 
+the evaluation period, with this result staying consistent when only social media apps are included in the dataset. Therefore, this first point is proven to be plausible, or somewhat true.
 
 \subsubsection{Was the PRI a factor in a reduction in usage?}
-The qualitative data gathered and presented in section 4.2 reveal that participants who experienced a usage drop at some point during the evaluation period positively 
-attributed the app to be a significant factor in, and carry the opinion that the app helped them achieve their set goal. Therefore, this second point is proven to be true 
-beyond a reasonable doubt.
+The qualitative data gathered and presented in section 4.2 reveal that participants who experienced a usage drop at some point during the evaluation period positively attributed the app to be 
+a significant factor in a reduction in that usage, and carry the opinion that the app helped them achieve their set goal. Therefore, this second point is proven to be true beyond a reasonable
+doubt.
 
 \subsubsection{Conclusion}
-To conclude, the PRI and project as a whole successfully satisfies the research statement and project hypothesis, however, does so to an extent. The project does indeed
-create a mobile app that uses psychological intervention methods with usage tracking technologies to address the issue of SA and SMA, and has also shown to reduce the 
-smartphone usage in young adults, however, from the results of the evaluation, the PRI only reduced the smartphone and social media usage in two of the four 
-participants, though this is juxtaposed from the opinions from the participants themselves, who believe that the app played a significant role in reducing their smartphone 
-and social media usage.
+To conclude, the PRI and project as a whole successfully satisfies the research statement and project hypothesis, yet only does so to an extent. The project does indeed create a mobile app that 
+uses psychological intervention methods with usage tracking technologies to address the issue of SA and SMA, and has also shown to reduce the smartphone usage in young adults. However, from the 
+results of the evaluation, the PRI only reduced the smartphone and social media usage in two of the four participants. This is juxtaposed from the opinions from the participants themselves, who 
+believe that the app played a significant role in reducing their smartphone and social media usage.
 
 \subsection{Limitations \& Project Critique}
 Despite proving the research statement and project hypothesis to be true, the project is limited in some regards. A limitation of the project was the use of only one 
@@ -1739,12 +1758,12 @@ decision to use a single intervention method from a single framework was made to
 literature review, CBT is referenced as a psychological framework that has seen use and success in apps similar to the one made for the project, so, integrating
 frameworks such as ones seen in CBT would be an area of improvement. \newline
 
-Although not a issue for the current iteration of the project, from September of 2026 onwards, apps to be installed on Android devices in certain regions will have to 
+Although not an issue for the current iteration of the project, from September of 2026 onwards, apps to be installed on Android devices in certain regions will have to 
 be from verified Android developers \autocite{androiddevelopment-verification}. This means that future research that involves evaluating an app on a real device with human 
 participants will require a researcher to be an Android verified developer, or go through the process of side-loading the app \autocite{androiddevelopment-blog}. \newline
 
-The project was limited during the evaluation phase, due to the number of participants involved. While the intention was to gather ten participants for the evaluation, only 
-four participants were gathered. The reasoning behind this lacklustre turnout may be due to poor recruiting efforts when it came to gathering participants, as recruiting 
+The project was also limited during the evaluation phase, due to the number of participants involved. While the intention was to gather ten participants for the evaluation, only 
+four participants were gathered. The reasoning behind this lacklustre turnout may be due to poor recruiting efforts when gathering participants, as recruiting 
 efforts were limited to a small group of people. Should a project of this calibre be attempted again, promoting the evaluation to a wider group of individuals, perhaps in 
 physical areas such as university campuses may prove to be an effective method of gathering participants.
 
@@ -1776,12 +1795,13 @@ The GitHub repository containing the source code for the PRI, as well as all oth
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix B - Risk Matrix \& Risk Register}
 \textbf{Risk Register}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{riskregisterscreenshot.png}
-	\captionof{figure}[]{\textit{Risk Register (originally from RS\&PI Project Planning report)}}
+	\captionof{figure}[]{{Risk Register (originally from RS\&PI Project Planning report)}}
 	\label{fig:riskregister}
 \end{figure}
 
@@ -1791,22 +1811,24 @@ The GitHub repository containing the source code for the PRI, as well as all oth
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{riskmatrix.png}
-	\captionof{figure}[]{\textit{Risk Matrix (originally from RS\&PI Project Planning report)}}
+	\captionof{figure}[]{{Risk Matrix (originally from RS\&PI Project Planning report)}}
 	\label{fig:riskmatrix}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix C - Gantt Chart}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth]{GCU_Project_Plan_New.png}
-	\captionof{figure}[]{\textit{Project Plan Gantt Chart (originally from RS\&PI Project Planning report)}}
+	\captionof{figure}[]{{Project Plan Gantt Chart (originally from RS\&PI Project Planning report)}}
 	\label{fig:projectplan}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix D - Requirements Analysis Interview Transcripts}
 Due to its large volume of content, a link containing each interview transcript has been provided instead, separated into different folders inside a GitHub repository.
 This can be found by following the link below:\newline
@@ -1815,40 +1837,41 @@ This can be found by following the link below:\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix E - Requirements Analysis Interview Notes}
 Notes were taken with each interviewee, providing a brief summary of the interviewee's response to a given question. Image scans of these notes 
-taken during the requirements analysis interviews can be found below. Note that notes for the interview with A1 weren't taken.
+taken during the requirements analysis interviews can be found below. Note that notes for the interview with A1 weren't taken.\newline
 
-\pagebreak
+
 \noindent\textbf{Interview with B2}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with B2 - Page 1}}
 	\label{fig:interview-b2-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with B2 - Page 2}}
 	\label{fig:interview-b2-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with B2 - Page 3}}
 	\label{fig:interview-b2-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with B2 - Page 4}}
 	\label{fig:interview-b2-4}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/b2/b2-5_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with B2 - Page 5}}
+	\captionof{figure}[]{{Notes from interview with B2 - Page 5}}
 	\label{fig:interview-b2-5}
 \end{figure}
 
@@ -1857,25 +1880,25 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with C3 - Page 1}}
 	\label{fig:interview-c3-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with C3 - Page 2}}
 	\label{fig:interview-c3-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with C3 - Page 3}}
 	\label{fig:interview-c3-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/c3/c3-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with C3 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with C3 - Page 4}}
 	\label{fig:interview-c3-4}
 \end{figure}
 
@@ -1884,31 +1907,31 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with D4 - Page 1}}
 	\label{fig:interview-d4-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with D4 - Page 2}}
 	\label{fig:interview-d4-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with D4 - Page 3}}
 	\label{fig:interview-d4-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with D4 - Page 4}}
 	\label{fig:interview-d4-4}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/d4/d4-5_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with D4 - Page 5}}
+	\captionof{figure}[]{{Notes from interview with D4 - Page 5}}
 	\label{fig:interview-d4-5}
 \end{figure}
 
@@ -1917,31 +1940,31 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with E5 - Page 1}}
 	\label{fig:interview-e5-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with E5 - Page 2}}
 	\label{fig:interview-e5-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with E5 - Page 3}}
 	\label{fig:interview-e5-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with E5 - Page 4}}
 	\label{fig:interview-e5-4}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/e5/e5-5_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with E5 - Page 5}}
+	\captionof{figure}[]{{Notes from interview with E5 - Page 5}}
 	\label{fig:interview-e5-5}
 \end{figure}
 
@@ -1950,25 +1973,25 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with F6 - Page 1}}
 	\label{fig:interview-f6-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with F6 - Page 2}}
 	\label{fig:interview-f6-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with F6 - Page 3}}
 	\label{fig:interview-f6-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/f6/f6-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with F6 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with F6 - Page 4}}
 	\label{fig:interview-f6-4}
 \end{figure}
 
@@ -1977,25 +2000,25 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with G7 - Page 1}}
 	\label{fig:interview-g7-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with G7 - Page 2}}
 	\label{fig:interview-g7-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with G7 - Page 3}}
 	\label{fig:interview-g7-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/g7/g7-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with G7 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with G7 - Page 4}}
 	\label{fig:interview-g7-4}
 \end{figure}
 
@@ -2004,25 +2027,25 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with H8 - Page 1}}
 	\label{fig:interview-h8-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with H8 - Page 2}}
 	\label{fig:interview-h8-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with H8 - Page 3}}
 	\label{fig:interview-h8-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/h8/h8-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with H8 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with H8 - Page 4}}
 	\label{fig:interview-h8-4}
 \end{figure}
 
@@ -2031,36 +2054,37 @@ taken during the requirements analysis interviews can be found below. Note that 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-1_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 1}}
+	\captionof{figure}[]{{Notes from interview with I9 - Page 1}}
 	\label{fig:interview-i9-1}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-2_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 2}}
+	\captionof{figure}[]{{Notes from interview with I9 - Page 2}}
 	\label{fig:interview-i9-2}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-3_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 3}}
+	\captionof{figure}[]{{Notes from interview with I9 - Page 3}}
 	\label{fig:interview-i9-3}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-4_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 4}}
+	\captionof{figure}[]{{Notes from interview with I9 - Page 4}}
 	\label{fig:interview-i9-4}
 \end{figure}
 \begin{figure}[H]
 \centering
 	\includegraphics[width=1\linewidth, angle=90]{interview-notes/i9/i9-5_page-0001.jpg}
-	\captionof{figure}[]{\textit{Notes from interview with I9 - Page 5}}
+	\captionof{figure}[]{{Notes from interview with I9 - Page 5}}
 	\label{fig:interview-i9-5}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix F - Software Requirements Specification - Functional \& Non-Functional Requirements}
 The SRS document can be found within the project's GitHub repository, via: \newline
 
@@ -2249,7 +2273,7 @@ on each image. \newline
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.6\linewidth]{diagrams/req-1_1-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.1 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.1 Flowchart Diagram}}
 	\label{fig:req1-1-diagram}
 \end{figure}
 
@@ -2258,7 +2282,7 @@ on each image. \newline
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.5\linewidth]{diagrams/req-1_2-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.2 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.2 Flowchart Diagram}}
 	\label{fig:req1-2-diagram}
 \end{figure}
 
@@ -2267,7 +2291,7 @@ on each image. \newline
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{diagrams/req-1.3-diagram-old.jpg}
-	\captionof{figure}[]{\textit{Old iteration of First iteration of requirement 1.3's flowchart design}}
+	\captionof{figure}[]{{Old iteration of First iteration of requirement 1.3's flowchart design}}
 	\label{fig:req-1_3-old-appendix}
 \end{figure}
 
@@ -2276,7 +2300,7 @@ on each image. \newline
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.7\linewidth]{diagrams/req-1_3-diagram.jpg}
-	\captionof{figure}[]{\textit{New iteration of Req-1.3 Flowchart Diagram}}
+	\captionof{figure}[]{{New iteration of Req-1.3 Flowchart Diagram}}
 	\label{fig:req1-3-diagram}
 \end{figure}
 
@@ -2285,7 +2309,7 @@ on each image. \newline
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.6\linewidth]{diagrams/req-1_4-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.4 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.4 Flowchart Diagram}}
 	\label{fig:req1-4-diagram}
 \end{figure}
 
@@ -2295,7 +2319,7 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.25\linewidth]{diagrams/req-1_5__1_7-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.5 / Req-1.7 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.5 / Req-1.7 Flowchart Diagram}}
 	\label{fig:req1-5-7-diagram}
 \end{figure}
 
@@ -2304,7 +2328,7 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.6\linewidth]{diagrams/req-1_6-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.6 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.6 Flowchart Diagram}}
 	\label{fig:req1-6-diagram}
 \end{figure}
 
@@ -2313,108 +2337,111 @@ Requirements 1.5 \& 1.7 were merged into a single diagram to reduce replication.
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.6\linewidth]{diagrams/req-1_8-diagram.jpg}
-	\captionof{figure}[]{\textit{Req-1.8 Flowchart Diagram}}
+	\captionof{figure}[]{{Req-1.8 Flowchart Diagram}}
 	\label{fig:req1-8-diagram}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix H - User Interface designs}
 \textbf{NOTE:} UI designs should not be interpreted as being in sequential order.
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Screen 1.png}
-	\captionof{figure}[]{\textit{UI wireframe of the first onboarding screen}}
+	\captionof{figure}[]{{UI wireframe of the first onboarding screen}}
 	\label{fig:ui-wireframe-onboarding-1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Screen 2.png}
-	\captionof{figure}[]{\textit{UI wireframe of the second onboarding screen}}
+	\captionof{figure}[]{{UI wireframe of the second onboarding screen}}
 	\label{fig:ui-wireframe-onboarding-2}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Usage Tracking Enable Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the "Enable Usage Tracking" screen}}
+	\captionof{figure}[]{{UI wireframe of the "Enable Usage Tracking" screen}}
 	\label{fig:ui-wireframe-usage-tracking}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Goal Entry Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the "Goal Entry" screen}}
+	\captionof{figure}[]{{UI wireframe of the "Goal Entry" screen}}
 	\label{fig:ui-wireframe-goal-entry}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Activity Entry Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the "Activity Entry" screen}}
+	\captionof{figure}[]{{UI wireframe of the "Activity Entry" screen}}
 	\label{fig:ui-wireframe-activity-entry}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Onboarding Notification Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the "Enable Notification" screen}}
+	\captionof{figure}[]{{UI wireframe of the "Enable Notification" screen}}
 	\label{fig:ui-wireframe-enable-noti}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Main Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the main screen}}
+	\captionof{figure}[]{{UI wireframe of the main screen}}
 	\label{fig:ui-wireframe-main-screen-appendix}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Settings Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the settings screen}}
+	\captionof{figure}[]{{UI wireframe of the settings screen}}
 	\label{fig:ui-wireframe-settings-screen}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Usage compliment Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the screen used to compliment a user on their usage}}
+	\captionof{figure}[]{{UI wireframe of the screen used to compliment a user on their usage}}
 	\label{fig:ui-wireframe-usage-compliment}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Ask user to redefine goal Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the screen used to ask the user if they want to redefine their goal}}
+	\captionof{figure}[]{{UI wireframe of the screen used to ask the user if they want to redefine their goal}}
 	\label{fig:ui-wireframe-ask-redefine-goal}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Evaluation of usage Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the screen used to ask the user to evaluate their usage}}
+	\captionof{figure}[]{{UI wireframe of the screen used to ask the user to evaluate their usage}}
 	\label{fig:ui-wireframe-eval-usage-screen}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.45\linewidth]{ui/Activity Suggestion Screen.png}
-	\captionof{figure}[]{\textit{UI wireframe of the "Activity Suggestion" screen}}
+	\captionof{figure}[]{{UI wireframe of the "Activity Suggestion" screen}}
 	\label{fig:ui-wireframe-activity-suggestion}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \subsection*{Appendix I - Note on the loadUsage() function}
 While a majority of the code was written by the author, some of the code used for loading the usage, as well as in other places, was sourced from an external sample project by 
 Amajd Ibraheem. The repository containing the code can be found via: \newline
 
-https://github.com/AmjadIbraheem/UsageStats
+\noindent https://github.com/AmjadIbraheem/UsageStats
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix J - screenCheck() function (branch req-1.5/1.7)}
 \begin{lstlisting}[language=Java, style=mystyle, label=lst:screenCheckFull]
 public void screenCheck() {
@@ -2600,6 +2627,8 @@ public void screenCheck() {
 \end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
 \subsection*{Appendix K - Activities string array from strings.xml}
 \begin{lstlisting}[language=XML, style=mystyle, label=lst:stringsXML]
 <string-array name="activities_array">
@@ -2627,7 +2656,10 @@ public void screenCheck() {
 \end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Appendix L - Code used to show the previous weeks' usage (uses code from https://gitlab.ciit-training.com/amjad/UsageStats as a template)}
+
+\pagebreak
+\subsection*{Appendix L - Code used to show the previous weeks' usage}
+\textbf{NOTE:} Sources code from https://gitlab.ciit-training.com/amjad/UsageStats as a template and reference point.
 
 \begin{lstlisting}[language=Java, style=mystyle, label=lst:showPrevUsageGraph]
 setContentView(R.layout.previous_week);
@@ -2662,6 +2694,7 @@ currentGraphBtn.setOnClickListener(view -> {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix M - Code used for updating a set of activities}
 
 \begin{lstlisting}[language=Java, style=mystyle, label=lst:updateActivities]
@@ -2723,6 +2756,7 @@ toNotiScreenBtn.setOnClickListener(view -> {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix N - Test Case results}
 \textbf{NOTE:} Evidence files have been linked externally due to the sizes of images \& raw file size of videos. These can be seen via
 the GitHub repository (see Appendix A) and inside the Test Case document at:\newline
@@ -2871,14 +2905,17 @@ Test ID                  & Action                                               
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\pagebreak
 \subsection*{Appendix O - Post-Evaluation survey results}
+The number of respondents matched the number of participants who took part in the evaluation, that being 4. Note that because the open-ended questions were 
+optional, not all participants provided a response to them.\newline\newline
 \underline{\textbf{QS1}}\newline\newline
 \noindent Q1: The app was built to be informative to some degree; on a 1 to 5 scale, how much did you find yourself informed in some way 
 after using the app? This could be on your overall usage, usage patterns, etc...
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q1.png}
-	\captionof{figure}[]{\textit{Question 1 from Question Set 1}}
+	\captionof{figure}[]{{Question 1 from Question Set 1}}
 	\label{fig:qs1-q1}
 \end{figure}
 
@@ -2887,7 +2924,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q2.png}
-	\captionof{figure}[]{\textit{Question 2 from Question Set 1}}
+	\captionof{figure}[]{{Question 2 from Question Set 1}}
 	\label{fig:qs1-q2}
 \end{figure}
 
@@ -2895,7 +2932,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q3.png}
-	\captionof{figure}[]{\textit{Question 3 from Question Set 1}}
+	\captionof{figure}[]{{Question 3 from Question Set 1}}
 	\label{fig:qs1-q3}
 \end{figure}
 
@@ -2910,7 +2947,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs1-q4.png}
-	\captionof{figure}[]{\textit{Question 4 from Question Set 1}}
+	\captionof{figure}[]{{Question 4 from Question Set 1}}
 	\label{fig:qs1-q4}
 \end{figure}
 
@@ -2919,7 +2956,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q1.png}
-	\captionof{figure}[]{\textit{Question 1 from Question Set 2}}
+	\captionof{figure}[]{{Question 1 from Question Set 2}}
 	\label{fig:qs2-q1}
 \end{figure}
 
@@ -2927,7 +2964,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q2.png}
-	\captionof{figure}[]{\textit{Question 2 from Question Set 2}}
+	\captionof{figure}[]{{Question 2 from Question Set 2}}
 	\label{fig:qs2-q2}
 \end{figure}
 
@@ -2941,7 +2978,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q3.png}
-	\captionof{figure}[]{\textit{Question 3 from Question Set 2}}
+	\captionof{figure}[]{{Question 3 from Question Set 2}}
 	\label{fig:qs2-q3}
 \end{figure}
 
@@ -2949,7 +2986,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q4.png}
-	\captionof{figure}[]{\textit{Question 4 from Question Set 2}}
+	\captionof{figure}[]{{Question 4 from Question Set 2}}
 	\label{fig:qs2-q4}
 \end{figure}
 
@@ -2957,7 +2994,7 @@ Plan" system. On a 1 to 5 scale, how much do you believe the app successfully in
 \begin{figure}[H]
 \centering
 	\includegraphics[width=0.75\linewidth]{eval-survey-results/qs2-q5.png}
-	\captionof{figure}[]{\textit{Question 5 from Question Set 2}}
+	\captionof{figure}[]{{Question 5 from Question Set 2}}
 	\label{fig:qs2-q5}
 \end{figure}
 

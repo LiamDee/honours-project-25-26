@@ -2562,38 +2562,6 @@
       \field{pages}{173\bibrangedash 200}
       \range{pages}{28}
     \endentry
-    \entry{RefWorks:RefID:169-xinogalos2013flowchartbased}{inproceedings}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=90b7159b31e8ad25877c807b1fec7852}{%
-           family={Xinogalos},
-           familyi={X\bibinitperiod},
-           given={Stelios},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{fullhash}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{fullhashraw}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{bibnamehash}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{authorbibnamehash}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{authornamehash}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{authorfullhash}{90b7159b31e8ad25877c807b1fec7852}
-      \strng{authorfullhashraw}{90b7159b31e8ad25877c807b1fec7852}
-      \field{sortinit}{X}
-      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{{2013} {IEEE} Global Engineering Education Conference ({EDUCON})}
-      \field{title}{Using flowchart-based programming environments for simplifying programming and software engineering processes}
-      \field{year}{2013}
-      \field{pages}{1313\bibrangedash 1322}
-      \range{pages}{10}
-    \endentry
     \entry{RefWorks:RefID:48-yao2017combined}{article}{}{}
       \name{author}{9}{}{%
         {{un=0,uniquepart=base,hash=052c3369c7e1f8c79c5cd28cfa6cc1ca}{%
