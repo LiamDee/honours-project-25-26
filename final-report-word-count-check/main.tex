@@ -161,24 +161,7 @@
 
 \begin{abstract} %may need to shorten
 
-Throughout the rise of social media and smartphones, an ever-growing topic of discussion has been the issue of individuals developing an 
-overdependence on said technologies, referred to as "Social Media Addiction" and "Smartphone Addiction" respectively. Research into the topic 
-has been performed extensively in the past, with some 
-looking towards psychological-based treatments such as Cognitive-Based Therapy and Reality Therapy, and in recent years, some looking at mobile 
-applications that use some form of usage tracking to address the issue. Research has shown that psychological-based treatments has provided 
-promising results in treating similar issues such as anxiety, and has even seen integration with mobile apps. Similarly, studies conducted show viability in
-utilising usage tracking when addressing the issue,
-particularly when integrated into a mobile app. However, little work has been done to utilise both of these concepts together into a single
-mobile app. \newline
 
-
-This project showcases an Android-based mobile application that integrates concepts from Reality Therapy alongside usage tracking technologies, with
-the overall objective being to lower an individuals usage in an attempt to address the issue of Social Media and Smartphone Addiction. To evaluate
-the project, a small group of participants were given the application to use over a three-week period, and were asked to send their usage data
-each week during this time. By the end of this period, they were also provided a survey where they could provide their own opinions on the app.  \newline
-
-Results from the evaluation show that the PRI was somewhat successful in reducing the usage of smartphones and social media in young adults by using
-concepts from Reality Therapy and usage tracking technologies.
 
 
 \end{abstract}
@@ -348,27 +331,26 @@ application will help to address and reduce smartphone \& social media usage in 
 Before continuing with the remainder of this paper, a brief overview of the structure of the report is provided, giving
 a short summary of each upcoming chapter. \newline
 
-\noindent\textbf{Chapter 2 - Literature and Technology Review - }
+\subsubsection{Chapter 2 - Literature and Technology Review}
 This chapter provides an extended review of the current literature surrounding topic areas relevant to the report while also
 analysing technical methods utilised by apps with a similar intention to the PRI outlined within the primary objectives. \newline
 
-\noindent\textbf{Chapter 3 - Execution - }
+\subsubsection{Chapter 3 - Execution}
 This chapter provides an extensive look towards the development of the PRI, providing commentary towards the research methodology
 used, and discussion and justification on the design choices, technological components used, features implemented when developing the PRI, and
-the results from testing the application for bugs. \newline
+the results from testing the application. \newline
 
-
-\noindent\textbf{Chapter 4 - Evaluation and Results Discussion - }
+\subsubsection{Chapter 4 - Evaluation and Results Discussion}
 This chapter presents a in-depth discussion of the results of the evaluation, including the findings themselves, reasoning on the 
 findings, and initial conclusions from the findings. \newline
 
 
-\noindent\textbf{Chapter 5 - Legal, Social, Ethical, and Professional Issues - }
+\subsubsection{Chapter 5 - Legal, Social, Ethical, and Professional Issues}
 This chapter gives commentary on any Legal, Social, Ethical, and Professional the project encountered over its lifespan, with
 additional discussion provided towards the Sustainable Development Goals the project aligns with when discussing social issues. \newline
 
 
-\noindent\textbf{Chapter 6 - Conclusions and Further Work - }
+\subsubsection{Chapter 6 - Conclusions and Further Work}
 This chapter concludes the report by summarizing the project in it's entirety up to this point, before then presenting a final answer 
 to the project's hypothesis. It then continues by providing critical analysis of the project and it's limitations, and finally, discusses 
 what further work the project may lead in the future.
@@ -629,10 +611,12 @@ the PRI meets the project's main objective, research statement, and hypothesis.
 Early in the planning stage of the project, the project intended to make use of the agile methodology, due to
 its focus on flexibility, adaptability to any changes in requirements, and frequent use in mobile app development. However, during the
 requirements analysis stage of the project, a change to a Hybrid methodology was made. This model aims to let development teams combine approaches from
-multiple methodologies and tailor the Software Development Lifecycle to fit their needs . In this case,
-approaches from iterative and waterfall methodologies were combined to create a methodology that fit the needs of the project at that point in time.
-specifically, the waterfall methodology was used for the Requirements Analysis, Design, and Evaluation stage, while the iterative methodology was used for
-the Implementation and Testing stage. 
+multiple methodologies and tailor the Software Development Lifecycle to fit their needs . 
+
+% In this case,
+% approaches from iterative and waterfall methodologies were combined to create a methodology that fit the needs of the project at that point in time.
+% specifically, the waterfall methodology was used for the Requirements Analysis, Design, and Evaluation stage, while the iterative methodology was used for
+% the Implementation and Testing stage. 
 
 % This allowed for requirements to be "fully" defined and for designs to be as detailed as possible, while also
 % allowing for the creation of multiple prototypes and for issues to be identified and solved during the creation of each prototype. \newline
@@ -697,7 +681,7 @@ can be found within Appendices D and E. \newline
 
 \subsubsection{Psychological Intervention Method}
 
-The psychological intervention method is a critical componentfor the PRI, as this would then ben used to derive functional requirements of the application, therefore,
+The psychological intervention method is a critical component for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
 choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
 specifically section 2.3 made mention of two psychological intervention methods, Cognitive Behavioural Therapy and Reality Therapy. \newline
 
@@ -1408,9 +1392,9 @@ while ((nextLine = csvReader.readNext()) != null) {
 \end{lstlisting}
 
 \subsubsection{Req 1.8 / Clean up}
-This was the last branch created during development, and focused on getting the app ready for human evaluation. This branch was also when the last requirement, requirement 1.8, was identified and implemented.
+This was the last branch created during development, and focused on getting the app ready for evaluation. This branch was also when the last requirement, requirement 1.8, was identified and implemented.
 Implementing requirement 1.8 was conducted in a similar manner to requirement 1.3, that being to add a boolean variable, check if its true, perform input validation, then update 
-the set of activities. A small snippet of the code used can be found below in code snippet \ref{lst:editing-activity}, but the full code block where this was performed can be found in Appendix M.
+the set of activities. A small snippet of the code used can be found below in code snippet \ref{lst:editing-activity}, but the full code block can be found in Appendix M.
 
 \begin{lstlisting}[language=Java, style=mystyle, caption={Code added to activities definition code block}, label=lst:editing-activity]
  if (isEditingActivities == true) {
@@ -1525,9 +1509,11 @@ One UI Home & 01:21    & 3\%  \\ \bottomrule
 \label{tab:3c-usage-sample}
 \end{table}
 
-Within the dataset, an outlier was detected within the baseline data for participant 3C. Seen above in table \ref{tab:3c-usage-sample}, the "android" 
+% Within the dataset, an outlier was detected within the baseline data for participant 3C. 
+
+Seen above in table \ref{tab:3c-usage-sample}, the "android" 
 package, which refers to the android home screen, takes up over 24 hours of usage time. Seeing as this may be unrealistic for a typical user, the decision was
-made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the same chart as figure \ref{fig:eval-data-with-3c-basline-outlier}, but 
+made to leave out the usage time for "android". Figure \ref{fig:eval-data-without-3c-basline-outlier} below shows the chart 
 without the outlier data.
 
 \begin{figure}[H]
@@ -1537,10 +1523,10 @@ without the outlier data.
 	\label{fig:eval-data-without-3c-basline-outlier}
 \end{figure}
 
-1A's usage is relatively consistent between baseline and week-2, though doesn't take a noticeable drop, but takes a substantial
+1A's usage is relatively consistent between baseline and week-2, but takes a substantial
 drop in week-3. 2B's usage fluctuates a lot throughout the timeframe, initially rising before falling again, and then settling in the middle for week-3. 3C's usage does take a drop overall 
 when comparing baseline to week-3, and remains under 10 hours for the remainder of the evaluation period after the baseline data. 4D's usage experiences a slight increase before dropping 
-slightly, though experiences an increase when compared from the baseline to week-3. %for 1a, This may be because\dots (expand on this, possibly due to how androids UsageStatsManager queries data) 
+slightly, though experiences an overall increase.  
 
 \begin{figure}[H]
 \centering
@@ -1550,8 +1536,8 @@ slightly, though experiences an increase when compared from the baseline to week
 \end{figure}
 
 Figure \ref{fig:eval-data-social-media} shows the same graph as figure \ref{fig:eval-data-without-3c-basline-outlier}, but only including social media usage from each participant. 
-While the graph is relatively the same, there are some differences. For example, unlike the total usage, 1A's social media usage never increases, rather, taking a small decline 
-instead. 4D's social media usage starts, and remains quite low, though does take a small increase in week-1 before levelling out by the latter weeks.
+While the graph is relatively the same, there are some differences. For example, unlike the total usage, 1A's social media usage never increases, rather, takes a small decline 
+instead. 4D's social media usage starts, and remains quite low, though does take a small increase in week-1 before levelling out by the later weeks.
 
 \subsection{Post-Evaluation survey results}
 Part of using a mixed-method approach involves collected qualitative data, which can be defined as written text, images, audio 
@@ -1560,10 +1546,13 @@ of the evaluation as a whole, getting this kind of data helps to understand the 
 and contextualising the behaviours represented in the previous section.\newline
 
 At the end of the evaluation testing period, participants were sent a survey to fill out. This survey gave participants the opportunity to express their
-opinions on using the app throughout the evaluation period, with the survey including a variety of multiple choice and open-ended, optional questions. Two question
-sets were provided, one focusing on how the participant felt after using the app, and the other focusing on the overall functionality of the app. The number of 
-respondents matched the number of participants who took part in the evaluation, that being 4. Note that because the open-ended questions were optional, not all 
-participants provided a response to them.\newline
+opinions on the evaluation period, with the survey including a variety of multiple choice and open-ended questions. Two question
+sets were provided, one focusing on how the participant felt after using the app, and the other focusing on the overall functionality of the app. 
+
+% move to appendix maybe
+% The number of 
+% respondents matched the number of participants who took part in the evaluation, that being 4. Note that because the open-ended questions were optional, not all 
+% participants provided a response to them.\newline
 
 \begin{figure}[H]
 \centering
@@ -1572,7 +1561,7 @@ participants provided a response to them.\newline
 	\label{fig:question3surveyresults}
 \end{figure}
 
-A complete collection of the responses and their associated questions can be found in Appendix O, however, the sentiment derived from 
+A complete collection of the questions and responses can be found in Appendix O, however, the sentiment derived from 
 the results of QS1 show that users felt more informed about their usage after using the app, and on average, users felt as if the app
 implemented the WDEP system to a good degree. As demonstrated in figure \ref{fig:question3surveyresults}, only two of the respondents felt that the app contributed to their
 lowered usage, with one respondent feeling as if other factors had a bigger impact than the app by itself, and the other feeling like there wasn't any
@@ -1584,34 +1573,41 @@ Another response, in reference to the participant not seeing a usage drop, state
 
 \textit{"At this time of year as a student based outside the city of my university I was regularly on my device to check on my classes and assignments"}\newline
 
-\begin{figure}[H]
-\centering
-	\includegraphics[width=1\linewidth]{Q11-evaluation-survey.png}
-	\captionof{figure}{\textit{Results from question 11 from the post-evaluation survey}}
-	\label{fig:question11surveyresults}
-\end{figure}
 
-The responses to QS2 show that respondents generally had a positive experience using the app, with no participant experiencing any substantial issues. One
-participant did however note one smaller issue, stating:\newline
+% may be cut, not too related to the evaluation intention
 
-\textit{"I find that the email prompt would be better and easier to understand is [sic] it was titled "report" or something similar"}\newline
+% \begin{figure}[H]
+% \centering
+% 	\includegraphics[width=1\linewidth]{Q11-evaluation-survey.png}
+% 	\captionof{figure}{\textit{Results from question 11 from the post-evaluation survey}}
+% 	\label{fig:question11surveyresults}
+% \end{figure}
 
-Participants were asked if the app experience was better than existing apps that provided similar functionality, while 3 of the participants stated that they haven't
-used apps similar to the PRI, one participant disagreed that the app experience was better than existing apps. When asked to provide a follow-up stating what the PRI
-could take note of, they stated:\newline
+% The responses to QS2 show that respondents generally had a positive experience using the app, with no participant experiencing any substantial issues. One
+% participant did however note one smaller issue, stating:\newline
 
-\textit{"an app called Screen Zen which gives more options to limit screen usage."}\newline
+% \textit{"I find that the email prompt would be better and easier to understand is [sic] it was titled "report" or something similar"}\newline
 
-When asked to provide suggestions on how the app could be improved, one response suggested increasing the notification frequency from being sent on a weekly basis
-to a daily basis, while another suggested showing how the app usage for specific apps have changed between weeks. At the end, participants were finally asked to
+% Participants were asked if the app experience was better than existing apps that provided similar functionality, while 3 of the participants stated that they haven't
+% used apps similar to the PRI, one participant disagreed that the app experience was better than existing apps. When asked to provide a follow-up stating what the PRI
+% could take note of, they stated:\newline
+
+% \textit{"an app called Screen Zen which gives more options to limit screen usage."}\newline
+
+% When asked to provide suggestions on how the app could be improved, one response suggested increasing the notification frequency from being sent on a weekly basis
+% to a daily basis, while another suggested showing how the app usage for specific apps have changed between weeks. 
+
+At the end, participants were finally asked to
 provide any closing thoughts regarding their experience, and while only one participant gave a response, they stated that they believe the app is a step in the 
 right direction in addressing SA and SMA.
 
 
 \subsection{Discussion}
-The intention of the evaluation was to find if the PRI satisfies the project's hypothesis, and this was done by collecting quantitative data in the form of usage data captured
-from each participant and qualitative data in the form of a survey given to participants at the end of the evaluation period, where participants could provide their opinions on the
-current state of the PRI. \newline
+
+% maybe remove? kinda hesitant
+% The intention of the evaluation was to find if the PRI satisfies the project's hypothesis, and this was done by collecting quantitative data in the form of usage data captured
+% from each participant and qualitative data in the form of a survey given to participants at the end of the evaluation period, where participants could provide their opinions on the
+% current state of the PRI. \newline
 
 The quantitative data initially revealed that only three participants experienced a drop in smartphone usage at some point during the evaluation, and only two 
 of the participants' usage was lower by the end of the evaluation period. Discussed in section 2.2, discussed how smartphones can be used 
@@ -1619,9 +1615,9 @@ for productivity and not exclusively for social media, so the data was reanalyse
 the initial set of data.\newline
 
 The qualitative data revealed that participants found themselves informed about their smartphone and/or social media usage. This was another talking point from 
-, as it was discussed that current apps don't provide an opportunity for users to reflect and learn about SA and SMA. Not only this,
+, as it was discussed that intervention apps don't provide an opportunity for users to reflect and learn about SA and SMA. Not only this,
 the data revealed that some participants attributed the PRI as a factor in their reduction in smartphone and social media usage, all participants in their opinion felt that the app
-helped them achieve the goal they set out, and most participants said they would recommend the app in its current state to others (see Appendix O), with one participant stating the app is a 
+helped them achieve the goal they set out with one participant stating the app is a 
 step in the right direction when addressing the issue of SA and SMA.\newline
 
 Given this, the PRI can be considered somewhat successful in meeting the project's hypothesis. This is because The quantitative data provided mixed results when it came to reducing the 
@@ -1635,20 +1631,20 @@ helpful in reducing their usage, most saying they would recommend the app to a f
 \section{Legal, Social, Ethical, and Professional Issues}
 This section will provide commentary on Legal, Social, Ethical, and Professional (LSEP) issues the project dealt with over its lifespan.
 Within the Social Issues section, it will also provide additional commentary and reflection on the Sustainable Development Goals (SDGs)
-the project has aligned itself with in accordance to the definitions provided by the United Nations. 
+the project has aligned itself.
 
 \subsection{Legal Issues}
 While the project didn't encounter any issues related to copyright, the project did have to deal with issues to data protection, particularly in
 relation to the Data Protection Act 2018 and the UK General Data Protection Regulation, two laws that relate to protecting the personal data of
 individuals . \newline
 
+Any data taken from participants was ensured to be compliant under the Data Protection Act 2018. When ensuring the protection of 
+user data, all information was kept in a local folder on the author's PC at his home, as well as on an external USB.\newline
+
 When a human participant was involved at any stage of the project, it was clearly outlined to them what kind of data would be collected and
 processed. For example, during the evaluation stage, when the user opens the app for the first time, the user is given full clarity on the
 purpose of them using the app, as well as what kinds of data the app would be collecting. At no point does the app capture any personally
-identifiable information from a participant. \newline
-
-Alongside this, any data taken from participants was ensured to be compliant under the Data Protection Act 1998. When ensuring the protection of 
-user data, all information was kept in a local folder on the author's PC at his home, as well as on an external USB.
+identifiable information from a participant. 
 
 \subsection{Social Issues}
 The projects primary subject matter involved addressing the issue of addiction pertaining to social media and smartphones. When discussing
@@ -1665,28 +1661,28 @@ This project has aligned itself with Sustainable Development Goals 3 and 4. Belo
 	\item Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all .
 \end{itemize}
 
-Target 3.4 (Reduce Mortality From Non-communicable Diseases And Promote Mental Health) for SDG 3 states that by 2030, it should:\newline
+Target 3.4 for SDG 3 states that by 2030, it should:\newline
 
 \textit{...reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote 
 mental health and well-being} .\newline
 
 The project's intention from the very beginning was to encourage healthier smartphone and social media usage. It attempts to achieve this by encouraging the user to partake in activities
-from outside their smartphone and social media and set goals for themselves that they can achieve away from their smartphone and social media. \newline
+away from their smartphone and set goals for themselves that they can achieve away from their smartphone and social media. \newline
 
-In relation to goal 4, a key component of the app is making the user aware of their habits, and what they can do to lower their smartphone and social media usage should it be at a high level. This is
-also help through the use of the WDEP system introduced by Reality Therapy, whose system intrinsically includes learning opportunities through self-evaluation. This teaching aspect was also a 
+In relation to goal 4, a key component of the app is making the user aware of their habits, and what they can do to lower their smartphone and social media usage, should it be at a high level. This is
+also helped through the use of the WDEP system introduced by Reality Therapy, whose system intrinsically includes learning opportunities through self-evaluation. This teaching aspect was also a 
 component that was intended to be included following the literature review. \newline
 
 Through the promotion of better smartphone habits, and through provided opportunities for the user to learn about their smartphone habits, the author believes the project correctly aligns with
 these two goals.
 
 \subsection{Ethical Issues}
-Arguably, the largest issue the project had to consider during its lifespan were Ethical Issues. As previously mentioned when discussing
+As previously mentioned when discussing
 the project's primary objectives in section 1.2.2, for conduction the evaluation, human participants were required to carry out said
-evaluation as intended. This aspect by itself already constitutes as an ethical issue, given the use of human participants for a project
-of this nature raises concerns regarding the autonomy, well-being of participants, as well as the requirement of seeking ethical approval 
-, but this specific use of human participants brings forth another issue. The evaluation 
-involved collecting app usage data from participants, as well as responses from the post-evaluation survey. \newline
+evaluation as intended, which involved collecting app usage data from participants, as well as responses from the post-evaluation survey.
+ This aspect by itself already constitutes as an ethical issue, given the use of human participants for a project
+of this nature raises concerns regarding the autonomy and well-being of participants,
+, but this specific use of human participants brings forth the issue of data collection. \newline
 
 Similarly, during the requirements analysis stage of the project's execution, a survey was distributed, and 1-to-1 interviews were 
 conducted. Given the use of software tools to carry out these parts of the project, this raises issues with data protection, informed 
@@ -1698,7 +1694,7 @@ When conducting user interviews and the evaluation, participants were given a co
 to the project, and before taking part in any survey, participants were asked to provide informed consent to take part and were given as 
 much information as possible, something which was noted as an issue by . \newline
 
-To conduct any part of the project where human participants are required, ethical approval via an ethics form is required to be submitted 
+To conduct any part of the project where human participants are required, ethical approval was required to be granted 
 prior to conducting any part of it. All the details written about previously were mentioned within the ethics form, alongside reasonable 
 justification, and ethical approval was granted.
 
@@ -1708,7 +1704,7 @@ within Appendix I.
 
 \subsection{Professional Issues}
 Following the completion of this project, there are a few aspects that have been reflected on that the author believes have undertaken well, and
-others the author wishes would've been undertaken differently. For one, section 3.3 details the SDLC used during the project's execution, and 
+others the author wishes would've been undertaken differently. Section 3.3 details the SDLC used during the project's execution, and 
 how there was a change in SDLC midway through the project. Instead of this conducting this change midway through the project, this change 
 could've occurred before any work was carried out, or could've been prevented altogether if deeper research was conducted at that stage. \newline
 
