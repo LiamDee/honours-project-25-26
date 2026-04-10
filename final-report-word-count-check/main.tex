@@ -628,11 +628,15 @@ multiple methodologies and tailor the Software Development Lifecycle to fit thei
 	\label{fig:iterativewaterfall}
 \end{figure}
 
-This change in methodology was deemed to be necessary, as it felt more appropriate for the project as a whole when compared to agile and waterfall separately. Agile
-methodologies, while fitting for any software project, puts a focus on constant customer feedback during the SDLC , 
-something that there would be a lack of in this project's case. The Waterfall methodology, while a lot simpler to plan with, its lack of flexibility when it comes to changes 
-in project scope and lack of prototype creation in particular , made it usage unfitting for the project. Combining parts 
-of these methodologies however, made for a methodology that was fitting for the project as a whole. 
+This change in methodology was deemed to be necessary, as it felt more appropriate for the project as a whole when compared to agile and waterfall separately.
+
+% Agile
+% methodologies, while fitting for any software project, puts a focus on constant customer feedback during the SDLC , 
+% something that there would be a lack of in this project's case. The Waterfall methodology, while a lot simpler to plan with, its lack of flexibility when it comes to changes 
+% in project scope and lack of prototype creation in particular , made it usage unfitting for the project. 
+
+Combining parts 
+of these methodologies, made for a methodology that was fitting for the project as a whole. 
 
 % Though this was a unforeseen risk according to the risk matrix and risk 
 % register composed before the beginning of development (see Appendix B), 
@@ -653,8 +657,12 @@ Implementation and Testing stage. The requirements were defined during the begin
 	\label{fig:gitbranch}
 \end{figure}
 
-Figure \ref{fig:gitbranch} showcases the process behind implementing and testing the PRI. A GitHub branch that matched the name of the requirement was 
-created, then, within that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. If that 
+Figure \ref{fig:gitbranch} showcases the process behind implementing and testing the PRI. 
+
+% A GitHub branch that matched the name of the requirement was 
+% created, then, within that branch, that requirement was implemented, then tested upon via Incremental Integration Testing to ensure the requirement was implemented as intended. 
+
+If that 
 part of the requirement passed all test cases, a new GitHub branch for the next requirement was created using the newly completed requirement as a blueprint, and this process 
 repeated until the implementation of all requirements were completed.
 
@@ -675,14 +683,18 @@ From the research statement alone, two integral components can be identified:
 \end{enumerate}
 
 From here, these components can then be broken down into smaller parts that then make up a list of functional requirements after ensuring they fit within the findings of the literature
-review, with some aspects from both components being used to identify a requirement. Additionally, interviews were conducted with nine participants to help identify new requirements or 
-to add pieces to existing requirements. Full interview transcripts, instructions on accessing them, and detailed notes taken during each interview
-can be found within Appendices D and E. \newline
+review, 
+
+% with some aspects from both components being used to identify a requirement. 
+
+Additionally, interviews were conducted with nine participants to help identify new requirements or 
+to add pieces to existing requirements. 
+Interview details can be found within Appendices D and E. \newline
 
 \subsubsection{Psychological Intervention Method}
 
-The psychological intervention method is a critical component for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
-choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
+% The psychological intervention method is a critical component for the PRI, as this would then ben used to derive functional requirements of the application, therefore,
+Choosing a psychological intervention method came down to how easy it would be to integrate said method into a mobile app and how impactful the method itself is when used. The literature review,
 specifically section 2.3 made mention of two psychological intervention methods, Cognitive Behavioural Therapy and Reality Therapy. \newline
 
 After analysing both frameworks, it was concluded that RT was the choice of framework to use. The primary reason for using this framework instead of CBT ties back to one of the main criticisms
@@ -692,7 +704,9 @@ case, their smartphone usage and/or SA \& SMA would be the aspect affecting them
 
 \subsubsection{Usage Tracking Method}
 
-Finding a usage tracking method was a simple task. As mentioned in section 2.4, Apple's iOS operating system disallows apps from tracking a user's usage
+% Finding a usage tracking method was a simple task. 
+
+As mentioned in section 2.4, Apple's iOS operating system disallows apps from tracking a user's usage
 due to privacy concerns, with the only "viable" alternative being using a "jailbroken" device, which would complicate multiple parts of the project. On the contrary, Google's Android operating system
 allows for apps to track a user's usage via the "android.app.usage" package within its API, so long that a user permits the app to do so.
 
@@ -712,8 +726,7 @@ time range .
 \subsubsection{Functional (and Non-Functional) Requirements}
 
 As mentioned at the beginning of this section, requirements were identified by taking the findings from the literature review and combining them alongside the analysis of the research statement and
-user interviews that were performed as well. All requirements were then compiled into a single document, the Software Requirements Specification document which would frequently be referred to during
-development.
+user interviews that were performed as well. All requirements were then compiled the Software Requirements Specification document.
 
 \begin{table}[H]
 \centering
@@ -760,8 +773,12 @@ any data used for the requirement, and how the app should handle errors the requ
 \end{table}
 
 %possibly shorten - move to appendix
-Table \ref{tab:func-req-master-list} provides a full list of all the functional requirements identified throughout the project's lifespan. With the exception of "REQ-1.8", where the requirement
-was identified and defined later during development, all requirements were identified during the initial requirements analysis phase of development. A comprehensive breakdown of each functional 
+Table \ref{tab:func-req-master-list} provides a full list of all the functional requirements identified throughout the project's lifespan. 
+
+% With the exception of "REQ-1.8", where the requirement
+% was identified and defined later during development, all requirements were identified during the initial requirements analysis phase of development. 
+
+A comprehensive breakdown of each functional 
 requirement identified in detail, similar in manner to Table \ref{tab:func-req-1-5-main}, alongside non-functional requirements can be found in Appendix F, as well as the SRS document separately 
 via the GitHub repository.
 
@@ -782,9 +799,11 @@ end-user and user interfaces for each screen necessary per requirement.
 \subsubsection{Diagram Design}
 
 The type of diagram used for designing the application based on the requirements was a Flowchart diagram, a diagram which uses components, typically shapes, that represent logic, order, and decision-points within a system
-to model said system or related processes, making it easy for developers to understand event sequences or the overall structure of a system .This type 
-of diagram was decided upon due to how easily it can convey the idea of how a requirement should function . Flowchart diagrams were the 
-exclusive diagram used for designing the application.
+to model said system or related processes, making it easy for developers to understand event sequences or the overall structure of a system .
+
+% This type 
+% of diagram was decided upon due to how easily it can convey the idea of how a requirement should function . Flowchart diagrams were the 
+% exclusive diagram used for designing the application.
 
 \begin{figure}[H]
 \centering
@@ -801,8 +820,12 @@ utilised during this process, with the level of complexity in the designs varyin
 % As mentioned at the beginning of this section, 
 
 This process of creating a flowchart based on the requirement was repeated until all requirements outlined had a flowchart diagram. From there, the designs
-were reviewed for any possible refinements, for which only one flowchart needed refinement, that being requirement 1.3. Requirements were created in sequential order according to the requirement number 
-(Req-1.1 $\rightarrow$ Req-1.2 $\rightarrow$ Req-1.3 $\rightarrow$ etc\dots). A complete list of the flowchart diagrams created can be found in Appendix G.
+were reviewed for any possible refinements, for which only one flowchart needed refinement, that being requirement 1.3. 
+
+% Requirements were created in sequential order according to the requirement number 
+% (Req-1.1 $\rightarrow$ Req-1.2 $\rightarrow$ Req-1.3 $\rightarrow$ etc\dots). 
+
+A complete list of the flowchart diagrams created can be found in Appendix G.
 
 \begin{figure}[H]
 \centering
@@ -820,7 +843,11 @@ were reviewed for any possible refinements, for which only one flowchart needed 
 	\label{fig:req-1_3-new}
 \end{figure}
 
-Figures \ref{fig:req-1_3-old} and \ref{fig:req-1_3-new} show the first and last iterations respectively of the flowchart design for requirement 1.3. While the design for the requirement is the same, the 
+Figures \ref{fig:req-1_3-old} and \ref{fig:req-1_3-new} show the first and last iterations respectively of the flowchart design for requirement 1.3. 
+
+% While the design for the requirement is the same, 
+
+The 
 later iteration shows greater detail, providing more decision-points and error handling in the scenario the user wants to redefine their goal, while also making some changes to the wording of the process points.
 
 \begin{figure}[H]
@@ -831,9 +858,11 @@ later iteration shows greater detail, providing more decision-points and error h
 \end{figure}
 
 Figure \ref{fig:req1-5-7-diagram-main} shows the flowchart diagram of requirements 1.5 and 1.7, merged into a single requirement. When creating both requirements, it was identified that requirement 1.7 could
-only function if the app was at a specific point. Requirement 1.7's constraints notes that: \newline
+only function if the app was at a specific point (See Appendix F). 
 
-\textit{"User must be currently given guidance by the app, or is in the onboarding section of the app"}\newline
+% Requirement 1.7's constraints notes that: \newline
+
+% \textit{"User must be currently given guidance by the app, or is in the onboarding section of the app"}\newline
 
 This means that the requirement can't be met unless the app is in the onboarding stage (outlined in requirement 1.5) or is currently providing guidance to the user (outlined in requirement 1.3). To avoid 
 replication when creating the flowcharts, requirements 1.5 and 1.7 were merged into a single diagram. 
@@ -844,8 +873,11 @@ replication when creating the flowcharts, requirements 1.5 and 1.7 were merged i
 
 \subsubsection{User Interface Design}
 When designing the UI, a wireframing approach was used. This approach involves creating simplistic designs of an interface to establish structure and design flow.
-Wireframe designs are meant to be basic in terms of visual spectacle, acting as a blueprint for a user interface, and keeping its focus solely on fundamental design elements such as where important
-parts of a UI should go . The intention from the start was to keep the UI as simple as possible, ensuring that an end-user wasn't overwhelmed from using the app while
+
+% Wireframe designs are meant to be basic in terms of visual spectacle, acting as a blueprint for a user interface, and keeping its focus solely on fundamental design elements such as where important
+% parts of a UI should go . 
+
+The intention from the start was to keep the UI as simple as possible, ensuring that an end-user wasn't overwhelmed from using the app while
 making sure all essential elements for the interface were included, therefore, this approach was deemed to be the most effective way of creating the UI.\newline
 
 The wireframes created for the UI consist of "Mid-Fidelity" wireframes, which can be defined as a compromise between "Low-Fidelity" and "High-Fidelity" wireframes, providing clearer structure of an
@@ -857,7 +889,9 @@ interface while making use of little to no visual flair or colouring.
 
 Because all of the requirements had already been established (with the exception of requirement 1.8), there was a fairly clear understanding of what UI elements needed to be included to ensure 
 functionality for each requirement. One screen by itself did not meet the functionality for each requirement, meaning the creation of multiple screens were necessary to ensure each requirement was
-met. Concerning how the screens needed for each requirement should be ordered, the flowcharts established how the screens should be ordered.
+met. 
+
+% Concerning how the screens needed for each requirement should be ordered, the flowcharts established how the screens should be ordered.
 
 \begin{figure}[H]
 \centering
@@ -899,8 +933,8 @@ While creating these screens, it was also determined that some of the screens ca
 % As noted previously in section 3.3, this part of the project, alongside the testing part of the project, made use of an iterative approach. 
 
 At this stage, implementing the project would consist
-of using the information gathered for each requirement during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
-them according to the documentation. 
+of using the information gathered during the requirements analysis stage, then taking the flowchart diagrams and UI wireframes created from the design stage, and implementing
+them according to the documentation.
 
 % Implementing each requirement facilitated backend development via implementing the functionality for the requirement and frontend development via implementing
 % the user interface the end-user would interact with. Therefore, the primary type of development executed can be considered full-stack. \newline
@@ -1718,27 +1752,27 @@ may have to the author, showing a level of accountability and responsibility tak
 \section{Conclusions and Further Work}
 
 \subsection{Summary}
-Over the past fifteen years, smartphones and social media have been quickly integrated into wider society. Both of them serve as an important component of everyday life for a large amount of 
-people and have helped connect people with each other from around the globe on a never-before-seen scale. With this however, the issue of individuals developing an overdependence on such
-technology has become a prominent talking point when discussing these technologies, and subsequently, studies have been carried out analysing the issue, its causes, its effects on one's 
-health, and potential solutions, one of which being intervention apps that attempt to help users lower their usage, and another being the use of psychological methods. With that being said, a 
-gap of intervention apps that deal with the aforementioned issue was found. The primary aim of the project was to carry out the research statement, being: \newline
+Over the past fifteen years, smartphones and social media have been quickly integrated into wider society. Both of them serve as an important component of everyday life for a large number of 
+people and have helped connect people with each other from around the globe on a never-before-seen scale. With this, however, the issue of individuals developing an overdependence on such 
+technology has become a prominent talking point when discussing them. Subsequently, studies have been carried out analysing the issue, its causes, its effects on one's health, and potential 
+solutions, one of which being intervention apps that attempt to help users lower their usage, and another being the use of psychological methods. With that being said, a gap of intervention apps
+that deal with the aforementioned issue was found. The primary aim of the project was to carry out the research statement, being: \newline
 
 \textbf{To create a mobile application that integrates psychological intervention methods alongside usage tracking technologies to help address smartphone and social media addiction} \newline
 
-A literature review was carried out to investigate existing applications that use psychological intervention methods when addressing related issues, how SA and SMA are contextualized
-within existing apps, and the issues they raise, existing psychological frameworks that can be integrated into a mobile application, and methods to track a user's app usage. \newline
+A literature review was carried out to investigate existing applications that use psychological intervention methods when addressing related issues, how SA and SMA are contextualized within 
+existing apps and the issues they raise, existing psychological frameworks that can be integrated into a mobile application, and methods to track a user's app usage. \newline
 
-Following the findings from the literature review, an effort to create a mobile application that used usage tracking technologies and psychological intervention methods
-while following a "develop and test" approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid 
-methodology, an analysis of the requirements necessary for the app to function as intended was undertaken, as well as picking a psychological intervention and usage tracking method, those being
-Reality Therapy and using the android.app.usage package, respectively. Flowchart design diagrams showing the app flow for each requirement and UI wireframes that depict 
-how each app screen should look were then created. After this, the process of coding the app based on the information created and obtained began, with close attention paid
-to the prior information. After each iteration, testing was performed to ensure the app worked without issue. Finally, an evaluation with multiple participants took place where
-they used the app over a three-week span and sent their usage data for further analysis at one week intervals, before answering a survey at the end of the three-week period.
+Following the findings from the literature review, an effort to create a mobile application that used usage tracking technologies and psychological intervention methods while following a 
+”develop and test” approach began. A development lifecycle was chosen, initially being an agile methodology before switching to a hybrid methodology.Thereafter, an analysis of the requirements 
+necessary for the app to function as intended was undertaken, as well as picking a psychological intervention and usage tracking method, those being Reality Therapy and using the
+android.app.usage package, respectively. Flowchart design diagrams showing the app flow for each requirement and UI wireframes that depict how each app screen should look were then created. 
+After this, the process of coding the app based on the information created and obtained began. After each iteration, testing was performed to ensure the app worked without issue. Finally, an 
+evaluation with multiple participants took place where they used the app over a three-week span and sent their usage data for further analysis at one week intervals, before answering a survey 
+at the end of the three-week period.
 
 \subsection{Results}
-To reiterate what was stated in section 4, based off of the hypothesis, the intention of the evaluation was to find out if:
+To reiterate what was stated in section 4; based off of the hypothesis, the intention of the evaluation was to find out if:
 
 \begin{enumerate}
 	\item The mobile phone usage from a participant decreased when comparing their usage from the start of the evaluation to the end.
@@ -1746,21 +1780,19 @@ To reiterate what was stated in section 4, based off of the hypothesis, the inte
 \end{enumerate}
 
 \subsubsection{Was there a decrease in usage?}
-The quantitative data gathered and presented in section 4.1 reveal that only two of the four participants usage decreased overall when comparing their usage at the start to 
-the end of the evaluation period, with this result staying consistent when only social media apps are included in the dataset. Therefore, this first point is proven to be
-plausible, or somewhat true.
+The quantitative data gathered and presented in section 4.1 reveal that only two of the four participants' usage decreased overall when comparing their usage at the start to the end of 
+the evaluation period, with this result staying consistent when only social media apps are included in the dataset. Therefore, this first point is proven to be plausible, or somewhat true.
 
 \subsubsection{Was the PRI a factor in a reduction in usage?}
-The qualitative data gathered and presented in section 4.2 reveal that participants who experienced a usage drop at some point during the evaluation period positively 
-attributed the app to be a significant factor in, and carry the opinion that the app helped them achieve their set goal. Therefore, this second point is proven to be true 
-beyond a reasonable doubt.
+The qualitative data gathered and presented in section 4.2 reveal that participants who experienced a usage drop at some point during the evaluation period positively attributed the app to be 
+a significant factor in a reduction in that usage, and carry the opinion that the app helped them achieve their set goal. Therefore, this second point is proven to be true beyond a reasonable
+doubt.
 
 \subsubsection{Conclusion}
-To conclude, the PRI and project as a whole successfully satisfies the research statement and project hypothesis, however, does so to an extent. The project does indeed
-create a mobile app that uses psychological intervention methods with usage tracking technologies to address the issue of SA and SMA, and has also shown to reduce the 
-smartphone usage in young adults, however, from the results of the evaluation, the PRI only reduced the smartphone and social media usage in two of the four 
-participants, though this is juxtaposed from the opinions from the participants themselves, who believe that the app played a significant role in reducing their smartphone 
-and social media usage.
+To conclude, the PRI and project as a whole successfully satisfies the research statement and project hypothesis, yet only does so to an extent. The project does indeed create a mobile app that 
+uses psychological intervention methods with usage tracking technologies to address the issue of SA and SMA, and has also shown to reduce the smartphone usage in young adults. However, from the 
+results of the evaluation, the PRI only reduced the smartphone and social media usage in two of the four participants. This is juxtaposed from the opinions from the participants themselves, who 
+believe that the app played a significant role in reducing their smartphone and social media usage.
 
 \subsection{Limitations \& Project Critique}
 Despite proving the research statement and project hypothesis to be true, the project is limited in some regards. A limitation of the project was the use of only one 
@@ -1769,14 +1801,14 @@ decision to use a single intervention method from a single framework was made to
 literature review, CBT is referenced as a psychological framework that has seen use and success in apps similar to the one made for the project, so, integrating
 frameworks such as ones seen in CBT would be an area of improvement. \newline
 
-Although not a issue for the current iteration of the project, from September of 2026 onwards, apps to be installed on Android devices in certain regions will have to 
-be from verified Android developers . This means that future research that involves evaluating an app on a real device with human 
-participants will require a researcher to be an Android verified developer, or go through the process of side-loading the app . \newline
+Although not an issue for the current iteration of the project, from September of 2026 onwards, apps to be installed on Android devices in certain regions will have to be from verified Android 
+developers . This means that future research that involves evaluating an app on a real device with human participants will require a researcher to be an Android verified developer, or go through 
+the process of side-loading the app. \newline
 
-The project was limited during the evaluation phase, due to the number of participants involved. While the intention was to gather ten participants for the evaluation, only 
-four participants were gathered. The reasoning behind this lacklustre turnout may be due to poor recruiting efforts when it came to gathering participants, as recruiting 
-efforts were limited to a small group of people. Should a project of this calibre be attempted again, promoting the evaluation to a wider group of individuals, perhaps in 
-physical areas such as university campuses may prove to be an effective method of gathering participants.
+The project was also limited during the evaluation phase due to the number of participants involved. While the intention was to gather ten participants for the evaluation, only four participants 
+were gathered. The reasoning behind this lacklustre turnout may be due to poor recruiting efforts when gathering participants, as recruiting efforts were limited to a small group of people. 
+Should a project of this calibre be attempted again, promoting the evaluation to a wider group of individuals, perhaps in physical areas such as university campuses, may prove to be an effective 
+method of gathering participants.
 
 \subsection{Further Work}
 When it comes to other work this project could potentially influence, investigating what psychological framework between CBT, RT, or another psychological framework 
